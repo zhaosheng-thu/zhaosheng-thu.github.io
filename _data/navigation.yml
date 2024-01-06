@@ -1,0 +1,13 @@
+# main links links
+main:
+  - title: "Daily Life"
+    url: "/daily/"
+
+  - title: "Projects"
+    url: "/projects/"
+    
+  - title: "Learning Journal"
+    url: "/knowledge/"
+
+  - title: "CV"
+    url: "/files/resume-ENG.pdf"
