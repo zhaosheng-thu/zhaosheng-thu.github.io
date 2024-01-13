@@ -82,7 +82,7 @@ I am currently involved in VR-related research: human computer interaction  & co
 - Developed a Smart Home Android app using Java, which includes features like Bluetooth connectivity, weather forecast queries, and communication with hardware devices. I won the Second Prize. Code [here](https://github.com/zhaosheng-thu/Smart-Home-APP).
 
 ### The 12th Tsinghua University Digital System Design Competition
-- *August 2022 -- October 2023*
+- *August 2022 -- October 2022*
 - Designed a small car driven by MSP430 with various sensors for autonomous navigation and resource acquisition. I won the First Prize (1/60). Code can be found [here](https://github.com/zhaosheng-thu/msp430car).
 
 ---
