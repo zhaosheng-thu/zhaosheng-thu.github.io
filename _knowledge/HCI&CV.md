@@ -7,7 +7,7 @@ excerpt: ''
 # HCI
 <!-- Password Protected Section -->
 ```html
-<iframe src="password_protected.html" width="100%" height="500px"></iframe>
+<iframe src="password-protected.html" width="100%" height="500px"></iframe>
 ### CMU 
 * [Aniket kittur](https://www.hcii.cmu.edu/people/aniket-kittur)组内有华人
 * David Lindlbauer,领导实验室[augmented-perception](https://augmented-perception.org/team),vr,ar, 组内多个华人，有清华学生
