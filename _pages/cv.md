@@ -62,16 +62,16 @@ I am currently involved in VR-related research: human computer interaction  & co
   - Project leader, proposing the current authentication framework based on drawing a 3x3 unlock pattern by eye gaze, then using the entered password pattern and behavioral biometrics for authentication.
   - Using Unity to build the authentication 3*3 unlock UI.
   - A two-factor framework of authentication by machine learning, using SVM, KNN, RF, MLP and ResNet, to implement the classification of behavior biometrics during saccades and fixations of eye movements.
-- We achieved a more than 95% accuray and the both the frr & far are lower than 0.05. Code [here](https://github.com/ZhuJunray/srt_vr_auth). We are conducting long-term experiments and the paper work, preparing to submit it to [Ubicomp'24](https://dl.acm.org/conference/ubicomp).
+- We achieved a more than 95% accuray and the both the FRR & FAR are lower than 0.05. Code [here](https://github.com/ZhuJunray/srt_vr_auth). We are conducting long-term experiments and the paper work, preparing to submit it to [Ubicomp'24](https://dl.acm.org/conference/ubicomp).
 
 ### *[C3ILab](http://c3i.ee.tsinghua.edu.cn/), Tsinghua University, China*
 - *October 2023 -- Present*
 - *Visiting Student, Advisor: [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=en&oi=ao)*
 - **Research about 3D generation by diffusion model**
-- keyWords: Vision, diffusion model, 3D generation
+- KeyWords: Vision, diffusion model, 3D generation
 - My works include:
   - Researching the use of a pre-trained diffusion model on 2D to generate high-fidelity 3D reconstruction masks. This is particularly helpful for applications in VR and AR.
-  - Finding that existing models do not perform well in generating objects worn by people with complex 3D structures ,like glasses or jewelry. I would like to propose an improvement solution.
+  - Finding that existing models do not perform well in generating objects worn by people with complex 3D structures, like glasses or jewelry. I would like to propose an improvement solution.
   - Conducting basic experiments to validate some basic ideas. The project is currently in progress.
 
 ---
@@ -102,4 +102,4 @@ I am currently involved in VR-related research: human computer interaction  & co
 - Second Prize, Tsinghua University "Smart Coastal" Software Design Competition (January 2023)
 - First Prize, Tsinghua University Scientific And Technological Innovation Scholarship (October 2023)
 - First Prize, Tsinghua University Sports Excellence Scholarship (October 2023)
-- First Prize, The 3rd Tsinghua Craftsman Competition, 1\%, Presented a representative speech (November 2023)
+- First Prize, The 3rd Tsinghua Craftsman Competition, 1%, Presented a representative speech (November 2023)

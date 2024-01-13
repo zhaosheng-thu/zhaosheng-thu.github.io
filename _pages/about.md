@@ -10,7 +10,7 @@ redirect_from:
 
 # Hey there, I'm Alexzhao (Sheng Zhao)! 👋
 
-## About Me
+## Who I am
 
 Welcome to my personal website! I'm **Sheng Zhao**, and you can call me Alex. I'm a junior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China🏫. Now I am pursuing a double degree in **Mathematics Physics** and **Electrical Engineering**🎓 .
 
