@@ -7,4 +7,4 @@ excerpt: 'HCI Labs'
 # HCI
 <!-- Password Protected Section -->
 ```html
-<iframe src="password_protected.html" width="100%" height="auto"></iframe>
+<iframe src="password-protected.html" width="100%" height="auto"></iframe>
