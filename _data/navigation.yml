@@ -4,7 +4,7 @@
 #    url: "/daily/"
 main:
   - title: "Publications"
-    url: "/publication/"
+    url: "/publications/"
 
   - title: "Projects"
     url: "/projects/"

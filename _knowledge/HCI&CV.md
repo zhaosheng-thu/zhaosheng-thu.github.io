@@ -1,6 +1,7 @@
 ---
 title: "HCI Lab"
 permalink: /knowledge/hci
+date: 2024-01-13
 excerpt: 'HCI Labs'
 ---
 # HCI

@@ -14,30 +14,32 @@ redirect_from:
 - Phone: (+86) 186-2226-6039
 - LinkedIn: [Sheng Zhao](https://www.linkedin.com/in/sheng-zhao-027719290/)
 
-I am currently involved in VR-related research: human computer interaction  & computer vision, including social computing, authentication, text entry in VR, as well as 3D generation by diffusion model.
+I am currently involved in VR-related research: **human computer interaction** & **computer vision**, including social computing, authentication, text entry in VR, as well as 3D generation by diffusion model.
 
 ---
 
 ## Education
 - **Tsinghua University**
   - *August 2021 -- Present*
-  - *Double Major: Mathematics and Physics & Electrical Engineering*
-  - Junior, GPA: 3.85/4; Major GPA: 3.89/4.
-  - [Transcript](https://zhaosheng-thu.github.io/files/zhaosheng_undergraduate%20major_en.pdf)
+  - *Double Major: B.Sc. in Mathematics and Physics & B.Eng. in Electrical Engineering*
+  - *Junior, GPA: 3.81/4*.
+  <!-- - [Transcript](https://zhaosheng-thu.github.io/files/zhaosheng_undergraduate%20major_en.pdf) -->
   - Relevant courses:
-    - Physics: Optics(100), Quantum Mechanics(100), Electromagnetism(98), Thermodynamics(98).
+    - Physics: Optics(100), Quantum Mechanics(100), Electromagnetism(98), Thermodynamics(98), Statistical Mechanics(92)
     - Math: Calculus A1(98), Calculus A2(92), Mathematical Physics Equations(98), Linear Algebra(92).
   - [Personal Website](https://zhaosheng-thu.github.io/)
 
 ---
 
 ## Publications & Manuscripts
-- **VisionSpin: An Efficient Two-factor Authentication in VR based on Coordinated Head and Eye Movements**
-  - ***Sheng Zhao\***, JunRay Zhu\*, Shuning Zhang, Xueyang Wang, Fang Yi, Xin Yi<sup>†</sup>*
-  - *(Ubicomp'24, in submission)*
+- **CoordAuth: An Efficient Two-factor Authentication in VR based on Coordinated Head and Eye Movements**
+  <!-- - ***Sheng Zhao\***, JunRay Zhu\*, Shuning Zhang, Xueyang Wang, Fang Yi, Xin Yi<sup>†</sup>* -->
+  - ***Sheng Zhao**, Anonymous Author(s).*
+  - *1st Author, Ubicomp'24, under review.*
 - **EmoBlend: Revealing the Impact of Facial Blendshape Intensity on Emotional Perception**
-  - *Xueyang Wang\*, **Sheng Zhao\***, Yihe Wang, Ziyu Han, Xin Ge, Xin Tong<sup>†</sup>, Xin Yi<sup>†</sup>*
-  - *(ISMAR'24, in submission)*
+  <!-- - *Xueyang Wang\*, **Sheng Zhao\***, Yihe Wang, Ziyu Han, Xin Ge, Xin Tong<sup>†</sup>, Xin Yi<sup>†</sup>* -->
+  - *XX\*, **Sheng Zhao\***, Anonymous Author(s).*
+  - *Co-1st Author, ISMAR'24, in submission*
 
 ---
 
@@ -50,7 +52,7 @@ I am currently involved in VR-related research: human computer interaction  & co
   - Designing both qualitative and quantitative research methods based on interviews and questionnaires.
   - Conducting user research experiments and conducting data analysis.
   - Proposing an improved camera2blendshape method to mitigate the uncanny valley effect and enhance the emotional experience. 
-- We'll submit it to [ISMAR'24](https://www.ismar.net/2024/)(TVCG'24). Code [here](https://github.com/zhaosheng-thu/AvatarFacial).
+- We'll submit it to [ISMAR'24](https://www.ismar.net/2024/). Code [here](https://github.com/zhaosheng-thu/AvatarFacial).
 
 ### *HCI Group, Tsinghua University, China*
 - *Research Assistant, Advisor: [Xin Yi](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ)*
@@ -58,9 +60,9 @@ I am currently involved in VR-related research: human computer interaction  & co
 - My work include:
   - Project leader, proposing the current two-factor authentication framework based on unlock pattern and the behaviour biometrics.
   - Using Unity to build the 3*3 unlock UI in VR by Unity.
-  - Designing the biometric classifier by machine learning, using MLP etc. to implement the classification of behavior biometrics during saccades and fixations of eye movements.
-  - Conducting user experiments, validating framework robustness, achieveing a more than 98% accuray and both the FRR & FAR are lower than 0.05.
-- We'll submit it to [Ubicomp'24](https://dl.acm.org/conference/ubicomp). Code [here](https://github.com/ZhuJunray/srt_vr_auth).
+  - Designing the biometric classifier by machine learning, using RF etc. to implement the classification of behavior biometrics during saccades and fixations of eye movements.
+  - Conducting user studies, validating framework robustness against password collision, contextual factors and shoulder surfing attacks.
+- I have submitted it to [Ubicomp'24](https://dl.acm.org/conference/ubicomp). Code [here](https://github.com/ZhuJunray/srt_vr_auth).
 
 ### *[C3I Lab](http://c3i.ee.tsinghua.edu.cn/), Tsinghua University, China*
 - *Visiting Student, Advisor: [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=en&oi=ao)*
@@ -81,7 +83,7 @@ I am currently involved in VR-related research: human computer interaction  & co
 - *Remote research intern, Advisor: [Yalong Yang](https://ivi.cc.gatech.edu/people.html)*
 - **Research about taxonomic of Human data interaction in VR**
 - My work include:
-  - Collecting relevant papers presented at VR, VIS, ISMAR, TVCG etc."
+  - Collecting relevant papers presented at VR, VIS, ISMAR, TVCG etc.
   - Developing mini demos in VR by Unity.
 - The project is currently in progress.
 
@@ -101,7 +103,7 @@ I am currently involved in VR-related research: human computer interaction  & co
 
 ## Skills
 - Program language: C#(NET, Socket, Unity3D, VR), Python(Scikit-learn, Torch), Java(Android, Web spider)
-- Machine learning & Deep learning(SVM, KNN etc. Diffusion, Transformer)
+- Machine learning & Deep learning(Diffusion, Transformer)
 - User study design(Qualitative research, Quantitative research)
 - Hardware design(FPGA, STM32, MSP430)
 - Tools: Git, LaTeX, and Markdown.
