@@ -22,51 +22,53 @@ I am currently involved in VR-related research: **human computer interaction** &
 - **Tsinghua University**
   - *August 2021 -- Present*
   - *Double Major: B.Sc. in Mathematics and Physics & B.Eng. in Electrical Engineering*
-  - *Junior, GPA: 3.81/4*.
+  - *Junior, GPA: 3.81/4*
   <!-- - [Transcript](https://zhaosheng-thu.github.io/files/zhaosheng_undergraduate%20major_en.pdf) -->
-  - Relevant courses:
+  - *Relevant courses*:
     - Physics: Optics(100), Quantum Mechanics(100), Electromagnetism(98), Thermodynamics(98), Statistical Mechanics(92)
-    - Math: Calculus A1(98), Calculus A2(92), Mathematical Physics Equations(98), Linear Algebra(92).
-  - [Personal Website](https://zhaosheng-thu.github.io/)
+    - Math: Calculus A1(98), Mathematical Physics Equations(98), Calculus A2(92), Linear Algebra(92).
+  - *[Personal Website](https://zhaosheng-thu.github.io/)*
 
 ---
 
 ## Publications & Manuscripts
-- **CoordAuth: An Efficient Two-factor Authentication in VR based on Coordinated Head and Eye Movements**
+- **CoordAuth: A Two-factor Authentication Method in Virtual Reality Leveraging
+Head-Eye Coordination**
   <!-- - ***Sheng Zhao\***, JunRay Zhu\*, Shuning Zhang, Xueyang Wang, Fang Yi, Xin Yi<sup>†</sup>* -->
-  - ***Sheng Zhao**, Anonymous Author(s).*
+  <!-- - ***Sheng Zhao**, Anonymous Author(s).* -->
   - *1st Author, Ubicomp'24, under review.*
-- **EmoBlend: Revealing the Impact of Facial Blendshape Intensity on Emotional Perception**
+- **EmoBlend: Revealing the Impact of Facial Blendshape Intensity on Emotional Perception in Virtual Reality**
   <!-- - *Xueyang Wang\*, **Sheng Zhao\***, Yihe Wang, Ziyu Han, Xin Ge, Xin Tong<sup>†</sup>, Xin Yi<sup>†</sup>* -->
-  - *XX\*, **Sheng Zhao\***, Anonymous Author(s).*
-  - *Co-1st Author, ISMAR'24, in submission*
+  <!-- - *XX\*, **Sheng Zhao\***, Anonymous Author(s).* -->
+  - *Co-1st Author, ISMAR'24, in submission.*
 
 ---
 
 ## Research Experiences
 ### *HCI Group, Tsinghua University, China*
 - *Research Assistant, Advisor: [Xin Yi](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ) , [Yuanchun Shi](https://scholar.google.com/citations?user=TZm3-pwAAAAJ&hl=en&oi=ao)*
-- **EmoBlend: Revealing the Impact of Facial Blendshape Intensity on Emotional Perception**
+- **EmoBlend: Revealing the Impact of Facial Blendshape Intensity on Emotional Perception in Virtual Reality**
 - My work include:
   - Implementing VR face2face chat using TCP-based socket and [Oculus SDK](https://github.com/oculus-samples/Unity-Movement).
   - Designing both qualitative and quantitative research methods based on interviews and questionnaires.
   - Conducting user research experiments and conducting data analysis.
   - Proposing an improved camera2blendshape method to mitigate the uncanny valley effect and enhance the emotional experience. 
-- We'll submit it to [ISMAR'24](https://www.ismar.net/2024/). Code [here](https://github.com/zhaosheng-thu/AvatarFacial).
+- We'll submit it to [ISMAR'24](https://www.ismar.net/2024/). Code [here](https://zhaosheng-thu.github.io/projects/avatarfacialexpressions).
 
 ### *HCI Group, Tsinghua University, China*
 - *Research Assistant, Advisor: [Xin Yi](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ)*
-- **VisionSpin: An Efficient Two-factor Authentication in VR based on Coordinated Head and Eye Movements**
+- **CoordAuth: A Two-factor Authentication Method in Virtual Reality Leveraging
+Head-Eye Coordination**
 - My work include:
   - Project leader, proposing the current two-factor authentication framework based on unlock pattern and the behaviour biometrics.
   - Using Unity to build the 3*3 unlock UI in VR by Unity.
   - Designing the biometric classifier by machine learning, using RF etc. to implement the classification of behavior biometrics during saccades and fixations of eye movements.
   - Conducting user studies, validating framework robustness against password collision, contextual factors and shoulder surfing attacks.
-- I have submitted it to [Ubicomp'24](https://dl.acm.org/conference/ubicomp). Code [here](https://github.com/ZhuJunray/srt_vr_auth).
+- I have submitted it to [Ubicomp'24](https://dl.acm.org/conference/ubicomp). Code [here](https://zhaosheng-thu.github.io/projects/vrauth).
 
 ### *[C3I Lab](http://c3i.ee.tsinghua.edu.cn/), Tsinghua University, China*
 - *Visiting Student, Advisor: [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=en&oi=ao)*
-- **Research about high fidelity 3D generation by 2D-trained diffusion model**
+- Research about high fidelity 3D generation by 2D-trained **diffusion model**
 - My works include:
   - Finding existing models do not perform well in generating objects worn by people with complex 3D structures.
   - Conducting experiments to validate some basic ideas. 
@@ -74,14 +76,14 @@ I am currently involved in VR-related research: **human computer interaction** &
 
 ### *[Bear Lab](https://rochester-bear-lab.github.io/), University of Rochester, USA*
 - *Remote Research Intern, Advisor: [Yukang Yan](https://rochester-bear-lab.github.io/team) , [Yuntao Wang](https://pi.cs.tsinghua.edu.cn/lab/people/YuntaoWang/)*
-- **Research about EventCamera: Empowering Autonomous Driving Assistance**
+- Research about **EventCamera**: empowering autonomous driving assistance
 - My work include:
   - Developing a virtual environment for simulating autonomous driving by Unity.
 - The project is currently in progress.
 
 ### *[IVI Lab](https://ivi.cc.gatech.edu/people.html), Georgia Institute of Technology, USA*
 - *Remote research intern, Advisor: [Yalong Yang](https://ivi.cc.gatech.edu/people.html)*
-- **Research about taxonomic of Human data interaction in VR**
+- Research about taxonomic of **human data interaction** in VR
 - My work include:
   - Collecting relevant papers presented at VR, VIS, ISMAR, TVCG etc.
   - Developing mini demos in VR by Unity.
