@@ -8,7 +8,7 @@ excerpt: "<b>#HCI #Graphics #Social Computing</b><br/>Revealing the Impact of Fa
     <img src="0108male.png" alt="1" width="330" height="310">
 </div>
 
-**[The repository](https://github.com/zhaosheng-thu/AvatarFacial)** has implemented some novel features in VR, utilizing the official SDK for [Oculus Movements](https://github.com/oculus-samples/Unity-Movement).
+**[This repository](https://github.com/zhaosheng-thu/AvatarFacial)** has implemented some novel features in VR, utilizing the official SDK for [Oculus Movements](https://github.com/oculus-samples/Unity-Movement).
 
 - **Face2Face Communication**: Through TCP socket programming, I have developed a scene that allows two virtual avatars to engage in face-to-face communication within a virtual environment. Both users can see each other's body movements and facial expressions in real time, providing a new form of social interaction.
 

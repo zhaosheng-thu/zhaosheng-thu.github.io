@@ -1,14 +1,14 @@
 ---
 title: "CoordAuth: A Two-factor Authentication Method in Virtual Reality Leveraging Head-Eye Coordination"
 permalink: /projects/vrauth
-excerpt: "<b>#HCI #Authentication #ML</b><br/>A Two-factor Authentication Tech<br/><img src='imwut24a-storyboard.jpg' width='350' height='200'>"
+excerpt: "<b>#HCI #Authentication #ML</b><br/>A Two-factor Authentication Tech<br/><img src='imwut24a-storyboard.jpg' width='360' height='210'>"
 ---
 
 <div style="text-align:center;">
     <img src="imwut24a-storyboard.jpg" alt="Example Image" width="430" height="230">
 </div>
 
-**[The repository](https://github.com/zhaosheng-thu/VRAuthentication)** has implemented CoordAuth's UI layout in VR by Unity. Additionally, **[The repository](https://github.com/ZhuJunray/srt_vr_auth)** has implemented the Algorithm Design and Implementation of CoordAuth.
+**[This repository](https://github.com/zhaosheng-thu/VRAuthentication)** has implemented CoordAuth's UI layout in VR by Unity. Additionally, **[this repository](https://github.com/ZhuJunray/srt_vr_auth)** has implemented the Algorithm Design and Implementation of CoordAuth.
 
 <div style="text-align:center;">
     <img src="imwut24a-prototype.jpg" alt="Example Image" width="430" height="230">

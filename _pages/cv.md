@@ -62,7 +62,7 @@ Head-Eye Coordination**
 Head-Eye Coordination**
 - My work include:
   - Project leader, proposing the current two-factor authentication framework based on unlock pattern and the behaviour biometrics.
-  - Using Unity to build the 3*3 unlock UI in VR by Unity.
+  - Using Unity to build the 3*3 unlock UI in VR.
   - Designing the biometric classifier by machine learning, using RF etc. to implement the classification of behavior biometrics during saccades and fixations of eye movements.
   - Conducting user studies, validating framework robustness against password collision, contextual factors and shoulder surfing attacks.
 - I have submitted it to [Ubicomp'24](https://dl.acm.org/conference/ubicomp). Code [here](https://zhaosheng-thu.github.io/projects/vrauth).
