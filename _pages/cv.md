@@ -37,6 +37,7 @@ Head-Eye Coordination**
   <!-- - ***Sheng Zhao\***, JunRay Zhu\*, Shuning Zhang, Xueyang Wang, Fang Yi, Xin Yi<sup>†</sup>* -->
   <!-- - ***Sheng Zhao**, Anonymous Author(s).* -->
   - *1st Author, Ubicomp'24, under review.*
+  - *[PDF](/publications/imwut24a-sub3876.pdf)*
 - **EmoBlend: Revealing the Impact of Facial Blendshape Intensity on Emotional Perception in Virtual Reality**
   <!-- - *Xueyang Wang\*, **Sheng Zhao\***, Yihe Wang, Ziyu Han, Xin Ge, Xin Tong<sup>†</sup>, Xin Yi<sup>†</sup>* -->
   <!-- - *XX\*, **Sheng Zhao\***, Anonymous Author(s).* -->
@@ -99,7 +100,7 @@ Head-Eye Coordination**
 ### The 12th Tsinghua University Digital System Design Competition
 - Designed a small car driven by MSP430 with various sensors for autonomous navigation.
 - Modeled resource exploitation strategy using greedy algorithm.
-- The First Prize (1/60). Code [here](https://github.com/zhaosheng-thu/msp430car).
+- The First Prize (1/60). Code [here](https://zhaosheng-thu.github.io/projects/msp430car).
 
 ---
 

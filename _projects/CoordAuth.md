@@ -4,8 +4,6 @@ permalink: /projects/vrauth
 excerpt: "<b>#HCI #Authentication #ML</b><br/>A Two-factor Authentication Tech<br/><img src='imwut24a-storyboard.jpg' width='350' height='200'>"
 ---
 
-# CoordAuth: A Two-factor Authentication Method in Virtual Reality
-
 <div style="text-align:center;">
     <img src="imwut24a-storyboard.jpg" alt="Example Image" width="350" height="200">
 </div>
@@ -22,4 +20,4 @@ excerpt: "<b>#HCI #Authentication #ML</b><br/>A Two-factor Authentication Tech<b
 
 - **Usability**: CoordAuth also exhibited longitudinal stability with a 0.32% FAR and 2.73% FRR across 7 days. The subsequent usability and shoulder-surfing attack study proved CoordAuth's usability and robustness, where CoordAuth achieved 3.82s authentication time, 2.50% Error Rate, and 0.60% Attack Success Rate (ASR) comparable to knowledge-based and behavioral-biometric-based baselines.
 
-If you find this interesting, feel free to read the [paper](/_publications/imwut24a-sub3876.pdf)"
+If you find this interesting, feel free to read our **[paper](/publications/imwut24a-sub3876.pdf)**!
