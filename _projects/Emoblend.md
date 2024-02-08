@@ -19,7 +19,7 @@ excerpt: "<b>#HCI #Graphics #Social Computing</b><br/>Revealing the Impact of Fa
 If you find this interesting, feel free to watch [Demo1](https://www.youtube.com/watch?v=puNORFzl48w) and [Demo2](https://www.youtube.com/watch?v=2zthpene_yg)!
 
 <div style="text-align:center;">
-    <iframe width="350" height="315" src="https://www.youtube.com/embed/puNORFzl48w" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="260" src="https://www.youtube.com/embed/puNORFzl48w" frameborder="0" allowfullscreen></iframe>
 </div>
 
 In addition, we investigated the impact of facial blendshape intensity on users' emotional perception experience through semi-structured **interviews** and 7Likert-scale **questionnaires**. Furthermore, we proposed a specific implementation method to alleviate the **uncanny valley** effect and enhance the efficiency of emotional perception for users, allowing both conversational parties to have a better experience.
