@@ -5,13 +5,13 @@ excerpt: "<b>#HCI #Authentication #ML</b><br/>A Two-factor Authentication Tech<b
 ---
 
 <div style="text-align:center;">
-    <img src="imwut24a-storyboard.jpg" alt="Example Image" width="350" height="200">
+    <img src="imwut24a-storyboard.jpg" alt="Example Image" width="430" height="230">
 </div>
 
 **[The repository](https://github.com/zhaosheng-thu/VRAuthentication)** has implemented CoordAuth's UI layout in VR by Unity. Additionally, **[The repository](https://github.com/ZhuJunray/srt_vr_auth)** has implemented the Algorithm Design and Implementation of CoordAuth.
 
 <div style="text-align:center;">
-    <img src="imwut24a-prototype.jpg" alt="Example Image" width="350" height="200">
+    <img src="imwut24a-prototype.jpg" alt="Example Image" width="430" height="230">
 </div>
 
 - **3*3 Unlock UI**: I have designed unlock screens of various sizes, allowing you to draw your pattern using your gaze, similar to unlocking a phone. Not sure how to begin? Close your eyes for 0.3 seconds and then open them, you'll notice a cursor appearing! Now, start drawing your pattern to unlock!

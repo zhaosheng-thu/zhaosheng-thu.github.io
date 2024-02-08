@@ -1,11 +1,11 @@
 ---
 title: "A model car controlled by MSP430 capable of autonomous navigation.."
 permalink: /projects/msp430car
-excerpt: "<b>#Sensor #Hardware Design #microcontroller #Greedy Algorithm</b><br/>A model car using sensors and Bluetooth to obtain contextual information, and utilizing MSP430 to make autonomous navigation decisions.<br/><img src='msp430car.jpg' width='260' height='200'>"
+excerpt: "<b>#Sensor #Hardware Design #Microcontroller #Greedy Algorithm</b><br/>A model car using sensors and Bluetooth to obtain contextual information, and utilizing MSP430 to make autonomous navigation decisions.<br/><img src='msp430car.jpg' width='260' height='200'>"
 ---
 
 <div style="text-align:center;">
-    <iframe width="400" height="315" src="https://www.youtube.com/embed/n2sC8Pn0ipk" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="315" src="https://www.youtube.com/embed/n2sC8Pn0ipk" frameborder="0" allowfullscreen></iframe>
 </div>
 
 **[This repository](https://github.com/zhaosheng-thu/msp430car)** implemented a microcontroller-controlled car capable of autonomous navigation and accessing virtual resources.

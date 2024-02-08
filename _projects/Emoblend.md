@@ -5,7 +5,7 @@ excerpt: "<b>#HCI #Graphics #Social Computing</b><br/>Revealing the Impact of Fa
 ---
 
 <div style="text-align:center;">
-    <img src="0108male.png" alt="1" width="300" height="290">
+    <img src="0108male.png" alt="1" width="330" height="310">
 </div>
 
 **[The repository](https://github.com/zhaosheng-thu/AvatarFacial)** has implemented some novel features in VR, utilizing the official SDK for [Oculus Movements](https://github.com/oculus-samples/Unity-Movement).
@@ -19,7 +19,7 @@ excerpt: "<b>#HCI #Graphics #Social Computing</b><br/>Revealing the Impact of Fa
 If you find this interesting, feel free to watch [Demo1](https://www.youtube.com/watch?v=puNORFzl48w) and [Demo2](https://www.youtube.com/watch?v=2zthpene_yg)!
 
 <div style="text-align:center;">
-    <iframe width="400" height="315" src="https://www.youtube.com/embed/puNORFzl48w" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="315" src="https://www.youtube.com/embed/puNORFzl48w" frameborder="0" allowfullscreen></iframe>
 </div>
 
 In addition, we investigated the impact of facial blendshape intensity on users' emotional perception experience through semi-structured **interviews** and 7Likert-scale **questionnaires**. Furthermore, we proposed a specific implementation method to alleviate the **uncanny valley** effect and enhance the efficiency of emotional perception for users, allowing both conversational parties to have a better experience.
