@@ -1,7 +1,7 @@
 ---
 title: "EmoBlend: Revealing the Impact of Facial Blendshape Intensity on Emotional Perception"
 collection: publications
-permalink: /publications/avatarfacial
-excerpt: "<i>Xueyang Wang, <b>Sheng Zhao</b><sup>*</sup>, Yihe Wang, etc</i>"
+permalink: /publications/EmoBlend
+excerpt: "<i>Xueyang Wang<sup>*</sup>, <b>Sheng Zhao</b><sup>*</sup>, etc, ISMAR’24, in submission</i>"
 ---
 
