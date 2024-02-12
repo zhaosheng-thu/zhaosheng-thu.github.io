@@ -23,7 +23,7 @@ I am currently involved in VR-related research: **human computer interaction** &
   - *August 2021 -- Present*
   - *Double Major: B.Sc. in Mathematics and Physics & B.Eng. in Electrical Engineering*
   - *Junior, GPA: 3.81/4*
-  <!-- - [Transcript](https://zhaosheng-thu.github.io/files/zhaosheng_undergraduate%20major_en.pdf) -->
+  - *[Transcript](https://zhaosheng-thu.github.io/files/zhaosheng_undergraduate%20major_en.pdf)*
   - *Relevant courses*:
     - Physics: Optics(100), Quantum Mechanics(100), Electromagnetism(98), Thermodynamics(98), Statistical Mechanics(92)
     - Math: Calculus A1(98), Mathematical Physics Equations(98), Calculus A2(92), Linear Algebra(92).

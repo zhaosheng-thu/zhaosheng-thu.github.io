@@ -1,7 +1,7 @@
 ---
 title: "EmoBlend: Revealing the Impact of Facial Blendshape Intensity on Emotional Perception"
 permalink: /projects/avatarfacialexpressions
-excerpt: "<b>#HCI #Graphics #Social Computing</b><br/>Revealing the Impact of Facial Blendshape Intensity on Emotional Perception<br/><img src='0108male.png' width='210' height='200'>"
+excerpt: "<b>#HCI #Graphics #Social Computing</b><br/>Revealing the Impact of Facial Blendshape Intensity on Emotional Perception in Virtual Reality<br/><img src='0108male.png' width='210' height='200'>"
 ---
 
 <div style="text-align:center;">
