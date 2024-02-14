@@ -19,11 +19,11 @@ Welcome to my personal website! I'm **Sheng Zhao**, and you can call me Alex. I'
 Currently, I'm a research assistant at Tsinghua University, under the advisory of Prof. [Xin Yi](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ) and Prof. [Yuanchun Shi](https://scholar.google.com/citations?user=TZm3-pwAAAAJ&hl=en&oi=ao).
 <!-- And at the same time, I'm a visiting student at [C3ILab](http://c3i.ee.tsinghua.edu.cn/), Tsinghua University, under the advisory of Prof. [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=en&oi=ao). -->
 
-My research interests lie in the fields of interactive **usability**, **privacy** and **security** in **Virtual Reality**, as well as efficient and trustworthy **human-AI interaction** technologies. I'm currently conducting the following research:
+My research interests lie in the fields of **usable privacy**, **security** and **social computing** in **Virtual Reality**, as well as efficient and trustworthy **human-AI interaction** technologies. I'm currently conducting the following research:
 
 - Interaction Techniques in VR:
 
-  - Developed a novel two-factor authentication method utilizing gaze interaction to address security concerns.
+  - Developed a novel two-factor authentication method utilizing head-eye coordinated behavioral biometrics to address security concerns and shoulder surfing attacks.
   - Explored the impact of avatar facial blendshapes intensity on emotional perception in VR and proposed a camera2blendshape method to mitigate the uncanny valley effect.
   - Collaborated on research to summarize existing human data interaction technologies into a comprehensive taxonomy.
 
