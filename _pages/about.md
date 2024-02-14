@@ -36,7 +36,8 @@ My future directions include:
 
 - Focusing on designing more efficient and usable interaction techniques in virtual reality.
 - Exploring the potential for efficient and reliable human-AI interaction in various common scenarios.
-- Designing innovative interaction systems utilizing various sensors to enhance people's work efficiency and quality of life.
+- Designing innovative interaction systems utilizing various sensors to enhance people's work efficiency and quality of life.  
+
 <!-- My research domains span **Human Computer Interaction** from the human-centered perspective and **Computer Vision** from the technical perspective. -->
 <!-- - **Social Computing** in VR: I try to figure out the impact of facial blendshape intensity on people's emotional perception and the Uncanny Valley Effect. This is critical for the experiences of individuals participating in social communication in VR.
 - Two Factor **Authentication** in VR: I'm eager to design a novel authentication framework which can be used for HMDs. It allows fast and comfortable input, is stable and can resist shoulder surfing. And it can be easily deployed on many HMDs, compensating for the absence of an authentication method uniquely tailored for head-mounted displays.
