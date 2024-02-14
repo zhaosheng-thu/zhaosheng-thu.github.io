@@ -1,7 +1,7 @@
 ---
 title: "CoordAuth: A Two-factor Authentication Method in Virtual Reality Leveraging Head-Eye Coordination"
 permalink: /projects/vrauth
-excerpt: "<b>#HCI #Authentication #ML</b><br/>A Two-factor Authentication Tech<br/><img src='imwut24a-storyboard.jpg' width='360' height='210'>"
+excerpt: "<b>#HCI #Authentication #ML #VR #Usable Privacy</b><br/>A Two-factor Authentication Tech<br/><img src='imwut24a-storyboard.jpg' width='360' height='210'>"
 ---
 
 <div style="text-align:center;">

@@ -9,8 +9,8 @@ main:
   - title: "Projects"
     url: "/projects/"
     
-  - title: "Blogs"
-    url: "/knowledge/"
+  # - title: "Blogs"
+  #   url: "/knowledge/"
 
   - title: "CV"
     url: "/cv/"

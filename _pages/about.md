@@ -12,7 +12,7 @@ redirect_from:
 
 ## Who I am
 
-Welcome to my personal website! I'm **Sheng Zhao**, and you can call me Alex. I'm a junior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China🏫. Now I am pursuing a dual degree in **Fundamental Science**(Mathematics\&Physics) and **Electrical Engineering**🎓 .
+Welcome to my personal website! I'm **Sheng Zhao**, and you can call me Alex. I'm a junior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China🏫. Now I am pursuing a dual degree in **Fundamental Science**(Mathematics&Physics) and **Electrical Engineering**🎓 .
 
 ## Research
 
@@ -25,7 +25,7 @@ My research interests lie in the fields of interactive **usability**, **privacy*
 
   - Developed a novel two-factor authentication method utilizing gaze interaction to address security concerns.
   - Explored the impact of avatar facial blendshapes intensity on emotional perception in VR and proposed a camera2blendshape method to mitigate the uncanny valley effect.
-  - Collaborated on research to summarize existing interaction technologies into a comprehensive taxonomy.
+  - Collaborated on research to summarize existing human data interaction technologies into a comprehensive taxonomy.
 
 - Human-AI Collaboration Technologies:
 
@@ -34,15 +34,15 @@ My research interests lie in the fields of interactive **usability**, **privacy*
 
 My future directions include:
 
-- Focus on designing more efficient and usable interaction techniques in virtual reality.
-- Explore the potential for efficient and reliable human-AI interaction in various common scenarios.
-
+- Focusing on designing more efficient and usable interaction techniques in virtual reality.
+- Exploring the potential for efficient and reliable human-AI interaction in various common scenarios.
+- Designing innovative interaction systems utilizing various sensors to enhance people's work efficiency and quality of life.
 <!-- My research domains span **Human Computer Interaction** from the human-centered perspective and **Computer Vision** from the technical perspective. -->
 <!-- - **Social Computing** in VR: I try to figure out the impact of facial blendshape intensity on people's emotional perception and the Uncanny Valley Effect. This is critical for the experiences of individuals participating in social communication in VR.
 - Two Factor **Authentication** in VR: I'm eager to design a novel authentication framework which can be used for HMDs. It allows fast and comfortable input, is stable and can resist shoulder surfing. And it can be easily deployed on many HMDs, compensating for the absence of an authentication method uniquely tailored for head-mounted displays.
 - 3D generation by **Diffusion Model**: I try to make modifications to the current diffusion based 3D generation framework, enabling it to produce high-fidelity and rapidly generated 3D models suitable for use in mainstream VR/AR development engines. This can enhance the diversity of the VR world and make interactions between people and VR more efficient. -->
 
-I am striving to submit my work in <i>IMWUT(Ubicomp), UIST, TVCG, MM</i> and <i>CHI</i>. I am committed to making impactful contributions during my undergraduate studies and in the future."
+I am striving to submit my work in <i>IMWUT(Ubicomp), UIST</i> and <i>CHI</i>. I am committed to making impactful contributions during my undergraduate studies and in the future."
 
 ## Hobbies
 

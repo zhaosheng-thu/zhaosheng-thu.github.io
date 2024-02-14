@@ -14,7 +14,7 @@ redirect_from:
 - Phone: (+86) 186-2226-6039
 - LinkedIn: [Sheng Zhao](https://www.linkedin.com/in/sheng-zhao-027719290/)
 
-I am currently involved in VR-related research: **human computer interaction** & **computer vision**, including social computing, authentication, text entry in VR, as well as 3D generation by diffusion model.
+My research interests include interactive usability, privacy, and security in Virtual Reality, as well as efficient and trustworthy human-AI interaction technologies.
 
 ---
 
