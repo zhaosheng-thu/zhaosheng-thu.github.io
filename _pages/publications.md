@@ -20,7 +20,8 @@ author_profile: true
   <div>
       <b><a href="https://zhaosheng-thu.github.io/publications/CoordAuth">CoordAuth: A Two-factor Authentication Method in Virtual Reality Leveraging Head-Eye Coordination</a></b>
       <br> <b>Anonymous author(s)</b>, 1st Author.
-      <br> <i>The 2024 ACM international joint conference on Pervasive and Ubiquitous Computing & The 2024 ACM International Symposium on Wearable Computing (Ubicomp / ISWC 2024)</i>, under rewiew.
+      <br> <i>The 2024 ACM international joint conference on Pervasive and Ubiquitous Computing & The 2024 ACM International Symposium on Wearable Computing (Ubicomp / ISWC 2024)</i>, in submission.
+      <br> [<a href="https://zhaosheng-thu.github.io/publications/imwut24a-sub3876.pdf">Paper</a>] [<a href="https://github.com/zhaosheng-thu/VRAuthentication">Code</a>]
   </div>
 </div>
 
@@ -30,5 +31,6 @@ author_profile: true
       <b><a href="https://zhaosheng-thu.github.io">EmoBlend: Revealing the Impact of Facial Blendshape Intensity on Emotional Perception in Virtual Reality</a></b>
       <br> <b>Anonymous author(s)</b>, Co-1st Author.
       <br> <i>The 23rd IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2024)</i>, under rewiew.
+      <br> [<a href="https://github.com/zhaosheng-thu/AvatarFacial">Code</a>]
   </div>
 </div>
