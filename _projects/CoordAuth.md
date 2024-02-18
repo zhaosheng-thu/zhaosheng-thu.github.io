@@ -1,20 +1,21 @@
 ---
 title: "CoordAuth: A Two-factor Authentication Method in Virtual Reality Leveraging Head-Eye Coordination"
 permalink: /projects/vrauth
-excerpt: "<b>#HCI #Authentication #ML #VR #Usable Privacy</b><br/>A Two-factor Authentication Tech<br/><img src='imwut24a-storyboard.jpg' width='360' height='210'>"
+# excerpt: "<b>#HCI #Authentication #ML #VR #Usable Privacy</b><br/>A Two-factor Authentication Tech<br/><img src='imwut24a-storyboard.jpg' width='360' height='210'>"
+excerpt: 
 ---
+
+**[This repository](https://github.com/zhaosheng-thu/VRAuthentication)** has implemented CoordAuth's UI layout in VR by Unity. Additionally, **[this repository](https://github.com/ZhuJunray/srt_vr_auth)** has implemented the Algorithm Design and Implementation of CoordAuth.
 
 <div style="text-align:center;">
     <img src="imwut24a-storyboard.jpg" alt="Example Image" width="430" height="230">
 </div>
 
-**[This repository](https://github.com/zhaosheng-thu/VRAuthentication)** has implemented CoordAuth's UI layout in VR by Unity. Additionally, **[this repository](https://github.com/ZhuJunray/srt_vr_auth)** has implemented the Algorithm Design and Implementation of CoordAuth.
+- **3*3 Unlock UI**: I have designed unlock screens of various sizes, allowing you to draw your pattern using your gaze, similar to unlocking a phone. Not sure how to begin? Close your eyes for 0.3 seconds and then open them, you'll notice a cursor appearing! Now, start drawing your pattern to unlock!
 
 <div style="text-align:center;">
     <img src="imwut24a-prototype.jpg" alt="Example Image" width="430" height="230">
 </div>
-
-- **3*3 Unlock UI**: I have designed unlock screens of various sizes, allowing you to draw your pattern using your gaze, similar to unlocking a phone. Not sure how to begin? Close your eyes for 0.3 seconds and then open them, you'll notice a cursor appearing! Now, start drawing your pattern to unlock!
 
 - **Algorithm Design and Implementation**: Leveraging unique head-eye coordination features, CoordAuth combined pattern-based classifiers and majority voting-based behavioral biometric classifiers for two-factor authentication, achieving 0.04% False Acceptance Rate (FAR) and 0.88% False Rejection Rate (FRR) during leave-one-out simulation.
 
