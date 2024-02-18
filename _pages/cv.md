@@ -7,9 +7,9 @@ redirect_from:
   - /resume
 ---
 
-# Sheng Zhao
+<!-- # Sheng Zhao
 
-**Contact Information:**
+ **Contact Information:**
 - Email: alexzhao0705@gmail.com
 - Phone: (+86) 186-2226-6039
 - LinkedIn: [Sheng Zhao](https://www.linkedin.com/in/sheng-zhao-027719290/)
@@ -23,13 +23,13 @@ My research interests include interactive usability, privacy, and security in Vi
   - *August 2021 -- Present*
   - *Double Major: B.Sc. in Mathematics and Physics & B.Eng. in Electrical Engineering*
   - *Junior, GPA: 3.81/4*
-  <!-- - *[Transcript](https://zhaosheng-thu.github.io/files/zhaosheng_undergraduate%20major_en.pdf)* -->
+  - *[Transcript](https://zhaosheng-thu.github.io/files/zhaosheng_undergraduate%20major_en.pdf)*
   - *Relevant courses*:
     - Physics: Optics(100), Quantum Mechanics(100), Electromagnetism(98), Thermodynamics(98), Statistical Mechanics(92)
     - Math: Calculus A1(98), Mathematical Physics Equations(98), Calculus A2(92), Linear Algebra(92).
-  - *[Personal Website](https://zhaosheng-thu.github.io/)*
+  - *[Personal Website](https://zhaosheng-thu.github.io/)* 
 
----
+--- -->
 
 ## Publications & Manuscripts
 - **CoordAuth: A Two-factor Authentication Method in Virtual Reality Leveraging
@@ -92,7 +92,7 @@ Head-Eye Coordination**
 
 ---
 
-## Science and Technology Innovation Competition
+<!-- ## Science and Technology Innovation Competition
 ### Tsinghua University Software Design Competition
 - Developed a Smart Home Android app using Java, which includes features like Bluetooth connectivity, weather forecast queries, and communication with hardware devices.
 - The Second Prize. Code [here](https://github.com/zhaosheng-thu/Smart-Home-APP).
@@ -102,8 +102,8 @@ Head-Eye Coordination**
 - Modeled resource exploitation strategy using greedy algorithm.
 - The First Prize (1/60). Code [here](https://zhaosheng-thu.github.io/projects/msp430car).
 
----
-
+--- -->
+<!-- 
 ## Skills
 - Program language: C#(NET, Socket, Unity3D, VR), Python(Scikit-learn, Torch), Java(Android, Web spider)
 - Machine learning & Deep learning(Diffusion, Transformer)
@@ -120,4 +120,4 @@ Head-Eye Coordination**
 - Second Prize, Tsinghua University "Smart Coastal" Software Design Competition (January 2023)
 - First Prize, Tsinghua University Scientific And Technological Innovation Scholarship (October 2023)
 - First Prize, Tsinghua University Sports Excellence Scholarship (October 2023)
-- First Prize, The 3rd Tsinghua Craftsman Competition, 1%, Presented a representative speech (November 2023)
+- First Prize, The 3rd Tsinghua Craftsman Competition, 1%, Presented a representative speech (November 2023) -->
