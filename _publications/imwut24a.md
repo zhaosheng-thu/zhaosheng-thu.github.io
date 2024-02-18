@@ -1,6 +1,5 @@
 ---
 title: "CoordAuth: A Two-factor Authentication Method in Virtual Reality Leveraging Head-Eye Coordination"
-collection: publications
 permalink: /publications/CoordAuth
 excerpt: "<i><b>Sheng Zhao</b>, etc, Ubicomp’24, under review</i>"
 ---
