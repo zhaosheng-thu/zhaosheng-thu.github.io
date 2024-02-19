@@ -1,6 +1,7 @@
 ---
 title: "Immersive 3D cinema experience in VR/AR"
 permalink: /projects/drive
+excerpt: 
 ---
 
 Choose your favorite video, load it into the virtual space, and enjoy a unique sense of immersion!  
