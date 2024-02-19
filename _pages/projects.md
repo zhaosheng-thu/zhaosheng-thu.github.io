@@ -51,3 +51,21 @@ author_profile: true
       <br> Keywords: <i>Sensors, Microcontroller, Greedy Algorithm </i>
   </div>
 </div>
+
+<div style="display: flex; align-items: start; margin-bottom: 20px;">
+  <img src="../images/autodrive.jpg" style="margin-right: 15px; width: 150px;">
+  <div>
+      <b><a href="https://zhaosheng-thu.github.io/projects/drive">FreeDrive</a></b>
+      <br> A virtual driving environment in VR developed by Unity 3D.
+      <br> Keywords: <i>Virtual Reality </i>
+  </div>
+</div>
+
+<div style="display: flex; align-items: start; margin-bottom: 20px;">
+  <img src="../images/Theater.jpg" style="margin-right: 15px; width: 150px;">
+  <div>
+      <b><a href="https://zhaosheng-thu.github.io/projects/cinema">VRCinema</a></b>
+      <br> Enjoying a unique sense of immersion while watching moves.
+      <br> Keywords: <i>Virtual Reality </i>
+  </div>
+</div>
