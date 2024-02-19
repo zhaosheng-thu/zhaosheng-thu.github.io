@@ -47,7 +47,7 @@ author_profile: true
   <img src="../images/msp430.png" style="margin-right: 15px; width: 150px;">
   <div>
       <b><a href="https://zhaosheng-thu.github.io/projects/msp430car">SensVehicle</a></b>
-      <br> A self-navigating small vehicle controlled by MSP430 and equipped with various <b>sensors</b> and hardware.
+      <br> A self-navigating vehicle controlled by MSP430 and equipped with <b>sensors</b> and hardware.
       <br> Keywords: <i>Sensors, Microcontroller, Greedy Algorithm </i>
   </div>
 </div>
