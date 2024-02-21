@@ -65,7 +65,7 @@ author_profile: true
   <img src="../images/Theater.jpg" style="margin-right: 15px; width: 150px;">
   <div>
       <b><a href="https://zhaosheng-thu.github.io/projects/cinema">VRCinema</a></b>
-      <br> Enjoying a unique sense of immersion while watching moves.
+      <br> Enjoying a unique sense of immersion while watching movies.
       <br> Keywords: <i>Virtual Reality </i>
   </div>
 </div>

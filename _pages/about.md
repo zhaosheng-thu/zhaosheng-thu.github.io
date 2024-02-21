@@ -43,7 +43,7 @@ My future directions include:
 - Two Factor **Authentication** in VR: I'm eager to design a novel authentication framework which can be used for HMDs. It allows fast and comfortable input, is stable and can resist shoulder surfing. And it can be easily deployed on many HMDs, compensating for the absence of an authentication method uniquely tailored for head-mounted displays.
 - 3D generation by **Diffusion Model**: I try to make modifications to the current diffusion based 3D generation framework, enabling it to produce high-fidelity and rapidly generated 3D models suitable for use in mainstream VR/AR development engines. This can enhance the diversity of the VR world and make interactions between people and VR more efficient. -->
 
-I am striving to submit my work in <i>IMWUT(Ubicomp), UIST</i> and <i>CHI</i>. I am committed to making impactful contributions during my undergraduate studies and in the future."
+I am striving to submit my work in <i>IMWUT(Ubicomp), UIST</i> and <i>CHI</i>. I am committed to making impactful contributions during my undergraduate studies and in the future.
 
 ## Hobbies
 
