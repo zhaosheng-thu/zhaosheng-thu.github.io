@@ -37,11 +37,11 @@ Head-Eye Coordination**
   <!-- - ***Sheng Zhao\***, JunRay Zhu\*, Shuning Zhang, Xueyang Wang, Fang Yi, Xin Yi<sup>†</sup>* -->
   <!-- - ***Sheng Zhao**, Anonymous Author(s).* -->
   - *1st Author, Ubicomp'24, under review.*
-  - *[PDF](/publications/imwut24a-sub3876.pdf)*
+  <!-- - *[PDF](/publications/imwut24a-sub3876.pdf)* -->
 - **EmoBlend: Revealing the Impact of Facial Blendshape Intensity on Emotional Perception in Virtual Reality**
   <!-- - *Xueyang Wang\*, **Sheng Zhao\***, Yihe Wang, Ziyu Han, Xin Ge, Xin Tong<sup>†</sup>, Xin Yi<sup>†</sup>* -->
   <!-- - *XX\*, **Sheng Zhao\***, Anonymous Author(s).* -->
-  - *Co-1st Author, ISMAR'24, in submission.*
+  - *Co-1st Author, TVCG, in submission.*
 
 ---
 
@@ -54,7 +54,7 @@ Head-Eye Coordination**
   - Designing both qualitative and quantitative research methods based on interviews and questionnaires.
   - Conducting user research experiments and conducting data analysis.
   - Proposing an improved camera2blendshape method to mitigate the uncanny valley effect and enhance the emotional experience. 
-- We'll submit it to [ISMAR'24](https://www.ismar.net/2024/). Code [here](https://zhaosheng-thu.github.io/projects/avatarfacialexpressions).
+- We'll submit it to [TVCG](). Code [here](https://zhaosheng-thu.github.io/projects/avatarfacialexpressions).
 
 ### *HCI Group, Tsinghua University, China*
 - *Research Assistant, Advisor: [Xin Yi](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ)*
@@ -69,7 +69,7 @@ Head-Eye Coordination**
 
 ### *[C3I Lab](http://c3i.ee.tsinghua.edu.cn/), Tsinghua University, China*
 - *Visiting Student, Advisor: [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=en&oi=ao)*
-- Research about high fidelity 3D generation by 2D-trained **diffusion model**
+- Research about high fidelity avatar generation by 2D-trained **diffusion model**
 - My works include:
   - Finding existing models do not perform well in generating objects worn by people with complex 3D structures.
   - Conducting experiments to validate some basic ideas. 

@@ -44,6 +44,15 @@ author_profile: true
 </div>
 
 <div style="display: flex; align-items: start; margin-bottom: 20px;">
+  <img src="../images/avatars-g.jpg" style="margin-right: 15px; width: 150px;">
+  <div>
+      <b><a href="https://github.com/zhaosheng-thu/AvatarDiffusion">AvatarFusion</a></b>
+      <br> Utilizing dreambooth and LoRA to fine-tune <b>diffusion</b> model for avatar generation.
+      <br> Keywords: <i>Computer Vision and Pattern Recognition, Diffusion Model, Low-Rank Adaptation</i>
+  </div>
+</div>
+
+<div style="display: flex; align-items: start; margin-bottom: 20px;">
   <img src="../images/msp430.png" style="margin-right: 15px; width: 150px;">
   <div>
       <b><a href="https://zhaosheng-thu.github.io/projects/msp430car">SensVehicle</a></b>
@@ -55,7 +64,7 @@ author_profile: true
 <div style="display: flex; align-items: start; margin-bottom: 20px;">
   <img src="../images/autodrive.jpg" style="margin-right: 15px; width: 150px;">
   <div>
-      <b><a href="https://zhaosheng-thu.github.io/projects/drive">FreeDrive</a></b>
+      <b><a href="https://zhaosheng-thu.github.io/projects/drive">EVCDrive</a></b>
       <br> A virtual driving environment in VR developed by Unity 3D.
       <br> Keywords: <i>Virtual Reality </i>
   </div>
