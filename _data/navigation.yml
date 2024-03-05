@@ -12,8 +12,8 @@ main:
   # - title: "Blogs"
   #   url: "/knowledge/"
 
-  - title: "Research"
-    url: "/cv/"
+  # - title: "Research"
+  #   url: "/cv/"
 
   - title: "CV"
-    url: "/files/CV_ShengZhao_2024_02.pdf"
+    url: "/margin/"
