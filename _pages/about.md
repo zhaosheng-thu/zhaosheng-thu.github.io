@@ -46,7 +46,7 @@ My future directions include:
 My research interests focus on developing efficient, controllable and trustworthy **computing systems** facilitating interaction between **humans** and **mobile devices**, leveraging **AI** and **ML** technologies, as illustrated in the following image:
 
 <div style="text-align: center;">
-  <img src="../images/research-2.jpg", style="width: 95%;">
+  <img src="../images/research-2.jpg" style="width: 95%;">
 </div>
 
 <details>
