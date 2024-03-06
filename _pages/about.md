@@ -12,14 +12,14 @@ redirect_from:
 
 ## Who I am
 
-Welcome to my personal website! I'm **Sheng Zhao**, and you can call me Alex. I'm a junior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China🏫. Now I am pursuing a dual degree in **Fundamental Science**(Mathematics&Physics) and **Electrical Engineering**🎓 .
+Welcome to my personal website! I'm **Sheng Zhao**, and you can call me Alex. I'm a junior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China🏫. Now I am pursuing a dual degree in **Fundamental Science** (Mathematics & Physics) and **Electrical Engineering**🎓 .
 
 ## Research
 
-Currently, I'm a research assistant at Tsinghua University, under the advisory of Prof. [Xin Yi](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ) and Prof. [Yuanchun Shi](https://scholar.google.com/citations?user=TZm3-pwAAAAJ&hl=en&oi=ao).
+Currently, I'm a research assistant at **Tsinghua University**, under the advisory of Assistant Professor [<i>Xin Yi</i>](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ) and Professor [<i>Yuanchun Shi</i>](https://scholar.google.com/citations?user=TZm3-pwAAAAJ&hl=en&oi=ao). Meanwhile, I'm also a research intern under the supervisor of Chair Professor [<i>Bowen Zhou</i>](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ) at **Tsinghua University** and Assistant Professor [<i>Yukang Yan</i>](https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao) at **University of Rochester**.
 <!-- And at the same time, I'm a visiting student at [C3ILab](http://c3i.ee.tsinghua.edu.cn/), Tsinghua University, under the advisory of Prof. [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=en&oi=ao). -->
 
-My research interests lie in the fields of **usable privacy**, **security** and **social computing** in **Virtual Reality**, as well as efficient and trustworthy **human-AI interaction** technologies. I'm currently conducting the following research:
+<!-- My research interests lie in the fields of **usable privacy**, **security** and **social computing** in **Virtual Reality**, as well as efficient and trustworthy **human-AI interaction** technologies. I'm currently conducting the following research:
 
 - Interaction Techniques in VR:
 
@@ -36,14 +36,95 @@ My future directions include:
 
 - Focusing on designing more efficient and usable interaction techniques in virtual reality.
 - Exploring the potential for efficient and reliable human-AI interaction in various common scenarios.
-- Designing innovative interaction systems utilizing various sensors to enhance people's work efficiency and quality of life.  
+- Designing innovative interaction systems utilizing various sensors to enhance people's work efficiency and quality of life.   -->
 
 <!-- My research domains span **Human Computer Interaction** from the human-centered perspective and **Computer Vision** from the technical perspective. -->
 <!-- - **Social Computing** in VR: I try to figure out the impact of facial blendshape intensity on people's emotional perception and the Uncanny Valley Effect. This is critical for the experiences of individuals participating in social communication in VR.
 - Two Factor **Authentication** in VR: I'm eager to design a novel authentication framework which can be used for HMDs. It allows fast and comfortable input, is stable and can resist shoulder surfing. And it can be easily deployed on many HMDs, compensating for the absence of an authentication method uniquely tailored for head-mounted displays.
 - 3D generation by **Diffusion Model**: I try to make modifications to the current diffusion based 3D generation framework, enabling it to produce high-fidelity and rapidly generated 3D models suitable for use in mainstream VR/AR development engines. This can enhance the diversity of the VR world and make interactions between people and VR more efficient. -->
 
-I am striving to submit my work in <i>IMWUT(Ubicomp), UIST</i> and <i>CHI</i>. I am committed to making impactful contributions during my undergraduate studies and in the future.
+My research interests focus on developing efficient, controllable and trustworthy **computing systems** facilitating interaction between **humans** and **mobile devices**, leveraging **AI** and **ML** technologies, as illustrated in the following image:
+
+<p style="text-align: center;">
+<img src="../images/research-2.jpg", style="width: 95%;">
+</p>
+
+<details>
+  <summary>Click to view relevant  <b>research projects</b>:</summary>
+  
+<p></p>
+    <hr style="border: none; height: 1px; background-color: black; margin-top: 10px; margin-bottom: 10px;">
+
+<div style="display: flex; align-items: start; margin-bottom: 20px;">
+  <img src="../images/CoordAuth.jpg" style="margin-right: 15px; width: 150px;">
+  <div>
+      <b><a href="https://zhaosheng-thu.github.io/projects/vrauth">CoordAuth</a></b>
+      <br> A Two-factor <b>Authentication</b> Method in Virtual Reality Leveraging Head-Eye Coordination.
+      <br> Keywords: <i>Human Computer interaction, Machine Learning, Virtual Reality, Usable privacy </i>
+  </div>
+</div>
+
+<div style="display: flex; align-items: start; margin-bottom: 20px;">
+  <img src="../images/Emoblend.png" style="margin-right: 15px; width: 150px;">
+  <div>
+      <b><a href="https://zhaosheng-thu.github.io/projects/avatarfacialexpressions">EmoBlend</a></b>
+      <br> Revealing the Impact of Avatar's Facial <b>Blendshape</b> Intensity on Emotional Perception in VR.
+      <br> Keywords: <i>Human Computer interaction, Graphics, Virtual Reality, Social Computing </i>
+  </div>
+</div>
+
+<div style="display: flex; align-items: start; margin-bottom: 20px;">
+  <img src="../images/avatars-g.jpg" style="margin-right: 15px; width: 150px;">
+  <div>
+      <b><a href="https://github.com/zhaosheng-thu/AvatarDiffusion">AvatarFusion</a></b>
+      <br> Utilizing dreambooth and LoRA to fine-tune <b>diffusion</b> model for avatar generation.
+      <br> Keywords: <i>Computer Vision and Pattern Recognition, Diffusion Model, Low-Rank Adaptation</i>
+  </div>
+</div>
+
+<div style="display: flex; align-items: start; margin-bottom: 20px;">
+  <img src="../images/msp430.png" style="margin-right: 15px; width: 150px;">
+  <div>
+      <b><a href="https://zhaosheng-thu.github.io/projects/msp430car">SensVehicle</a></b>
+      <br> A self-navigating vehicle controlled by MSP430 and equipped with <b>sensors</b> and hardware.
+      <br> Keywords: <i>Sensors, Microcontroller, Greedy Algorithm </i>
+  </div>
+</div>
+
+</details>
+
+## Publications & Manuscripts
+
+I am striving to submit my work to <i>IMWUT (Ubicomp), UIST, CHI, MM</i> and <i>TVCG</i>. 
+
+<details>
+  <summary>Click to view <b>publications & manuscripts</b>:</summary>
+
+  <p></p>
+    <hr style="border: none; height: 1px; background-color: black; margin-top: 10px; margin-bottom: 10px;">
+
+  <div style="display: flex; align-items: start; margin-bottom: 20px;">
+  <img src="../images/CoordAuth.jpg" style="margin-right: 15px; width: 150px;">
+  <div>
+      <b><a href="https://zhaosheng-thu.github.io/publications/CoordAuth">CoordAuth: A Two-factor Authentication Method in Virtual Reality Leveraging Head-Eye Coordination</a></b>
+      <br> <b>Anonymous author(s)</b>, 1st Author.
+      <br> <i>The 2024 ACM international joint conference on Pervasive and Ubiquitous Computing & The 2024 ACM International Symposium on Wearable Computing (Ubicomp / ISWC 2024)</i>, under review.
+      <br><!-- [<a href="https://zhaosheng-thu.github.io/publications/imwut24a-sub3876.pdf">Paper</a>] -->
+      [<a href="https://github.com/zhaosheng-thu/VRAuthentication">Code</a>] 
+  </div>
+</div>
+
+<div style="display: flex; align-items: start; margin-bottom: 20px;">
+  <img src="../images/Emoblend.png" style="margin-right: 15px; width: 150px;">
+  <div>
+      <b><a href="https://zhaosheng-thu.github.io">EmoBlend: Revealing the Impact of Facial Blendshape Intensity on Emotional Perception in Virtual Reality</a></b>
+      <br> <b>Anonymous author(s)</b>, Co-1st Author.
+      <br> <i>IEEE Transactions on Visualization and Computer Graphics (TVCG)</i>, under review.
+      <br> [<a href="https://github.com/zhaosheng-thu/AvatarFacial">Code</a>]
+  </div>
+</div>
+
+</details>
 
 ## Hobbies
 

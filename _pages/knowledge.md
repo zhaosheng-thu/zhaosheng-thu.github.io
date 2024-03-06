@@ -1,9 +1,9 @@
----
+<!-- ---
 layout: archive
 title: "Study Notes"
 permalink: /knowledge/
 author_profile: true
----
+--- -->
 
 {% include base_path %}
 
