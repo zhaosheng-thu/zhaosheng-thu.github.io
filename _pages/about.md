@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About me"
+# title: "About me"
 # excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,15 +8,30 @@ redirect_from:
   - /about.html
 ---
 
-# Hey there, I'm Alexzhao(Sheng Zhao)! 👋
+<!-- # Hey there, I'm Alexzhao (Sheng Zhao)!  -->
 
 ## Who I am
 
-Welcome to my personal website! I'm **Sheng Zhao**, and you can call me Alex. I'm a junior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China🏫. Now I am pursuing a dual degree in **Fundamental Science** (Mathematics & Physics) and **Electrical Engineering**🎓 .
+I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a junior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China🏫. Now I am pursuing a dual degree in **Fundamental Science** (Mathematics & Physics) and **Electrical Engineering**🎓 .
+
+## Experience
+
+  <div style="display: flex; align-items: start; margin-bottom: 20px;">
+  <img src="../images/Tsinghua.jpg" style="margin-right: 15px; width: 150px;">
+  <div>
+      <b><a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a></b>
+      <br> 2021.9 - Present
+      <br> <b>B.Eng. in Electrical Engineering</b>
+      <br> <b>B.S. in Fundamental Sciences</b>
+      <br> Research Assistant at HCI-Group, advised by Prof. <i>Xin Yi</i>
+      <br> Research Intern at C3ILab, advised by Prof. <i>Bowen Zhou</i>
+
+  </div>
+</div>
 
 ## Research
 
-Currently, I'm a research assistant at **Tsinghua University**, under the advisory of Assistant Professor [<i>Xin Yi</i>](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ) and Professor [<i>Yuanchun Shi</i>](https://scholar.google.com/citations?user=TZm3-pwAAAAJ&hl=en&oi=ao). Meanwhile, I'm also a research intern under the supervisor of Chair Professor [<i>Bowen Zhou</i>](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ) at **Tsinghua University** and Assistant Professor [<i>Yukang Yan</i>](https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao) at **University of Rochester**.
+Currently, I'm a research assistant at **Tsinghua University**, under the advisory of Assistant Professor [<i>Xin Yi</i>](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ) and Professor [<i>Yuanchun Shi</i>](https://scholar.google.com/citations?user=TZm3-pwAAAAJ&hl=en&oi=ao). Meanwhile, I'm also a research intern under the supervisor of Chair Professor [<i>Bowen Zhou</i>](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ) at **Tsinghua University** and Assistant Professor [<i>Yukang Yan</i>](https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao) at **University of Rochester**. I am also delighted to collaborate and discuss with my classmates [<i>Junrui Zhu</i>](https://zhujuneray.github.io/) and [<i>Jingwei Zuo</i>](https://dr-left.github.io/).
 <!-- And at the same time, I'm a visiting student at [C3ILab](http://c3i.ee.tsinghua.edu.cn/), Tsinghua University, under the advisory of Prof. [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=en&oi=ao). -->
 
 <!-- My research interests lie in the fields of **usable privacy**, **security** and **social computing** in **Virtual Reality**, as well as efficient and trustworthy **human-AI interaction** technologies. I'm currently conducting the following research:
@@ -95,13 +110,13 @@ My research interests focus on developing efficient, controllable and trustworth
 
 ## Publications & Manuscripts
 
-I am striving to submit my work to <i>IMWUT (Ubicomp), UIST, CHI, MM</i> and <i>TVCG</i>. 
+<!-- I am striving to submit my work to <i>IMWUT (Ubicomp), UIST, CHI, MM</i> and <i>TVCG</i>.  -->
 
-<details>
-  <summary>Click to view <b>publications & manuscripts</b>:</summary>
+<!-- <details>
+  <summary>Click to view <b>publications & manuscripts</b>:</summary> -->
 
-  <p></p>
-    <hr style="border: none; height: 1px; background-color: black; margin-top: 10px; margin-bottom: 10px;">
+  <!-- <p></p>
+    <hr style="border: none; height: 1px; background-color: black; margin-top: 10px; margin-bottom: 10px;"> -->
 
   <div style="display: flex; align-items: start; margin-bottom: 20px;">
   <img src="../images/CoordAuth.jpg" style="margin-right: 15px; width: 150px;">
@@ -124,7 +139,7 @@ I am striving to submit my work to <i>IMWUT (Ubicomp), UIST, CHI, MM</i> and <i>
   </div>
 </div>
 
-</details>
+<!-- </details> -->
 
 ## Hobbies
 
