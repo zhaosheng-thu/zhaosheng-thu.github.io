@@ -14,7 +14,7 @@ redirect_from:
 
 I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a junior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China🏫. Now I am pursuing a dual degree in **Fundamental Science** (Mathematics & Physics) and **Electrical Engineering**🎓 .
 
-## Experience
+## Education
 
   <div style="display: flex; align-items: start; margin-bottom: 20px;">
   <img src="../images/Tsinghua.jpg" style="margin-right: 15px; width: 150px;">

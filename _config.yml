@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Sheng Zhao / Homepage"
+title                    : "Sheng (Alex) Zhao"
 title_separator          : "-"
 name                     : &name "Sheng Zhao"
 description              : &description "A junior in thu"
@@ -81,8 +81,8 @@ analytics:
 # Site Author
 author:
   name             : "Sheng Zhao"
-  avatar           : "myself.png"
-  bio              : "25' Undergrad @ Tsinghua | HCI | Vision"
+  avatar           : "myself-cyc.jpg"
+  bio              : "25' Undergrad @ Tsinghua | Tech HCI"
   location         : "Haidian Beijing China"
   employer         :
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
