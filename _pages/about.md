@@ -58,14 +58,14 @@ My future directions include:
 - Two Factor **Authentication** in VR: I'm eager to design a novel authentication framework which can be used for HMDs. It allows fast and comfortable input, is stable and can resist shoulder surfing. And it can be easily deployed on many HMDs, compensating for the absence of an authentication method uniquely tailored for head-mounted displays.
 - 3D generation by **Diffusion Model**: I try to make modifications to the current diffusion based 3D generation framework, enabling it to produce high-fidelity and rapidly generated 3D models suitable for use in mainstream VR/AR development engines. This can enhance the diversity of the VR world and make interactions between people and VR more efficient. -->
 
-My research interests focus on developing efficient, controllable and trustworthy **computing systems** facilitating interaction between **humans** and **mobile devices**, leveraging **AI** and **ML** technologies, as illustrated in the following image:
+My research interest focus on designing efficient and trustworthy interaction methods between **human** and **XR** to enhance human well-being.
 
 <div style="text-align: center;">
-  <img src="../images/research-2.jpg" style="width: 95%;">
+  <img src="../images/research-3.jpg" style="width: 95%;">
 </div>
 
 <details>
-  <summary>Click to view relevant  <b>research projects</b>:</summary>
+  <summary>Click to view relevant  <b>projects</b>:</summary>
   
 <p></p>
     <hr style="border: none; height: 1px; background-color: black; margin-top: 10px; margin-bottom: 10px;">
