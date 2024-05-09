@@ -1,9 +1,9 @@
----
+<!-- ---
 layout: archive
 title: "Daily Life"
 permalink: /daily/
 author_profile: true
----
+--- -->
 
 {% include base_path %}
 
