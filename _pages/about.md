@@ -12,7 +12,7 @@ redirect_from:
 
 ## Who I am
 
-I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a junior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China🏫. Now I am pursuing a dual degree in **Fundamental Science** (Mathematics & Physics) and **Electrical Engineering**🎓 .
+I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a junior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China🏫. Now I am pursuing a dual degree in **Fundamental Science** (Physics) and **Electrical Engineering**🎓 .
 
 ## Education
 
@@ -22,16 +22,16 @@ I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a junior at [**Tsingh
       <b><a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a></b>
       <br> 2021.9 - Present
       <br> <b>B.Eng. in Electrical Engineering</b>
-      <br> <b>B.S. in Fundamental Sciences</b>
-      <br> Research Assistant at HCI-Group, advised by Prof. <i>Xin Yi</i>
-      <br> Research Intern at C3ILab, advised by Prof. <i>Bowen Zhou</i>
+      <br> <b>B.S. in Fundamental Sciences</b> (Physics)
+      <!-- <br> Research Assistant at HCI-Group, advised by Prof. <i>Xin Yi</i>
+      <br> Research Intern at C3ILab, advised by Prof. <i>Bowen Zhou</i> -->
 
   </div>
 </div>
 
 ## Research
 
-Currently, I'm a research assistant at **Tsinghua University**, under the advisory of Assistant Professor [<i>Xin Yi</i>](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ) and Professor [<i>Yuanchun Shi</i>](https://scholar.google.com/citations?user=TZm3-pwAAAAJ&hl=en&oi=ao). Meanwhile, I'm also a research intern under the supervisor of Chair Professor [<i>Bowen Zhou</i>](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ) at **Tsinghua University** and Assistant Professor [<i>Yukang Yan</i>](https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao) at **University of Rochester**. I am also delighted to collaborate and discuss with my classmates [<i>Junrui Zhu</i>](https://zhujuneray.github.io/) and [<i>Jingwei Zuo</i>](https://dr-left.github.io/).
+Currently, I'm a research assistant at **Tsinghua University HCI Group**, under the advisory of Assistant Professor [<i>Xin Yi</i>](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ) and Professor [<i>Yuanchun Shi</i>](https://scholar.google.com/citations?user=TZm3-pwAAAAJ&hl=en&oi=ao). Meanwhile, I'm a research intern under the supervisor of Chair Professor [<i>Bowen Zhou</i>](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ) at **Tsinghua University**. And I'm collaborating with Assistant Professor [<i>Yukang Yan</i>](https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao) at **University of Rochester**. <!--I am also delighted to collaborate and discuss with my classmates [<i>Junrui Zhu</i>](https://zhujuneray.github.io/) and [<i>Jingwei Zuo</i>](https://dr-left.github.io/).-->
 <!-- And at the same time, I'm a visiting student at [C3ILab](http://c3i.ee.tsinghua.edu.cn/), Tsinghua University, under the advisory of Prof. [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=en&oi=ao). -->
 
 <!-- My research interests lie in the fields of **usable privacy**, **security** and **social computing** in **Virtual Reality**, as well as efficient and trustworthy **human-AI interaction** technologies. I'm currently conducting the following research:
@@ -63,6 +63,8 @@ My research interest focus on designing efficient and trustworthy interaction me
 <div style="text-align: center;">
   <img src="../images/research-3.jpg" style="width: 95%;">
 </div>
+
+<!-- ### Research Experiences -->
 
 <details>
   <summary>Click to view relevant  <b>projects</b>:</summary>
@@ -126,9 +128,12 @@ My research interest focus on designing efficient and trustworthy interaction me
   <div>
       <b><a href="https://zhaosheng-thu.github.io/publications/CoordAuth">CoordAuth: A Two-factor Authentication Method in Virtual Reality Leveraging Head-Eye Coordination</a></b>
       <br> <b>Anonymous author(s)</b>, 1st Author.
-      <br> <i>The 2024 ACM international joint conference on Pervasive and Ubiquitous Computing & The 2024 ACM International Symposium on Wearable Computing (Ubicomp / ISWC 2024)</i>, under review.
+      <!-- <br> <i>The 2024 ACM international joint conference on Pervasive and Ubiquitous Computing & The 2024 ACM International Symposium on Wearable Computing (Ubicomp / ISWC 2024)</i>, under review. -->
+      <br>Preprint, [<a href="https://zhaosheng-thu.github.io/publications/imwut24a-sub3876.pdf">PDF</a>]
+      <!-- <br>(Rejected by <i>IMWUT'24-a</i>) -->
       <!-- <br>[<a href="https://zhaosheng-thu.github.io/publications/imwut24a-sub3876.pdf">Paper</a>]
       [<a href="https://github.com/zhaosheng-thu/VRAuthentication">Code</a>]  -->
+
   </div>
 </div>
 
@@ -148,7 +153,9 @@ My research interest focus on designing efficient and trustworthy interaction me
 
 - 🎵 Favorite musicians: Stefanie Sun(孙燕姿) and Jay Chou(周杰伦).
 - 📚 Favorite book: Dream of the Red Chamber(红楼梦).
-- 🚴‍♂️ Passionate about outdoor activities and proud member of the Tsinghua University Cycling Team. Strava account [here](https://www.strava.com/athletes/107292471). 
-- :soccer: A soccer enthusiast, a dedicated supporter of Cristiano Ronaldo.
+- 🚴‍♂️ Passionate about outdoor activities and proud member of the **Tsinghua Cycling Team**. Strava account [here](https://www.strava.com/athletes/107292471). 
+<!-- - :soccer: A soccer enthusiast, a dedicated supporter of Cristiano Ronaldo. -->
 
-Feel free to reach out to me! Let's connect and collaborate. 😊
+<!-- ## Others
+
+I'll apply for HCI Ph.D. starting at Fall 2025.  -->
