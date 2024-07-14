@@ -38,7 +38,7 @@ I conduct research in Technical Human-Computer Interaction (Tech HCI) domain, as
 
 - Building the trustworthy and efficient interaction system between human and XR, fully considering usable privacy, social presence, by applied machine learning, qualititive and quantitive research methods.
 
-- Exploring the design space of human LLMs interaction in 3D environments (e.g., virtual reality, augmented reality) to enhance LLMs' ability to serve humans (improve efficiency in collaboration; enhance well-being), as well as the generative capabilities of GAI (i.e. latent diffusion models) in 3D reconstruction space to enable more efficient and controllable human utilization.
+- Exploring the design space of human LLMs interaction in 3D environments (e.g., virtual reality, augmented reality) to enhance LLMs' ability to serve humans (improve efficiency in collaboration; enhance well-being), as well as the generative capabilities of GAI (i.e. latent diffusion model) in 3D reconstruction space to enable more efficient and controllable human utilization.
 
 <!-- <div style="text-align: center;">
   <img src="../images/research-3.jpg" style="width: 95%;">
