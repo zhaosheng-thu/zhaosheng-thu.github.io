@@ -22,8 +22,6 @@ author_profile: true
   </div> -->
   <p></p>
     <hr style="border: none; height: 1px; background-color: black; margin-top: 10px; margin-bottom: 10px;">
-</article>
-
 
 <div style="display: flex; align-items: start; margin-bottom: 20px;">
   <img src="../images/CoordAuth.jpg" style="margin-right: 15px; width: 150px;">
@@ -61,20 +59,5 @@ author_profile: true
   </div>
 </div>
 
-<div style="display: flex; align-items: start; margin-bottom: 20px;">
-  <img src="../images/autodrive.jpg" style="margin-right: 15px; width: 150px;">
-  <div>
-      <b><a href="https://zhaosheng-thu.github.io/projects/drive">EVCDrive</a></b>
-      <br> A virtual driving environment in VR developed by Unity 3D.
-      <br> Keywords: <i>Virtual Reality </i>
-  </div>
-</div>
-
-<div style="display: flex; align-items: start; margin-bottom: 20px;">
-  <img src="../images/Theater.jpg" style="margin-right: 15px; width: 150px;">
-  <div>
-      <b><a href="https://zhaosheng-thu.github.io/projects/cinema">VRCinema</a></b>
-      <br> Enjoying a unique sense of immersion while watching movies.
-      <br> Keywords: <i>Virtual Reality </i>
-  </div>
-</div>
+<p></p>
+    <hr style="border: none; height: 1px; background-color: black; margin-top: 10px; margin-bottom: 10px;">
