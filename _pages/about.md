@@ -12,7 +12,7 @@ redirect_from:
 
 ## Who I am
 
-I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a junior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China 🏫. Now I am pursuing a dual degree in **Fundamental Science** (Physics) and **Electrical Engineering**🎓 .
+I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a junior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China 🏫. Now I am pursuing dual degrees in **Fundamental Science** (Physics) and **Electrical Engineering**🎓, at Weiyang College.
 
 ## Education
 
@@ -33,12 +33,13 @@ I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a junior at [**Tsingh
 
 Formerly, I was a research assistant at **Tsinghua University HCI Group**, under the advisory of Assistant Professor [<i>Xin Yi</i>](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ) and Professor [<i>Yuanchun Shi</i>](https://scholar.google.com/citations?user=TZm3-pwAAAAJ&hl=en&oi=ao). Meanwhile, I was a research intern under the supervisor of Chair Professor [<i>Bowen Zhou</i>](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ) at **Tsinghua University**. And I also collaborated with Assistant Professor [<i>Yukang Yan</i>](https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao) at **University of Rochester** remotely. Currently, I'm a research intern at **School of Information, University of Michigan**, under the supervisor of Associate Professor [<i>Michael Nebeling</i>](https://scholar.google.com/citations?user=W2XLsXoAAAAJ&hl=en&oi=ao) and Postdoc [<i>Janet Johnson</i>](https://scholar.google.com/citations?user=YCJhuRMAAAAJ&hl=en&oi=sra).<!--I am also delighted to collaborate and discuss with my classmates [<i>Junrui Zhu</i>](https://zhujuneray.github.io/) and [<i>Jingwei Zuo</i>](https://dr-left.github.io/).-->
 <!-- And at the same time, I'm a visiting student at [C3ILab](http://c3i.ee.tsinghua.edu.cn/), Tsinghua University, under the advisory of Prof. [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=en&oi=ao). -->
+My research goal is to explore trustworthy, controllable, and user-friendly interaction technologies and methods in 3D spaces, from a human centric perspective. Which follows three threads:
 
-I conduct research in Technical Human-Computer Interaction (Tech HCI) domain, as well as the Multi Model Representation Learning domain. In details:
+- Building the trustworthy and efficient interaction system between human and Mixed Reality (MR), fully considering usable privacy, social presence, by applied machine learning, qualitative and quantitative research methods.
 
-- Building the trustworthy and efficient interaction system between human and XR, fully considering usable privacy, social presence, by applied machine learning, qualititive and quantitive research methods.
+- Exploring the design space of human LLMs interaction in 3D environments (e.g., virtual reality, augmented reality) to enhance LLMs' ability to serve humans (improve efficiency in collaboration; enhance well-being)
 
-- Exploring the design space of human LLMs interaction in 3D environments (e.g., virtual reality, augmented reality) to enhance LLMs' ability to serve humans (improve efficiency in collaboration; enhance well-being), as well as the generative capabilities of GAI (e.g. latent diffusion model) in 3D reconstruction space to enable more efficient and controllable human utilization.
+- Enhancing the generative capabilities of GAI (e.g. latent diffusion model) in 3D reconstruction space to enable more efficient and controllable human utilization.
 
 <!-- <div style="text-align: center;">
   <img src="../images/research-3.jpg" style="width: 95%;">
@@ -77,8 +78,7 @@ I conduct research in Technical Human-Computer Interaction (Tech HCI) domain, as
 <div style="display: flex; align-items: start; margin-bottom: 20px;">
   <img src="../images/ESConv.jpg" style="margin-right: 15px; width: 150px;">
   <div>
-      <b><a href="https://zhaosheng-thu.github.io">Open Your Heart: Evaluating the Impact of the Number and Adopted Strategies
-of LLM Assistants on User Emotional Support Experience in Virtual Reality</a></b>
+      <b><a href="https://zhaosheng-thu.github.io">Open Your Heart: Evaluating the Impact of Conversational Strategies and Multi-Agent Setting of LLM Assistants on User Emotional Support Experience in Virtual Reality</a></b>
       <br> <b>Anonymous author(s)</b>, 1st Author.
       <br>Preprint, [<a href="https://zhaosheng-thu.github.io/publications/ESConv.pdf">PDF</a>] [<a href="https://github.com/zhaosheng-thu/Llama3-8b-Emotion-Support">Code</a>]
   </div>
