@@ -67,20 +67,20 @@ My research goal is to explore trustworthy, controllable, and user-friendly inte
 </div>
 
 <div style="display: flex; align-items: start; margin-bottom: 20px;">
-  <img src="../images/Emoblend.png" style="margin-right: 15px; width: 150px;">
+  <img src="../images/RaiseYourEyebrow.jpg" style="margin-right: 15px; width: 150px;">
   <div>
       <b><a href="https://zhaosheng-thu.github.io/publications/AvatarExpressions">Raise Your Eyebrows: Investigating the Impact of Virtual Avatar’s Facial Expression Scaling on Users’ Perception of Emotion and Uncanny Valley Effect in Social Virtual Reality</a></b>
       <br> <b>Anonymous author(s)</b>, Co-1st Author.
-      <br>Preprint, [<a href="https://zhaosheng-thu.github.io/publications/avatar.pdf">PDF</a>]
+      <br>Preprint, [<a href="https://zhaosheng-thu.github.io/publications/chi25b-sub7664.pdf">PDF</a>]
   </div>
 </div>
 
 <div style="display: flex; align-items: start; margin-bottom: 20px;">
-  <img src="../images/ESConv.jpg" style="margin-right: 15px; width: 150px;">
+  <img src="../images/ES-strategies.jpg" style="margin-right: 15px; width: 150px;">
   <div>
       <b><a href="https://zhaosheng-thu.github.io">Open Your Heart: Evaluating the Impact of Conversational Strategies and Multi-Agent Setting of LLM Assistants on User Emotional Support Experience in Virtual Reality</a></b>
       <br> <b>Anonymous author(s)</b>, 1st Author.
-      <br>Preprint, [<a href="https://zhaosheng-thu.github.io/publications/ESConv.pdf">PDF</a>] [<a href="https://github.com/zhaosheng-thu/Llama3-8b-Emotion-Support">Code</a>]
+      <br>Preprint, [<a href="https://zhaosheng-thu.github.io/publications/chi25b-sub7582.pdf">PDF</a>] [<a href="https://github.com/zhaosheng-thu/Llama3-8b-Emotion-Support">Code</a>]
   </div>
 </div>
 
