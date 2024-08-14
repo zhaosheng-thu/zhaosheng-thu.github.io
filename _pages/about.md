@@ -35,12 +35,12 @@ Formerly, I was a research assistant at **Tsinghua University HCI Group**, under
 <!-- And at the same time, I'm a visiting student at [C3ILab](http://c3i.ee.tsinghua.edu.cn/), Tsinghua University, under the advisory of Prof. [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=en&oi=ao). -->
 My research goal is to explore trustworthy, controllable, and user-friendly interaction technologies and methods in 3D spaces, from a human centric perspective. Which follows three threads:
 
-- Building the trustworthy and efficient interaction system between human and Mixed Reality (MR), fully considering usable privacy, social presence, by applied machine learning, qualitative and quantitative research methods. <b>CoordAuth</b> [[1](#Coordauth-section)]; <b>RaiseYourEyebrows</b> [[2](#AvatarExpression-section)]
+- Building trustworthy and efficient interaction technologies between human and VR / AR, fully considering usable privacy, social presence, by applied machine learning, qualitative and quantitative research methods. <b>CoordAuth</b> [[1](#Coordauth-section)]; <b>RaiseYourEyebrows</b> [[2](#AvatarExpression-section)].
 
 
-- Exploring the design space of human LLMs interaction in 3D environments (e.g., virtual reality, augmented reality) to enhance LLMs' ability to serve humans (improve efficiency in collaboration; enhance well-being). <b>OpenYourHeart</b> [[3](#VRCARES-section)]; <b>DISCO</b> [[4](#DISCO-section)]
+- Exploring the design space of human LLMs interaction in 3D environments (e.g. VR / AR) to enhance LLMs' ability to serve human (e.g. improve efficiency in collaboration; enhance well-being). <b>OpenYourHeart</b> [[3](#VRCARES-section)]; <b>DISCO</b> [[4](#DISCO-section)].
 
-- Enhancing the generative capabilities of GAI (e.g. latent diffusion model) in 3D reconstruction space to enable more efficient and controllable human utilization.
+- Enhancing the generative capabilities of GAI (e.g. latent diffusion model) by refining based frameworks (e.g. Unet, Spatial and Temporal Attention Block) in reconstruction space, enable more efficient, customizable and controllable human utilization.
 
 <!-- <div style="text-align: center;">
   <img src="../images/research-3.jpg" style="width: 95%;">
@@ -59,7 +59,7 @@ My research goal is to explore trustworthy, controllable, and user-friendly inte
   <div id="Coordauth-section" style="display: flex; align-items: start; margin-bottom: 20px;">
   <img src="../images/teaser-auth.jpg" style="margin-right: 15px; width: 150px;">
   <div>
-      <b><a href="https://zhaosheng-thu.github.io/publications/CoordAuth">[1] CoordAuth: A Two-factor Authentication Method in Virtual Reality Leveraging Head-Eye Coordination</a></b>
+      <b>[1] <a href="https://zhaosheng-thu.github.io/publications/CoordAuth">CoordAuth: A Two-factor Authentication Method in Virtual Reality Leveraging Head-Eye Coordination</a></b>
       <br> <b>Anonymous author(s)</b>, 1st Author.
       <br>Preprint (Rejected by <i>IMWUT'24-a</i>). [<a href="https://zhaosheng-thu.github.io/publications/imwut24a-sub3876.pdf">PDF</a>]
       [<a href="https://github.com/zhaosheng-thu/VRAuthentication">Code</a>]  
@@ -70,7 +70,7 @@ My research goal is to explore trustworthy, controllable, and user-friendly inte
 <div id="AvatarExpression-section" style="display: flex; align-items: start; margin-bottom: 20px;">
   <img src="../images/RaiseYourEyebrow.jpg" style="margin-right: 15px; width: 150px;">
   <div>
-      <b><a href="https://zhaosheng-thu.github.io/publications/AvatarExpressions">[2] Raise Your Eyebrows: Investigating the Impact of Virtual Avatar’s Facial Expression Scaling on Users’ Perception of Emotion and Uncanny Valley Effect in Social Virtual Reality</a></b>
+      <b>[2]<a href="https://zhaosheng-thu.github.io/publications/AvatarExpressions">Raise Your Eyebrows: Investigating the Impact of Virtual Avatar’s Facial Expression Scaling on Users’ Perception of Emotion and Uncanny Valley Effect in Social Virtual Reality</a></b>
       <br> <b>Anonymous author(s)</b>, Co-1st Author.
       <br>Preprint. [<a href="https://zhaosheng-thu.github.io/publications/chi25b-sub7664.pdf">PDF</a>]
   </div>
@@ -79,7 +79,7 @@ My research goal is to explore trustworthy, controllable, and user-friendly inte
 <div id="VRCARES-section" style="display: flex; align-items: start; margin-bottom: 20px;">
   <img src="../images/ES-strategies.jpg" style="margin-right: 15px; width: 150px;">
   <div>
-      <b><a href="https://zhaosheng-thu.github.io">[3] Open Your Heart: Evaluating the Impact of Conversational Strategies and Multi-Agent Setting of LLM Assistants on User Emotional Support Experience in Virtual Reality</a></b>
+      <b>[3] <a href="https://zhaosheng-thu.github.io">Open Your Heart: Evaluating the Impact of Conversational Strategies and Multi-Agent Setting of LLM Assistants on User Emotional Support Experience in Virtual Reality</a></b>
       <br> <b>Anonymous author(s)</b>, 1st Author.
       <br>Preprint. [<a href="https://zhaosheng-thu.github.io/publications/chi25b-sub7582.pdf">PDF</a>] [<a href="https://github.com/zhaosheng-thu/Llama3-8b-Emotion-Support">Code</a>]
   </div>
@@ -88,7 +88,7 @@ My research goal is to explore trustworthy, controllable, and user-friendly inte
 <div id="DISCO-section" style="display: flex; align-items: start; margin-bottom: 20px;">
   <img src="../images/?" style="margin-right: 15px; width: 150px;">
   <div>
-      <b><a href="https://zhaosheng-thu.github.io">[4] Disco: Dsigning intelligent spaces for collaboration in mixed reality</a></b>
+      <b>[4] <a href="https://zhaosheng-thu.github.io">Disco: Dsigning Intelligent Spaces for Collaboration in Mixed Reality</a></b>
       <br> <b>Anonymous author(s)</b>.
       <br>Preprint.
   </div>
