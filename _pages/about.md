@@ -29,18 +29,21 @@ I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a junior at [**Tsingh
   </div>
 </div>
 
-## Research Experience
+## Research Experience and Focus
 
 Formerly, I was a research assistant at **Tsinghua University HCI Group**, under the advisory of Assistant Professor [<i>Xin Yi</i>](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ) and Professor [<i>Yuanchun Shi</i>](https://scholar.google.com/citations?user=TZm3-pwAAAAJ&hl=en&oi=ao). Meanwhile, I was a research intern under the supervisor of Chair Professor [<i>Bowen Zhou</i>](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ) at **Tsinghua University**. And I also collaborated with Assistant Professor [<i>Yukang Yan</i>](https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao) at **University of Rochester** remotely. Currently, I'm a research intern at **School of Information, University of Michigan**, under the supervisor of Associate Professor [<i>Michael Nebeling</i>](https://scholar.google.com/citations?user=W2XLsXoAAAAJ&hl=en&oi=ao) and Postdoc [<i>Janet Johnson</i>](https://scholar.google.com/citations?user=YCJhuRMAAAAJ&hl=en&oi=sra).<!--I am also delighted to collaborate and discuss with my classmates [<i>Junrui Zhu</i>](https://zhujuneray.github.io/) and [<i>Jingwei Zuo</i>](https://dr-left.github.io/).-->
 <!-- And at the same time, I'm a visiting student at [C3ILab](http://c3i.ee.tsinghua.edu.cn/), Tsinghua University, under the advisory of Prof. [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=en&oi=ao). -->
-My research goal is to explore trustworthy, controllable, and user-friendly interaction technologies and methods in 3D spaces, from a human centric perspective. Which follows three threads:
+
+Overall, I am a human-centered technical researcher focused on exploring user friendly technologies and interaction methods from a human-centric perspective when interacting with AI, VR/AR, etc., aiming to enhance human's life in an era of rapid technological advancement. 
+
+Specifically, my work follows three key threads:
 
 - Building trustworthy and efficient interaction technologies between human and VR / AR, fully considering usable privacy, social presence, by applied machine learning, qualitative and quantitative research methods. <b>CoordAuth</b> [[1](#Coordauth-section)]; <b>RaiseYourEyebrows</b> [[2](#AvatarExpression-section)].
 
 
 - Exploring the design space of human LLMs interaction in 3D environments (e.g. VR / AR) to enhance LLMs' ability to serve human (e.g. improve efficiency in collaboration; enhance well-being). <b>OpenYourHeart</b> [[3](#VRCARES-section)]; <b>DISCO</b> [[4](#DISCO-section)].
 
-- Enhancing the generative capabilities of GAI (e.g. latent diffusion model) by refining based frameworks (e.g. Unet, Spatial and Temporal Attention Block) in reconstruction space, enable more efficient, customizable and controllable human utilization.
+- Enhancing the generative capabilities of GAI (e.g. latent diffusion model) by adjusting based frameworks (e.g. Unet, Spatial and Temporal Attention Block), enable more efficient, customizable and controllable human utilization.
 
 <!-- <div style="text-align: center;">
   <img src="../images/research-3.jpg" style="width: 95%;">
