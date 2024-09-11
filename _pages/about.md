@@ -64,7 +64,7 @@ Specifically, my work follows three key threads:
   <div>
       <b>[1] <a href="https://zhaosheng-thu.github.io/publications/CoordAuth">CoordAuth: A Two-factor Authentication Method in Virtual Reality Leveraging Head-Eye Coordination</a></b>
       <br> <b>Anonymous author(s)</b>, 1st Author.
-      <br>Preprint (Rejected by <i>IMWUT'24-a</i>). [<a href="https://zhaosheng-thu.github.io/publications/imwut24a-sub3876.pdf">PDF</a>]
+      <br>Preprint (Rejected by <i>IMWUT'24-a</i>). [<a href="https://zhaosheng-thu.github.io/publications/imwut24a.pdf">PDF</a>]
       [<a href="https://github.com/zhaosheng-thu/VRAuthentication">Code</a>]  
 
   </div>
@@ -73,9 +73,9 @@ Specifically, my work follows three key threads:
 <div id="AvatarExpression-section" style="display: flex; align-items: start; margin-bottom: 20px;">
   <img src="../images/RaiseYourEyebrow.jpg" style="margin-right: 15px; width: 150px;">
   <div>
-      <b>[2]<a href="https://zhaosheng-thu.github.io/publications/AvatarExpressions">Raise Your Eyebrows: Investigating the Impact of Virtual Avatar’s Facial Expression Scaling on Users’ Perception of Emotion and Uncanny Valley Effect in Social Virtual Reality</a></b>
+      <b>[2] <a href="https://zhaosheng-thu.github.io/publications/AvatarExpressions">Raise Your Eyebrows: Investigating the Impact of Virtual Avatar’s Facial Expression Scaling on Users’ Perception of Emotion and Uncanny Valley Effect in Social Virtual Reality</a></b>
       <br> <b>Anonymous author(s)</b>, Co-1st Author.
-      <br>Preprint. [<a href="https://zhaosheng-thu.github.io/publications/chi25b-sub7664.pdf">PDF</a>]
+      <br>Preprint. [<a href="https://zhaosheng-thu.github.io/publications/chi25b.pdf">PDF</a>]
   </div>
 </div>
 
@@ -84,7 +84,7 @@ Specifically, my work follows three key threads:
   <div>
       <b>[3] <a href="https://zhaosheng-thu.github.io">Open Your Heart: Evaluating the Impact of Conversational Strategies and Multi-Agent Setting of LLM Assistants on User Emotional Support Experience in Virtual Reality</a></b>
       <br> <b>Anonymous author(s)</b>, 1st Author.
-      <br>Preprint. [<a href="https://zhaosheng-thu.github.io/publications/chi25b-sub7582.pdf">PDF</a>] [<a href="https://github.com/zhaosheng-thu/Llama3-8b-Emotion-Support">Code</a>]
+      <br>Preprint. [<a href="https://zhaosheng-thu.github.io/publications/chi25b.pdf">PDF</a>] [<a href="https://github.com/zhaosheng-thu/Llama3-8b-Emotion-Support">Code</a>]
   </div>
 </div>
 
