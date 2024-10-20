@@ -71,22 +71,20 @@ I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a senior at [**Tsingh
 Previously, I was a research assistant at **Tsinghua University HCI Group**, under the advisory of Assistant Professor [<i>Xin Yi</i>](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ) and Professor [<i>Yuanchun Shi</i>](https://scholar.google.com/citations?user=TZm3-pwAAAAJ&hl=en&oi=ao). Meanwhile, I was a research intern under the supervisor of Chair Professor [<i>Bowen Zhou</i>](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ) at **Tsinghua University**. And I also collaborated with Assistant Professor [<i>Yukang Yan</i>](https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao) at **University of Rochester** remotely. Currently, I'm a research intern at **School of Information, University of Michigan**, under the supervisor of Associate Professor [<i>Michael Nebeling</i>](https://scholar.google.com/citations?user=W2XLsXoAAAAJ&hl=en&oi=ao) and Postdoc [<i>Janet Johnson</i>](https://scholar.google.com/citations?user=YCJhuRMAAAAJ&hl=en&oi=sra).I am also delighted to collaborate and discuss with my classmates [<i>Junrui Zhu</i>](https://zhujuneray.github.io/) and [<i>Jingwei Zuo</i>](https://dr-left.github.io/).
 And at the same time, I'm a visiting student at [C3ILab](http://c3i.ee.tsinghua.edu.cn/), Tsinghua University, under the advisory of Prof. [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=en&oi=ao). -->
 
-I am a human-centered technical researcher working at the intersection of <b>Human-Computer Interaction (HCI)</b>, <b>Machine Learning (ML)</b>, and <b>Artificial Intelligence (AI)</b>, where I apply human-centered methods to design, build, and study interactive systems and techniques, aiming to enhance their capacity to better serve human needs.
+I am a human-centered technical researcher working at the intersection of <b>eXtended Reality (XR)</b>, <b>Machine Learning (ML)</b>, and <b>Artificial Intelligence (AI)</b>.
 
-Specifically, my work follows three key threads:
+Specifically, my work follows two key threads:
 
-- Percepting and modeling human behaviours in Mixed Reality (MR) to facilitate safe, trustworthy and immerse interaction technologies between human and MR devices and environments [[P.1](#Coordauth-section)], [[P.2](#AvatarExpression-section)].
+- Modeling and understanding human behaviours in XR, building systems or proposing strategies for augmented experience [[P.1](#Coordauth-section)], [[P.2](#AvatarExpression-section)].
 
-- Exploring the design space of human-LLM interactions in MR to enhance LLMs' ability to better serve humans (e.g., improving collaboration efficiency, enhancing well-being) by considering factors such as team dynamics, human-AI alignment, and etc. [[P.3](#VRCARES-section)], [[P.4](#DISCO-section)].
-
-- Enhancing the interactive capabilities of GAI (e.g. Diffusion Model) by adjusting based frameworks (e.g. Unet, Spatial and Temporal Attention Block), leading to customizable and controllable human utilization [[R.1](#1Image2NovelViewSV3D)].
+- Enhancing the interactive capabilities of GAI (e.g. Diffusion Model), leading to customizable and controllable human utilization [[R.1](#1Image2NovelViewSV3D)]. Specifically, integrating GAI in XR for human benefits (e.g. well-being, collaboration efficiency) [[P.3](#VRCARES-section)], [[P.4](#DISCO-section)].
 
 <!-- <div style="text-align: center;">
   <img src="../images/research-3.jpg" style="width: 95%;">
 </div> --> 
 
 
-## Preprints
+## Academic papers
 
 Note: To maintain <b>anonymity</b>, preprints under review are illustrated by their main topics rather than their titles.
 <!-- I am striving to submit my work to <i>IMWUT (Ubicomp), UIST, CHI, MM</i> and <i>TVCG</i>.  -->
@@ -102,7 +100,7 @@ Note: To maintain <b>anonymity</b>, preprints under review are illustrated by th
   <div>
       <b>[P.1] 2 Factor Authentication on HMDs</b>
       <br> <b>Anonymous author(s)</b>, 1st Author.
-      <br>Preprint, VR'25 Submission (Rejected by IMWUT'24-a). 
+      <br>Preprint, XX'25 Submission (Rejected by IMWUT'24-a). 
       <br>[<a href="https://drive.google.com/file/d/1nu8My7_aV61lu0zflA6P1AnhsmCXOA9R/view?usp=sharing">PDF</a>]
       [<a href="https://github.com/zhaosheng-thu/VRAuthentication">Code</a>]  
 
@@ -110,11 +108,11 @@ Note: To maintain <b>anonymity</b>, preprints under review are illustrated by th
 </div>
 
 <div id="AvatarExpression-section" style="display: flex; align-items: start; margin-bottom: 20px;">
-  <img src="../images/RaiseYourEyebrow" style="margin-right: 15px; width: 150px;">
+  <img src="../images/RaiseYourEyebrow.jpg" style="margin-right: 15px; width: 150px;">
   <div>
       <b>[P.2] Avatar Facial Expressions Scaling in VR</b>
       <br> <b>Anonymous author(s)</b>, Co-1st Author.
-      <br>Preprint, CHI'25 Submission. 
+      <br>Preprint, XXX'25 Submission. 
       <br>[<a href="https://drive.google.com/file/d/1NrWsxmTKIbign3oKdjtdKU37GUMXYGFP/view?usp=sharing">PDF</a>]
   </div>
 </div>
@@ -124,7 +122,7 @@ Note: To maintain <b>anonymity</b>, preprints under review are illustrated by th
   <div>
       <b>[P.3] Virtual Agents in VR for Mental Health</b>
       <br> <b>Anonymous author(s)</b>, 1st Author.
-      <br>Preprint, CHI'25 Submission. 
+      <br>Preprint, XXX'25 Submission. 
       <br>[<a href="https://drive.google.com/file/d/1Nqq3PtRd8rTnLe9EG6Ffr-bJcI8osO7G/view?usp=sharing">PDF</a>] [<a href="https://github.com/zhaosheng-thu/Llama3-8b-Emotion-Support">Code</a>]
   </div>
 </div>
