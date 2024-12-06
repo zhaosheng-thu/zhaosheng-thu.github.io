@@ -82,7 +82,7 @@ From my understanding, <b>XR’s 3D digital representations</b> have revolutioni
 <br>This reminds me of the initial skepticism surrounding touch-based smartphones when they first emerged. However, with improvements in interaction methods like text entry and advancements in hardware capabilities, the iPhone achieved great success. <b>Could XR have similar potential?</b> As a human-centered researcher, I aim to identify how XR's 3D virtual interactions can provide the greatest benefits to people, particularly in which areas or downstream tasks, despite these existing limitations. The optimization of issues related to HMD rendering methods, imaging, and weight might have to be left to the experts in optics and hardware. 😈
 </blockquote>
 </details>
-<br />
+<br>
 
 👉 **Question:** Why am I interested in **working on GenAI**?
 <details><summary>Unfold</summary>
@@ -106,7 +106,7 @@ Additionally, I believe that multimodal representations in XR have great potenti
 
 </blockquote>
 </details>
-<br />
+<br>
 
 👉 **Question:** What **have I learned** from my past research on XR + GenAI?
 <details><summary>Unfold</summary>
@@ -120,7 +120,7 @@ However, despite the impressive capabilities of LLMs, their ability to enhance h
 This calls for advancements in both the NLP and computer graphics fields. After all, HCI is an applied discipline that requires foundational theoretical research and practical development to truly shine. Perhaps I will also <b>attempt</b> to address (or at least mitigate) these significant challenges from a more theoretical and technical perspective.
 </blockquote>
 </details>
- <br />
+<br>
 
 👉 **Question:** What do I **want to do in the future**?
 <details><summary>Unfold</summary>
@@ -149,55 +149,6 @@ I am also open to exploring other research opportunities, such as using diffusio
       <b>[R.1] Singe Image Guided Novel View Image Synthesis by SV3D.</b>
       <br>Facilitating more controllable and flexible novel view generation from a single image through precise camera parameters and enhanced attention blocks. 
       <br>[<a href="https://github.com/zhaosheng-thu/NovelView-SVD-finetune">Code</a>]
-  </div>
-</div> -->
-
-
-
-
-<!-- <details>
-  <summary>Click to view <b>publications & manuscripts</b>:</summary> -->
-
-  <!-- <p></p>
-    <hr style="border: none; height: 1px; background-color: black; margin-top: 10px; margin-bottom: 10px;"> -->
-<!-- 
-  <div id="Coordauth-section" style="display: flex; align-items: start; margin-bottom: 20px;">
-  <img src="../images/CoordAuth-VR.jpg" style="margin-right: 15px; width: 150px;">
-  <div>
-      <b>[P.1] 2 Factor Authentication on HMDs</b>
-      <br> <b>Anonymous author(s)</b>, 1st Author.
-      <br>XX'25 Submission (Rejected by IMWUT'24-a). 
-      <br>[<a href="https://drive.google.com/file/d/1nu8My7_aV61lu0zflA6P1AnhsmCXOA9R/view?usp=sharing">PDF</a>]
-      [<a href="https://github.com/zhaosheng-thu/VRAuthentication">Code</a>]  
-
-  </div>
-</div>
-
-<div id="AvatarExpression-section" style="display: flex; align-items: start; margin-bottom: 20px;">
-  <img src="../images/RaiseYourEyebrow.jpg" style="margin-right: 15px; width: 150px;">
-  <div>
-      <b>[P.2] Avatar Facial Expressions Scaling in VR</b>
-      <br> <b>Anonymous author(s)</b>, Co-1st Author.
-      <br>XXX'25 Submission. 
-      <br>[<a href="https://drive.google.com/file/d/1NrWsxmTKIbign3oKdjtdKU37GUMXYGFP/view?usp=sharing">PDF</a>]
-  </div>
-</div>
-
-<div id="VRCARES-section" style="display: flex; align-items: start; margin-bottom: 20px;">
-  <img src="../images/VirtualAgent.jpg" style="margin-right: 15px; width: 150px;">
-  <div>
-      <b>[P.3] Virtual Agents in VR for Mental Health</b>
-      <br> <b>Anonymous author(s)</b>, 1st Author.
-      <br>XXX'25 Submission. 
-      <br>[<a href="https://drive.google.com/file/d/1Nqq3PtRd8rTnLe9EG6Ffr-bJcI8osO7G/view?usp=sharing">PDF</a>] [<a href="https://github.com/zhaosheng-thu/Llama3-8b-Emotion-Support">Code</a>]
-  </div>
-</div>
-
-<div id="DISCO-section" style="display: flex; align-items: start; margin-bottom: 20px;">
-  <img src="../images/?" style="margin-right: 15px; width: 150px;">
-  <div>
-      <b>[P.4] Designing Intelligent Spaces for Collaboration in MR</b>
-      <br>Preprint.
   </div>
 </div> -->
 
