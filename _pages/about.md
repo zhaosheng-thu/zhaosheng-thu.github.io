@@ -82,6 +82,7 @@ From my understanding, <b>XR’s 3D digital representations</b> have revolutioni
 <br>This reminds me of the initial skepticism surrounding touch-based smartphones when they first emerged. However, with improvements in interaction methods like text entry and advancements in hardware capabilities, the iPhone achieved great success. <b>Could XR have similar potential?</b> As a human-centered researcher, I aim to identify how XR's 3D virtual interactions can provide the greatest benefits to people, particularly in which areas or downstream tasks, despite these existing limitations. The optimization of issues related to HMD rendering methods, imaging, and weight might have to be left to the experts in optics and hardware. 😈
 </blockquote>
 </details>
+<br />
 
 👉 **Question:** Why am I interested in **working on GenAI**?
 <details><summary>Unfold</summary>
@@ -105,6 +106,7 @@ Additionally, I believe that multimodal representations in XR have great potenti
 
 </blockquote>
 </details>
+<br />
 
 👉 **Question:** What **have I learned** from my past research on XR + GenAI?
 <details><summary>Unfold</summary>
@@ -118,6 +120,7 @@ However, despite the impressive capabilities of LLMs, their ability to enhance h
 This calls for advancements in both the NLP and computer graphics fields. After all, HCI is an applied discipline that requires foundational theoretical research and practical development to truly shine. Perhaps I will also <b>attempt</b> to address (or at least mitigate) these significant challenges from a more theoretical and technical perspective.
 </blockquote>
 </details>
+ <br />
 
 👉 **Question:** What do I **want to do in the future**?
 <details><summary>Unfold</summary>
@@ -149,14 +152,8 @@ I am also open to exploring other research opportunities, such as using diffusio
   </div>
 </div> -->
 
-<!-- <div style="text-align: center;">
-  <img src="../images/research-3.jpg" style="width: 95%;">
-</div> --> 
 
 
-<!-- ## Peer-review Papers -->
-
-<!-- I am striving to submit my work to <i>IMWUT (Ubicomp), UIST, CHI, MM</i> and <i>TVCG</i>.  -->
 
 <!-- <details>
   <summary>Click to view <b>publications & manuscripts</b>:</summary> -->
@@ -204,7 +201,9 @@ I am also open to exploring other research opportunities, such as using diffusio
   </div>
 </div> -->
 
-<!-- <div id="Coordauth-section" style="display: flex; align-items: start; margin-bottom: 20px;">
+
+<!-- 
+<div id="Coordauth-section" style="display: flex; align-items: start; margin-bottom: 20px;">
   <img src="../images/teaser-auth.jpg" style="margin-right: 15px; width: 150px;">
   <div>
       <b>[1] <a href="https://zhaosheng-thu.github.io/publications/CoordAuth">CoordAuth: A Two-factor Authentication Method in Virtual Reality Leveraging Head-Eye Coordination</a></b>
@@ -241,6 +240,7 @@ I am also open to exploring other research opportunities, such as using diffusio
       <br>Preprint.
   </div>
 </div> -->
+
 ## Hobbies
 
 - 🎵 Favorite musicians: Stefanie Sun (孙燕姿) and Jay Chou (周杰伦).
