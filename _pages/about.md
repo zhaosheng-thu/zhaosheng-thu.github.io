@@ -12,7 +12,7 @@ redirect_from:
 
 ## Who I am
 
-I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a senior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China 🏫. Now I am pursuing B.Sc. in **Fundamental Science** (Mathematics and Physics) and B.Eng. in **Electrical Engineering**🎓, at Weiyang College. For more information, please refer to my [Curriculum Vitae](https://drive.google.com/file/d/10gRGZ-B-lTQRnmqzW-8egPKW3EEP8dv6/view?usp=sharing).
+I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a senior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China 🏫. Now I am pursuing B.Sc. in **Mathematics and Physics** and B.Eng. in **Electrical Engineering**🎓, at Weiyang College. For more information, please refer to my [Curriculum Vitae](https://drive.google.com/file/d/1hGyLitA5c0I03qbDbG42kRQnJ4xSVKuh/view?usp=drive_link).
 
 ## Education
 
@@ -71,7 +71,41 @@ I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a senior at [**Tsingh
 Previously, I was a research assistant at **Tsinghua University HCI Group**, under the advisory of Assistant Professor [<i>Xin Yi</i>](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ) and Professor [<i>Yuanchun Shi</i>](https://scholar.google.com/citations?user=TZm3-pwAAAAJ&hl=en&oi=ao). Meanwhile, I was a research intern under the supervisor of Chair Professor [<i>Bowen Zhou</i>](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ) at **Tsinghua University**. And I also collaborated with Assistant Professor [<i>Yukang Yan</i>](https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao) at **University of Rochester** remotely. Currently, I'm a research intern at **School of Information, University of Michigan**, under the supervisor of Associate Professor [<i>Michael Nebeling</i>](https://scholar.google.com/citations?user=W2XLsXoAAAAJ&hl=en&oi=ao) and Postdoc [<i>Janet Johnson</i>](https://scholar.google.com/citations?user=YCJhuRMAAAAJ&hl=en&oi=sra).I am also delighted to collaborate and discuss with my classmates [<i>Junrui Zhu</i>](https://zhujuneray.github.io/) and [<i>Jingwei Zuo</i>](https://dr-left.github.io/).
 And at the same time, I'm a visiting student at [C3ILab](http://c3i.ee.tsinghua.edu.cn/), Tsinghua University, under the advisory of Prof. [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=en&oi=ao). -->
 
-I am a human-centered technical researcher working at the intersection of <b>eXtended Reality (XR)</b> and <b>Generative Artificial Intelligence (GenAI)</b>. I focus on **understanding human behaviors** when interacting with digital objects, considering **visual representations**, **linguistic information**, and **interaction setups**. To this end, I implemented computational prototypes, conducted empirical studies, and performed evaluations to advance our capabilities of perception, congnition, and interction. Through my research, I aimed to **enhance human well-being**, such as emotional state, collaboration efficiency, creativity, as well as usable privacy and security.
+I am a human-centered technical researcher working at the intersection of <b>eXtended Reality (XR)</b> and <b>Generative Artificial Intelligence (GenAI)</b>. I focus on **understanding human behaviors** when interacting with digital objects, considering **visual representations**, **linguistic information**, and **interaction setups**. To this end, I implemented computational prototypes, conducted empirical studies, and deployed systems to advance our capabilities of perception, congnition, and interction. Through my research, I aim to enhance human well-being in various ways, including improving emotional states [<a href="#VRCARES">3</a>], fostering collaboration [<a href="#DISCO">4</a>], enriching communication experiences [<a href="#AvatarFacial">3</a>], sparking creativity [<a href="#1Image2NovelViewSV3D">5</a>], and advancing usable privacy and security [<a href="#CoordAuth">1</a>], all within digital interactive environments such as XR, with the help of GenAI.
+
+## Peer-review Papers
+
+<div id="CoordAuth">
+  <p>
+    [1]. <strong>Sheng Zhao</strong>*, Junrui Zhu*, Xueyang Wang, Hongyi Li, Suning Zhang, Xin Yi, and Hewu Li. <em>CoordAuth: Hands-Free Two-Factor Authentication in Virtual Reality Leveraging Head-Eye Coordination.</em><br>
+    <u>Accepted as Conference Paper</u>, <em>The 32nd IEEE Conference on Virtual Reality and 3D User Interfaces (VR’25).</em> (* Equal Contribution)
+  </p>
+</div>
+
+<div id="FacialScaling">
+  <p>
+    [2]. Xueyang Wang*, <strong>Sheng Zhao</strong>*, Yihe Wang, Ziyu Han, Xinge Liu, Xin Tong, and Xin Yi. <em>Raise Your Eyebrows Higher: Facilitating Emotional Communication in Social Virtual Reality Through Region-specific Facial Expression Scaling.</em><br>
+    <u>Revise & Resubmit (Accept with Minor Revision from 1AC)</u>, <em>2025 ACM CHI Conference on Human Factors in Computing Systems (CHI’25).</em> (* Equal Contribution)
+  </p>
+</div>
+
+<div id="VRCARES">
+  <p>
+    [3]. <strong>Sheng Zhao</strong>, Janet Johnson, Xin Yi, and Yukang Yan. <em>Open Your Heart: Investigating the Impact of Dynamic Conversational Strategies and the Multiple Virtual Agent Setting on Emotional Support.</em><br>
+    <u>Revise & Resubmit</u>, <em>2025 ACM CHI Conference on Human Factors in Computing Systems (CHI’25).</em>
+  </p>
+</div>
+
+<div id="DISCO">
+  <p>
+    [4]. Janet Johnson, Macarena Peralta, Mansanjam Kaur, Sophia Huang, <strong>Sheng Zhao</strong>, Hannah Guan, Shwetha Rajaram, and Michael Nebeling. 
+    <em>Exploring Collaborative GenAI Agents in Synchronous Group Settings: Eliciting Team Perceptions and Design Considerations for the Future of Work.</em><br>
+    <u>Under review</u>, <em>The 28th ACM SIGCHI Conference on Computer-Supported Cooperative Work & Social Computing (CSCW’25).</em>
+  </p>
+</div>
+
+
+## Misc
 
 👉 **Question:** Why do I **focus on XR**? What kind of research do I want to conduct in XR?
 <details><summary>Unfold</summary>
@@ -128,7 +162,7 @@ This calls for advancements in both the NLP and computer graphics fields. After 
 This is a difficult question to answer. There are too many complex and obscure issues that need to be addressed. Over the past two years, I have worked on several projects (covering submissions to IMWUT, CHI, CSCW, VR, etc.), but when I reflect on them, I realize that they <b>struggle to fundamentally</b> solve the problems I mentioned earlier. At best, they offer some limited insights. In the future, I need more time to think and reflect on what exactly I need to do. It's a painful process, but it is also rewarding. ✨😊
 <br>
 <br>
-Overall, I aim to <b>improve the usability of XR</b>, including <b>understanding human behavior and needs</b> when interacting with XR, enhancing the accessibility of XR systems to the physical world (through sensors, caemras,and fabrication), and from a GenAI perspective, exploring how XR can provide well-being to GenAI developers; how to leverage GenAI to enhance the diversity and practicality of XR applications, considering visual and textual representations, as well as interactive settings.
+Overall, I aim to <b>improve the usability of XR</b>, including <b>understanding human behavior and needs</b> when interacting with XR, enhancing the accessibility of XR systems to the physical world (through sensors, cameras,and fabrication), and from a GenAI perspective, exploring how XR can provide well-being to GenAI developers; how to leverage GenAI to enhance the diversity and practicality of XR applications, considering visual and textual representations, as well as interactive settings.
 <br>
 <br>
 I am also open to exploring other research opportunities, such as using diffusion models for 3D reconstruction or building multimodal datasets for interactions between humans and the digital or physical world. Ultimately, I want to pursue research that <b>solves real-world problems</b> and makes tangible contributions to improving human life.
@@ -142,7 +176,7 @@ I am also open to exploring other research opportunities, such as using diffusio
 - Enhancing the interactive capabilities of GAI (e.g. Diffusion Model), leading to customizable and controllable human utilization [[R.1](#1Image2NovelViewSV3D)]. Specifically, integrating GAI in XR for human benefits (e.g. well-being, collaboration efficiency) [[P.3](#VRCARES-section)], [[P.4](#DISCO-section)]. -->
 
 
-<!-- ## Repositories
+## Repository
 <div id="1Image2NovelViewSV3D" style="display: flex; align-items: start; margin-bottom: 20px;">
   <img src="../images/SV3D.jpg" style="margin-right: 15px; width: 150px;">
   <div>
@@ -150,7 +184,7 @@ I am also open to exploring other research opportunities, such as using diffusio
       <br>Facilitating more controllable and flexible novel view generation from a single image through precise camera parameters and enhanced attention blocks. 
       <br>[<a href="https://github.com/zhaosheng-thu/NovelView-SVD-finetune">Code</a>]
   </div>
-</div> -->
+</div>
 
 
 <!-- 
@@ -192,12 +226,14 @@ I am also open to exploring other research opportunities, such as using diffusio
   </div>
 </div> -->
 
+
+
 ## Hobbies
 
 - 🎵 Favorite musicians: Stefanie Sun (孙燕姿) and Jay Chou (周杰伦).
 - 📚 Favorite book: Dream of the Red Chamber (红楼梦).
 - 🚴‍♂️ Passionate about outdoor activities and proud member of the **Tsinghua Cycling Team**. Strava account [here](https://www.strava.com/athletes/107292471). 
-<!-- - :soccer: A soccer enthusiast, a dedicated supporter of Cristiano Ronaldo. -->
+
 
 <!-- ## Others
 
