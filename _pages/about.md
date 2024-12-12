@@ -71,8 +71,9 @@ I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a senior at [**Tsingh
 Previously, I was a research assistant at **Tsinghua University HCI Group**, under the advisory of Assistant Professor [<i>Xin Yi</i>](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ) and Professor [<i>Yuanchun Shi</i>](https://scholar.google.com/citations?user=TZm3-pwAAAAJ&hl=en&oi=ao). Meanwhile, I was a research intern under the supervisor of Chair Professor [<i>Bowen Zhou</i>](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ) at **Tsinghua University**. And I also collaborated with Assistant Professor [<i>Yukang Yan</i>](https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao) at **University of Rochester** remotely. Currently, I'm a research intern at **School of Information, University of Michigan**, under the supervisor of Associate Professor [<i>Michael Nebeling</i>](https://scholar.google.com/citations?user=W2XLsXoAAAAJ&hl=en&oi=ao) and Postdoc [<i>Janet Johnson</i>](https://scholar.google.com/citations?user=YCJhuRMAAAAJ&hl=en&oi=sra).I am also delighted to collaborate and discuss with my classmates [<i>Junrui Zhu</i>](https://zhujuneray.github.io/) and [<i>Jingwei Zuo</i>](https://dr-left.github.io/).
 And at the same time, I'm a visiting student at [C3ILab](http://c3i.ee.tsinghua.edu.cn/), Tsinghua University, under the advisory of Prof. [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=en&oi=ao). -->
 
-I am a human-centered technical researcher working at the intersection of <b>eXtended Reality (XR)</b> and <b>Generative Artificial Intelligence (GenAI)</b>. I focus on **understanding human behaviors** when interacting with digital objects, considering **visual representations**, **linguistic information**, and **interaction setups**. To this end, I implemented computational prototypes, conducted empirical studies, and deployed systems to advance our capabilities of perception, congnition, and interction. Through my research, I aim to enhance human well-being in various ways, including improving emotional states [<a href="#VRCARES">3</a>], fostering collaboration [<a href="#DISCO">4</a>], enriching communication experiences [<a href="#AvatarFacial">3</a>], sparking creativity [<a href="#1Image2NovelViewSV3D">5</a>], and advancing usable privacy and security [<a href="#CoordAuth">1</a>], all within digital interactive environments such as XR, with the help of GenAI.
+I am a human-centered technical researcher working at the intersection of <b>eXtended Reality (XR)</b> and <b>Generative Artificial Intelligence (GenAI)</b>. I focus on **understanding human behaviors** when interacting with digital objects, considering **visual representations**, **linguistic information**, and **interaction setups**. To this end, I implemented computational prototypes, conducted empirical studies, and deployed systems to advance our capabilities of perception, congnition, and interction. Through my research, I aim to enhance human well-being in various ways, including improving emotional states [<a href="#VRCARES">3</a>], fostering collaboration [<a href="#DISCO">4</a>], enriching communication experiences [<a href="#FacialScaling">3</a>], sparking creativity [<a href="#1Image2NovelViewSV3D">5</a>], and advancing usable privacy and security [<a href="#CoordAuth">1</a>], all within digital interactive environments such as XR, with the help of GenAI.
 
+<a name="Paper"></a>
 ## Peer-review Papers
 
 <div id="CoordAuth">
@@ -102,6 +103,16 @@ I am a human-centered technical researcher working at the intersection of <b>eXt
     <em>Exploring Collaborative GenAI Agents in Synchronous Group Settings: Eliciting Team Perceptions and Design Considerations for the Future of Work.</em><br>
     <u>Under review</u>, <em>The 28th ACM SIGCHI Conference on Computer-Supported Cooperative Work & Social Computing (CSCW’25).</em>
   </p>
+</div>
+
+## Repository
+<div id="1Image2NovelViewSV3D" style="display: flex; align-items: start; margin-bottom: 20px;">
+  <img src="../images/SV3D.jpg" style="margin-right: 15px; width: 150px;">
+  <div>
+      <b>Singe Image Guided Novel View Image Synthesis by SV3D.</b>
+      <br>Facilitating more controllable and flexible novel view generation from a single image through precise camera parameters and enhanced attention blocks. 
+      <br>[<a href="https://github.com/zhaosheng-thu/NovelView-SVD-finetune">Github</a>]
+  </div>
 </div>
 
 
@@ -174,17 +185,6 @@ I am also open to exploring other research opportunities, such as using diffusio
 - Modeling and understanding human behaviours, building systems or proposing strategies for augmented experience [[P.1](#Coordauth-section)], [[P.2](#AvatarExpression-section)].
 
 - Enhancing the interactive capabilities of GAI (e.g. Diffusion Model), leading to customizable and controllable human utilization [[R.1](#1Image2NovelViewSV3D)]. Specifically, integrating GAI in XR for human benefits (e.g. well-being, collaboration efficiency) [[P.3](#VRCARES-section)], [[P.4](#DISCO-section)]. -->
-
-
-## Repository
-<div id="1Image2NovelViewSV3D" style="display: flex; align-items: start; margin-bottom: 20px;">
-  <img src="../images/SV3D.jpg" style="margin-right: 15px; width: 150px;">
-  <div>
-      <b>[R.1] Singe Image Guided Novel View Image Synthesis by SV3D.</b>
-      <br>Facilitating more controllable and flexible novel view generation from a single image through precise camera parameters and enhanced attention blocks. 
-      <br>[<a href="https://github.com/zhaosheng-thu/NovelView-SVD-finetune">Code</a>]
-  </div>
-</div>
 
 
 <!-- 
