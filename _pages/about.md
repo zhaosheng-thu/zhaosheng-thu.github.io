@@ -12,7 +12,7 @@ redirect_from:
 
 ## Who I am
 
-I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a senior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China 🏫. Now I am pursuing B.Sc. in **Mathematics and Physics** and B.Eng. in **Electrical Engineering**🎓, at Weiyang College. For more information, please refer to my [Curriculum Vitae](https://drive.google.com/file/d/1hGyLitA5c0I03qbDbG42kRQnJ4xSVKuh/view?usp=drive_link).
+I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a senior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China 🏫. Now I am pursuing B.Sc. in **Mathematics and Physics** and B.Eng. in **Electrical Engineering**🎓, at Weiyang College. For more information, please refer to my [Curriculum Vitae](https://drive.google.com/file/d/1afqzCNoYhTbYer-mW-HA2aSQDCiQLajp/view?usp=sharing).
 
 ## Education
 
@@ -78,22 +78,23 @@ I am a human-centered technical researcher working at the intersection of <b>eXt
 
 <div id="CoordAuth">
   <p>
-    [1]. <strong>Sheng Zhao</strong>*, Junrui Zhu*, Xueyang Wang, Hongyi Li, Suning Zhang, Xin Yi, and Hewu Li. <em>CoordAuth: Hands-Free Two-Factor Authentication in Virtual Reality Leveraging Head-Eye Coordination.</em><br>
-    <u>Accepted as Conference Paper</u>, <em>The 32nd IEEE Conference on Virtual Reality and 3D User Interfaces (VR’25).</em> (* Equal Contribution)
+    [1]. <strong>Sheng Zhao</strong>*, Junrui Zhu*, Shuning Zhang, Xueyang Wang, Hongyi Li, Fang Yi, Xin Yi, and Hewu Li. <em>CoordAuth: Hands-Free Two-Factor Authentication in Virtual Reality Leveraging Head-Eye Coordination.</em><br>
+    <u>Accepted as Conference Paper</u>, <em>The 32nd IEEE Conference on Virtual Reality and 3D User Interfaces (VR’25).</em> (* Equal Contribution) 
+    <br>[<a href="https://drive.google.com/file/d/1RFVvsPcA-gr3k55ahL-dNq2pXOacCl6i/view">PDF</a>] [<a>IEEE</a>]
   </p>
 </div>
 
 <div id="FacialScaling">
   <p>
     [2]. Xueyang Wang*, <strong>Sheng Zhao</strong>*, Yihe Wang, Ziyu Han, Xinge Liu, Xin Tong, and Xin Yi. <em>Raise Your Eyebrows Higher: Facilitating Emotional Communication in Social Virtual Reality Through Region-specific Facial Expression Scaling.</em><br>
-    <u>Revise & Resubmit (Accept with Minor Revision from 1AC)</u>, <em>2025 ACM CHI Conference on Human Factors in Computing Systems (CHI’25).</em> (* Equal Contribution)
+    <u>Conditionally Accepted</u>, <em>2025 ACM CHI Conference on Human Factors in Computing Systems (CHI’25).</em> (* Equal Contribution)
   </p>
 </div>
 
 <div id="VRCARES">
   <p>
     [3]. <strong>Sheng Zhao</strong>, Janet Johnson, Xin Yi, and Yukang Yan. <em>Open Your Heart: Investigating the Impact of Dynamic Conversational Strategies and the Multiple Virtual Agent Setting on Emotional Support.</em><br>
-    <u>Revise & Resubmit</u>, <em>2025 ACM CHI Conference on Human Factors in Computing Systems (CHI’25).</em>
+    <u>Preprint</u>, <em>2025 ACM CHI Conference on Human Factors in Computing Systems (CHI’25).</em>
   </p>
 </div>
 
