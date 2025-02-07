@@ -94,7 +94,7 @@ I am a human-centered technical researcher working at the intersection of <b>eXt
 <div id="VRCARES">
   <p>
     [3]. <strong>Sheng Zhao</strong>, Janet Johnson, Xin Yi, and Yukang Yan. <em>Open Your Heart: Investigating the Impact of Dynamic Conversational Strategies and the Multiple Virtual Agent Setting on Emotional Support.</em><br>
-    <u>Preprint</u>, <em>2025 ACM CHI Conference on Human Factors in Computing Systems (CHI’25).</em>
+    <u>Preprint</u>. <em></em>
   </p>
 </div>
 
