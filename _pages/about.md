@@ -14,6 +14,8 @@ redirect_from:
 
 I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a senior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China 🏫. Now I am pursuing B.Sc. in **Mathematics and Physics** and B.Eng. in **Electrical Engineering**🎓, at Weiyang College. For more information, please refer to my [Curriculum Vitae](https://drive.google.com/file/d/1afqzCNoYhTbYer-mW-HA2aSQDCiQLajp/view?usp=sharing).
 
+Now I'm interned at **[Zhipu-AI](https://www.zhipuai.cn/en/)**.
+
 ## Education
 
   <div style="display: flex; align-items: start; margin-bottom: 20px;">
@@ -80,14 +82,14 @@ I am a human-centered technical researcher working at the intersection of <b>eXt
   <p>
     [1]. <strong>Sheng Zhao</strong>*, Junrui Zhu*, Shuning Zhang, Xueyang Wang, Hongyi Li, Fang Yi, Xin Yi, and Hewu Li. <em>CoordAuth: Hands-Free Two-Factor Authentication in Virtual Reality Leveraging Head-Eye Coordination.</em><br>
     <u>Accepted as Conference Paper</u>, <em>The 32nd IEEE Conference on Virtual Reality and 3D User Interfaces (VR’25).</em> (* Equal Contribution) 
-    <br>[<a href="https://drive.google.com/file/d/1RFVvsPcA-gr3k55ahL-dNq2pXOacCl6i/view">PDF</a>] [<a>IEEE</a>]
+    <br>[<a href="https://drive.google.com/file/d/1RFVvsPcA-gr3k55ahL-dNq2pXOacCl6i/view">PDF</a>] [<a href="https://ieeevr.org/2025/program/papers/#16">IEEE</a>]
   </p>
 </div>
 
 <div id="FacialScaling">
   <p>
-    [2]. Xueyang Wang*, <strong>Sheng Zhao</strong>*, Yihe Wang, Ziyu Han, Xinge Liu, Xin Tong, and Xin Yi. <em>Raise Your Eyebrows Higher: Facilitating Emotional Communication in Social Virtual Reality Through Region-specific Facial Expression Scaling.</em><br>
-    <u>Conditionally Accepted</u>, <em>2025 ACM CHI Conference on Human Factors in Computing Systems (CHI’25).</em> (* Equal Contribution)
+    [2]. Xueyang Wang, <strong>Sheng Zhao</strong>, Yihe Wang, Ziyu Han, Xinge Liu, Xin Tong, and Xin Yi. <em>Raise Your Eyebrows Higher: Facilitating Emotional Communication in Social Virtual Reality Through Region-specific Facial Expression Scaling.</em><br>
+    <u>Accepted</u>, <em>2025 ACM CHI Conference on Human Factors in Computing Systems (CHI’25).</em> 
   </p>
 </div>
 
@@ -102,7 +104,7 @@ I am a human-centered technical researcher working at the intersection of <b>eXt
   <p>
     [4]. Janet Johnson, Macarena Peralta, Mansanjam Kaur, Sophia Huang, <strong>Sheng Zhao</strong>, Hannah Guan, Shwetha Rajaram, and Michael Nebeling. 
     <em>Exploring Collaborative GenAI Agents in Synchronous Group Settings: Eliciting Team Perceptions and Design Considerations for the Future of Work.</em><br>
-    <u>Under review</u>, <em>The 28th ACM SIGCHI Conference on Computer-Supported Cooperative Work & Social Computing (CSCW’25).</em>
+    <u>Conditionally Accepted</u>, <em>The 28th ACM SIGCHI Conference on Computer-Supported Cooperative Work & Social Computing (CSCW’25).</em>
   </p>
 </div>
 
