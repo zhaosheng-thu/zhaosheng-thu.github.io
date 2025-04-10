@@ -90,7 +90,7 @@ And at the same time, I'm a visiting student at [C3ILab](http://c3i.ee.tsinghua.
   <p>
     [1]. <strong>Sheng Zhao</strong>*, Junrui Zhu*, Shuning Zhang, Xueyang Wang, Hongyi Li, Fang Yi, Xin Yi, and Hewu Li. <em>CoordAuth: Hands-Free Two-Factor Authentication in Virtual Reality Leveraging Head-Eye Coordination.</em><br>
     <u>Accepted as Conference Paper</u>, <em>The 32nd IEEE Conference on Virtual Reality and 3D User Interfaces (VR’25).</em> (* Equal Contribution) 
-    <br>[<a href="https://drive.google.com/file/d/1RFVvsPcA-gr3k55ahL-dNq2pXOacCl6i/view">PDF</a>] [<a href="https://ieeevr.org/2025/program/papers/#16">ieeevr.org</a>][<a href="https://ieeexplore.ieee.org/abstract/document/10937423/">IEEE Xplore</a>]
+    <br>[<a href="https://drive.google.com/file/d/1RFVvsPcA-gr3k55ahL-dNq2pXOacCl6i/view">PDF</a>][<a href="https://ieeevr.org/2025/program/papers/#16">ieeevr.org</a>][<a href="https://ieeexplore.ieee.org/abstract/document/10937423/">IEEE Xplore</a>]
   </p>
 </div>
 
@@ -116,6 +116,12 @@ And at the same time, I'm a visiting student at [C3ILab](http://c3i.ee.tsinghua.
     <u>In submission</u>. <em></em>
   </p>
 </div>
+
+## Service
+
+**Reviewer**: IMWUT'24, OzCHI'25, VR'25, CHI'25, CHI LBW'25, ICWSM'25, DIS'25
+<br>
+**Student Volunteer**: CHI'25
 
 ## Repository
 <div id="1Image2NovelViewSV3D" style="display: flex; align-items: start; margin-bottom: 20px;">
