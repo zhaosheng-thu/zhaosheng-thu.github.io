@@ -12,10 +12,11 @@ redirect_from:
 
 ## Who I am
 
-I'm **Sheng Zhao** (赵晟), and you can call me Alex. I'm a senior at [**Tsinghua University**](https://www.tsinghua.edu.cn/en/), Beijing, China 🏫. Now I am pursuing B.Sc. in **Mathematics and Physics** and B.Eng. in **Electrical Engineering**🎓, at Weiyang College. For more information, please refer to my [Curriculum Vitae](https://drive.google.com/file/d/1afqzCNoYhTbYer-mW-HA2aSQDCiQLajp/view?usp=sharing).
+I'm **Sheng Zhao** (赵晟), an undergraduate student at Tsinghua University, Beijing, China 🏫. For more information, please refer to my [Curriculum Vitae](https://drive.google.com/file/d/1afqzCNoYhTbYer-mW-HA2aSQDCiQLajp/view?usp=sharing).
 
-Now I'm interned at **[Zhipu-AI](https://www.zhipuai.cn/en/)**.
+I will join the Department of Computer Science at University of Rochester, NY, USA as a Ph.D. student, working with Prof. [Yuhao Zhu](https://yuhaozhu.com/), from 25 Fall. 
 
+My research focuses on AR/VR systems and visual computing, considering human perception modeling and neural rendering acceleration.
 ## Education
 
   <div style="display: flex; align-items: start; margin-bottom: 20px;">
@@ -25,13 +26,41 @@ Now I'm interned at **[Zhipu-AI](https://www.zhipuai.cn/en/)**.
       <br> 2021.9 - Present (2025.7 Expected)
       <br> <b>B.Eng. in Electrical Engineering</b>
       <br> <b>B.S. in Fundamental Sciences</b> (Mathematics and Physics)
-      <!-- <br> Research Assistant at HCI-Group, advised by Prof. <i>Xin Yi</i>
-      <br> Research Intern at C3ILab, advised by Prof. <i>Bowen Zhou</i> -->
 
   </div>
 </div>
 
-## Research Experience
+## Experience
+
+<div style="display: flex; align-itmes: start; margin-bottom: 20px;">
+  <img src="../images/zhipulogo.jpg" style="margin-right: 15px; width: 120px;">
+  <div>
+      <b><a href="">Zhipu AI</a></b>
+      <br> 2025.3 - now
+      <br> Working on <a href="https://github.com/THUDM/CogAgent">CogAgent</a> and <a href="https://codegeex.cn/en-US">CodeGeeX</a>
+
+  </div>
+</div>
+
+<div style="display: flex; align-items: start; margin-bottom: 20px;">
+  <img src="../images/Michigan.jpg" style="margin-right: 15px; width: 120px;">
+  <div>
+      <b><a href="https://www.si.umich.edu/">Information Interaction Lab, University of Michigan</a></b>
+      <br> 2024.6 - 2024.9
+      <br> Advisors: Professor <a href="https://scholar.google.com/citations?user=W2XLsXoAAAAJ&hl=en&oi=ao"><i>Michael Nebeling</i></a> and Postdoc <a href="https://scholar.google.com/citations?user=YCJhuRMAAAAJ&hl=en&oi=sra"><i>Janet Johnson</i></a>.
+      <!-- <br> Work: Exploring Collaborative GenAI Agents [<a href="#DISCO-section">P.4</a>]. -->
+  </div>
+</div>
+
+<div style="display: flex; align-items: start; margin-bottom: 20px;">
+  <img src="../images/Rochester.jpg" style="margin-right: 15px; width: 120px;">
+  <div>
+      <b><a href="https://www.rochester.edu/">Bear Lab, University of Rochester</a></b>
+      <br> 2024.1 - 2024.9
+      <br> Advisor: Professor <a href="https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao"><i>Yukang Yan</i></a>.
+      <!-- <br> Work: Virtual Agents for Emotional Support [<a href="#VRCARES-section">P.3</a>]. -->
+  </div>
+</div>
 
 <div style="display: flex; align-items: start; margin-bottom: 20px;">
   <img src="../images/Tsinghua.jpg" style="margin-right: 15px; width: 120px;">
@@ -48,32 +77,11 @@ Now I'm interned at **[Zhipu-AI](https://www.zhipuai.cn/en/)**.
   </div>
 </div>
 
-
-<div style="display: flex; align-items: start; margin-bottom: 20px;">
-  <img src="../images/Rochester.jpg" style="margin-right: 15px; width: 120px;">
-  <div>
-      <b><a href="https://www.rochester.edu/">Bear Lab, University of Rochester</a></b>
-      <br> 2024.1 - 2024.9
-      <br> Advisor: Professor <a href="https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao"><i>Yukang Yan</i></a>.
-      <!-- <br> Work: Virtual Agents for Emotional Support [<a href="#VRCARES-section">P.3</a>]. -->
-  </div>
-</div>
-
-<div style="display: flex; align-items: start; margin-bottom: 20px;">
-  <img src="../images/Michigan.jpg" style="margin-right: 15px; width: 120px;">
-  <div>
-      <b><a href="https://www.si.umich.edu/">Information Interaction Lab, University of Michigan</a></b>
-      <br> 2024.6 - 2024.9
-      <br> Advisors: Professor <a href="https://scholar.google.com/citations?user=W2XLsXoAAAAJ&hl=en&oi=ao"><i>Michael Nebeling</i></a> and Postdoc <a href="https://scholar.google.com/citations?user=YCJhuRMAAAAJ&hl=en&oi=sra"><i>Janet Johnson</i></a>.
-      <!-- <br> Work: Exploring Collaborative GenAI Agents [<a href="#DISCO-section">P.4</a>]. -->
-  </div>
-</div>
-
 <!-- 
 Previously, I was a research assistant at **Tsinghua University HCI Group**, under the advisory of Assistant Professor [<i>Xin Yi</i>](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ) and Professor [<i>Yuanchun Shi</i>](https://scholar.google.com/citations?user=TZm3-pwAAAAJ&hl=en&oi=ao). Meanwhile, I was a research intern under the supervisor of Chair Professor [<i>Bowen Zhou</i>](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ) at **Tsinghua University**. And I also collaborated with Assistant Professor [<i>Yukang Yan</i>](https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao) at **University of Rochester** remotely. Currently, I'm a research intern at **School of Information, University of Michigan**, under the supervisor of Associate Professor [<i>Michael Nebeling</i>](https://scholar.google.com/citations?user=W2XLsXoAAAAJ&hl=en&oi=ao) and Postdoc [<i>Janet Johnson</i>](https://scholar.google.com/citations?user=YCJhuRMAAAAJ&hl=en&oi=sra).I am also delighted to collaborate and discuss with my classmates [<i>Junrui Zhu</i>](https://zhujuneray.github.io/) and [<i>Jingwei Zuo</i>](https://dr-left.github.io/).
 And at the same time, I'm a visiting student at [C3ILab](http://c3i.ee.tsinghua.edu.cn/), Tsinghua University, under the advisory of Prof. [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=en&oi=ao). -->
 
-I am a human-centered technical researcher working at the intersection of <b>eXtended Reality (XR)</b> and <b>Generative Artificial Intelligence (GenAI)</b>. I focus on **understanding human behaviors** when interacting with digital objects, considering **visual representations**, **linguistic information**, and **interaction setups**. To this end, I implemented computational prototypes, conducted empirical studies, and deployed systems to advance our capabilities of perception, cognition, and interaction. Through my research, I aim to enhance human well-being in various ways, including improving emotional states [<a href="#VRCARES">3</a>], fostering collaboration [<a href="#DISCO">4</a>], enriching communication experiences [<a href="#FacialScaling">2</a>], sparking creativity [<a href="#1Image2NovelViewSV3D">5</a>], and advancing usable privacy and security [<a href="#CoordAuth">1</a>], all within digital interactive environments such as XR, with the help of GenAI.
+<!-- I am a human-centered technical researcher working at the intersection of <b>eXtended Reality (XR)</b> and <b>Generative Artificial Intelligence (GenAI)</b>. I focus on **understanding human behaviors** when interacting with digital objects, considering **visual representations**, **linguistic information**, and **interaction setups**. To this end, I implemented computational prototypes, conducted empirical studies, and deployed systems to advance our capabilities of perception, cognition, and interaction. Through my research, I aim to enhance human well-being in various ways, including improving emotional states [<a href="#VRCARES">3</a>], fostering collaboration [<a href="#DISCO">4</a>], enriching communication experiences [<a href="#FacialScaling">2</a>], sparking creativity [<a href="#1Image2NovelViewSV3D">5</a>], and advancing usable privacy and security [<a href="#CoordAuth">1</a>], all within digital interactive environments such as XR, with the help of GenAI. -->
 
 <a name="Paper"></a>
 ## Peer-review Papers
@@ -82,7 +90,7 @@ I am a human-centered technical researcher working at the intersection of <b>eXt
   <p>
     [1]. <strong>Sheng Zhao</strong>*, Junrui Zhu*, Shuning Zhang, Xueyang Wang, Hongyi Li, Fang Yi, Xin Yi, and Hewu Li. <em>CoordAuth: Hands-Free Two-Factor Authentication in Virtual Reality Leveraging Head-Eye Coordination.</em><br>
     <u>Accepted as Conference Paper</u>, <em>The 32nd IEEE Conference on Virtual Reality and 3D User Interfaces (VR’25).</em> (* Equal Contribution) 
-    <br>[<a href="https://drive.google.com/file/d/1RFVvsPcA-gr3k55ahL-dNq2pXOacCl6i/view">PDF</a>] [<a href="https://ieeevr.org/2025/program/papers/#16">IEEE</a>]
+    <br>[<a href="https://drive.google.com/file/d/1RFVvsPcA-gr3k55ahL-dNq2pXOacCl6i/view">PDF</a>] [<a href="https://ieeevr.org/2025/program/papers/#16">ieeevr.org</a>][<a href="https://ieeexplore.ieee.org/abstract/document/10937423/">IEEE Xplore</a>]
   </p>
 </div>
 
@@ -90,21 +98,22 @@ I am a human-centered technical researcher working at the intersection of <b>eXt
   <p>
     [2]. Xueyang Wang, <strong>Sheng Zhao</strong>, Yihe Wang, Ziyu Han, Xinge Liu, Xin Tong, and Xin Yi. <em>Raise Your Eyebrows Higher: Facilitating Emotional Communication in Social Virtual Reality Through Region-specific Facial Expression Scaling.</em><br>
     <u>Accepted</u>, <em>2025 ACM CHI Conference on Human Factors in Computing Systems (CHI’25).</em> 
-  </p>
-</div>
-
-<div id="VRCARES">
-  <p>
-    [3]. <strong>Sheng Zhao</strong>, Janet Johnson, Xin Yi, and Yukang Yan. <em>Open Your Heart: Investigating the Impact of Dynamic Conversational Strategies and the Multiple Virtual Agent Setting on Emotional Support.</em><br>
-    <u>Preprint</u>. <em></em>
+    <br>[<a href="">PDF</a>][<a href="https://programs.sigchi.org/chi/2025/program/content/188476">sigchi.org</a>]
   </p>
 </div>
 
 <div id="DISCO">
   <p>
-    [4]. Janet Johnson, Macarena Peralta, Mansanjam Kaur, Sophia Huang, <strong>Sheng Zhao</strong>, Hannah Guan, Shwetha Rajaram, and Michael Nebeling. 
+    [3]. Janet Johnson, Macarena Peralta, Mansanjam Kaur, Sophia Huang, <strong>Sheng Zhao</strong>, Hannah Guan, Shwetha Rajaram, and Michael Nebeling. 
     <em>Exploring Collaborative GenAI Agents in Synchronous Group Settings: Eliciting Team Perceptions and Design Considerations for the Future of Work.</em><br>
-    <u>Conditionally Accepted</u>, <em>The 28th ACM SIGCHI Conference on Computer-Supported Cooperative Work & Social Computing (CSCW’25).</em>
+    <u>Accepted</u>, <em>The 28th ACM SIGCHI Conference on Computer-Supported Cooperative Work & Social Computing (CSCW’25).</em>
+  </p>
+</div>
+
+<div id="VRCARES">
+  <p>
+    [4]. <strong>Sheng Zhao</strong>, Janet Johnson, Xin Yi, and Yukang Yan. <em>Open Your Heart: Investigating the Impact of Dynamic Conversational Strategies and the Multiple Virtual Agent Setting on Emotional Support.</em><br>
+    <u>In submission</u>. <em></em>
   </p>
 </div>
 
@@ -118,7 +127,7 @@ I am a human-centered technical researcher working at the intersection of <b>eXt
   </div>
 </div>
 
-
+<!-- 
 ## Misc
 
 👉 **Question:** Why do I **focus on XR**? What kind of research do I want to conduct in XR?
@@ -181,7 +190,7 @@ Overall, I aim to <b>improve the usability of XR</b>, including <b>understanding
 <br>
 I am also open to exploring other research opportunities, such as using diffusion models for 3D reconstruction or building multimodal datasets for interactions between humans and the digital or physical world. Ultimately, I want to pursue research that <b>solves real-world problems</b> and makes tangible contributions to improving human life.
 </blockquote>
-</details>
+</details> -->
 
 <!-- Specifically, my work follows two key threads:
 
