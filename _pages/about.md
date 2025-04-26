@@ -12,7 +12,8 @@ redirect_from:
 
 ## Who I am
 
-I'm **Sheng Zhao** (赵晟), an undergraduate student at Tsinghua University, Beijing, China 🏫. For more information, please refer to my [Curriculum Vitae](https://drive.google.com/file/d/1afqzCNoYhTbYer-mW-HA2aSQDCiQLajp/view?usp=sharing).
+I'm **Sheng Zhao** (赵晟), an undergraduate student at Tsinghua University, Beijing, China 🏫. 
+<!-- For more information, please refer to my [Curriculum Vitae](https://drive.google.com/file/d/1afqzCNoYhTbYer-mW-HA2aSQDCiQLajp/view?usp=sharing). -->
 
 I will join the Department of Computer Science at University of Rochester, NY, USA as a Ph.D. student, working with Prof. [Yuhao Zhu](https://yuhaozhu.com/), from 25 Fall. 
 
@@ -98,7 +99,7 @@ And at the same time, I'm a visiting student at [C3ILab](http://c3i.ee.tsinghua.
   <p>
     [2]. Xueyang Wang, <strong>Sheng Zhao</strong>, Yihe Wang, Ziyu Han, Xinge Liu, Xin Tong, and Xin Yi. <em>Raise Your Eyebrows Higher: Facilitating Emotional Communication in Social Virtual Reality Through Region-specific Facial Expression Scaling.</em><br>
     <u>Accepted</u>, <em>2025 ACM CHI Conference on Human Factors in Computing Systems (CHI’25).</em> 
-    <br>[<a href="">PDF</a>][<a href="https://programs.sigchi.org/chi/2025/program/content/188476">sigchi.org</a>]
+    <br>[<a href="">PDF</a>][<a href="https://programs.sigchi.org/chi/2025/program/content/188476">sigchi.org</a>][<a href="https://dl.acm.org/doi/10.1145/3706598.3713688">ACM Library</a>]
   </p>
 </div>
 
@@ -107,6 +108,7 @@ And at the same time, I'm a visiting student at [C3ILab](http://c3i.ee.tsinghua.
     [3]. Janet Johnson, Macarena Peralta, Mansanjam Kaur, Sophia Huang, <strong>Sheng Zhao</strong>, Hannah Guan, Shwetha Rajaram, and Michael Nebeling. 
     <em>Exploring Collaborative GenAI Agents in Synchronous Group Settings: Eliciting Team Perceptions and Design Considerations for the Future of Work.</em><br>
     <u>Accepted</u>, <em>The 28th ACM SIGCHI Conference on Computer-Supported Cooperative Work & Social Computing (CSCW’25).</em>
+    <br>[<a href="https://arxiv.org/abs/2504.14779">Arxiv</a>]
   </p>
 </div>
 
@@ -119,7 +121,7 @@ And at the same time, I'm a visiting student at [C3ILab](http://c3i.ee.tsinghua.
 
 ## Service
 
-**Reviewer**: IMWUT'24, OzCHI'25, VR'25, CHI'25, CHI LBW'25, ICWSM'25, DIS'25
+**Reviewer**: IMWUT'24, OzCHI'25, VR'25, CHI'25, CHI LBW'25, ICWSM'25, DIS'25, ISMAR'25
 <br>
 **Student Volunteer**: CHI'25
 
