@@ -12,7 +12,7 @@ redirect_from:
 
 ## Who I am
 
-I'm Sheng Zhao (赵晟), focusing on research in visual computing and AI model engineering (LLMs, VLMs, and Diffusion Models). I am currently an intern in the AI Coding Team at the CapCut Department, ByteDance (字节跳动). Previously, I earned my Bachelor's degree from Tsinghua University, Beijing, China.
+I'm Sheng Zhao (赵晟), focusing on research in visual computing and AI model engineering (LLM, VLM, and Diffusion Model). I am currently an intern in the AI Coding Team at ByteDance (字节跳动). Previously, I earned my Bachelor's degree from Tsinghua University, Beijing, China.
 <!-- For more information, please refer to my [Curriculum Vitae](https://drive.google.com/file/d/1afqzCNoYhTbYer-mW-HA2aSQDCiQLajp/view?usp=sharing). -->
 
 I will join the Department of Computer Science at University of Rochester, NY, USA as a Ph.D. student, working with Prof. [Yuhao Zhu](https://yuhaozhu.com/), from 26 Spring (deferred from Fall 2025 to Spring 2026 due to visa processing). 
@@ -57,7 +57,7 @@ I will join the Department of Computer Science at University of Rochester, NY, U
   <div>
       <b><a href="">ByteDance (字节跳动)</a></b>
       <br> 2025.10 - now
-      <br> Intern in <a href="https://www.capcut.com/">CapCut</a>, optimizing model-based code generation and reasoning systems.
+      <br> Intern in <a href="https://www.capcut.com/">CapCut</a>, involving in the post-training (SFT, RL) of the internal general-purpose coding agent model.
 
   </div>
 </div>
@@ -67,12 +67,12 @@ I will join the Department of Computer Science at University of Rochester, NY, U
   <div>
       <b><a href="">Z.AI (智谱 AI)</a></b>
       <br> 2025.3 - 2025.7
-      <br> Intern in <a href="https://github.com/THUDM/CogAgent">CogAgent</a>, working on data augmentation and post training for <a href="https://z.ai/blog/glm-4.5">GLM-4.5</a>.
+      <br> Intern in <a href="https://github.com/THUDM/CogAgent">CogAgent</a>, working on data augmentation and post training (SFT) for <a href="https://z.ai/blog/glm-4.5">GLM-4.5</a>.
 
   </div>
 </div>
 
-Additionally, I have conducted research at the Department of **[Computer Science](https://www.rochester.edu/)** of the University of Rochester, working with Professor **[Yukang Yan](https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao)**, as well as at the Department of Computer Science and Department of Electronic Engineering under the guidance of Professor **[Xin Yi](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ)** and Professor **[Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ)**, respectively.
+Additionally, I have conducted research at the Department of **[Computer Science](https://www.rochester.edu/)** of the University of Rochester, working with Professor **[Yukang Yan](https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao)**, as well as at the Department of Computer Science and Department of Electronic Engineering of Tsinghua University, under the guidance of Professor **[Xin Yi](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ)** and Professor **[Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ)**, respectively.
 <!-- **[PI Lab](https://pi.cs.tsinghua.edu.cn/)** and **[C3I Lab](https://c3i.ee.tsinghua.edu.cn/)**  -->
 
 
