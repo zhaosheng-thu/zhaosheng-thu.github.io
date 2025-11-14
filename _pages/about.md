@@ -12,7 +12,7 @@ redirect_from:
 
 ## Who I am
 
-I'm Sheng Zhao (赵晟), focusing on research in visual computing and AI model engineering (LLM, VLM, and Diffusion Model). I am currently an intern in the AI Coding Team at ByteDance (字节跳动). Previously, I earned my Bachelor's degree from Tsinghua University, Beijing, China.
+I'm Sheng Zhao (赵晟), focusing on research in visual computing and large AI models (LLM, VLM, and Diffusion Model). I am currently an intern in the AI Coding Team at ByteDance (字节跳动). Previously, I earned my Bachelor's degree from Tsinghua University, Beijing, China.
 <!-- For more information, please refer to my [Curriculum Vitae](https://drive.google.com/file/d/1afqzCNoYhTbYer-mW-HA2aSQDCiQLajp/view?usp=sharing). -->
 
 I will join the Department of Computer Science at University of Rochester, NY, USA as a Ph.D. student, working with Prof. [Yuhao Zhu](https://yuhaozhu.com/), from 26 Spring (deferred from Fall 2025 to Spring 2026 due to visa processing). 
@@ -63,7 +63,7 @@ I will join the Department of Computer Science at University of Rochester, NY, U
 </div>
 
 <div style="display: flex; align-itmes: start; margin-bottom: 20px;">
-  <img src="../images/zhipulogo.jpg" style="margin-right: 15px; width: 120px;">
+  <img src="../images/OIP-C.jpg" style="margin-right: 15px; width: 120px;">
   <div>
       <b><a href="">Z.AI (智谱 AI)</a></b>
       <br> 2025.3 - 2025.7
