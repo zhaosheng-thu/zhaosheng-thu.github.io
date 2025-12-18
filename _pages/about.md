@@ -57,7 +57,7 @@ I will join the Department of Computer Science at University of Rochester, NY, U
   <div>
       <b><a href="">ByteDance (字节跳动)</a></b>
       <br> 2025.10 - now
-      <br> Intern in <a href="https://www.capcut.com/">CapCut</a>, involving in the post-training (SFT, RL) of the internal general-purpose coding agent model.
+      <br> Intern in <a href="https://www.capcut.com/">CapCut</a>, involving in the post-training (SFT, RL) of the internal general-purpose coding agentic model.
 
   </div>
 </div>
@@ -130,3 +130,4 @@ Additionally, I have conducted research at the Department of **[Computer Science
 - 🎵 Favorite musicians: Stefanie Sun (孙燕姿) and Jay Chou (周杰伦).
 - 📚 Favorite book: Dream of the Red Chamber (红楼梦).
 - 🚴‍♂️ Passionate about outdoor activities and proud member of the Tsinghua Cycling Team. [Strava account here](https://www.strava.com/athletes/107292471)
+
