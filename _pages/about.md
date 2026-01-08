@@ -14,7 +14,7 @@ redirect_from:
 
 I am Sheng Zhao (赵晟), a Ph.D. student starting in Spring 2026 at the University of Rochester, NY, USA, under the supervision of Prof. [Yuhao Zhu]((https://yuhaozhu.com/)) (admitted for Fall 2025; start deferred due to visa processing). My research focuses on **visual computing** and **large-scale AI models**, including LLM, VLM, and diffusion model.
 
-Previously, I interned on the AI Coding Team at ByteDance (字节跳动) and worked as a research intern at Z.ai (智谱). I received my Bachelor’s degree from Tsinghua University in Beijing.
+Previously, I interned on the AI Coding Team at ByteDance (字节跳动) and worked as a research intern at Z.ai (智谱). I received my Bachelor’s degree from Tsinghua University, Beijing, China.
 <!-- For more information, please refer to my [Curriculum Vitae](https://drive.google.com/file/d/1afqzCNoYhTbYer-mW-HA2aSQDCiQLajp/view?usp=sharing). -->
 
 ## Education
@@ -66,8 +66,8 @@ Previously, I interned on the AI Coding Team at ByteDance (字节跳动) and wor
   <img src="../images/OIP-C.jpg" style="margin-right: 15px; width: 120px;">
   <div>
       <b><a href="">Z.ai (智谱 AI)</a></b>
-      <br> 2025.3 - 2025.7
-      <br>  working on data augmentation and post training for <a href="https://docs.z.ai/guides/vlm/glm-4.5v">GLM-4.5v</a>.
+      <br> 2025.03 - 2025.07
+      <br> Working on data augmentation and post training for <a href="https://docs.z.ai/guides/vlm/glm-4.5v">GLM-4.5v</a>.
       <!-- Intern in <a href="https://github.com/THUDM/CogAgent">CogAgent</a>, -->
 
   </div>
