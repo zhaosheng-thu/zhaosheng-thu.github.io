@@ -12,12 +12,11 @@ redirect_from:
 
 ## Who I am
 
-I'm Sheng Zhao (赵晟), focusing on research in visual computing and large AI models (LLM, VLM, and Diffusion Model). I am currently an intern in the AI Coding Team at ByteDance (字节跳动). Previously, I earned my Bachelor's degree from Tsinghua University, Beijing, China.
+I am Sheng Zhao (赵晟), a Ph.D. student starting in Spring 2026 at the University of Rochester, NY, USA, under the supervision of Prof. [Yuhao Zhu]((https://yuhaozhu.com/)) (admitted for Fall 2025; start deferred due to visa processing). My research focuses on **visual computing** and **large-scale AI models**, including LLM, VLM, and diffusion model.
+
+Previously, I interned on the AI Coding Team at ByteDance (字节跳动) and worked as a research intern at Z.ai (智谱). I received my Bachelor’s degree from Tsinghua University in Beijing.
 <!-- For more information, please refer to my [Curriculum Vitae](https://drive.google.com/file/d/1afqzCNoYhTbYer-mW-HA2aSQDCiQLajp/view?usp=sharing). -->
 
-I will join the Department of Computer Science at University of Rochester, NY, USA as a Ph.D. student, working with Prof. [Yuhao Zhu](https://yuhaozhu.com/), from 26 Spring (deferred from Fall 2025 to Spring 2026 due to visa processing). 
-
-<!-- My research focuses on human visual system (HVS). -->
 ## Education
 <div style="display: flex; align-items: start; margin-bottom: 20px;">
   <img src="../images/Rochester.jpg" style="margin-right: 15px; width: 120px;">
@@ -56,8 +55,9 @@ I will join the Department of Computer Science at University of Rochester, NY, U
   <img src="../images/bytedance.png" style="margin-right: 15px; width: 120px;">
   <div>
       <b><a href="">ByteDance (字节跳动)</a></b>
-      <br> 2025.10 - now
-      <br> Intern in <a href="https://www.capcut.com/">CapCut</a>, involving in the post-training (SFT, RL) of the internal general-purpose coding agentic model.
+      <br> 2025.10 - 2026.01
+      <br> Involving in post-training of the agentic model (for internal utilization, using Seed-1.6 and Qwen series).
+      <!-- Intern in <a href="https://www.capcut.com/">CapCut</a>,  -->
 
   </div>
 </div>
@@ -65,19 +65,21 @@ I will join the Department of Computer Science at University of Rochester, NY, U
 <div style="display: flex; align-itmes: start; margin-bottom: 20px;">
   <img src="../images/OIP-C.jpg" style="margin-right: 15px; width: 120px;">
   <div>
-      <b><a href="">Z.AI (智谱 AI)</a></b>
+      <b><a href="">Z.ai (智谱 AI)</a></b>
       <br> 2025.3 - 2025.7
-      <br> Intern in <a href="https://github.com/THUDM/CogAgent">CogAgent</a>, working on data augmentation and post training (SFT) for <a href="https://z.ai/blog/glm-4.5">GLM-4.5</a>.
+      <br>  working on data augmentation and post training for <a href="https://docs.z.ai/guides/vlm/glm-4.5v">GLM-4.5v</a>.
+      <!-- Intern in <a href="https://github.com/THUDM/CogAgent">CogAgent</a>, -->
 
   </div>
 </div>
 
 Additionally, I have conducted research at the Department of **[Computer Science](https://www.rochester.edu/)** of the University of Rochester, working with Professor **[Yukang Yan](https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao)**, as well as at the Department of Computer Science and Department of Electronic Engineering of Tsinghua University, under the guidance of Professor **[Xin Yi](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ)** and Professor **[Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ)**, respectively.
+In addition, I served as a research intern in **[PI Lab](https://pi.cs.tsinghua.edu.cn/)**, where I conducted research on persona-aware LLM in the dental domain.
 <!-- **[PI Lab](https://pi.cs.tsinghua.edu.cn/)** and **[C3I Lab](https://c3i.ee.tsinghua.edu.cn/)**  -->
 
 
 <a name="Paper"></a>
-## Peer-review Papers
+## Publications
 
 <div id="CoordAuth">
   <p>
@@ -100,7 +102,7 @@ Additionally, I have conducted research at the Department of **[Computer Science
     [3]. Janet Johnson, Macarena Peralta, Mansanjam Kaur, Sophia Huang, <strong>Sheng Zhao</strong>, Hannah Guan, Shwetha Rajaram, and Michael Nebeling. 
     <em>Exploring Collaborative GenAI Agents in Synchronous Group Settings: Eliciting Team Perceptions and Design Considerations for the Future of Work.</em><br>
     <u>Accepted</u>, <em>The 28th ACM SIGCHI Conference on Computer-Supported Cooperative Work & Social Computing (CSCW’25).</em>
-    <br>[<a href="https://arxiv.org/abs/2504.14779">Arxiv</a>]
+    <br>[<a href="https://arxiv.org/abs/2504.14779">Arxiv</a>][<a href="https://dl.acm.org/doi/pdf/10.1145/3757595">ACM Library</a>]
   </p>
 </div>
 <!-- 
@@ -129,5 +131,5 @@ Additionally, I have conducted research at the Department of **[Computer Science
 ## Hobbies
 - 🎵 Favorite musicians: Stefanie Sun (孙燕姿) and Jay Chou (周杰伦).
 - 📚 Favorite book: Dream of the Red Chamber (红楼梦).
-- 🚴‍♂️ Passionate about outdoor activities and proud member of the Tsinghua Cycling Team. [Strava account here](https://www.strava.com/athletes/107292471)
+- 🚴‍♂️ Passionate about outdoor activities and proud member of the Tsinghua Cycling Team. Strava account[ here](https://www.strava.com/athletes/107292471).
 
