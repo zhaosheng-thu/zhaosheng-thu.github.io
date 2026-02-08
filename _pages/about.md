@@ -12,9 +12,9 @@ redirect_from:
 
 ## Who I am
 
-I am Sheng Zhao (赵晟), a Ph.D. student starting in Spring 2026 at the University of Rochester, NY, USA, under the supervision of Prof. [Yuhao Zhu]((https://yuhaozhu.com/)) (admitted for Fall 2025; start deferred due to visa processing). My research focuses on **visual computing** and **large-scale AI models**, including LLM, VLM, and diffusion model.
+I am Sheng Zhao (赵晟), a Ph.D. student starting in Spring 2026 at the University of Rochester, NY, USA, under the supervision of Prof. [Yuhao Zhu]((https://yuhaozhu.com/)). My research focuses on **visual computing** and **large-scale AI models**, including LLM, VLM, and diffusion model. For more information, please refer to my [CV](../files/CV_Sheng%20Zhao.pdf).
 
-Previously, I interned on the AI Coding Team at ByteDance (字节跳动) and worked as a research intern at Z.ai (智谱). I received my Bachelor’s degree from Tsinghua University, Beijing, China.
+<!-- Previously, I interned on the AI Coding Team at ByteDance (字节跳动) and worked as a research intern at Z.ai (智谱). I received my Bachelor’s degree from Tsinghua University, Beijing, China. -->
 <!-- For more information, please refer to my [Curriculum Vitae](https://drive.google.com/file/d/1afqzCNoYhTbYer-mW-HA2aSQDCiQLajp/view?usp=sharing). -->
 
 ## Education
@@ -39,7 +39,7 @@ Previously, I interned on the AI Coding Team at ByteDance (字节跳动) and wor
   </div>
 </div>
 
-<div style="display: flex; align-items: start; margin-bottom: 20px;">
+<!-- <div style="display: flex; align-items: start; margin-bottom: 20px;">
   <img src="../images/Michigan.jpg" style="margin-right: 15px; width: 120px;">
   <div>
       <b><a href="https://www.si.umich.edu/">University of Michigan</a></b>
@@ -47,7 +47,7 @@ Previously, I interned on the AI Coding Team at ByteDance (字节跳动) and wor
       <br>Research Assistant in Information Science
       <br>Advisor: Professor <a href="https://scholar.google.com/citations?user=W2XLsXoAAAAJ&hl=en&oi=ao"><i>Michael Nebeling</i></a>
   </div>
-</div>
+</div> -->
 
 ## Experience
 
@@ -115,7 +115,7 @@ In addition, I served as a research intern in **[PI Lab](https://pi.cs.tsinghua.
 
 ## Service
 
-**Reviewer**: IMWUT 2024; OzCHI 2025; CHI LBW 2025; ICWSM 2025; DIS 2025; ISMAR 2025; VR 2025, 2026; CHI 2025, 2026
+**Reviewer**: IMWUT 2024; ICWSM 2025; DIS 2025; ISMAR 2025; VR 2025, 2026; CHI 2025, 2026
 <br>**Student Volunteer**: CHI 2025
 
 <!-- ## Repository
