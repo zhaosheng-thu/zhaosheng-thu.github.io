@@ -58,7 +58,7 @@ Additionally, I have conducted research as a Research Assistant at the Universit
   <div>
       <b><a href="">ByteDance (字节跳动)</a></b>
       <br> <i style="color: #888;">Oct 2025 - Jan 2026</i>
-      <br> Intern working on agentic coding models (Seed-1.6-Code) covering front-end development.
+      <br> Intern improving the front-end coding capabilities of agentic model (Seed-1.6-Code, etc.) via SFT and RL.
       <!-- Intern in <a href="https://www.capcut.com/">CapCut</a>,  -->
 
   </div>
@@ -70,7 +70,7 @@ Additionally, I have conducted research as a Research Assistant at the Universit
       <b><a href="">Z.ai (智谱 AI)</a></b>
       <br> <i style="color: #888;">Mar 2025 - Jul 2025</i>
       <!-- <br> Trajectory synthesis and rejection sampling for <a href="https://docs.z.ai/guides/vlm/glm-4.5v">GLM-4.5v</a>'s SFT and RL post-training on web tool use. -->
-      <br> Intern working on <a href="https://docs.z.ai/guides/vlm/glm-4.5v">GLM-4.5v</a>'s SFT and RL.
+      <br> Intern improving <a href="https://docs.z.ai/guides/vlm/glm-4.5v">GLM-4.5v</a>'s GUI web-agent capabilities via SFT and RL.
       <!-- Intern in <a href="https://github.com/THUDM/CogAgent">CogAgent</a>, -->
 
   </div>
