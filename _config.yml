@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Sheng Zhao"
 title_separator          : "-"
 name                     : &name "Sheng Zhao"
-description              : &description "A junior in thu"
+description              : &description "Ph.D. student in Computer Science at the University of Rochester"
 url                      : https://zhaosheng-thu.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # "academicpages/academicpages.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Sheng Zhao"
   avatar           : "avatar-n.png"
-  bio              : "Ph.D. student @ University of Rochester"
+  bio              : "1st-year Ph.D. student @ University of Rochester"
   location         : "Rochester, NY, USA"
   employer         :
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"

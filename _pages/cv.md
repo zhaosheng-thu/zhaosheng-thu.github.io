@@ -32,40 +32,46 @@ My research interests include interactive usability, privacy, and security in Vi
 --- -->
 
 ## Publications & Manuscripts
-- **CoordAuth: A Two-factor Authentication Method in Virtual Reality Leveraging
-Head-Eye Coordination**
-  <!-- - ***Sheng Zhao\***, JunRay Zhu\*, Shuning Zhang, Xueyang Wang, Fang Yi, Xin Yi<sup>†</sup>* -->
-  <!-- - ***Sheng Zhao**, Anonymous Author(s).* -->
-  - *1st Author, Ubicomp'24, under review.*
-  <!-- - *[PDF](/publications/imwut24a-sub3876.pdf)* -->
-- **EmoBlend: Revealing the Impact of Facial Blendshape Intensity on Emotional Perception in Virtual Reality**
-  <!-- - *Xueyang Wang\*, **Sheng Zhao\***, Yihe Wang, Ziyu Han, Xin Ge, Xin Tong<sup>†</sup>, Xin Yi<sup>†</sup>* -->
-  <!-- - *XX\*, **Sheng Zhao\***, Anonymous Author(s).* -->
-  - *Co-1st Author, TVCG, in submission.*
+- **CoordAuth: Hands-Free Two-Factor Authentication in Virtual Reality Leveraging Head-Eye Coordination**
+  - *Sheng Zhao\*, Junrui Zhu\*, Shuning Zhang, Xueyang Wang, Hongyi Li, Fang Yi, Xin Yi, Hewu Li. (\*Equal Contribution)*
+  - *Co-1st Author, accepted, IEEE VR'25.*
+- **Raise Your Eyebrows Higher: Facilitating Emotional Communication in Social Virtual Reality Through Region-specific Facial Expression Scaling**
+  - *Xueyang Wang, Sheng Zhao, Yihe Wang, Ziyu Han, Xinge Liu, Xin Tong, Xin Yi.*
+  - *Accepted, ACM CHI'25.*
+- **Exploring Collaborative GenAI Agents in Synchronous Group Settings: Eliciting Team Perceptions and Design Considerations for the Future of Work**
+  - *Janet Johnson, Macarena Peralta, Mansanjam Kaur, Sophia Huang, Sheng Zhao, Hannah Guan, Shwetha Rajaram, Michael Nebeling.*
+  - *Accepted, ACM CSCW'25.*
+- **LowPowAR: Power-Constrained Tone Mapping for Augmented Reality**
+  - *Weikai Lin, Sheng Zhao, Ian Ross, Carl Marshall, Sushant Kondguli, Yuhao Zhu.*
+  - *Accepted, IEEE TVCG'26 (ISMAR Journal Track).*
 
 ---
 
 ## Research Experiences
 ### *HCI Group, Tsinghua University, China*
 - *Research Assistant, Advisor: [Xin Yi](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ) , [Yuanchun Shi](https://scholar.google.com/citations?user=TZm3-pwAAAAJ&hl=en&oi=ao)*
-- **EmoBlend: Revealing the Impact of Facial Blendshape Intensity on Emotional Perception in Virtual Reality**
+- **Raise Your Eyebrows Higher: Facilitating Emotional Communication in Social Virtual Reality Through Region-specific Facial Expression Scaling**
 - My work include:
   - Implementing VR face2face chat using TCP-based socket and [Oculus SDK](https://github.com/oculus-samples/Unity-Movement).
   - Designing both qualitative and quantitative research methods based on interviews and questionnaires.
   - Conducting user research experiments and conducting data analysis.
   - Proposing an improved camera2blendshape method to mitigate the uncanny valley effect and enhance the emotional experience. 
-- We'll submit it to [TVCG](). Code [here](https://zhaosheng-thu.github.io/projects/avatarfacialexpressions).
+- Accepted to ACM CHI'25. Code [here](https://zhaosheng-thu.github.io/projects/avatarfacialexpressions).
 
 ### *HCI Group, Tsinghua University, China*
 - *Research Assistant, Advisor: [Xin Yi](https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ)*
-- **CoordAuth: A Two-factor Authentication Method in Virtual Reality Leveraging
-Head-Eye Coordination**
+- **CoordAuth: Hands-Free Two-Factor Authentication in Virtual Reality Leveraging Head-Eye Coordination**
 - My work include:
   - Project leader, proposing the current two-factor authentication framework based on unlock pattern and the behaviour biometrics.
   - Using Unity to build the 3*3 unlock UI in VR.
   - Designing the biometric classifier by machine learning, using RF etc. to implement the classification of behavior biometrics during saccades and fixations of eye movements.
   - Conducting user studies, validating framework robustness against password collision, contextual factors and shoulder surfing attacks.
-- I have submitted it to [Ubicomp'24](https://dl.acm.org/conference/ubicomp). Code [here](https://zhaosheng-thu.github.io/projects/vrauth).
+- Accepted to IEEE VR'25. Code [here](https://zhaosheng-thu.github.io/projects/vrauth).
+
+### *Horizon Lab, University of Rochester, USA*
+- *Ph.D. Student, Advisor: [Yuhao Zhu](https://yuhaozhu.com/)*
+- **LowPowAR: Power-Constrained Tone Mapping for Augmented Reality**
+- Co-authored a power-constrained tone-mapping framework for AR displays, accepted to IEEE TVCG'26 (ISMAR Journal Track).
 
 ### *[C3I Lab](http://c3i.ee.tsinghua.edu.cn/), Tsinghua University, China*
 - *Visiting Student, Advisor: [Bowen Zhou](https://scholar.google.com/citations?user=h3Nsz6YAAAAJ&hl=en&oi=ao)*
