@@ -1,0 +1,14 @@
+{
+  "dataset_key": "vwm_de_color",
+  "title": "Factorial Comparison of Working Memory Models",
+  "authors": "Ronald van den Berg, Edward Awh, Wei Ji Ma",
+  "year": 2014,
+  "venue": "Psychological Review, 121(1), 124-149",
+  "doi_or_url": "https://doi.org/10.1037/a0035234",
+  "pdf_url": "https://www.cns.nyu.edu/malab/static/files/publications/2014%20Van%20den%20Berg%20Ma%20Psych%20Review.pdf",
+  "figure": "Figure 2",
+  "page": 3,
+  "caption_short": "Example trial procedure in delayed estimation of color: subjects view a set of colored items, and after a brief delay report the color of one probed item by clicking on a color wheel.",
+  "license": "publisher copyright (© 2014 American Psychological Association) — author self-archived copy of the published version from the Ma lab website (cns.nyu.edu/malab); used under fair use for academic summary",
+  "notes": "Cropped from page 3 (journal page 126) of the published APA typeset PDF at 440 dpi; caption text excluded. Figure 2 is the paper's schematic of the delayed-estimation paradigm (memory array -> delay -> continuous report on a color wheel). The delayed-estimation benchmark analysed in this paper pools 10 previously published experiments (Table 1, same page): E1 Wilken & Ma 2004 (color wheel, Caltech); E2 Zhang & Luck 2008 (color wheel, UC Davis); E3 Bays et al. 2009 (color wheel, UCL); E4 Anderson et al. 2011 (orientation 360deg, U Oregon); E5 Anderson & Awh 2012 (orientation 180deg, U Oregon); E6 Anderson & Awh 2012 (orientation 360deg, U Oregon); E7-E9 Van den Berg et al. 2012 (color scrolling, color wheel, orientation 180deg; Baylor); E10 Rademaker et al. 2012 (orientation 180deg, Vanderbilt). Combined: 164 subjects, 131,452 trials. Figure 2 illustrates the color-wheel version; orientation experiments used an analogous continuous report. Data and code: https://github.com/WeiJiMaLab/delayed_estimation_benchmark. The PMC author-manuscript version is PMC4159389 (its PDF is behind a proof-of-work challenge; the Ma lab copy was used instead — note the task brief cited PMC3949221, but Unpaywall/PMC resolve DOI 10.1037/a0035234 to PMC4159389)."
+}

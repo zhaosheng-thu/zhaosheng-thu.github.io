@@ -1,0 +1,14 @@
+{
+  "dataset_key": "duolingo",
+  "title": "A Trainable Spaced Repetition Model for Language Learning",
+  "authors": "Burr Settles, Brendan Meeder",
+  "year": 2016,
+  "venue": "Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (ACL 2016), Volume 1: Long Papers, pages 1848-1858",
+  "doi_or_url": "https://doi.org/10.18653/v1/P16-1174",
+  "pdf_url": "https://aclanthology.org/P16-1174.pdf",
+  "figure": "Figure 1 (panels a-d)",
+  "page": 2,
+  "caption_short": "What a Duolingo learner sees on a practice trial: the skill tree marking which skills are due for practice, a skill screen listing the learner's weakest words, and the graded translation exercise showing the correct-response and incorrect-response feedback screens.",
+  "license": "CC BY 4.0 (ACL Anthology; materials published in or after 2016 are licensed CC BY 4.0)",
+  "notes": "Cropped from a 220-dpi render of p. 2 of the ACL Anthology PDF. The four screenshot panels and their own (a)-(d) sub-labels are included; the 'Figure 1: Duolingo screenshots...' caption text below them is excluded. Chosen over Figure 4 (the forgetting-curve / half-life illustration, p. 5) because the task brief's primary criterion is what a participant sees and does, and Figure 1 is the only figure in the paper showing the actual practice interface and response feedback. Figure 4 on p. 5 is the alternative if a half-life / forgetting-curve illustration is wanted instead; Figure 3 on p. 3 shows the Leitner flashcard system."
+}

@@ -1,0 +1,14 @@
+{
+  "dataset_key": "peers_recog",
+  "title": "The Penn Electrophysiology of Encoding and Retrieval Study",
+  "authors": "Michael J. Kahana, Lynn J. Lohnas, M. Karl Healey, Ada Aka, Adam W. Broitman, Patrick Crutchley, Elizabeth Crutchley, Kylie H. Alm, Brandon S. Katerman, Nicole E. Miller, Joel R. Kuhn, Yuxuan Li, Nicole M. Long, Jonathan Miller, Madison D. Paron, Jesse K. Pazdera, Isaac Pedisich, Joseph H. Rudoler, Christoph T. Weidemann",
+  "year": 2024,
+  "venue": "Journal of Experimental Psychology: Learning, Memory, and Cognition 50(9):1421-1443",
+  "doi_or_url": "https://doi.org/10.1037/xlm0001319",
+  "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12161444/pdf/nihms-2084225.pdf",
+  "figure": "Figure 1, top row (PEERS Experiments 1 and 3)",
+  "page": 32,
+  "caption_short": "The end-of-session recognition path in PEERS: after studying 16 lists of 16 words and doing immediate free recall, subjects take an item-recognition test with confidence judgements (and, in half the sessions, a 5-minute final free-recall test first).",
+  "license": "author manuscript, PMC (NIHMS-2084225); published version copyright American Psychological Association - figure reproduced under fair use for academic summary",
+  "notes": "This is the SAME Figure 1 as peers_recall.png, not a separate figure. The paper contains no dedicated panel or screenshot of the recognition response screen or of the confidence scale, so per instructions this crop is the sub-region of Figure 1 (the Experiments 1 and 3 row) that contains the 'Item Recognition with Conf. Judgments' branch; use peers_recall.png if a single shared figure is preferred. Recognition procedure per the paper's Methods ('Measuring Recognition'): responses were vocal - subjects said 'pess' or 'po' instead of 'yes'/'no' so that the stop consonant gave precise response timing - and confidence ratings were collected after the old/new decision; subjects were incentivised for speed on the yes/no response and for accuracy via the confidence judgement. The paper does not state the number of confidence levels in this figure or its caption. Cropped from a 220-dpi render of p. 32."
+}

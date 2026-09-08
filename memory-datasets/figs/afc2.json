@@ -1,0 +1,14 @@
+{
+  "dataset_key": "afc2",
+  "title": "Comparing memory capacity across stimuli requires maximally dissimilar foils: Using deep convolutional neural networks to understand visual working memory capacity for real-world objects",
+  "authors": "Timothy F. Brady, Viola S. Störmer",
+  "year": 2024,
+  "venue": "Memory & Cognition, 52(3), 595-609",
+  "doi_or_url": "https://doi.org/10.3758/s13421-023-01485-5",
+  "pdf_url": "https://bradylab.ucsd.edu/pdfs/BradyStormer2024.pdf",
+  "figure": "Fig. 4",
+  "page": 8,
+  "caption_short": "Method of Experiment 2: participants saw six real-world objects for 2000 ms, held them over a 700 ms delay, and then made a two-alternative forced choice at a cued location between the studied object and a foil.",
+  "license": "publisher copyright (© The Psychonomic Society, Inc. 2023; Springer Nature holds exclusive rights under a publishing agreement) — author self-archived PDF of the published version from the Brady lab website; used under fair use for academic summary",
+  "notes": "Cropped from page 8 (journal page 602) of the published typeset PDF at 440 dpi; caption text excluded. Fig. 4 shows the full trial: 6-object memory array (2000 ms, spatial placeholders visible throughout) -> 700 ms delay -> 2-AFC test at one cued location with the studied object and one foil. The foil-similarity manipulation is described in the caption rather than drawn as separate panels: foils were maximally distinct cross-category, minimally distinct cross-category, or randomly chosen from a different category (60 trials each, 180 total, N = 50 MTurk participants). The example pairs for the similarity conditions are shown separately in Fig. 2, and the CNN foil-selection method in Fig. 1. Fig. 6 (page 10) is the analogous method figure for Experiment 3, which contrasts objects with colors. Not open access: Crossref registers only a Springer Nature text-and-data-mining license (no CC license), and no PMC record was found. The OSF node https://osf.io/axyqs/ is a public project holding materials, data and analysis code — the OSF preprints API returns 404 for that identifier, so it is not a preprint. The author self-archived copy at bradylab.ucsd.edu was therefore used."
+}

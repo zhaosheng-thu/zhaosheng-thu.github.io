@@ -1,0 +1,14 @@
+{
+  "dataset_key": "nsd",
+  "title": "A massive 7T fMRI dataset to bridge cognitive and computational neuroscience (preprint title; published as 'A massive 7T fMRI dataset to bridge cognitive neuroscience and artificial intelligence')",
+  "authors": "Emily J. Allen, Ghislain St-Yves, Yihan Wu, Jesse L. Breedlove, Logan T. Dowdle, Brad Caron, Franco Pestilli, Ian Charest, J. Benjamin Hutchinson, Thomas Naselaris, Kendrick Kay",
+  "year": 2021,
+  "venue": "bioRxiv 2021.02.22.432340 (preprint, posted 22 February 2021); published version: Nature Neuroscience 25, 116-126 (2022)",
+  "doi_or_url": "https://doi.org/10.1101/2021.02.22.432340 (preprint); https://doi.org/10.1038/s41593-021-00962-x (published)",
+  "pdf_url": "https://www.biorxiv.org/content/10.1101/2021.02.22.432340v1.full.pdf",
+  "figure": "Figure 1A",
+  "page": 5,
+  "caption_short": "Trial design of the NSD continuous recognition task: while holding central fixation, participants see a stream of COCO natural scenes (3 s on, 1 s off, 8.4 degrees visual angle) and report for each image whether they have seen it before at any point in the experiment.",
+  "license": "CC BY 4.0 (bioRxiv preprint)",
+  "notes": "The published Nature Neuroscience version is paywalled, is NOT deposited in PubMed Central (checked via the PMC ID converter and Europe PMC; no author manuscript exists), and Unpaywall reports no open-access location for 10.1038/s41593-021-00962-x. The CC BY 4.0 bioRxiv preprint was therefore used; its Figure 1A corresponds to Figure 1a of the published article. Crop is panel A only (panels B-D and the caption are excluded). bioRxiv rate-limits/challenges direct downloads; the PDF eventually downloaded on retry and is saved as site/papers/nsd.pdf. Rendered at 440 dpi because the panel is physically small on the page (final crop 723x740 px)."
+}

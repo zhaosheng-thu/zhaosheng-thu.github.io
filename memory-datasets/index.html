@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Human memory datasets — catalogue for a unified trial-level model</title>
+<style>
+  :root { --ink:#1b1f24; --muted:#5b6470; --line:#e2e6ea; --bg:#fafbfc; --card:#fff; --wm:#e8f1ff; --ltm:#fff1e6; --rec:#eef7ee; --rcl:#f5ecff; --rep:#fff8dc; --acc:#0b57d0; }
+  * { box-sizing: border-box; }
+  body { margin:0; font: 15px/1.5 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color:var(--ink); background:var(--bg); }
+  header { padding:28px 32px 12px; border-bottom:1px solid var(--line); background:#fff; }
+  h1 { margin:0 0 6px; font-size:24px; }
+  .sub { color:var(--muted); max-width:980px; }
+  .dims { display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; padding:16px 32px; }
+  .dim { background:#fff; border:1px solid var(--line); border-radius:10px; padding:12px 14px; }
+  .dim h3 { margin:0 0 6px; font-size:14px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .chip { display:inline-block; margin:3px 6px 3px 0; padding:3px 10px; border-radius:999px; border:1px solid var(--line); background:#f3f5f7; cursor:pointer; font-size:13px; }
+  .chip.on { border-color:var(--acc); background:#e3ecfb; color:var(--acc); }
+  .chip small { color:var(--muted); }
+  .tools { padding:0 32px 8px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; color:var(--muted); font-size:13px; }
+  .tools button { font:inherit; padding:4px 10px; border-radius:6px; border:1px solid var(--line); background:#fff; cursor:pointer; }
+  main { padding:8px 32px 40px; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(460px, 1fr)); gap:18px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden; display:flex; flex-direction:column; }
+  .card .head { padding:14px 16px 6px; }
+  .card h2 { margin:0; font-size:18px; }
+  .card .full { color:var(--muted); font-size:13px; }
+  .tags { padding:0 16px 8px; display:flex; flex-wrap:wrap; gap:6px; }
+  .tag { font-size:12px; padding:2px 8px; border-radius:6px; border:1px solid var(--line); }
+  .t-WM { background:var(--wm); } .t-LTM { background:var(--ltm); } .t-recognition { background:var(--rec); } .t-recall { background:var(--rcl); } .t-reproduction { background:var(--rep); } .t-metric { background:#f3f5f7; }
+  .fig { background:#f6f7f9; border-top:1px solid var(--line); border-bottom:1px solid var(--line); text-align:center; }
+  .fig img { max-width:100%; max-height:300px; display:block; margin:0 auto; }
+  .fig .cap { font-size:12px; color:var(--muted); padding:6px 12px; text-align:left; }
+  .fig .none { padding:28px; color:var(--muted); font-size:13px; }
+  .body { padding:10px 16px 14px; font-size:14px; }
+  .body p { margin:6px 0; }
+  .kv { display:grid; grid-template-columns: 120px 1fr; gap:2px 10px; font-size:13px; margin:6px 0; }
+  .kv div:nth-child(odd) { color:var(--muted); }
+  .sota { margin-top:8px; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  .sota .hd { background:#f3f5f7; padding:6px 10px; font-size:13px; font-weight:600; display:flex; justify-content:space-between; }
+  .arrow { font-weight:700; color:var(--acc); }
+  table { border-collapse:collapse; width:100%; font-size:13px; }
+  td, th { padding:5px 10px; border-top:1px solid var(--line); vertical-align:top; text-align:left; }
+  th { color:var(--muted); font-weight:600; background:#fff; }
+  .ours { background:#f7fbff; }
+  .note { color:var(--muted); font-size:12px; }
+  .matrix { overflow-x:auto; margin:16px 0 26px; }
+  .matrix table { min-width:900px; background:#fff; border:1px solid var(--line); }
+  .matrix td.k { font-weight:600; }
+  .foot { padding:20px 32px 40px; color:var(--muted); font-size:13px; border-top:1px solid var(--line); background:#fff; }
+  a { color:var(--acc); text-decoration:none; } a:hover { text-decoration:underline; }
+  @media (max-width: 900px) { .dims { grid-template-columns:1fr; } .grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">Human memory datasets</h1>
+  <div class="sub" id="subtitle">Every dataset used by the unified trial-level memory model, placed on three axes: how long the memory is held, what the task asks, and what kind of measurement is released. Each card shows the task figure from the original paper, the metric the field uses (with the direction that is better), the best released model on that metric, and the unified model's number.</div>
+</header>
+<section class="dims">
+  <div class="dim"><h3>Axis 1 · Memory duration</h3><div id="chips-duration"></div></div>
+  <div class="dim"><h3>Axis 2 · Task</h3><div id="chips-task"></div></div>
+  <div class="dim"><h3>Axis 3 · Measurement</h3><div id="chips-metric"></div></div>
+</section>
+<div class="tools"><span id="count"></span><button id="clear">clear filters</button><button id="toggle">show matrix view</button></div>
+<main>
+  <div class="matrix" id="matrix" style="display:none"></div>
+  <div class="grid" id="grid"></div>
+</main>
+<div class="foot" id="foot"></div>
+<script>
+const state = { duration: new Set(), task: new Set(), metric: new Set(), matrix: false };
+let DATA = null;
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const arrow = d => d === 'higher' ? '↑ higher is better' : d === 'lower' ? '↓ lower is better' : d && d.startsWith('lower') ? '↓ ' + d : d && d.startsWith('higher') ? '↑ ' + d : '— no model metric';
+function chips(axis, dict) {
+  const box = document.getElementById('chips-' + axis); box.innerHTML = '';
+  for (const [k, label] of Object.entries(dict)) {
+    const n = DATA.datasets.filter(d => d[axis] === k).length;
+    const el = document.createElement('span'); el.className = 'chip' + (state[axis].has(k) ? ' on' : ''); el.innerHTML = esc(label.split(' (')[0]) + ' <small>' + n + '</small>'; el.title = label;
+    el.onclick = () => { state[axis].has(k) ? state[axis].delete(k) : state[axis].add(k); render(); }; box.appendChild(el);
+  }
+}
+function visible() { return DATA.datasets.filter(d => (!state.duration.size || state.duration.has(d.duration)) && (!state.task.size || state.task.has(d.task)) && (!state.metric.size || state.metric.has(d.metric))); }
+function card(d) {
+  const f = d.figure;
+  const figHtml = f && f.png ? `<div class="fig"><img src="${esc(f.png)}" alt="task figure for ${esc(d.name)}"><div class="cap">${esc(f.figure || 'Figure')} of ${esc(f.authors || '')} (${esc(f.year || '')}), ${esc(f.venue || '')}. ${esc(f.caption_short || '')} <span class="note">${esc(f.license || '')}</span></div></div>`
+                             : `<div class="fig"><div class="none">task figure pending${f && f.notes ? ': ' + esc(f.notes) : ''}</div></div>`;
+  const sota = (d.sota || []).map(s => `<tr><td>${esc(s.model)}${s.year ? ' (' + esc(s.year) + ')' : ''}</td><td><b>${esc(s.value)}</b></td><td class="note">${esc(s.note || '')}</td></tr>`).join('');
+  const ours = (d.ours || []).map(o => `<tr class="ours"><td>${esc(o.what)}</td><td><b>${esc(o.value)}</b></td><td class="note">unified model</td></tr>`).join('');
+  return `<div class="card">
+    <div class="head"><h2>${esc(d.name)}</h2><div class="full">${esc(d.full)} · ${esc(d.group)} · in model: ${esc(d.in_model)}</div></div>
+    <div class="tags"><span class="tag t-${d.duration}">${esc(d.duration_label.split(' (')[0])}</span><span class="tag t-${d.task}">${esc(d.task_label.split(' (')[0])}</span><span class="tag t-metric">${esc(d.metric_label.split(' (')[0])}</span></div>
+    ${figHtml}
+    <div class="body">
+      <p>${esc(d.task_text)}</p>
+      <div class="kv"><div>size</div><div>${esc(d.size)}</div><div>stimuli</div><div>${esc(d.stimuli)}</div><div>response</div><div>${esc(d.response)}</div><div>paper</div><div><a href="${esc(d.paper_url)}" target="_blank" rel="noopener">${esc(d.paper)}</a></div></div>
+      <div class="sota"><div class="hd"><span>Published metric: ${esc(d.published_metric)}</span><span class="arrow">${arrow(d.direction)}</span></div>
+        <table><tr><th>best released model</th><th>value</th><th></th></tr>${sota}${ours}</table>
+        <div class="note" style="padding:6px 10px">ceiling / reliability: ${esc(d.ceiling)} · trial-level model in the literature: ${esc(d.trial_model)}</div></div>
+    </div></div>`;
+}
+function matrix(list) {
+  const rows = list.map(d => `<tr><td class="k">${esc(d.name)}</td><td>${esc(d.duration_label.split(' (')[0])}</td><td>${esc(d.task_label.split(' (')[0])}</td><td>${esc(d.metric_label.split(' (')[0])}</td><td>${esc(d.published_metric)} <span class="arrow">${arrow(d.direction).split(' ')[0]}</span></td><td>${d.sota && d.sota[0] ? esc(d.sota[0].model) + ': <b>' + esc(d.sota[0].value) + '</b>' : ''}</td><td>${d.ours && d.ours[0] ? esc(d.ours[0].value) + ' <span class="note">(' + esc(d.ours[0].what) + ')</span>' : ''}</td></tr>`).join('');
+  return `<table><tr><th>dataset</th><th>duration</th><th>task</th><th>measurement</th><th>published metric</th><th>best released model</th><th>unified model</th></tr>${rows}</table>`;
+}
+function render() {
+  chips('duration', DATA.meta.dims.duration); chips('task', DATA.meta.dims.task); chips('metric', DATA.meta.dims.metric);
+  const list = visible(); document.getElementById('count').textContent = list.length + ' of ' + DATA.datasets.length + ' datasets';
+  document.getElementById('grid').innerHTML = list.map(card).join(''); document.getElementById('matrix').innerHTML = matrix(list);
+  document.getElementById('matrix').style.display = state.matrix ? 'block' : 'none'; document.getElementById('grid').style.display = state.matrix ? 'none' : 'grid';
+  document.getElementById('toggle').textContent = state.matrix ? 'show cards' : 'show matrix view';
+}
+document.getElementById('clear').onclick = () => { state.duration.clear(); state.task.clear(); state.metric.clear(); render(); };
+document.getElementById('toggle').onclick = () => { state.matrix = !state.matrix; render(); };
+fetch('data.json').then(r => r.json()).then(j => { DATA = j; document.getElementById('title').textContent = j.meta.title; document.getElementById('foot').innerHTML = j.meta.notes.map(esc).join('<br>') + '<br>built ' + esc(j.meta.built); render(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "dataset_key": "maimemo",
+  "title": "Evolvable Psychology Informed Neural Network for Memory Behavior Modeling",
+  "authors": "Xiaoxuan Shen, Zhihai Hu, Qirong Chen, Shengyingjie Liu, Ruxia Liang, Jianwen Sun",
+  "year": 2024,
+  "venue": "arXiv preprint arXiv:2408.14492 [cs.LG], 23 Aug 2024 (Central China Normal University)",
+  "doi_or_url": "https://arxiv.org/abs/2408.14492",
+  "pdf_url": "https://arxiv.org/pdf/2408.14492",
+  "figure": "Figure 1 (panels a-c; panels a and b are the paradigm)",
+  "page": 2,
+  "caption_short": "Panel (a) shows the MaiMemo app's vocabulary review screens - a prompt to recall a word's pronunciation and meaning, then the answer screen with the 'know' / 'vague' / 'forgot' response buttons - and panel (b) shows the resulting review log: a sequence of words w1, w2, ... each with a correct/incorrect answer and the time interval t between reviews.",
+  "license": "arXiv non-exclusive license to distribute v1.0 (http://arxiv.org/licenses/nonexclusive-distrib/1.0/); no Creative Commons licence declared - figure reproduced under fair use for academic summary",
+  "notes": "FALLBACK SOURCE. The original dataset paper - Junyao Ye, Jingyong Su & Yilong Cao, 'A Stochastic Shortest Path Algorithm for Optimizing Spaced Repetition Scheduling', KDD 2022, doi 10.1145/3534678.3539081, pp. 4381-4390 - could not be obtained: Unpaywall, OpenAlex and Semantic Scholar all report it CLOSED with no OA location; ACM DL returns HTTP 403 to automated requests; the free-access copy the authors advertise at https://www.maimemo.com/paper/ is behind a Cloudflare challenge and served zero bytes; no arXiv or preprint version exists (arXiv API returns no match). The follow-up IEEE TKDE 2023 paper (Su, Ye, Nie, Cao & Chen, doi 10.1109/TKDE.2023.3251721) is likewise closed. The official code/data releases (github.com/maimemo/SSP-MMC and github.com/maimemo/SSP-MMC-Plus, both MIT; dataset at Harvard Dataverse doi 10.7910/DVN/VAGUL0) contain no figures. This PsyINN preprint was the fallback named in the task brief and is one of the few open-access papers that both uses the MaiMemo logs and illustrates them. Cropped from a 450-dpi render of p. 2 and downscaled to 1400 px wide; the 'Figure 1: ...' caption text is excluded. Panel (c) (Ebbinghaus curve vs. deep model) is the paper's own modelling motivation, not part of the paradigm, but could not be cut out without slicing panel (a), which spans the full figure height."
+}

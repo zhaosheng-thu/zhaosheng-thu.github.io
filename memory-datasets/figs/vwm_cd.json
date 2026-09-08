@@ -1,0 +1,14 @@
+{
+  "dataset_key": "vwm_cd",
+  "title": "No Evidence for an Item Limit in Change Detection",
+  "authors": "Shaiyan Keshvari, Ronald van den Berg, Wei Ji Ma",
+  "year": 2013,
+  "venue": "PLoS Computational Biology, 9(2), e1002927",
+  "doi_or_url": "https://doi.org/10.1371/journal.pcbi.1002927",
+  "pdf_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1002927&type=printable",
+  "figure": "Figure 2a",
+  "page": 4,
+  "caption_short": "Orientation change detection trial sequence: a first display of oriented ellipses (100 ms), a 1000 ms delay, a second display (100 ms), and an unspeeded same/different (\"change\") response.",
+  "license": "CC BY 4.0 (PLOS gold open access; Crossref registers http://creativecommons.org/licenses/by/4.0/ — the article text itself says \"Creative Commons Attribution License\" without a version number)",
+  "notes": "Cropped panel (a) only of Figure 2 from page 4 at 440 dpi; panel label 'a' retained, panels (b) hit/false-alarm rates and (c) psychometric curves and the caption excluded, since only panel (a) shows the paradigm. The paper reports two change-detection experiments (orientation and color) in which change magnitude was drawn from a wide range including small changes; Figure 2a depicts the orientation version, and the color experiment used the same trial structure with colored disks. Set sizes were N = 2, 4, 6, 8."
+}

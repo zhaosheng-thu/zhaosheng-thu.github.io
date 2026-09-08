@@ -1,0 +1,14 @@
+{
+  "dataset_key": "cneuromod_things",
+  "title": "CNeuroMod-THINGS, a densely-sampled fMRI dataset for visual neuroscience",
+  "authors": "Marie St-Laurent, Basile Pinsard, Oliver Contier, Elizabeth DuPre, Katja Seeliger, Valentina Borghesani, Julie A. Boyle, Lune Bellec, Martin N. Hebart",
+  "year": 2026,
+  "venue": "Scientific Data 13:141",
+  "doi_or_url": "https://doi.org/10.1038/s41597-026-06591-y",
+  "pdf_url": "https://europepmc.org/articles/PMC12858831?pdf=render",
+  "figure": "Figure 1 (panels a-c)",
+  "page": 3,
+  "caption_short": "Experimental paradigm of the continuous recognition task: (a) each THINGS image is shown three times across sessions, repeated either within or between sessions, (b) the response screen, in which the four wedges of the central fixation marker map to the four buttons of a game controller (sure seen ++, unsure seen +, unsure unseen -, sure unseen - -), and (c) the distribution of delays between repetitions.",
+  "license": "CC BY 4.0",
+  "notes": "Whole Figure 1 is kept because the paradigm information is split across panels: panel (a) shows the repetition structure and panel (b) is the recognition response screen with the four confidence-graded response keys asked for. Panel (c) (delay histograms) is descriptive rather than paradigmatic but is inside the same figure bounding box and could not be excluded with a rectangular crop. The caption text is excluded. PDF page 3 of 17 (printed page number is also 3). Rendered at 220 dpi from the PMC copy (PMC12858831), saved as site/papers/cneuromod_things.pdf."
+}

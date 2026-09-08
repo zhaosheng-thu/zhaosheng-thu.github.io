@@ -1,0 +1,14 @@
+{
+  "dataset_key": "figrim",
+  "title": "Intrinsic and extrinsic effects on image memorability",
+  "authors": "Zoya Bylinskii, Phillip Isola, Constance Bainbridge, Antonio Torralba, Aude Oliva",
+  "year": 2015,
+  "venue": "Vision Research 116, 165-178",
+  "doi_or_url": "https://doi.org/10.1016/j.visres.2015.03.005",
+  "pdf_url": "http://web.mit.edu/zoya/www/docs/figrimProof.pdf",
+  "figure": "Figure 1",
+  "page": 3,
+  "caption_short": "An example AMT experimental sequence: a stream of scene images (1.0 s each, separated by a 1.4 s fixation cross) in which the participant presses a key on repeats and receives immediate feedback, illustrating hits, false alarms and correct rejections.",
+  "license": "author manuscript (accepted 'Article in Press' proof) hosted by the first author at MIT and linked from the official FIGRIM dataset site http://figrim.mit.edu; publisher copyright (c) 2015 Elsevier Ltd - used under fair use for academic summary",
+  "notes": "Downloaded from the author PDF linked in the citation block of the official FIGRIM dataset page (http://figrim.mit.edu); the URL http://figrim.mit.edu/bylinskii_vr2015.pdf returns 404. This is the accepted-manuscript proof, so it carries an 'ARTICLE IN PRESS' header and page numbers may differ slightly from the final Vision Research pagination; the figure content is identical. Unpaywall additionally reports the published version as freely readable at https://www.sciencedirect.com/science/article/pii/S0042698915000930/pdf. Crop is the figure image only, caption excluded. Rendered at 220 dpi and downscaled to 1400 px width. Note: Figure 8 of the same paper shows the corresponding in-lab eyetracking version of the sequence."
+}

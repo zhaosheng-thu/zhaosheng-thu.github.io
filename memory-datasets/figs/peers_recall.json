@@ -1,0 +1,14 @@
+{
+  "dataset_key": "peers_recall",
+  "title": "The Penn Electrophysiology of Encoding and Retrieval Study",
+  "authors": "Michael J. Kahana, Lynn J. Lohnas, M. Karl Healey, Ada Aka, Adam W. Broitman, Patrick Crutchley, Elizabeth Crutchley, Kylie H. Alm, Brandon S. Katerman, Nicole E. Miller, Joel R. Kuhn, Yuxuan Li, Nicole M. Long, Jonathan Miller, Madison D. Paron, Jesse K. Pazdera, Isaac Pedisich, Joseph H. Rudoler, Christoph T. Weidemann",
+  "year": 2024,
+  "venue": "Journal of Experimental Psychology: Learning, Memory, and Cognition 50(9):1421-1443",
+  "doi_or_url": "https://doi.org/10.1037/xlm0001319",
+  "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12161444/pdf/nihms-2084225.pdf",
+  "figure": "Figure 1",
+  "page": 32,
+  "caption_short": "Trial schematics for all five PEERS experiments: a fixation cross, then a list of 16 or 24 words presented one at a time (with optional size/animacy encoding judgements or an arithmetic distractor), followed by a timed free-recall period, and - for Experiments 1 to 3 - a later item-recognition test with confidence judgements and a final free-recall test.",
+  "license": "author manuscript, PMC (NIHMS-2084225); published version copyright American Psychological Association - figure reproduced under fair use for academic summary",
+  "notes": "Figure 1 is the paper's own methods schematic and covers every PEERS experiment, so it doubles as the paradigm figure for both the free-recall (ltpFR) and the recognition data; see peers_recog.json, which points at the same figure. Cropped from a 220-dpi render of p. 32 of the 48-page author manuscript; the caption block and the 'Author Manuscript' side rules were excluded, the panel's own row labels ('PEERS Exps. 1 and 3', etc.) were kept. The 2022 OSF preprint of the same paper (doi 10.31234/osf.io/bu5x8) is an alternative source. Healey & Kahana 2016 (Psychological Review, PMC5067022) was also downloaded as a secondary source (site/papers/healey2016.pdf) but was not used, since the 2024 paper is the dataset paper proper and has the better schematic."
+}

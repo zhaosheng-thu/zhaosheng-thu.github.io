@@ -1,0 +1,14 @@
+{
+  "dataset_key": "memcat",
+  "title": "MemCat: a new category-based image set quantified on memorability",
+  "authors": "Lore Goetschalckx, Johan Wagemans",
+  "year": 2019,
+  "venue": "PeerJ 7:e8169",
+  "doi_or_url": "https://doi.org/10.7717/peerj.8169",
+  "pdf_url": "https://europepmc.org/articles/PMC6911686?pdf=render",
+  "figure": "Figure 3",
+  "page": 9,
+  "caption_short": "Schematic of the repeat-detection memory game: a stream of target, filler and vigilance images shown for 600 ms each with an 800 ms interstimulus interval, in which participants press the space bar whenever they recognise a repeat.",
+  "license": "CC BY 4.0",
+  "notes": "Crop is the figure image only; the printed caption block below it is excluded. PDF page 9 of 18 (printed page number is also 9). The publisher PDF at https://peerj.com/articles/8169.pdf is behind a Cloudflare challenge, so the identical PMC copy (PMC6911686) was downloaded instead; saved as site/papers/memcat.pdf. Rendered at 220 dpi."
+}

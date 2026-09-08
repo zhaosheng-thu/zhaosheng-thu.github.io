@@ -1,0 +1,14 @@
+{
+  "dataset_key": "lamem",
+  "title": "Understanding and Predicting Image Memorability at a Large Scale",
+  "authors": "Aditya Khosla, Akhil S. Raju, Antonio Torralba, Aude Oliva",
+  "year": 2015,
+  "venue": "Proceedings of the IEEE International Conference on Computer Vision (ICCV) 2015, pp. 2390-2398",
+  "doi_or_url": "https://doi.org/10.1109/ICCV.2015.275",
+  "pdf_url": "https://openaccess.thecvf.com/content_iccv_2015/papers/Khosla_Understanding_and_Predicting_ICCV_2015_paper.pdf",
+  "figure": "Figure 2a",
+  "page": 3,
+  "caption_short": "The efficient visual memory game: participants watch a stream of images (0.6 s each, separated by a 0.8 s fixation) and press a key whenever an image repeats, with target repeats at long lags and vigilance repeats at short lags.",
+  "license": "publisher copyright (c) 2015 IEEE; obtained from the CVF Open Access repository (openaccess.thecvf.com) - used under fair use for academic summary",
+  "notes": "Crop is panel (a) of Figure 2 only; the accompanying panel (b) (human-consistency plot) and the printed caption text are excluded. The page number is the PDF page index; the printed page number is 2392. Rendered at 220 dpi from the CVF Open Access PDF (site/papers/lamem.pdf)."
+}

@@ -1,0 +1,14 @@
+{
+  "dataset_key": "things_mem",
+  "title": "Item memorability has no influence on value-based decisions",
+  "authors": "Xinyue Li, Wilma A. Bainbridge, Akram Bakkour",
+  "year": 2022,
+  "venue": "Scientific Reports 12:22056",
+  "doi_or_url": "https://doi.org/10.1038/s41598-022-26333-5",
+  "pdf_url": "https://europepmc.org/articles/PMC9772201?pdf=render",
+  "figure": "Figure 1A",
+  "page": 3,
+  "caption_short": "Continuous recognition memorability task: participants view a stream of single-object photographs (1 s each, separated by a fixation cross) and press the 'r' key when an image repeats after a delay of more than 120 s.",
+  "license": "CC BY 4.0",
+  "notes": "FALLBACK FIGURE - NOT from the original THINGS-memorability paper. The original dataset paper (Kramer, Hebart, Baker & Bainbridge, 'The features underlying the memorability of objects', Science Advances 9:eadd2981, 2023, https://doi.org/10.1126/sciadv.add2981, CC BY-NC 4.0, saved as site/papers/things_mem.pdf) contains NO task-paradigm figure: its four main figures (Figs. 1-4) and its seven supplementary figures (figs. S1-S7) are all analysis plots, and the bioRxiv preprint (10.1101/2022.04.29.490104, saved as site/papers/things_mem_preprint.pdf, retrieved via the Wayback Machine because biorxiv.org serves a Cloudflare challenge) has the same four figures. The project OSF repository (https://osf.io/5a7z6) contains only data tables, no task diagram. The figure used here is Figure 1A of Li, Bainbridge & Bakkour (2022), a study from the same senior lab (W. A. Bainbridge) that uses the same online continuous-recognition repeat-detection paradigm with single-object photographs and the same 'r' key response; PDF saved as site/papers/things_mem_paradigm_fallback.pdf. Differences from the actual THINGS experiment as described in the Science Advances Methods: THINGS used 500 ms image presentation with an 800 ms interstimulus interval, a minimum 60 s (not 120 s) delay before a target repeat, vigilance repeats 1-5 images apart, and 187 THINGS object images per participant (N = 13,946 AMT participants). Crop is panel A only; panel B (a value-based choice task, irrelevant here) and the caption are excluded. Rendered at 220 dpi."
+}

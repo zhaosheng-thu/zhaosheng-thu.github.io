@@ -1,0 +1,14 @@
+{
+  "dataset_key": "mst",
+  "title": "Mnemonic Similarity Task: A Tool for Assessing Hippocampal Integrity",
+  "authors": "Shauna M. Stark, C. Brock Kirwan, Craig E. L. Stark",
+  "year": 2019,
+  "venue": "Trends in Cognitive Sciences 23(11):938-951",
+  "doi_or_url": "https://doi.org/10.1016/j.tics.2019.08.003",
+  "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6991464/pdf/nihms-1545640.pdf",
+  "figure": "Figure 1 (panels A and B)",
+  "page": 23,
+  "caption_short": "Panel A shows the MST trial sequence - an incidental encoding phase with indoor/outdoor judgements followed by a test phase in which exact repetitions, similar lures and novel foils each require an 'old' / 'similar' / 'new' response - and panel B shows example encoding/test image pairs for the five lure-similarity bins.",
+  "license": "author manuscript, PMC (NIHMS-1545640); published version copyright Elsevier - figure reproduced under fair use for academic summary",
+  "notes": "The PMCID given in the request (PMC6825892) is wrong - it resolves to an unrelated Gynecologic Oncology article. The correct record for this paper is PMID 31597601 / PMC6991464, confirmed via PubMed esummary and EuropePMC. Figure 1 in the author manuscript sits on p. 23 of the 24-page PDF (figures are collected at the end). The PNG was extracted at native resolution (958x1050, 150 dpi) from the figure's embedded JPEG object rather than from a page raster - pdfimages confirms the PDF's page-23 image is exactly this asset (nihms-1545640-f0001.jpg), so no resampling was applied; only the uniform white border was trimmed. Panel A is the paradigm proper; panel B was kept because the lure-similarity bins are the graded manipulation the MST is built around. Colored boxes in panel A are the authors' annotation and are not shown to participants. An author-deposited CC-BY copy also exists at eScholarship (https://escholarship.org/uc/item/3h17g413) but its CDN refused all automated requests; the PMC author manuscript was used instead."
+}

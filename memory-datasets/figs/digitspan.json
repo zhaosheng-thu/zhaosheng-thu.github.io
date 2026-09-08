@@ -1,0 +1,14 @@
+{
+ "dataset_key": "digitspan",
+ "title": "The TestMyBrain Digital Neuropsychology Toolkit: Development and Psychometric Characteristics",
+ "authors": "Sarah Singh, Roger W. Strong, Lauren Jung, Frank H. Li, Lila Grinspoon, Luke S. Scheuer, Eliza J. Passell, Paolo Martini, Naomi Chaytor, Jason R. Soble, Laura Germine",
+ "year": 2021,
+ "venue": "Journal of Clinical and Experimental Neuropsychology 43(8):786-795",
+ "doi_or_url": "https://doi.org/10.1080/13803395.2021.2002269",
+ "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8922997/pdf/nihms-1778312.pdf",
+ "figure": "schematic (ours)",
+ "page": null,
+ "caption_short": "Schematic of the TestMyBrain digit-span task: digits appear one at a time, then the participant types them in the same (forward) or reversed (backward) order; lists lengthen after correct trials.",
+ "license": "our own schematic (CC BY 4.0)",
+ "notes": "Drawn by us: the original papers (Hartshorne & Germine 2015; Singh et al. 2021 JCEN 43:786) contain no task-sequence figure (Singh et al. Figure 1 shows only a stimulus icon). FALLBACK SOURCE, two levels down. (1) The paper named first in the brief - Hartshorne & Germine 2015, 'When does cognitive functioning peak?', Psychological Science 26(4):433-443, PMC4441622 - contains NO paradigm figure. Verified against the PMC XML and the downloaded author manuscript (site/papers/hartshorne2015.pdf): all four of its figures are results plots (bootstrapped ages of peak performance, lifespan curves, cross-experiment replications, vocabulary cohort curves). (2) This TestMyBrain toolkit paper (the 'Singh, Germine et al. 2021 JCEN 43:786' fallback in the brief) was used instead. Its Figure 1 ('Visualization of tests included in the DNT') is a schematic icon board of the whole battery; the crop is the Working Memory group, which is the only digit-span-specific graphic in either paper. Caveat: it is an illustrative stimulus icon, not a live task screen - it does not show the digits appearing one at a time, the response box, or the adaptive length staircase; the paper's Methods text supplies those details. (3) A screenshot of the live TestMyBrain digit-span demo was deliberately NOT taken: the public entry points (v3.testmybrain.org/cogsci, v3.testmybrain.org/digitallab) launch active data-collecting research studies, and the static pages (cogsci.testmybrain.org test list) carry only prose descriptions, no task screenshots. Extracted from the figure's embedded 1800x864 300-dpi JPEG (pdfimages confirms page 12 carries exactly this asset), cropped to the Working Memory group (442x410 px at source scale) and upsampled 2x with Lanczos to 884x820 for legibility on the site; no other processing."
+}
