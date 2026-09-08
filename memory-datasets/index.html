@@ -47,6 +47,7 @@
   th.rel { color:var(--ink); }
   td.blank { color:#c0c6cc; text-align:center; }
   tr.ours td { background:#f7fbff; font-weight:600; }
+  tr.ref td { background:#fafafa; color:#3b434c; }
   tr.ours td.note, td.note { font-weight:400; }
   .note { color:var(--muted); font-size:12px; }
   .matrix { overflow-x:auto; margin:16px 0 26px; }
@@ -91,8 +92,8 @@ function metricTable(d) {
   const cols = d.columns || [];
   const head = '<tr><th>method</th>' + cols.map(c => `<th class="${c.released ? 'rel' : ''}">${esc(c.label)}${c.released ? ' <span class="arrow">' + (d.direction === 'higher' ? '↑' : d.direction === 'lower' ? '↓' : '') + '</span>' : ''}</th>`).join('') + '<th></th></tr>';
   const rows = (d.rows || []).map(r => {
-    const ours = r.method === 'Unified memory model (ours)';
-    return `<tr class="${ours ? 'ours' : ''}"><td>${esc(r.method)}</td>` + cols.map(c => r[c.key] == null || r[c.key] === '' ? '<td class="blank">—</td>' : `<td>${esc(r[c.key])}</td>`).join('') + `<td class="note">${esc(r.note || '')}</td></tr>`;
+    const ours = r.method === 'Unified memory model (ours)'; const ref = r.method === 'Human' || r.method === 'Random';
+    return `<tr class="${ours ? 'ours' : ref ? 'ref' : ''}"><td>${esc(r.method)}</td>` + cols.map(c => r[c.key] == null || r[c.key] === '' ? '<td class="blank">—</td>' : `<td>${esc(r[c.key])}</td>`).join('') + `<td class="note">${esc(r.note || '')}</td></tr>`;
   }).join('');
   return `<div class="metric"><div class="hd"><div class="name">${esc(d.metric_name)} <span class="arrow">${arrow(d.direction)}</span></div><div class="intu">${esc(d.metric_intuition)}</div><div class="form">${esc(d.metric_formula)}</div></div><table>${head}${rows}</table><div class="note" style="padding:6px 10px">consistency ceiling: ${esc(d.ceiling)}</div></div>`;
 }
@@ -110,11 +111,12 @@ function card(d) {
     </div></div>`;
 }
 function matrix(list) {
+  const cell = (r, k) => (r && r[k] != null && r[k] !== '') ? esc(r[k]) : '<span class="note">—</span>';
   const rows = list.map(d => {
-    const ours = (d.rows || []).find(r => r.method === 'Unified memory model (ours)'); const rel = (d.columns || []).find(c => c.released); const best = (d.rows || []).find(r => r.method !== 'Unified memory model (ours)' && rel && r[rel.key]);
-    return `<tr><td class="k">${esc(d.name)}</td><td>${esc(d.duration_label.split(' (')[0])}</td><td>${esc(d.task_label.split(' (')[0])}</td><td>${esc(d.metric_label.split(' (')[0])}</td><td>${esc(d.metric_name)} <span class="arrow">${d.direction === 'higher' ? '↑' : d.direction === 'lower' ? '↓' : ''}</span></td><td>${best ? esc(best.method) + ': <b>' + esc(best[rel.key]) + '</b>' : '<span class="note">none published</span>'}</td><td>${ours && rel && ours[rel.key] ? '<b>' + esc(ours[rel.key]) + '</b>' : '<span class="note">—</span>'}</td></tr>`;
+    const rel = (d.columns || []).find(c => c.released); const R = m => (d.rows || []).find(r => r.method === m); const sota = (d.rows || []).find(r => !['Human', 'Random', 'Unified memory model (ours)'].includes(r.method));
+    return `<tr><td class="k">${esc(d.name)}</td><td>${esc(d.duration_label.split(' (')[0])}</td><td>${esc(d.task_label.split(' (')[0])}</td><td>${esc(d.metric_label.split(' (')[0])}</td><td>${esc(rel ? rel.label : d.metric_name)} <span class="arrow">${d.direction === 'higher' ? '↑' : d.direction === 'lower' ? '↓' : ''}</span></td><td>${cell(R('Human'), rel && rel.key)}</td><td>${cell(R('Random'), rel && rel.key)}</td><td>${sota && rel && sota[rel.key] ? esc(sota.method) + ': <b>' + esc(sota[rel.key]) + '</b>' : '<span class="note">—</span>'}</td><td><b>${cell(R('Unified memory model (ours)'), rel && rel.key)}</b></td></tr>`;
   }).join('');
-  return `<table><tr><th>dataset</th><th>duration</th><th>task</th><th>measurement</th><th>released metric</th><th>strongest released model</th><th>unified model</th></tr>${rows}</table>`;
+  return `<table><tr><th>dataset</th><th>duration</th><th>task</th><th>measurement</th><th>released metric</th><th>Human</th><th>Random</th><th>strongest released model</th><th>unified model</th></tr>${rows}</table>`;
 }
 function render() {
   chips('duration', DATA.meta.dims.duration); chips('task', DATA.meta.dims.task); chips('metric', DATA.meta.dims.metric);

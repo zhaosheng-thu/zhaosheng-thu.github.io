@@ -22,7 +22,7 @@
   },
   "notes": [
    "Each dataset is placed on three axes: how long the memory is held, what the task asks, and what kind of measurement is released.",
-   "The metric shown for each dataset is the one its own literature uses; the strongest released models are listed on that metric, followed by our unified model (one model for every dataset, no dataset-specific parameters, 6000 training steps). Cells are left blank when a number was not measured.",
+   "Every metric table has the same four rows: people doing the task (Human), guessing (Random), the strongest released model, and the unified model (one model for every dataset, no dataset-specific parameters). A dash means the number was not measured or does not exist.",
    "Published numbers were verified at source; figures are clipped from the original papers or author manuscripts for academic summary and carry their source and licence."
   ]
  },
@@ -44,7 +44,7 @@
    "paper_url": "https://openaccess.thecvf.com/content_iccv_2015/html/Khosla_Understanding_and_Predicting_ICCV_2015_paper.html",
    "metric_name": "Spearman rank correlation with human memorability",
    "metric_intuition": "How well the ranking of images by predicted memorability agrees with the ranking by measured hit rate (1 = identical order, 0 = unrelated).",
-   "metric_formula": "rho = Pearson correlation between the ranks of predicted and measured scores over the test images; mean over the five official 45k/4k/10k splits.",
+   "metric_formula": "rho = Pearson correlation between the ranks of predicted and measured scores over the test images.",
    "direction": "higher",
    "columns": [
     {
@@ -55,24 +55,24 @@
    ],
    "rows": [
     {
+     "method": "Human",
+     "spearman": "0.68",
+     "note": "one half of the raters against the other half"
+    },
+    {
+     "method": "Random",
+     "spearman": "0"
+    },
+    {
      "method": "PerceptCLIP (2025)",
      "spearman": "0.741"
     },
     {
-     "method": "ViTMem (2023)",
-     "spearman": "0.711"
-    },
-    {
-     "method": "MemNet (2015)",
-     "spearman": "0.64"
-    },
-    {
      "method": "Unified memory model (ours)",
      "spearman": "0.725",
-     "note": "protocol simulation of the memory game; the model never saw LaMem trials"
+     "note": "protocol simulation; the model never saw LaMem trials"
     }
    ],
-   "ceiling": "human split-half consistency 0.68",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Aggregate score (memorability score, hit / false-alarm rate)",
@@ -107,7 +107,7 @@
    "paper_url": "https://doi.org/10.7717/peerj.8169",
    "metric_name": "Spearman rank correlation with measured memorability",
    "metric_intuition": "Whether the images the model expects to be remembered are the ones people actually remembered.",
-   "metric_formula": "rho between the model's mean predicted hit probability per image and the observed hit rate per image (our held-out images with at least 20 repeat trials).",
+   "metric_formula": "rho between predicted and observed hit rate per image (our held-out images with at least 20 repeat trials).",
    "direction": "higher",
    "columns": [
     {
@@ -117,19 +117,26 @@
     },
     {
      "key": "auc",
-     "label": "trial-level AUC (old vs new response)",
+     "label": "trial-level AUC",
      "released": false
     }
    ],
    "rows": [
     {
-     "method": "MemNet, off the shelf (reported in the MemCat paper)",
-     "spearman": "0.68"
+     "method": "Human",
+     "spearman": "0.78",
+     "auc": null,
+     "note": "one half of the participants against the other half"
     },
     {
-     "method": "Henry (2025)",
-     "spearman": "0.82",
-     "note": "split unspecified; above the raw human ceiling"
+     "method": "Random",
+     "spearman": "0",
+     "auc": "0.5"
+    },
+    {
+     "method": "MemNet, off the shelf (reported in the MemCat paper)",
+     "spearman": "0.68",
+     "auc": null
     },
     {
      "method": "Unified memory model (ours)",
@@ -137,7 +144,6 @@
      "auc": "0.939"
     }
    ],
-   "ceiling": "human split-half 0.78 raw, 0.87 corrected",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Per-trial binary (old/new, correct/incorrect)",
@@ -183,28 +189,25 @@
    ],
    "rows": [
     {
-     "method": "PerceptCLIP, trained on THINGS (2025)",
-     "spearman": "0.452"
+     "method": "Human",
+     "spearman": "0.449",
+     "note": "split-half, corrected"
     },
     {
-     "method": "PerceptCLIP, zero-shot (2025)",
-     "spearman": "0.34"
+     "method": "Random",
+     "spearman": "0"
     },
     {
-     "method": "ViTMem (2023)",
-     "spearman": "0.30"
-    },
-    {
-     "method": "ResMem (2022)",
-     "spearman": "0.276"
+     "method": "PerceptCLIP (2025)",
+     "spearman": "0.452",
+     "note": "trained on THINGS; 0.34 zero-shot"
     },
     {
      "method": "Unified memory model (ours)",
      "spearman": "0.359",
-     "note": "zero-shot: never trained on THINGS; protocol simulation"
+     "note": "zero-shot: never trained on THINGS"
     }
    ],
-   "ceiling": "human split-half 0.449 (corrected)",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Aggregate score (memorability score, hit / false-alarm rate)",
@@ -250,16 +253,22 @@
    ],
    "rows": [
     {
-     "method": "published models on FIGRIM",
-     "spearman": null,
-     "note": "not verified in our survey"
+     "method": "Human",
+     "spearman": null
+    },
+    {
+     "method": "Random",
+     "spearman": "0"
+    },
+    {
+     "method": "Strongest released model",
+     "spearman": null
     },
     {
      "method": "Unified memory model (ours)",
      "spearman": null
     }
    ],
-   "ceiling": "reported in the paper (not verified here)",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Per-trial binary (old/new, correct/incorrect)",
@@ -292,20 +301,15 @@
    "response": "old / new (per trial)",
    "paper": "Allen et al., Nature Neuroscience 2022",
    "paper_url": "https://doi.org/10.1038/s41593-021-00962-x",
-   "metric_name": "Recognition sensitivity d' (per participant)",
-   "metric_intuition": "How well a participant separates old from new images, independent of their bias to say 'old'.",
-   "metric_formula": "d' = z(hit rate) minus z(false-alarm rate), z = inverse normal; computed per participant from old/new responses and averaged.",
+   "metric_name": "Recognition sensitivity d'",
+   "metric_intuition": "How well old images are separated from new ones, independent of the bias to say 'old'; the model's d' is computed from its predicted responses on the same trials.",
+   "metric_formula": "d' = z(hit rate) minus z(false-alarm rate), z = inverse normal; per participant, then averaged.",
    "direction": "higher",
    "columns": [
     {
      "key": "dprime",
-     "label": "d' (observed / predicted)",
+     "label": "d'",
      "released": true
-    },
-    {
-     "key": "rates",
-     "label": "hit / false-alarm rate (observed / predicted)",
-     "released": false
     },
     {
      "key": "auc",
@@ -315,17 +319,27 @@
    ],
    "rows": [
     {
-     "method": "no image-computable model published",
-     "dprime": "human mean 1.28 (Allen et al.)"
+     "method": "Human",
+     "dprime": "1.28",
+     "auc": null,
+     "note": "the eight participants, held-out trials"
+    },
+    {
+     "method": "Random",
+     "dprime": "0",
+     "auc": "0.5"
+    },
+    {
+     "method": "Strongest released model",
+     "dprime": null,
+     "auc": null
     },
     {
      "method": "Unified memory model (ours)",
-     "dprime": "1.28 obs / 1.00 pred",
-     "rates": "0.61 / 0.18 obs, 0.59 / 0.23 pred",
+     "dprime": "1.00",
      "auc": "0.871"
     }
    ],
-   "ceiling": "not reported",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Per-trial binary (old/new, correct/incorrect)",
@@ -358,14 +372,14 @@
    "response": "four-key confidence (per trial)",
    "paper": "St-Laurent et al., Scientific Data 2026",
    "paper_url": "https://doi.org/10.1038/s41597-025-06388-5",
-   "metric_name": "Recognition sensitivity d' (per participant)",
-   "metric_intuition": "How well the participant separates seen from unseen images once the four keys are collapsed to seen / unseen.",
+   "metric_name": "Recognition sensitivity d'",
+   "metric_intuition": "How well seen images are separated from unseen ones once the four keys are collapsed to seen / unseen.",
    "metric_formula": "d' = z(hit rate) minus z(false-alarm rate) after collapsing 'sure seen' + 'maybe seen' to 'seen'; per participant, then averaged.",
    "direction": "higher",
    "columns": [
     {
      "key": "dprime",
-     "label": "d' (observed / predicted)",
+     "label": "d'",
      "released": true
     },
     {
@@ -376,16 +390,27 @@
    ],
    "rows": [
     {
-     "method": "no model published",
-     "dprime": "human 1.54 to 1.90 per participant (St-Laurent et al.)"
+     "method": "Human",
+     "dprime": "1.73",
+     "acc": null,
+     "note": "the four participants, held-out trials"
+    },
+    {
+     "method": "Random",
+     "dprime": "0",
+     "acc": "0.25"
+    },
+    {
+     "method": "Strongest released model",
+     "dprime": null,
+     "acc": null
     },
     {
      "method": "Unified memory model (ours)",
-     "dprime": "1.73 obs / 1.08 pred",
+     "dprime": "1.08",
      "acc": "0.528"
     }
    ],
-   "ceiling": "not reported",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Per-trial graded (K-level confidence / category)",
@@ -419,18 +444,18 @@
    "paper": "Stark, Kirwan & Stark, Trends in Cognitive Sciences 2019",
    "paper_url": "https://doi.org/10.1016/j.tics.2019.08.003",
    "metric_name": "Lure discrimination index (LDI) and recognition score (REC)",
-   "metric_intuition": "LDI: how much more often people call a similar lure 'similar' than a brand-new foil; REC: how much more often a repeat is called 'old' than a foil.",
+   "metric_intuition": "LDI: how much more often a similar lure is called 'similar' than a brand-new foil; REC: how much more often a repeat is called 'old' than a foil.",
    "metric_formula": "LDI = p(similar | lure) minus p(similar | foil); REC = p(old | target) minus p(old | foil); per participant, then averaged.",
    "direction": "higher",
    "columns": [
     {
      "key": "ldi",
-     "label": "LDI (observed / predicted)",
+     "label": "LDI",
      "released": true
     },
     {
      "key": "rec",
-     "label": "REC (observed / predicted)",
+     "label": "REC",
      "released": true
     },
     {
@@ -441,19 +466,32 @@
    ],
    "rows": [
     {
-     "method": "MPT / LBA / diffusion models (2023-2024)",
+     "method": "Human",
+     "ldi": "0.32",
+     "rec": "0.58",
+     "acc": null,
+     "note": "696 participants, held-out trials"
+    },
+    {
+     "method": "Random",
+     "ldi": "0",
+     "rec": "0",
+     "acc": "0.33"
+    },
+    {
+     "method": "Strongest released model",
      "ldi": null,
      "rec": null,
-     "note": "fit the condition labels only; no predictive number published"
+     "acc": null,
+     "note": "existing MST models fit the condition labels, not the images; no predictive number"
     },
     {
      "method": "Unified memory model (ours)",
-     "ldi": "0.32 obs / 0.11 pred",
-     "rec": "0.58 obs / 0.55 pred",
+     "ldi": "0.11",
+     "rec": "0.55",
      "acc": "0.601"
     }
    ],
-   "ceiling": "LDI test-retest 0.69 to 0.75 within a session",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Per-trial graded (K-level confidence / category)",
@@ -486,14 +524,14 @@
    "response": "old / new with confidence (per trial)",
    "paper": "Kahana et al., JEP:LMC 2024",
    "paper_url": "https://doi.org/10.1037/xlm0001317",
-   "metric_name": "Recognition sensitivity d' (per participant)",
-   "metric_intuition": "How well the participant separates studied from unstudied words.",
+   "metric_name": "Recognition sensitivity d'",
+   "metric_intuition": "How well studied words are separated from unstudied ones.",
    "metric_formula": "d' = z(hit rate) minus z(false-alarm rate) after collapsing the confidence scale to old / new; per participant, then averaged.",
    "direction": "higher",
    "columns": [
     {
      "key": "dprime",
-     "label": "d' (observed / predicted)",
+     "label": "d'",
      "released": true
     },
     {
@@ -504,16 +542,27 @@
    ],
    "rows": [
     {
-     "method": "no trial-level model found",
-     "dprime": null
+     "method": "Human",
+     "dprime": "2.29",
+     "acc": null,
+     "note": "231 participants, held-out trials"
+    },
+    {
+     "method": "Random",
+     "dprime": "0",
+     "acc": "0.1"
+    },
+    {
+     "method": "Strongest released model",
+     "dprime": null,
+     "acc": null
     },
     {
      "method": "Unified memory model (ours)",
-     "dprime": "2.29 obs / 2.07 pred",
+     "dprime": "2.07",
      "acc": "0.456"
     }
    ],
-   "ceiling": "not reported",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Per-trial graded (K-level confidence / category)",
@@ -547,18 +596,18 @@
    "paper": "Kahana et al., JEP:LMC 2024",
    "paper_url": "https://doi.org/10.1037/xlm0001317",
    "metric_name": "Recall curves: probability of first recall and lag-CRP",
-   "metric_intuition": "Whether the model recalls from the same list positions people start from, and whether it moves to neighbouring items the way people do.",
-   "metric_formula": "PFR(i) = fraction of lists whose first recall was list position i; lag-CRP(k) = probability that the next recall is k positions away from the last one, over available transitions. We report the correlation between the model's and the participants' curves.",
+   "metric_intuition": "Whether recall starts from the same list positions people start from, and whether it moves to neighbouring items the way people do.",
+   "metric_formula": "PFR(i) = fraction of lists whose first recall was position i; lag-CRP(k) = probability that the next recall is k positions away from the last one. Reported as the correlation between a model's curve and the participants' curve.",
    "direction": "higher",
    "columns": [
     {
      "key": "pfr",
-     "label": "first-recall curve, correlation with people",
+     "label": "first-recall curve, r",
      "released": true
     },
     {
      "key": "crp",
-     "label": "lag-CRP, correlation with people",
+     "label": "lag-CRP, r",
      "released": true
     },
     {
@@ -569,19 +618,31 @@
    ],
    "rows": [
     {
+     "method": "Human",
+     "pfr": null,
+     "crp": null,
+     "nll": null
+    },
+    {
+     "method": "Random",
+     "pfr": "0",
+     "crp": "0",
+     "nll": null
+    },
+    {
      "method": "CMR with semantic cuing (Morton & Polyn 2016)",
      "pfr": null,
      "crp": null,
-     "nll": "1.94 (in-sample, per-participant fit)"
+     "nll": "1.94",
+     "note": "in-sample, fitted per participant"
     },
     {
      "method": "Unified memory model (ours)",
      "pfr": "0.93",
      "crp": "0.37",
-     "nll": "2.98 (held-out; candidates = every word in memory + stop + other)"
+     "nll": "2.98"
     }
    ],
-   "ceiling": "none",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recall (produce the item; nothing is shown)",
    "metric_label": "Per-trial sequence (which item next, in order)",
@@ -616,7 +677,7 @@
    "paper_url": "https://doi.org/10.1145/3534678.3539081",
    "metric_name": "Mean absolute error of predicted recall probability",
    "metric_intuition": "On average, how far the predicted chance of recalling a word is from the recall rate actually observed for reviews with the same history.",
-   "metric_formula": "MAE = mean over review-history groups of |mean predicted p minus observed recall rate|, weighted by group size (groups defined by number of earlier reviews, interval since the last review and its outcome).",
+   "metric_formula": "MAE = mean over review-history groups of |mean predicted p minus observed recall rate|, weighted by group size.",
    "direction": "lower",
    "columns": [
     {
@@ -632,21 +693,27 @@
    ],
    "rows": [
     {
-     "method": "PsyINN (2024)",
-     "mae": "0.210"
+     "method": "Human",
+     "mae": null,
+     "auc": null
     },
     {
-     "method": "Half-life regression (HLR)",
-     "mae": "0.224"
+     "method": "Random",
+     "mae": null,
+     "auc": "0.5"
+    },
+    {
+     "method": "PsyINN (2024)",
+     "mae": "0.210",
+     "auc": null
     },
     {
      "method": "Unified memory model (ours)",
      "mae": null,
      "auc": "0.730",
-     "note": "MAE not comparable: the paper's review-history groups cannot be rebuilt from raw logs; our per-review AUC is given instead"
+     "note": "MAE not measured: the paper's review-history groups cannot be rebuilt from raw logs"
     }
    ],
-   "ceiling": "none",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recall (produce the item; nothing is shown)",
    "metric_label": "Per-trial binary (old/new, correct/incorrect)",
@@ -697,13 +764,20 @@
    ],
    "rows": [
     {
+     "method": "Human",
+     "mae": null,
+     "auc": null
+    },
+    {
+     "method": "Random",
+     "mae": "0.175",
+     "auc": "0.5",
+     "note": "constant predictor (Settles & Meeder)"
+    },
+    {
      "method": "Half-life regression (Settles & Meeder 2016)",
      "mae": "0.128",
      "auc": "0.538"
-    },
-    {
-     "method": "constant baseline",
-     "mae": "0.175"
     },
     {
      "method": "Unified memory model (ours)",
@@ -711,7 +785,6 @@
      "auc": null
     }
    ],
-   "ceiling": "none",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recall (produce the item; nothing is shown)",
    "metric_label": "Per-trial binary (old/new, correct/incorrect)",
@@ -746,17 +819,17 @@
    "paper_url": "https://doi.org/10.1177/0956797614567339",
    "metric_name": "Maximum span",
    "metric_intuition": "The longest list a person can repeat back correctly, forward and backward.",
-   "metric_formula": "span = the longest list length recalled correctly by a participant; the model's span uses its predicted list-level success (predicted probability of the whole sequence at least 0.5).",
+   "metric_formula": "span = the longest list length recalled correctly; the model's span uses its predicted list-level success (predicted probability of the whole sequence at least 0.5).",
    "direction": "higher",
    "columns": [
     {
      "key": "fspan",
-     "label": "forward span (observed / predicted)",
+     "label": "forward span",
      "released": true
     },
     {
      "key": "bspan",
-     "label": "backward span (observed / predicted)",
+     "label": "backward span",
      "released": true
     },
     {
@@ -767,18 +840,31 @@
    ],
    "rows": [
     {
-     "method": "normative sample (Singh et al. 2021)",
-     "fspan": "6.43 (N = 9,858)",
-     "bspan": "5.33 (N = 6,269)"
+     "method": "Human",
+     "fspan": "6.45",
+     "bspan": "5.54",
+     "step": null,
+     "note": "183 held-out participants; published norms 6.43 / 5.33"
+    },
+    {
+     "method": "Random",
+     "fspan": "≈0",
+     "bspan": "≈0",
+     "step": "0.1"
+    },
+    {
+     "method": "Strongest released model",
+     "fspan": null,
+     "bspan": null,
+     "step": null
     },
     {
      "method": "Unified memory model (ours)",
-     "fspan": "6.45 obs / 2.63 pred",
-     "bspan": "5.54 obs / 1.94 pred",
+     "fspan": "2.63",
+     "bspan": "1.94",
      "step": "0.503"
     }
    ],
-   "ceiling": "split-half reliability 0.64 to 0.68",
    "duration_label": "Working memory (seconds)",
    "task_label": "Recall (produce the item; nothing is shown)",
    "metric_label": "Per-trial sequence (which item next, in order)",
@@ -813,26 +899,34 @@
    "paper_url": "https://doi.org/10.3758/s13421-023-01485-5",
    "metric_name": "Percent correct",
    "metric_intuition": "How often the studied object is chosen over the foil.",
-   "metric_formula": "percent correct = 100 x (number of trials where the studied object was chosen) / (number of trials); the model's value is its mean predicted probability of the correct choice.",
+   "metric_formula": "percent correct = 100 x correct choices / trials; the model's value is its mean predicted probability of the correct choice.",
    "direction": "higher",
    "columns": [
     {
      "key": "pc",
-     "label": "percent correct (observed / predicted)",
+     "label": "percent correct",
      "released": true
     }
    ],
    "rows": [
     {
-     "method": "no trial-level model for real-world images",
+     "method": "Human",
+     "pc": "73.8",
+     "note": "held-out trials"
+    },
+    {
+     "method": "Random",
+     "pc": "50"
+    },
+    {
+     "method": "Strongest released model",
      "pc": null
     },
     {
      "method": "Unified memory model (ours)",
-     "pc": "73.8 obs / 73.2 pred"
+     "pc": "73.2"
     }
    ],
-   "ceiling": "none",
    "duration_label": "Working memory (seconds)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Per-trial binary (old/new, correct/incorrect)",
@@ -866,8 +960,8 @@
    "paper": "van den Berg, Awh & Ma, Psychological Review 2014",
    "paper_url": "https://doi.org/10.1037/a0035234",
    "metric_name": "Per-trial likelihood of the reported colour",
-   "metric_intuition": "How much probability the model puts on the colour the participant actually reported; the benchmark ranks models by this likelihood (as AIC) per participant.",
-   "metric_formula": "NLL = minus the mean log density of the reported angle under the model's predicted circular distribution (nats; the uniform distribution scores 1.84). AIC = 2k minus 2 log-likelihood; lower is better.",
+   "metric_intuition": "How much probability a model puts on the colour the participant actually reported; the benchmark ranks models by this likelihood (as AIC) per participant.",
+   "metric_formula": "NLL = minus the mean log density of the reported angle under the model's predicted circular distribution (nats). AIC = 2k minus 2 log-likelihood.",
    "direction": "lower",
    "columns": [
     {
@@ -883,13 +977,21 @@
    ],
    "rows": [
     {
-     "method": "Variable-precision model VP-P-NT (2014)",
+     "method": "Human",
      "nll": null,
-     "note": "best model by AIC in 79% of the 164 participants; per-trial numbers not published"
+     "sd": null
     },
     {
-     "method": "mixture model fitted per set size (our reference)",
-     "nll": "1.117"
+     "method": "Random",
+     "nll": "1.838",
+     "sd": null,
+     "note": "uniform guess"
+    },
+    {
+     "method": "Variable-precision model VP-P-NT (2014)",
+     "nll": null,
+     "sd": null,
+     "note": "VP-P-NT is best by AIC in 79% of participants; per-trial numbers not published"
     },
     {
      "method": "Unified memory model (ours)",
@@ -897,7 +999,6 @@
      "sd": "1: 21/4 deg, 2: 30/5 deg, 3: 45/6 deg, 4: 57/6 deg, 5: 56/11 deg, 6: 75/9 deg, 7: 67/10 deg, 8: 93/15 deg"
     }
    ],
-   "ceiling": "none",
    "duration_label": "Working memory (seconds)",
    "task_label": "Reproduction / continuous report (reproduce a feature value such as a colour angle; also called delayed estimation or continuous recall)",
    "metric_label": "Per-trial continuous (reported angle)",
@@ -932,17 +1033,17 @@
    "paper_url": "https://doi.org/10.1371/journal.pcbi.1002927",
    "metric_name": "Accuracy and memory capacity K",
    "metric_intuition": "How often the change judgement is right, and how many items that accuracy implies were held in memory.",
-   "metric_formula": "K = N x (hit rate minus false-alarm rate) / (1 minus false-alarm rate) for a display of N items (whole-display formula); the model's value uses its predicted 'different' responses.",
+   "metric_formula": "K = N x (hit rate minus false-alarm rate) / (1 minus false-alarm rate) for a display of N items; reported at N = 8.",
    "direction": "higher",
    "columns": [
     {
      "key": "acc",
-     "label": "accuracy (observed / predicted)",
+     "label": "accuracy",
      "released": true
     },
     {
      "key": "k",
-     "label": "K at 8 items (observed / predicted)",
+     "label": "K at 8 items",
      "released": true
     },
     {
@@ -953,18 +1054,32 @@
    ],
    "rows": [
     {
+     "method": "Human",
+     "acc": "0.79",
+     "k": "1.17",
+     "nll": null,
+     "note": "17 participants, held-out trials"
+    },
+    {
+     "method": "Random",
+     "acc": "0.5",
+     "k": "0",
+     "nll": "0.693"
+    },
+    {
      "method": "Variable-precision model (Keshvari et al. 2013)",
      "acc": null,
-     "note": "ranked by log marginal likelihood against slot models; per-trial numbers not published"
+     "k": null,
+     "nll": null,
+     "note": "VP model ranked by log marginal likelihood; per-trial numbers not published"
     },
     {
      "method": "Unified memory model (ours)",
-     "acc": "0.79 obs / 0.60 pred",
-     "k": "1.17 obs / 0.06 pred",
+     "acc": "0.60",
+     "k": "0.06",
      "nll": "0.834"
     }
    ],
-   "ceiling": "none",
    "duration_label": "Working memory (seconds)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Per-trial binary (old/new, correct/incorrect)",
