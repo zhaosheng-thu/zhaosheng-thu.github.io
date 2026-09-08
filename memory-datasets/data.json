@@ -1,6 +1,6 @@
 {
  "meta": {
-  "title": "Human memory datasets: one catalogue for a unified trial-level model",
+  "title": "Human memory datasets: one catalogue for a unified trial-level model of memory behaviour",
   "built": "2026-09-08",
   "dims": {
    "duration": {
@@ -10,7 +10,7 @@
    "task": {
     "recognition": "Recognition (a probe is shown; judge whether it is in memory)",
     "recall": "Recall (produce the item; nothing is shown)",
-    "reproduction": "Reproduction / continuous report (reproduce a feature value, e.g. a colour angle; also called delayed estimation or continuous recall)"
+    "reproduction": "Reproduction / continuous report (reproduce a feature value such as a colour angle; also called delayed estimation or continuous recall)"
    },
    "metric": {
     "trial_binary": "Per-trial binary (old/new, correct/incorrect)",
@@ -21,9 +21,9 @@
    }
   },
   "notes": [
-   "'Ours' = the unified trial-level memory model (v10 checkpoint of 2026-09-07 unless stated); one model for all datasets, no dataset-specific parameters.",
-   "Published-model numbers were verified at source (summary/note-0906-sota-survey.md); 'not surveyed' means no verified number.",
-   "Figures are clipped from the original open-access papers or author manuscripts for academic summary; each carries its source and licence."
+   "Each dataset is placed on three axes: how long the memory is held, what the task asks, and what kind of measurement is released.",
+   "The metric shown for each dataset is the one its own literature uses; the strongest released models are listed on that metric, followed by our unified model (one model for every dataset, no dataset-specific parameters, 6000 training steps). Cells are left blank when a number was not measured.",
+   "Published numbers were verified at source; figures are clipped from the original papers or author manuscripts for academic summary and carry their source and licence."
   ]
  },
  "datasets": [
@@ -31,50 +31,48 @@
    "key": "lamem",
    "name": "LaMem",
    "full": "Large-scale Image Memorability",
-   "group": "Image memorability (score only)",
-   "in_model": "v8, v9, v10 (protocol simulation)",
+   "group": "Image memorability, score only",
+   "used": "protocol simulation (no trials released)",
    "duration": "LTM",
    "task": "recognition",
    "metric": "aggregate",
-   "task_text": "Memory game: a stream of natural images, one every ~1 s; press a key when an image repeats. Only the per-image memorability score (hit rate) is released.",
-   "size": "58,741 images; ~80 scores per image",
-   "stimuli": "natural photos",
-   "response": "key press on repeats -> per-image score",
-   "published_metric": "Spearman rank correlation between predicted and human memorability (mean over the 5 official splits)",
-   "direction": "higher",
-   "sota": [
-    {
-     "model": "PerceptCLIP",
-     "year": 2025,
-     "value": "0.741",
-     "note": "TMLR 2025; MSE 0.0069"
-    },
-    {
-     "model": "ViTMem",
-     "year": 2023,
-     "value": "0.711"
-    },
-    {
-     "model": "AMNet",
-     "year": 2018,
-     "value": "0.677"
-    },
-    {
-     "model": "MemNet",
-     "year": 2015,
-     "value": "0.64"
-    }
-   ],
-   "ceiling": "human split-half 0.68 (25 splits, not Spearman-Brown corrected)",
-   "trial_model": "no (image-level regression only)",
-   "ours": [
-    {
-     "what": "Spearman via protocol simulation",
-     "value": "0.725 (v10, 6k steps); 0.730 (v8)"
-    }
-   ],
+   "task_text": "A memory game: a stream of natural images, one every 1.4 s; press a key when an image repeats. Only the per-image memorability score is released.",
+   "size": "58,741 images, about 80 raters per image",
+   "stimuli": "natural photographs",
+   "response": "key press on repeats, summarised as one score per image",
    "paper": "Khosla, Raju, Torralba & Oliva, ICCV 2015",
    "paper_url": "https://openaccess.thecvf.com/content_iccv_2015/html/Khosla_Understanding_and_Predicting_ICCV_2015_paper.html",
+   "metric_name": "Spearman rank correlation with human memorability",
+   "metric_intuition": "How well the ranking of images by predicted memorability agrees with the ranking by measured hit rate (1 = identical order, 0 = unrelated).",
+   "metric_formula": "rho = Pearson correlation between the ranks of predicted and measured scores over the test images; mean over the five official 45k/4k/10k splits.",
+   "direction": "higher",
+   "columns": [
+    {
+     "key": "spearman",
+     "label": "Spearman rho",
+     "released": true
+    }
+   ],
+   "rows": [
+    {
+     "method": "PerceptCLIP (2025)",
+     "spearman": "0.741"
+    },
+    {
+     "method": "ViTMem (2023)",
+     "spearman": "0.711"
+    },
+    {
+     "method": "MemNet (2015)",
+     "spearman": "0.64"
+    },
+    {
+     "method": "Unified memory model (ours)",
+     "spearman": "0.725",
+     "note": "protocol simulation of the memory game; the model never saw LaMem trials"
+    }
+   ],
+   "ceiling": "human split-half consistency 0.68",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Aggregate score (memorability score, hit / false-alarm rate)",
@@ -96,48 +94,50 @@
    "key": "memcat",
    "name": "MemCat",
    "full": "MemCat category-based image set",
-   "group": "Image memorability (per-trial)",
-   "in_model": "v8, v9, v10",
+   "group": "Image memorability, every trial released",
+   "used": "yes",
    "duration": "LTM",
    "task": "recognition",
    "metric": "trial_binary",
-   "task_text": "Repeat-detection memory game on 10,000 category-labelled images (animal, food, landscape, sports, vehicle); press when an image repeats. Per-trial responses are available (2,291 participants, 3.0M trials).",
-   "size": "10,000 images; 2,291 participants; 3.0M trials",
-   "stimuli": "natural photos",
-   "response": "key press on repeats (per trial); memorability score per image",
-   "published_metric": "Spearman between predicted and measured memorability (hit rate / corrected recognition), 10,000 images",
-   "direction": "higher",
-   "sota": [
-    {
-     "model": "MemNet (off-the-shelf, in the MemCat paper)",
-     "year": 2019,
-     "value": "0.68"
-    },
-    {
-     "model": "Henry",
-     "year": 2025,
-     "value": "0.82 / 0.79",
-     "note": "split unspecified; exceeds the raw human ceiling, treat with caution"
-    }
-   ],
-   "ceiling": "human split-half 0.78 raw, 0.87 Spearman-Brown corrected",
-   "trial_model": "no",
-   "ours": [
-    {
-     "what": "per-trial NLL (lookup 0.330)",
-     "value": "0.281 (v10, 6k)"
-    },
-    {
-     "what": "AUC of the per-trial old/new prediction",
-     "value": "0.939 (v10)"
-    },
-    {
-     "what": "per-image Spearman on our 10% held-out images (1,002 images, >=20 repeat trials each)",
-     "value": "0.769 (v9)"
-    }
-   ],
-   "paper": "Goetschalckx & Wagemans, PeerJ 2019, 7:e8169",
+   "task_text": "Repeat-detection memory game on 10,000 category-labelled images; press when an image repeats. Every key press of 2,291 participants is released.",
+   "size": "10,000 images, 2,291 participants, 3.0M trials",
+   "stimuli": "natural photographs in five categories",
+   "response": "key press on repeats (per trial)",
+   "paper": "Goetschalckx & Wagemans, PeerJ 2019",
    "paper_url": "https://doi.org/10.7717/peerj.8169",
+   "metric_name": "Spearman rank correlation with measured memorability",
+   "metric_intuition": "Whether the images the model expects to be remembered are the ones people actually remembered.",
+   "metric_formula": "rho between the model's mean predicted hit probability per image and the observed hit rate per image (our held-out images with at least 20 repeat trials).",
+   "direction": "higher",
+   "columns": [
+    {
+     "key": "spearman",
+     "label": "Spearman rho",
+     "released": true
+    },
+    {
+     "key": "auc",
+     "label": "trial-level AUC (old vs new response)",
+     "released": false
+    }
+   ],
+   "rows": [
+    {
+     "method": "MemNet, off the shelf (reported in the MemCat paper)",
+     "spearman": "0.68"
+    },
+    {
+     "method": "Henry (2025)",
+     "spearman": "0.82",
+     "note": "split unspecified; above the raw human ceiling"
+    },
+    {
+     "method": "Unified memory model (ours)",
+     "spearman": "0.807",
+     "auc": "0.939"
+    }
+   ],
+   "ceiling": "human split-half 0.78 raw, 0.87 corrected",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Per-trial binary (old/new, correct/incorrect)",
@@ -159,95 +159,107 @@
    "key": "things_mem",
    "name": "THINGS memorability",
    "full": "THINGS object memorability",
-   "group": "Image memorability (score only)",
-   "in_model": "v8 (protocol simulation)",
+   "group": "Image memorability, score only",
+   "used": "not used for training (zero-shot only)",
    "duration": "LTM",
    "task": "recognition",
    "metric": "aggregate",
-   "task_text": "Continuous recognition over 26,107 object images; the released quantity is the corrected recognition score (hit rate minus false-alarm rate) per image; raw trials were not released.",
-   "size": "26,107 images",
-   "stimuli": "object photos",
-   "response": "per-image corrected recognition (CR)",
-   "published_metric": "Spearman between predicted and measured CR",
-   "direction": "higher",
-   "sota": [
-    {
-     "model": "PerceptCLIP (supervised on THINGS)",
-     "year": 2025,
-     "value": "0.452",
-     "note": "0.34 zero-shot transfer; split unspecified"
-    },
-    {
-     "model": "ViTMem",
-     "year": 2023,
-     "value": "0.30"
-    },
-    {
-     "model": "ResMem",
-     "year": 2022,
-     "value": "0.276"
-    }
-   ],
-   "ceiling": "0.449 (Spearman-Brown corrected split-half)",
-   "trial_model": "no (raw trials never released)",
-   "ours": [
-    {
-     "what": "Spearman via protocol simulation",
-     "value": "0.468 (v8; not in v10)"
-    }
-   ],
-   "paper": "Kramer, Hebart, Baker & Bainbridge, Science Advances 2023, 9:eadd2981",
+   "task_text": "Online continuous recognition over 26,107 object images; press when an image repeats. The released quantity is the corrected recognition score per image; raw trials were not released.",
+   "size": "26,107 images, 13,946 participants",
+   "stimuli": "object photographs (1,854 concepts)",
+   "response": "per-image corrected recognition",
+   "paper": "Kramer, Hebart, Baker & Bainbridge, Science Advances 2023",
    "paper_url": "https://doi.org/10.1126/sciadv.add2981",
+   "metric_name": "Spearman rank correlation with corrected recognition",
+   "metric_intuition": "Agreement between the model's ranking of objects and people's, where an object's score is how often it was recognised minus how often it was falsely recognised.",
+   "metric_formula": "CR = hit rate minus false-alarm rate per image; rho = rank correlation between predicted and measured CR over held-out images.",
+   "direction": "higher",
+   "columns": [
+    {
+     "key": "spearman",
+     "label": "Spearman rho",
+     "released": true
+    }
+   ],
+   "rows": [
+    {
+     "method": "PerceptCLIP, trained on THINGS (2025)",
+     "spearman": "0.452"
+    },
+    {
+     "method": "PerceptCLIP, zero-shot (2025)",
+     "spearman": "0.34"
+    },
+    {
+     "method": "ViTMem (2023)",
+     "spearman": "0.30"
+    },
+    {
+     "method": "ResMem (2022)",
+     "spearman": "0.276"
+    },
+    {
+     "method": "Unified memory model (ours)",
+     "spearman": "0.359",
+     "note": "zero-shot: never trained on THINGS; protocol simulation"
+    }
+   ],
+   "ceiling": "human split-half 0.449 (corrected)",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Aggregate score (memorability score, hit / false-alarm rate)",
    "figure": {
     "png": "figs/things_mem.png",
-    "title": "Item memorability has no influence on value-based decisions",
-    "authors": "Xinyue Li, Wilma A. Bainbridge, Akram Bakkour",
-    "year": 2022,
-    "venue": "Scientific Reports 12:22056",
-    "doi_or_url": "https://doi.org/10.1038/s41598-022-26333-5",
+    "title": "The features underlying the memorability of objects",
+    "authors": "Kramer, Hebart, Baker & Bainbridge",
+    "year": 2023,
+    "venue": "Science Advances 9:eadd2981",
+    "doi_or_url": "https://doi.org/10.1126/sciadv.add2981",
     "figure": "Figure 1A",
-    "page": 3,
-    "caption_short": "Continuous recognition memorability task: participants view a stream of single-object photographs (1 s each, separated by a fixation cross) and press the 'r' key when an image repeats after a delay of more than 120 s.",
-    "license": "CC BY 4.0",
-    "notes": "FALLBACK FIGURE - NOT from the original THINGS-memorability paper. The original dataset paper (Kramer, Hebart, Baker & Bainbridge, 'The features underlying the memorability of objects', Science Advances 9:eadd2981, 2023, https://doi.org/10.1126/sciadv.add2981, CC BY-NC 4.0, saved as site/papers/things_mem.pdf) contains NO task-paradigm figure: its four main figures (Figs. 1-4) and its seven supplementary figures (figs. S1-S7) are all analysis plots, and the bioRxiv preprint (10.1101/2022.04.29.490104, saved as site/papers/things_mem_preprint.pdf, retrieved via the Wayback Machine because biorxiv.org serves a Cloudflare challenge) has the same four figures. The project OSF repository (https://osf.io/5a7z6) contains only data tables, no task diagram. The figure used here is Figure 1A of Li, Bainbridge & Bakkour (2022), a study from the same senior lab (W. A. Bainbridge) that uses the same online continuous-recognition repeat-detection paradigm with single-object photographs and the same 'r' key response; PDF saved as site/papers/things_mem_paradigm_fallback.pdf. Differences from the actual THINGS experiment as described in the Science Advances Methods: THINGS used 500 ms image presentation with an 800 ms interstimulus interval, a minimum 60 s (not 120 s) delay before a target repeat, vigilance repeats 1-5 images apart, and 187 THINGS object images per participant (N = 13,946 AMT participants). Crop is panel A only; panel B (a value-based choice task, irrelevant here) and the caption are excluded. Rendered at 220 dpi."
+    "page": 4,
+    "caption_short": "The released quantity: corrected recognition (hit rate minus false-alarm rate) for each of the 1,854 THINGS concepts, sorted from most to least memorable, with example images; the task itself was an online continuous-recognition stream (press when an image repeats) and is described in the paper's Methods, not drawn.",
+    "license": "CC BY-NC 4.0",
+    "notes": "The original paper contains no task-paradigm figure (its figures are analyses); Figure 1A shows the released memorability scores. Cropped from the publisher PDF page 4."
    }
   },
   {
    "key": "figrim",
    "name": "FIGRIM",
    "full": "Fine-Grained Image Memorability",
-   "group": "Image memorability (per-trial)",
-   "in_model": "v8",
+   "group": "Image memorability, every trial released",
+   "used": "not used in the current model",
    "duration": "LTM",
    "task": "recognition",
    "metric": "trial_binary",
    "task_text": "Memory game on scene images from 21 categories with within-category repeats; press when an image repeats. Per-worker records are available.",
-   "size": "~9,000 images; per-worker trial records",
-   "stimuli": "scene photos",
-   "response": "key press on repeats",
-   "published_metric": "memorability (hit rate) per image; model comparison via rank correlation",
+   "size": "about 9,000 images",
+   "stimuli": "scene photographs",
+   "response": "key press on repeats (per trial)",
+   "paper": "Bylinskii, Isola, Bainbridge, Torralba & Oliva, Vision Research 2015",
+   "paper_url": "https://doi.org/10.1016/j.visres.2015.03.005",
+   "metric_name": "Spearman rank correlation with measured memorability",
+   "metric_intuition": "Agreement between predicted and measured rankings of the images.",
+   "metric_formula": "rho between predicted and measured hit rate per image.",
    "direction": "higher",
-   "sota": [
+   "columns": [
     {
-     "model": "not surveyed",
-     "year": "",
-     "value": "—",
-     "note": "published model numbers on FIGRIM were not verified in our survey"
+     "key": "spearman",
+     "label": "Spearman rho",
+     "released": true
+    }
+   ],
+   "rows": [
+    {
+     "method": "published models on FIGRIM",
+     "spearman": null,
+     "note": "not verified in our survey"
+    },
+    {
+     "method": "Unified memory model (ours)",
+     "spearman": null
     }
    ],
    "ceiling": "reported in the paper (not verified here)",
-   "trial_model": "no",
-   "ours": [
-    {
-     "what": "per-trial NLL",
-     "value": "0.426 (v8)"
-    }
-   ],
-   "paper": "Bylinskii, Isola, Bainbridge, Torralba & Oliva, Vision Research 2015",
-   "paper_url": "https://doi.org/10.1016/j.visres.2015.03.005",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Per-trial binary (old/new, correct/incorrect)",
@@ -268,44 +280,52 @@
   {
    "key": "nsd",
    "name": "NSD",
-   "full": "Natural Scenes Dataset — continuous recognition",
-   "group": "Long-term image recognition across sessions",
-   "in_model": "v8, v9, v10",
+   "full": "Natural Scenes Dataset, continuous recognition task",
+   "group": "Long-term recognition across sessions",
+   "used": "yes",
    "duration": "LTM",
    "task": "recognition",
    "metric": "trial_binary",
-   "task_text": "8 participants each saw ~10,000 COCO images, three times each, over 30–40 fMRI sessions spanning up to a year; on every trial they reported whether the image had been seen before at any point in the experiment.",
-   "size": "8 participants; ~213k old/new responses (our build)",
-   "stimuli": "COCO photos",
+   "task_text": "Eight people each saw about 10,000 photographs three times over 30 to 40 sessions spanning up to a year, and on every trial reported whether the image had been seen before at any point in the experiment.",
+   "size": "8 participants, about 213k responses (our build)",
+   "stimuli": "COCO photographs",
    "response": "old / new (per trial)",
-   "published_metric": "none for models (descriptive: d' and hit rate vs lag)",
-   "direction": "—",
-   "sota": [
+   "paper": "Allen et al., Nature Neuroscience 2022",
+   "paper_url": "https://doi.org/10.1038/s41593-021-00962-x",
+   "metric_name": "Recognition sensitivity d' (per participant)",
+   "metric_intuition": "How well a participant separates old from new images, independent of their bias to say 'old'.",
+   "metric_formula": "d' = z(hit rate) minus z(false-alarm rate), z = inverse normal; computed per participant from old/new responses and averaged.",
+   "direction": "higher",
+   "columns": [
     {
-     "model": "no image-computable model published",
-     "year": "",
-     "value": "—",
-     "note": "Allen et al. report mean d' = 1.28 (0.94–1.47); Ye et al. 2025 model trial responses from fMRI pattern similarity, not from the image"
+     "key": "dprime",
+     "label": "d' (observed / predicted)",
+     "released": true
+    },
+    {
+     "key": "rates",
+     "label": "hit / false-alarm rate (observed / predicted)",
+     "released": false
+    },
+    {
+     "key": "auc",
+     "label": "trial-level AUC",
+     "released": false
+    }
+   ],
+   "rows": [
+    {
+     "method": "no image-computable model published",
+     "dprime": "human mean 1.28 (Allen et al.)"
+    },
+    {
+     "method": "Unified memory model (ours)",
+     "dprime": "1.28 obs / 1.00 pred",
+     "rates": "0.61 / 0.18 obs, 0.59 / 0.23 pred",
+     "auc": "0.871"
     }
    ],
    "ceiling": "not reported",
-   "trial_model": "no image-computable model",
-   "ours": [
-    {
-     "what": "per-trial NLL (lookup 0.594)",
-     "value": "0.449 (v10, 6k)"
-    },
-    {
-     "what": "AUC",
-     "value": "0.871 (v10)"
-    },
-    {
-     "what": "per-subject hit / false-alarm rate, observed vs predicted",
-     "value": "0.608 vs 0.614 / 0.178 vs 0.201 (v9)"
-    }
-   ],
-   "paper": "Allen et al., Nature Neuroscience 2022, 25:116",
-   "paper_url": "https://doi.org/10.1038/s41593-021-00962-x",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Per-trial binary (old/new, correct/incorrect)",
@@ -327,42 +347,45 @@
    "key": "cneuromod_things",
    "name": "CNeuroMod-THINGS",
    "full": "Courtois NeuroMod THINGS recognition task",
-   "group": "Long-term image recognition across sessions",
-   "in_model": "v8, v9, v10",
+   "group": "Long-term recognition across sessions",
+   "used": "yes",
    "duration": "LTM",
    "task": "recognition",
    "metric": "trial_graded",
-   "task_text": "4 participants viewed THINGS images across many fMRI sessions and answered with four keys: sure seen / maybe seen / maybe unseen / sure unseen.",
-   "size": "4 participants; ~45k responses (our build)",
-   "stimuli": "THINGS object photos",
-   "response": "4-key confidence (per trial)",
-   "published_metric": "none for models (descriptive: per-subject d' = 1.54–1.90)",
-   "direction": "—",
-   "sota": [
+   "task_text": "Four people viewed THINGS images across many sessions and answered with four keys: sure seen, maybe seen, maybe unseen, sure unseen.",
+   "size": "4 participants, about 45k responses (our build)",
+   "stimuli": "THINGS object photographs",
+   "response": "four-key confidence (per trial)",
+   "paper": "St-Laurent et al., Scientific Data 2026",
+   "paper_url": "https://doi.org/10.1038/s41597-025-06388-5",
+   "metric_name": "Recognition sensitivity d' (per participant)",
+   "metric_intuition": "How well the participant separates seen from unseen images once the four keys are collapsed to seen / unseen.",
+   "metric_formula": "d' = z(hit rate) minus z(false-alarm rate) after collapsing 'sure seen' + 'maybe seen' to 'seen'; per participant, then averaged.",
+   "direction": "higher",
+   "columns": [
     {
-     "model": "no model published",
-     "year": "",
-     "value": "—"
+     "key": "dprime",
+     "label": "d' (observed / predicted)",
+     "released": true
+    },
+    {
+     "key": "acc",
+     "label": "exact four-key accuracy",
+     "released": false
+    }
+   ],
+   "rows": [
+    {
+     "method": "no model published",
+     "dprime": "human 1.54 to 1.90 per participant (St-Laurent et al.)"
+    },
+    {
+     "method": "Unified memory model (ours)",
+     "dprime": "1.73 obs / 1.08 pred",
+     "acc": "0.528"
     }
    ],
    "ceiling": "not reported",
-   "trial_model": "no",
-   "ours": [
-    {
-     "what": "4-key NLL (class-frequency baseline 1.311)",
-     "value": "0.953 (v10, 6k)"
-    },
-    {
-     "what": "4-key accuracy / old-new AUC",
-     "value": "0.528 / 0.854 (v9)"
-    },
-    {
-     "what": "zero-shot (never trained on this set)",
-     "value": "1.269 (v9)"
-    }
-   ],
-   "paper": "St-Laurent et al., Scientific Data 2026, 13:141",
-   "paper_url": "https://doi.org/10.1038/s41597-025-06388-5",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Per-trial graded (K-level confidence / category)",
@@ -385,42 +408,52 @@
    "name": "MST",
    "full": "Mnemonic Similarity Task",
    "group": "Recognition with similar lures",
-   "in_model": "v8, v9, v10",
+   "used": "yes",
    "duration": "LTM",
    "task": "recognition",
    "metric": "trial_graded",
-   "task_text": "Study a list of objects; at test each item is a repeat (target), a similar-looking new object (lure) or a new object (foil); answer old / similar / new. Per-trial data from 696 participants (OSF).",
-   "size": "696 participants; ~364k test responses (our build)",
-   "stimuli": "object photos with similar lures (5 similarity bins)",
+   "task_text": "Study a list of objects; at test each item is a repeat (target), a similar-looking new object (lure) or a new object (foil); answer old, similar or new.",
+   "size": "696 participants, about 364k test responses (our build)",
+   "stimuli": "object photographs with lures in five similarity bins",
    "response": "old / similar / new (per trial)",
-   "published_metric": "LDI = p(similar|lure) − p(similar|foil); REC = p(old|target) − p(old|foil); lure-bin gradient",
-   "direction": "higher",
-   "sota": [
-    {
-     "model": "MPT (Lee & Stark 2023), LBA (Banavar 2024), hierarchical diffusion (Chwiesko 2023)",
-     "year": "2023–2024",
-     "value": "no predictive metric published",
-     "note": "all trial-level models are stimulus-blind (inputs = condition labels)"
-    }
-   ],
-   "ceiling": "LDI test-retest r = 0.69–0.75 within session",
-   "trial_model": "yes, but stimulus-blind",
-   "ours": [
-    {
-     "what": "3-class NLL (class-frequency baseline 1.083)",
-     "value": "0.888 (v10, 6k)"
-    },
-    {
-     "what": "REC observed vs predicted",
-     "value": "0.580 vs 0.545 (v9)"
-    },
-    {
-     "what": "LDI observed vs predicted",
-     "value": "0.319 vs 0.112 (v9; lure gradient not captured)"
-    }
-   ],
-   "paper": "Stark, Kirwan & Stark, Trends in Cognitive Sciences 2019, 23:938",
+   "paper": "Stark, Kirwan & Stark, Trends in Cognitive Sciences 2019",
    "paper_url": "https://doi.org/10.1016/j.tics.2019.08.003",
+   "metric_name": "Lure discrimination index (LDI) and recognition score (REC)",
+   "metric_intuition": "LDI: how much more often people call a similar lure 'similar' than a brand-new foil; REC: how much more often a repeat is called 'old' than a foil.",
+   "metric_formula": "LDI = p(similar | lure) minus p(similar | foil); REC = p(old | target) minus p(old | foil); per participant, then averaged.",
+   "direction": "higher",
+   "columns": [
+    {
+     "key": "ldi",
+     "label": "LDI (observed / predicted)",
+     "released": true
+    },
+    {
+     "key": "rec",
+     "label": "REC (observed / predicted)",
+     "released": true
+    },
+    {
+     "key": "acc",
+     "label": "three-way accuracy",
+     "released": false
+    }
+   ],
+   "rows": [
+    {
+     "method": "MPT / LBA / diffusion models (2023-2024)",
+     "ldi": null,
+     "rec": null,
+     "note": "fit the condition labels only; no predictive number published"
+    },
+    {
+     "method": "Unified memory model (ours)",
+     "ldi": "0.32 obs / 0.11 pred",
+     "rec": "0.58 obs / 0.55 pred",
+     "acc": "0.601"
+    }
+   ],
+   "ceiling": "LDI test-retest 0.69 to 0.75 within a session",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Per-trial graded (K-level confidence / category)",
@@ -443,37 +476,44 @@
    "name": "PEERS recognition",
    "full": "PEERS final recognition test",
    "group": "Verbal recognition with confidence",
-   "in_model": "v8, v9, v10",
+   "used": "yes",
    "duration": "LTM",
    "task": "recognition",
    "metric": "trial_graded",
-   "task_text": "After the free-recall lists of a session, participants judged studied and unstudied words as old/new with a confidence rating (10 response levels in our build).",
-   "size": "~101k test responses (our build)",
+   "task_text": "After the free-recall lists of a session, participants judged studied and unstudied words as old or new with a confidence rating.",
+   "size": "about 101k test responses (our build)",
    "stimuli": "words",
-   "response": "old/new × confidence (per trial)",
-   "published_metric": "ROC / hit and false-alarm rates (no model benchmark)",
-   "direction": "—",
-   "sota": [
+   "response": "old / new with confidence (per trial)",
+   "paper": "Kahana et al., JEP:LMC 2024",
+   "paper_url": "https://doi.org/10.1037/xlm0001317",
+   "metric_name": "Recognition sensitivity d' (per participant)",
+   "metric_intuition": "How well the participant separates studied from unstudied words.",
+   "metric_formula": "d' = z(hit rate) minus z(false-alarm rate) after collapsing the confidence scale to old / new; per participant, then averaged.",
+   "direction": "higher",
+   "columns": [
     {
-     "model": "no trial-level model found",
-     "year": "",
-     "value": "—"
+     "key": "dprime",
+     "label": "d' (observed / predicted)",
+     "released": true
+    },
+    {
+     "key": "acc",
+     "label": "exact confidence-level accuracy",
+     "released": false
+    }
+   ],
+   "rows": [
+    {
+     "method": "no trial-level model found",
+     "dprime": null
+    },
+    {
+     "method": "Unified memory model (ours)",
+     "dprime": "2.29 obs / 2.07 pred",
+     "acc": "0.456"
     }
    ],
    "ceiling": "not reported",
-   "trial_model": "none found",
-   "ours": [
-    {
-     "what": "10-level NLL (class-frequency baseline 1.947)",
-     "value": "1.595 (v10, 6k)"
-    },
-    {
-     "what": "old/new AUC",
-     "value": "0.988 (v9)"
-    }
-   ],
-   "paper": "Kahana et al., JEP:LMC 2024, 50:1421 (PEERS)",
-   "paper_url": "https://doi.org/10.1037/xlm0001317",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Per-trial graded (K-level confidence / category)",
@@ -496,42 +536,52 @@
    "name": "PEERS free recall",
    "full": "Penn Electrophysiology of Encoding and Retrieval Study, immediate free recall",
    "group": "Verbal free recall",
-   "in_model": "v8 (per-item only), v9, v10",
+   "used": "yes",
    "duration": "LTM",
    "task": "recall",
    "metric": "trial_sequence",
-   "task_text": "Lists of 16 words shown one at a time; then recall as many as possible in any order (spoken). Our build keeps every recall event in output order, including prior-list and extra-list intrusions.",
-   "size": "~500k recall events (our build)",
+   "task_text": "Lists of 16 words shown one at a time, then recall as many as possible in any order. Every recall event in output order is kept, including intrusions.",
+   "size": "about 500k recall events (our build)",
    "stimuli": "words",
-   "response": "sequence of recalled words + stop",
-   "published_metric": "serial position curve, probability of first recall, lag-CRP (fit by RMSD/χ²); per-recall-event likelihood in Morton & Polyn 2016",
-   "direction": "lower (NLL) / curve fit",
-   "sota": [
+   "response": "spoken sequence of words, then stop",
+   "paper": "Kahana et al., JEP:LMC 2024",
+   "paper_url": "https://doi.org/10.1037/xlm0001317",
+   "metric_name": "Recall curves: probability of first recall and lag-CRP",
+   "metric_intuition": "Whether the model recalls from the same list positions people start from, and whether it moves to neighbouring items the way people do.",
+   "metric_formula": "PFR(i) = fraction of lists whose first recall was list position i; lag-CRP(k) = probability that the next recall is k positions away from the last one, over available transitions. We report the correlation between the model's and the participants' curves.",
+   "direction": "higher",
+   "columns": [
     {
-     "model": "CMR + WAS semantic cuing (Morton & Polyn 2016)",
-     "year": 2016,
-     "value": "≈1.94 nats per recall event",
-     "note": "in-sample, per-subject fit (10–14 free parameters), repeats and intrusions excluded; no held-out likelihood published"
+     "key": "pfr",
+     "label": "first-recall curve, correlation with people",
+     "released": true
+    },
+    {
+     "key": "crp",
+     "label": "lag-CRP, correlation with people",
+     "released": true
+    },
+    {
+     "key": "nll",
+     "label": "held-out NLL per recall event",
+     "released": false
+    }
+   ],
+   "rows": [
+    {
+     "method": "CMR with semantic cuing (Morton & Polyn 2016)",
+     "pfr": null,
+     "crp": null,
+     "nll": "1.94 (in-sample, per-participant fit)"
+    },
+    {
+     "method": "Unified memory model (ours)",
+     "pfr": "0.93",
+     "crp": "0.37",
+     "nll": "2.98 (held-out; candidates = every word in memory + stop + other)"
     }
    ],
    "ceiling": "none",
-   "trial_model": "yes (in-sample)",
-   "ours": [
-    {
-     "what": "held-out NLL per recall event, candidates = list words + stop (v9)",
-     "value": "2.68 (chance 2.83; position-only baseline 2.59)"
-    },
-    {
-     "what": "held-out NLL, candidates = every trace in memory + stop + other (v10, 6k)",
-     "value": "2.98 (chance ≈5.7)"
-    },
-    {
-     "what": "first-recall curve shape correlation / lag-CRP",
-     "value": "0.80 / no +1 contiguity peak yet"
-    }
-   ],
-   "paper": "Kahana et al., JEP:LMC 2024, 50:1421",
-   "paper_url": "https://doi.org/10.1037/xlm0001317",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recall (produce the item; nothing is shown)",
    "metric_label": "Per-trial sequence (which item next, in order)",
@@ -553,40 +603,50 @@
    "key": "maimemo",
    "name": "MaiMemo",
    "full": "MaiMemo spaced-repetition logs",
-   "group": "Spaced repetition / cued recall",
-   "in_model": "v8, v9, v10",
+   "group": "Spaced repetition, cued recall",
+   "used": "yes",
    "duration": "LTM",
    "task": "recall",
    "metric": "trial_binary",
-   "task_text": "Review logs of a vocabulary app: for each user × word, the times of each review and whether the word was recalled. Our build uses 4,000 users (≤1,500 reviews each).",
-   "size": "4,000 users; ~3.3M reviews (our build)",
-   "stimuli": "English words (Chinese learners)",
+   "task_text": "Review logs of a vocabulary app: for each learner and word, the times of each review and whether the word was recalled.",
+   "size": "4,000 learners, about 3.3M reviews (our build)",
+   "stimuli": "English words",
    "response": "recalled / not recalled (per review)",
-   "published_metric": "MAE of predicted recall probability (dataset paper); per-review log loss on the related FSRS benchmark (Anki data)",
+   "paper": "Ye, Su & Cao, KDD 2022 (dataset); Su et al. 2023",
+   "paper_url": "https://doi.org/10.1145/3534678.3539081",
+   "metric_name": "Mean absolute error of predicted recall probability",
+   "metric_intuition": "On average, how far the predicted chance of recalling a word is from the recall rate actually observed for reviews with the same history.",
+   "metric_formula": "MAE = mean over review-history groups of |mean predicted p minus observed recall rate|, weighted by group size (groups defined by number of earlier reviews, interval since the last review and its outcome).",
    "direction": "lower",
-   "sota": [
+   "columns": [
     {
-     "model": "PsyINN",
-     "year": 2024,
-     "value": "MAE 0.210 (HLR 0.224)"
+     "key": "mae",
+     "label": "MAE of recall probability",
+     "released": true
     },
     {
-     "model": "RWKV-Instant (FSRS benchmark, Anki, 350M reviews)",
-     "year": 2024,
-     "value": "log loss 0.277 / AUC 0.833",
-     "note": "different corpus and split; FSRS-7 0.336; HLR 0.469"
+     "key": "auc",
+     "label": "per-review AUC",
+     "released": false
+    }
+   ],
+   "rows": [
+    {
+     "method": "PsyINN (2024)",
+     "mae": "0.210"
+    },
+    {
+     "method": "Half-life regression (HLR)",
+     "mae": "0.224"
+    },
+    {
+     "method": "Unified memory model (ours)",
+     "mae": null,
+     "auc": "0.730",
+     "note": "MAE not comparable: the paper's review-history groups cannot be rebuilt from raw logs; our per-review AUC is given instead"
     }
    ],
    "ceiling": "none",
-   "trial_model": "yes on the FSRS benchmark",
-   "ours": [
-    {
-     "what": "per-review log loss / AUC (our subset; lookup 0.552)",
-     "value": "0.485 / 0.730 (v10, 6k)"
-    }
-   ],
-   "paper": "Ye, Su & Cao, KDD 2022 (dataset); Su et al. 2023 TKDE",
-   "paper_url": "https://doi.org/10.1145/3534678.3539081",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recall (produce the item; nothing is shown)",
    "metric_label": "Per-trial binary (old/new, correct/incorrect)",
@@ -606,37 +666,52 @@
   },
   {
    "key": "duolingo",
-   "name": "Duolingo HLR",
+   "name": "Duolingo",
    "full": "Duolingo half-life regression dataset",
-   "group": "Spaced repetition / cued recall",
-   "in_model": "v8",
+   "group": "Spaced repetition, cued recall",
+   "used": "not used in the current model",
    "duration": "LTM",
    "task": "recall",
    "metric": "trial_binary",
-   "task_text": "Practice-session logs from the Duolingo app: for each user × word, the time since last practice and the fraction of correct answers in the session.",
+   "task_text": "Practice-session logs from the Duolingo app: for each learner and word, the time since the last practice and the fraction of correct answers in the session.",
    "size": "12.9M session records",
-   "stimuli": "words (language learning)",
-   "response": "session recall rate",
-   "published_metric": "MAE of predicted recall rate; AUC; Spearman on half-life",
-   "direction": "lower (MAE)",
-   "sota": [
-    {
-     "model": "HLR (Settles & Meeder)",
-     "year": 2016,
-     "value": "MAE 0.128, AUC 0.538",
-     "note": "constant baseline MAE 0.175; Leitner 0.235"
-    }
-   ],
-   "ceiling": "none (authors call it an inherently noisy task)",
-   "trial_model": "session-level",
-   "ours": [
-    {
-     "what": "see status-0903-scale.md (v8 comparison with HLR)",
-     "value": "not in v10"
-    }
-   ],
+   "stimuli": "words in a second language",
+   "response": "fraction correct within a session",
    "paper": "Settles & Meeder, ACL 2016",
    "paper_url": "https://doi.org/10.18653/v1/P16-1174",
+   "metric_name": "Mean absolute error of predicted recall rate",
+   "metric_intuition": "How far the predicted probability of a correct answer is from the observed fraction correct in a practice session.",
+   "metric_formula": "MAE = mean |predicted p minus observed fraction correct| over sessions.",
+   "direction": "lower",
+   "columns": [
+    {
+     "key": "mae",
+     "label": "MAE",
+     "released": true
+    },
+    {
+     "key": "auc",
+     "label": "AUC",
+     "released": false
+    }
+   ],
+   "rows": [
+    {
+     "method": "Half-life regression (Settles & Meeder 2016)",
+     "mae": "0.128",
+     "auc": "0.538"
+    },
+    {
+     "method": "constant baseline",
+     "mae": "0.175"
+    },
+    {
+     "method": "Unified memory model (ours)",
+     "mae": null,
+     "auc": null
+    }
+   ],
+   "ceiling": "none",
    "duration_label": "Long-term memory (minutes to months)",
    "task_label": "Recall (produce the item; nothing is shown)",
    "metric_label": "Per-trial binary (old/new, correct/incorrect)",
@@ -656,41 +731,54 @@
   },
   {
    "key": "digitspan",
-   "name": "Digit span (TMB)",
-   "full": "TestMyBrain forward / backward digit span",
+   "name": "Digit span (TestMyBrain)",
+   "full": "Forward and backward digit span",
    "group": "Verbal serial recall",
-   "in_model": "v8 (per-item only), v9, v10",
+   "used": "yes",
    "duration": "WM",
    "task": "recall",
    "metric": "trial_sequence",
-   "task_text": "Digits appear one at a time; type them back in the same order (forward) or reversed (backward); lists get longer until errors. Public normative sample (N ≈ 1,000 per test).",
-   "size": "1,833 participants; ~146k typed digits (our build)",
+   "task_text": "Digits appear one at a time; type them back in the same order (forward) or reversed (backward); lists get longer after each correct answer.",
+   "size": "1,833 participants, about 146k typed digits (our build)",
    "stimuli": "digits",
    "response": "typed digit sequence",
-   "published_metric": "maximum span (summary score); norms FDS 6.43 (SD 1.58), BDS 5.33 (SD 1.58)",
-   "direction": "higher",
-   "sota": [
-    {
-     "model": "no per-trial model",
-     "year": "",
-     "value": "—",
-     "note": "nearest precedent: CRU (Logan 2021) on letters"
-    }
-   ],
-   "ceiling": "split-half reliability 0.64–0.68",
-   "trial_model": "no",
-   "ours": [
-    {
-     "what": "per-step top-1 accuracy of the next digit",
-     "value": "0.42 without / 0.77 with an explicit serial-position input (v10)"
-    },
-    {
-     "what": "whole-list success AUC",
-     "value": "0.80 (v9)"
-    }
-   ],
    "paper": "Hartshorne & Germine, Psychological Science 2015; Singh et al., JCEN 2021",
    "paper_url": "https://doi.org/10.1177/0956797614567339",
+   "metric_name": "Maximum span",
+   "metric_intuition": "The longest list a person can repeat back correctly, forward and backward.",
+   "metric_formula": "span = the longest list length recalled correctly by a participant; the model's span uses its predicted list-level success (predicted probability of the whole sequence at least 0.5).",
+   "direction": "higher",
+   "columns": [
+    {
+     "key": "fspan",
+     "label": "forward span (observed / predicted)",
+     "released": true
+    },
+    {
+     "key": "bspan",
+     "label": "backward span (observed / predicted)",
+     "released": true
+    },
+    {
+     "key": "step",
+     "label": "next-digit accuracy per step",
+     "released": false
+    }
+   ],
+   "rows": [
+    {
+     "method": "normative sample (Singh et al. 2021)",
+     "fspan": "6.43 (N = 9,858)",
+     "bspan": "5.33 (N = 6,269)"
+    },
+    {
+     "method": "Unified memory model (ours)",
+     "fspan": "6.45 obs / 2.63 pred",
+     "bspan": "5.54 obs / 1.94 pred",
+     "step": "0.503"
+    }
+   ],
+   "ceiling": "split-half reliability 0.64 to 0.68",
    "duration_label": "Working memory (seconds)",
    "task_label": "Recall (produce the item; nothing is shown)",
    "metric_label": "Per-trial sequence (which item next, in order)",
@@ -710,41 +798,41 @@
   },
   {
    "key": "afc2",
-   "name": "2AFC objects (Brady & Störmer)",
+   "name": "2AFC objects",
    "full": "Spatial two-alternative forced-choice recognition of real-world objects",
    "group": "Working memory for objects",
-   "in_model": "v8, v9, v10",
+   "used": "yes",
    "duration": "WM",
    "task": "recognition",
    "metric": "trial_binary",
-   "task_text": "Six object photos are shown together for 2 s; after a short delay two objects appear at one location — the studied one and a foil of graded similarity — and the participant picks the studied one.",
-   "size": "120 participants (raw, pre-exclusion); ~12k choices",
-   "stimuli": "object photos with similar / dissimilar foils",
-   "response": "2AFC choice (per trial)",
-   "published_metric": "percent correct (and R = 2·PC − 1); no model metric",
+   "task_text": "Six object photographs are shown together for 2 s; after a short delay two objects appear at one location, the studied one and a foil of graded similarity, and the participant picks the studied one.",
+   "size": "120 participants, about 12k choices (our build)",
+   "stimuli": "object photographs with similar or dissimilar foils",
+   "response": "two-alternative choice (per trial)",
+   "paper": "Brady & Störmer, Memory & Cognition 2024",
+   "paper_url": "https://doi.org/10.3758/s13421-023-01485-5",
+   "metric_name": "Percent correct",
+   "metric_intuition": "How often the studied object is chosen over the foil.",
+   "metric_formula": "percent correct = 100 x (number of trials where the studied object was chosen) / (number of trials); the model's value is its mean predicted probability of the correct choice.",
    "direction": "higher",
-   "sota": [
+   "columns": [
     {
-     "model": "no trial-level model for real-world images",
-     "year": "",
-     "value": "—",
-     "note": "TCC (Schurgin 2020) is the only trial-level 2AFC model and is for colour"
+     "key": "pc",
+     "label": "percent correct (observed / predicted)",
+     "released": true
+    }
+   ],
+   "rows": [
+    {
+     "method": "no trial-level model for real-world images",
+     "pc": null
+    },
+    {
+     "method": "Unified memory model (ours)",
+     "pc": "73.8 obs / 73.2 pred"
     }
    ],
    "ceiling": "none",
-   "trial_model": "no",
-   "ours": [
-    {
-     "what": "NLL of the participant's choice (uniform 0.693)",
-     "value": "0.602 (v10, 6k)"
-    },
-    {
-     "what": "predicted vs observed accuracy",
-     "value": "0.789 vs 0.738 (v9)"
-    }
-   ],
-   "paper": "Brady & Störmer, Memory & Cognition 2024, 52:595",
-   "paper_url": "https://doi.org/10.3758/s13421-023-01485-5",
    "duration_label": "Working memory (seconds)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Per-trial binary (old/new, correct/incorrect)",
@@ -765,42 +853,53 @@
   {
    "key": "vwm_de_color",
    "name": "Colour delayed estimation",
-   "full": "van den Berg–Awh–Ma delayed-estimation benchmark (colour)",
+   "full": "van den Berg, Awh & Ma delayed-estimation benchmark (colour)",
    "group": "Visual working memory",
-   "in_model": "v8, v9, v10",
+   "used": "yes",
    "duration": "WM",
    "task": "reproduction",
    "metric": "trial_continuous",
-   "task_text": "1–8 coloured items are shown briefly; after a delay one location is cued and the participant reproduces its colour on a colour wheel. The benchmark pools 8 colour experiments (E1–E8) from earlier papers.",
-   "size": "152 participants; ~106k reports (our build; includes the retracted E4–E6)",
+   "task_text": "One to eight coloured items are shown briefly; after a delay one location is cued and the participant reproduces its colour on a colour wheel.",
+   "size": "152 participants, about 106k reports (our build)",
    "stimuli": "colour patches",
    "response": "continuous colour angle",
-   "published_metric": "model comparison by AIC of the per-trial circular-error likelihood (per subject)",
-   "direction": "lower (AIC)",
-   "sota": [
+   "paper": "van den Berg, Awh & Ma, Psychological Review 2014",
+   "paper_url": "https://doi.org/10.1037/a0035234",
+   "metric_name": "Per-trial likelihood of the reported colour",
+   "metric_intuition": "How much probability the model puts on the colour the participant actually reported; the benchmark ranks models by this likelihood (as AIC) per participant.",
+   "metric_formula": "NLL = minus the mean log density of the reported angle under the model's predicted circular distribution (nats; the uniform distribution scores 1.84). AIC = 2k minus 2 log-likelihood; lower is better.",
+   "direction": "lower",
+   "columns": [
     {
-     "model": "VP-P-NT (variable precision, Poisson item number, non-target reports)",
-     "year": 2014,
-     "value": "best in 79.3% of 164 subjects",
-     "note": "exact per-model ΔAIC not published numerically"
+     "key": "nll",
+     "label": "NLL per report (nats)",
+     "released": true
+    },
+    {
+     "key": "sd",
+     "label": "error SD by set size (observed / decoded)",
+     "released": false
+    }
+   ],
+   "rows": [
+    {
+     "method": "Variable-precision model VP-P-NT (2014)",
+     "nll": null,
+     "note": "best model by AIC in 79% of the 164 participants; per-trial numbers not published"
+    },
+    {
+     "method": "mixture model fitted per set size (our reference)",
+     "nll": "1.117"
+    },
+    {
+     "method": "Unified memory model (ours)",
+     "nll": "1.193",
+     "sd": "1: 21/4 deg, 2: 30/5 deg, 3: 45/6 deg, 4: 57/6 deg, 5: 56/11 deg, 6: 75/9 deg, 7: 67/10 deg, 8: 93/15 deg"
     }
    ],
    "ceiling": "none",
-   "trial_model": "yes (per-trial likelihood)",
-   "ours": [
-    {
-     "what": "per-report NLL (uniform 1.838; population mixture per set size 1.117)",
-     "value": "1.193 (v10, 6k)"
-    },
-    {
-     "what": "set-size effect",
-     "value": "probability of retrieving the cued item 1.00 (1 item) → 0.57 (8 items); precision constant (v10)"
-    }
-   ],
-   "paper": "van den Berg, Awh & Ma, Psychological Review 2014, 121:124",
-   "paper_url": "https://doi.org/10.1037/a0035234",
    "duration_label": "Working memory (seconds)",
-   "task_label": "Reproduction / continuous report (reproduce a feature value, e.g. a colour angle; also called delayed estimation or continuous recall)",
+   "task_label": "Reproduction / continuous report (reproduce a feature value such as a colour angle; also called delayed estimation or continuous recall)",
    "metric_label": "Per-trial continuous (reported angle)",
    "figure": {
     "png": "figs/vwm_de_color.png",
@@ -819,36 +918,53 @@
   {
    "key": "vwm_cd",
    "name": "Change detection",
-   "full": "Keshvari–van den Berg–Ma change detection (colour and orientation)",
+   "full": "Keshvari, van den Berg & Ma change detection (colour and orientation)",
    "group": "Visual working memory",
-   "in_model": "v8, v9, v10",
+   "used": "yes",
    "duration": "WM",
    "task": "recognition",
    "metric": "trial_binary",
-   "task_text": "A display of 2–8 items (colours or orientations) is shown, then after a delay a second display in which one item may have changed by a graded amount; answer same / different.",
-   "size": "17 participants; 30,600 trials",
-   "stimuli": "colour patches / oriented ellipses",
+   "task_text": "A display of two to eight items is shown, then after a delay a second display in which one item may have changed by a graded amount; answer same or different.",
+   "size": "17 participants, 30,600 trials",
+   "stimuli": "colour patches or oriented ellipses",
    "response": "same / different (per trial)",
-   "published_metric": "log marginal likelihood (Bayes factors) of per-trial responses; descriptive K = N(H − FA)/(1 − FA)",
-   "direction": "higher (log-likelihood)",
-   "sota": [
+   "paper": "Keshvari, van den Berg & Ma, PLoS Computational Biology 2013",
+   "paper_url": "https://doi.org/10.1371/journal.pcbi.1002927",
+   "metric_name": "Accuracy and memory capacity K",
+   "metric_intuition": "How often the change judgement is right, and how many items that accuracy implies were held in memory.",
+   "metric_formula": "K = N x (hit rate minus false-alarm rate) / (1 minus false-alarm rate) for a display of N items (whole-display formula); the model's value uses its predicted 'different' responses.",
+   "direction": "higher",
+   "columns": [
     {
-     "model": "VP (variable precision)",
-     "year": 2013,
-     "value": "beats IP / SA / SR / EP by 97 ± 11, 7.2, 7.4, 19 log units per subject",
-     "note": "per-trial likelihood model; no normalised per-trial number published"
+     "key": "acc",
+     "label": "accuracy (observed / predicted)",
+     "released": true
+    },
+    {
+     "key": "k",
+     "label": "K at 8 items (observed / predicted)",
+     "released": true
+    },
+    {
+     "key": "nll",
+     "label": "NLL per trial",
+     "released": false
+    }
+   ],
+   "rows": [
+    {
+     "method": "Variable-precision model (Keshvari et al. 2013)",
+     "acc": null,
+     "note": "ranked by log marginal likelihood against slot models; per-trial numbers not published"
+    },
+    {
+     "method": "Unified memory model (ours)",
+     "acc": "0.79 obs / 0.60 pred",
+     "k": "1.17 obs / 0.06 pred",
+     "nll": "0.834"
     }
    ],
    "ceiling": "none",
-   "trial_model": "yes (per-trial likelihood)",
-   "ours": [
-    {
-     "what": "per-trial NLL (lookup 0.616)",
-     "value": "0.834 (v10, 6k) — currently worse than the base-rate baseline; magnitude dependence not yet captured"
-    }
-   ],
-   "paper": "Keshvari, van den Berg & Ma, PLoS Computational Biology 2013, 9:e1002927",
-   "paper_url": "https://doi.org/10.1371/journal.pcbi.1002927",
    "duration_label": "Working memory (seconds)",
    "task_label": "Recognition (a probe is shown; judge whether it is in memory)",
    "metric_label": "Per-trial binary (old/new, correct/incorrect)",

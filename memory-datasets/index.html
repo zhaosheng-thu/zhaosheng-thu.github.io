@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Human memory datasets — catalogue for a unified trial-level model</title>
+<title>Human memory datasets: a catalogue for a unified model of memory behaviour</title>
 <style>
   :root { --ink:#1b1f24; --muted:#5b6470; --line:#e2e6ea; --bg:#fafbfc; --card:#fff; --wm:#e8f1ff; --ltm:#fff1e6; --rec:#eef7ee; --rcl:#f5ecff; --rep:#fff8dc; --acc:#0b57d0; }
   * { box-sizing: border-box; }
   body { margin:0; font: 15px/1.5 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color:var(--ink); background:var(--bg); }
   header { padding:28px 32px 12px; border-bottom:1px solid var(--line); background:#fff; }
   h1 { margin:0 0 6px; font-size:24px; }
-  .sub { color:var(--muted); max-width:980px; }
+  .sub { color:var(--muted); max-width:1000px; }
   .dims { display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; padding:16px 32px; }
   .dim { background:#fff; border:1px solid var(--line); border-radius:10px; padding:12px 14px; }
   .dim h3 { margin:0 0 6px; font-size:14px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
@@ -20,7 +20,7 @@
   .tools { padding:0 32px 8px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; color:var(--muted); font-size:13px; }
   .tools button { font:inherit; padding:4px 10px; border-radius:6px; border:1px solid var(--line); background:#fff; cursor:pointer; }
   main { padding:8px 32px 40px; }
-  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(460px, 1fr)); gap:18px; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(520px, 1fr)); gap:18px; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden; display:flex; flex-direction:column; }
   .card .head { padding:14px 16px 6px; }
   .card h2 { margin:0; font-size:18px; }
@@ -31,18 +31,23 @@
   .fig { background:#f6f7f9; border-top:1px solid var(--line); border-bottom:1px solid var(--line); text-align:center; }
   .fig img { max-width:100%; max-height:300px; display:block; margin:0 auto; }
   .fig .cap { font-size:12px; color:var(--muted); padding:6px 12px; text-align:left; }
-  .fig .none { padding:28px; color:var(--muted); font-size:13px; }
   .body { padding:10px 16px 14px; font-size:14px; }
   .body p { margin:6px 0; }
-  .kv { display:grid; grid-template-columns: 120px 1fr; gap:2px 10px; font-size:13px; margin:6px 0; }
+  .kv { display:grid; grid-template-columns: 110px 1fr; gap:2px 10px; font-size:13px; margin:6px 0; }
   .kv div:nth-child(odd) { color:var(--muted); }
-  .sota { margin-top:8px; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
-  .sota .hd { background:#f3f5f7; padding:6px 10px; font-size:13px; font-weight:600; display:flex; justify-content:space-between; }
-  .arrow { font-weight:700; color:var(--acc); }
+  .metric { margin-top:10px; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  .metric .hd { background:#f3f5f7; padding:8px 10px; }
+  .metric .hd .name { font-weight:600; }
+  .metric .hd .intu { font-size:13px; margin-top:2px; }
+  .metric .hd .form { font-size:12px; color:var(--muted); margin-top:2px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .arrow { font-weight:700; color:var(--acc); white-space:nowrap; }
   table { border-collapse:collapse; width:100%; font-size:13px; }
   td, th { padding:5px 10px; border-top:1px solid var(--line); vertical-align:top; text-align:left; }
   th { color:var(--muted); font-weight:600; background:#fff; }
-  .ours { background:#f7fbff; }
+  th.rel { color:var(--ink); }
+  td.blank { color:#c0c6cc; text-align:center; }
+  tr.ours td { background:#f7fbff; font-weight:600; }
+  tr.ours td.note, td.note { font-weight:400; }
   .note { color:var(--muted); font-size:12px; }
   .matrix { overflow-x:auto; margin:16px 0 26px; }
   .matrix table { min-width:900px; background:#fff; border:1px solid var(--line); }
@@ -55,12 +60,12 @@
 <body>
 <header>
   <h1 id="title">Human memory datasets</h1>
-  <div class="sub" id="subtitle">Every dataset used by the unified trial-level memory model, placed on three axes: how long the memory is held, what the task asks, and what kind of measurement is released. Each card shows the task figure from the original paper, the metric the field uses (with the direction that is better), the best released model on that metric, and the unified model's number.</div>
+  <div class="sub" id="subtitle">Every dataset used to build a single model of memory behaviour, placed on three axes: how long the memory is held, what the task asks, and what kind of measurement is released. Each card shows the task as drawn in the original paper, the metric that dataset's field uses (what it means, how it is computed, which direction is better), the strongest released models on it, and the unified model.</div>
 </header>
 <section class="dims">
   <div class="dim"><h3>Axis 1 · Memory duration</h3><div id="chips-duration"></div></div>
   <div class="dim"><h3>Axis 2 · Task</h3><div id="chips-task"></div></div>
-  <div class="dim"><h3>Axis 3 · Measurement</h3><div id="chips-metric"></div></div>
+  <div class="dim"><h3>Axis 3 · Measurement released</h3><div id="chips-metric"></div></div>
 </section>
 <div class="tools"><span id="count"></span><button id="clear">clear filters</button><button id="toggle">show matrix view</button></div>
 <main>
@@ -72,7 +77,7 @@
 const state = { duration: new Set(), task: new Set(), metric: new Set(), matrix: false };
 let DATA = null;
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const arrow = d => d === 'higher' ? '↑ higher is better' : d === 'lower' ? '↓ lower is better' : d && d.startsWith('lower') ? '↓ ' + d : d && d.startsWith('higher') ? '↑ ' + d : '— no model metric';
+const arrow = d => d === 'higher' ? '↑ higher is better' : d === 'lower' ? '↓ lower is better' : '';
 function chips(axis, dict) {
   const box = document.getElementById('chips-' + axis); box.innerHTML = '';
   for (const [k, label] of Object.entries(dict)) {
@@ -82,27 +87,34 @@ function chips(axis, dict) {
   }
 }
 function visible() { return DATA.datasets.filter(d => (!state.duration.size || state.duration.has(d.duration)) && (!state.task.size || state.task.has(d.task)) && (!state.metric.size || state.metric.has(d.metric))); }
+function metricTable(d) {
+  const cols = d.columns || [];
+  const head = '<tr><th>method</th>' + cols.map(c => `<th class="${c.released ? 'rel' : ''}">${esc(c.label)}${c.released ? ' <span class="arrow">' + (d.direction === 'higher' ? '↑' : d.direction === 'lower' ? '↓' : '') + '</span>' : ''}</th>`).join('') + '<th></th></tr>';
+  const rows = (d.rows || []).map(r => {
+    const ours = r.method === 'Unified memory model (ours)';
+    return `<tr class="${ours ? 'ours' : ''}"><td>${esc(r.method)}</td>` + cols.map(c => r[c.key] == null || r[c.key] === '' ? '<td class="blank">—</td>' : `<td>${esc(r[c.key])}</td>`).join('') + `<td class="note">${esc(r.note || '')}</td></tr>`;
+  }).join('');
+  return `<div class="metric"><div class="hd"><div class="name">${esc(d.metric_name)} <span class="arrow">${arrow(d.direction)}</span></div><div class="intu">${esc(d.metric_intuition)}</div><div class="form">${esc(d.metric_formula)}</div></div><table>${head}${rows}</table><div class="note" style="padding:6px 10px">consistency ceiling: ${esc(d.ceiling)}</div></div>`;
+}
 function card(d) {
   const f = d.figure;
-  const figHtml = f && f.png ? `<div class="fig"><img src="${esc(f.png)}" alt="task figure for ${esc(d.name)}"><div class="cap">${esc(f.figure || 'Figure')} of ${esc(f.authors || '')} (${esc(f.year || '')}), ${esc(f.venue || '')}. ${esc(f.caption_short || '')} <span class="note">${esc(f.license || '')}</span></div></div>`
-                             : `<div class="fig"><div class="none">task figure pending${f && f.notes ? ': ' + esc(f.notes) : ''}</div></div>`;
-  const sota = (d.sota || []).map(s => `<tr><td>${esc(s.model)}${s.year ? ' (' + esc(s.year) + ')' : ''}</td><td><b>${esc(s.value)}</b></td><td class="note">${esc(s.note || '')}</td></tr>`).join('');
-  const ours = (d.ours || []).map(o => `<tr class="ours"><td>${esc(o.what)}</td><td><b>${esc(o.value)}</b></td><td class="note">unified model</td></tr>`).join('');
+  const figHtml = f && f.png ? `<div class="fig"><img src="${esc(f.png)}" alt="task figure for ${esc(d.name)}"><div class="cap">${esc(f.figure || 'Figure')} of ${esc(f.authors || '')} (${esc(f.year || '')}), ${esc(f.venue || '')}. ${esc(f.caption_short || '')} <span class="note">${esc(f.license || '')}</span></div></div>` : `<div class="fig"><div class="cap">task figure not available</div></div>`;
   return `<div class="card">
-    <div class="head"><h2>${esc(d.name)}</h2><div class="full">${esc(d.full)} · ${esc(d.group)} · in model: ${esc(d.in_model)}</div></div>
+    <div class="head"><h2>${esc(d.name)}</h2><div class="full">${esc(d.full)} · ${esc(d.group)} · used to train the unified model: ${esc(d.used)}</div></div>
     <div class="tags"><span class="tag t-${d.duration}">${esc(d.duration_label.split(' (')[0])}</span><span class="tag t-${d.task}">${esc(d.task_label.split(' (')[0])}</span><span class="tag t-metric">${esc(d.metric_label.split(' (')[0])}</span></div>
     ${figHtml}
     <div class="body">
       <p>${esc(d.task_text)}</p>
       <div class="kv"><div>size</div><div>${esc(d.size)}</div><div>stimuli</div><div>${esc(d.stimuli)}</div><div>response</div><div>${esc(d.response)}</div><div>paper</div><div><a href="${esc(d.paper_url)}" target="_blank" rel="noopener">${esc(d.paper)}</a></div></div>
-      <div class="sota"><div class="hd"><span>Published metric: ${esc(d.published_metric)}</span><span class="arrow">${arrow(d.direction)}</span></div>
-        <table><tr><th>best released model</th><th>value</th><th></th></tr>${sota}${ours}</table>
-        <div class="note" style="padding:6px 10px">ceiling / reliability: ${esc(d.ceiling)} · trial-level model in the literature: ${esc(d.trial_model)}</div></div>
+      ${metricTable(d)}
     </div></div>`;
 }
 function matrix(list) {
-  const rows = list.map(d => `<tr><td class="k">${esc(d.name)}</td><td>${esc(d.duration_label.split(' (')[0])}</td><td>${esc(d.task_label.split(' (')[0])}</td><td>${esc(d.metric_label.split(' (')[0])}</td><td>${esc(d.published_metric)} <span class="arrow">${arrow(d.direction).split(' ')[0]}</span></td><td>${d.sota && d.sota[0] ? esc(d.sota[0].model) + ': <b>' + esc(d.sota[0].value) + '</b>' : ''}</td><td>${d.ours && d.ours[0] ? esc(d.ours[0].value) + ' <span class="note">(' + esc(d.ours[0].what) + ')</span>' : ''}</td></tr>`).join('');
-  return `<table><tr><th>dataset</th><th>duration</th><th>task</th><th>measurement</th><th>published metric</th><th>best released model</th><th>unified model</th></tr>${rows}</table>`;
+  const rows = list.map(d => {
+    const ours = (d.rows || []).find(r => r.method === 'Unified memory model (ours)'); const rel = (d.columns || []).find(c => c.released); const best = (d.rows || []).find(r => r.method !== 'Unified memory model (ours)' && rel && r[rel.key]);
+    return `<tr><td class="k">${esc(d.name)}</td><td>${esc(d.duration_label.split(' (')[0])}</td><td>${esc(d.task_label.split(' (')[0])}</td><td>${esc(d.metric_label.split(' (')[0])}</td><td>${esc(d.metric_name)} <span class="arrow">${d.direction === 'higher' ? '↑' : d.direction === 'lower' ? '↓' : ''}</span></td><td>${best ? esc(best.method) + ': <b>' + esc(best[rel.key]) + '</b>' : '<span class="note">none published</span>'}</td><td>${ours && rel && ours[rel.key] ? '<b>' + esc(ours[rel.key]) + '</b>' : '<span class="note">—</span>'}</td></tr>`;
+  }).join('');
+  return `<table><tr><th>dataset</th><th>duration</th><th>task</th><th>measurement</th><th>released metric</th><th>strongest released model</th><th>unified model</th></tr>${rows}</table>`;
 }
 function render() {
   chips('duration', DATA.meta.dims.duration); chips('task', DATA.meta.dims.task); chips('metric', DATA.meta.dims.metric);
