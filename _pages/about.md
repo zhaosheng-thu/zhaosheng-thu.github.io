@@ -52,7 +52,7 @@ I am Sheng Zhao (赵晟), a 1st-year Ph.D. student in Computer Science at the Un
   <div>
       <b><a href="https://www.rochester.edu/">University of Rochester</a></b>
       <!-- <br> 2026.1 -  -->
-      <br> <i style="color: #888;">Spring 2026 - Present</i>
+      <br> <i style="color: #888;">Jan 2026 - Present</i>
       <br> <b>1st-year Ph.D. student in Computer Science</b>
       <br> Advisor: Professor <a href="https://yuhaozhu.com/"><i>Yuhao Zhu</i></a>
   </div>
@@ -162,9 +162,7 @@ In addition, I served as a research intern in **[PI Lab](https://pi.cs.tsinghua.
     <div style="margin-top: 2px; color: #777; font-style: italic;">In 32nd IEEE Conference on Virtual Reality and 3D User Interfaces (VR&rsquo;25) &middot; Conference Track</div>
     <div style="margin-top: 6px; font-size: 13px;">
       <a href="https://ieeexplore.ieee.org/abstract/document/10937423/" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">Paper</a>
-      <a href="https://ieeevr.org/2025/program/papers/#16" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">Program</a>
-      <a href="https://github.com/zhaosheng-thu/VRAuthentication" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">Code</a>
-    </div>
+      <a href="https://ieeevr.org/2025/program/papers/#16" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">Program</a>    </div>
   </div>
 </div>
 
@@ -176,9 +174,7 @@ In addition, I served as a research intern in **[PI Lab](https://pi.cs.tsinghua.
     <div style="margin-top: 2px; color: #777; font-style: italic;">In ACM CHI Conference on Human Factors in Computing Systems (CHI&rsquo;25)</div>
     <div style="margin-top: 6px; font-size: 13px;">
       <a href="https://dl.acm.org/doi/10.1145/3706598.3713688" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">Paper</a>
-      <a href="https://programs.sigchi.org/chi/2025/program/content/188476" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">Program</a>
-      <a href="https://github.com/zhaosheng-thu/AvatarFacial" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">Code</a>
-    </div>
+      <a href="https://programs.sigchi.org/chi/2025/program/content/188476" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">Program</a>    </div>
   </div>
 </div>
 
