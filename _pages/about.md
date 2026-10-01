@@ -10,12 +10,13 @@ redirect_from:
 
 ## Who I am
 
-I am Sheng Zhao (赵晟), a 1st-year Ph.D. student in Computer Science at the University of Rochester, NY, USA, advised by Prof. [Yuhao Zhu](https://yuhaozhu.com/). My research interests lie in **visual computing** and **deep learning**.
+I am Sheng Zhao (赵晟), a 1st-year Ph.D. student in Computer Science at the University of Rochester, NY, USA, advised by Prof. [Yuhao Zhu](https://yuhaozhu.com/). My research interests lie in **vision** (computer vision and human vision) and **deep learning**.
 
 <!-- Previously, I interned on the AI Coding Team at ByteDance (字节跳动) and worked as a research intern at Z.ai (智谱). I received my Bachelor’s degree from Tsinghua University, Beijing, China. -->
 
 <p style="text-align:center">
   <a href="mailto:alexzhao0705@gmail.com">Email</a> &nbsp;/&nbsp;
+  <a href="../files/Sheng_Zhao_CV.pdf">CV</a> &nbsp;/&nbsp;
   <a href="https://scholar.google.com/citations?user=sxEizdsAAAAJ">Google Scholar</a> &nbsp;/&nbsp;
   <a href="https://www.linkedin.com/in/sheng-zhao-027719290/">LinkedIn</a> &nbsp;/&nbsp;
   <a href="https://github.com/zhaosheng-thu">GitHub</a>
@@ -82,7 +83,7 @@ Additionally, I have conducted research as a Research Assistant at the Universit
   <div>
       <b><a href="">ByteDance (字节跳动)</a></b>
       <br> <i style="color: #888;">Oct 2025 - Jan 2026</i>
-      <br> Intern improving the front-end coding capabilities of agentic model (Seed-1.6-Code, etc.) via SFT and RL.
+      <br> Intern improving the front-end coding capabilities of agentic model (Seed-1.6-Code, etc.) via post-training (SFT and RL).
       <!-- Intern in <a href="https://www.capcut.com/">CapCut</a>,  -->
 
   </div>
@@ -94,7 +95,7 @@ Additionally, I have conducted research as a Research Assistant at the Universit
       <b><a href="">Z.ai (智谱 AI)</a></b>
       <br> <i style="color: #888;">Mar 2025 - Jul 2025</i>
       <!-- <br> Trajectory synthesis and rejection sampling for <a href="https://docs.z.ai/guides/vlm/glm-4.5v">GLM-4.5v</a>'s SFT and RL post-training on web tool use. -->
-      <br> Intern improving <a href="https://docs.z.ai/guides/vlm/glm-4.5v">GLM-4.5v</a>'s GUI web-agent capabilities via SFT and RL.
+      <br> Intern improving <a href="https://docs.z.ai/guides/vlm/glm-4.5v">GLM-4.5v</a>'s GUI web-agent capabilities via post-training (SFT and RL).
       <!-- Intern in <a href="https://github.com/THUDM/CogAgent">CogAgent</a>, -->
 
   </div>
@@ -117,11 +118,11 @@ In addition, I served as a research intern in **[PI Lab](https://pi.cs.tsinghua.
 <div id="GazeFlow" class="pub-item pub-item-first" style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 18px; padding: 10px 14px; border-left: 4px solid #d98c2b; background: #fff8ee; border-radius: 4px;">
   <div style="flex: 0 0 200px; max-width: 100%;"><span style="display: block; text-align: center; background: #1a4b8c; color: #fff; font-size: 12px; font-weight: 600; padding: 3px 0; border-radius: 3px;">NeurIPS</span><div style="margin-top: 6px; aspect-ratio: 2 / 1; background: #fff; border: 1px solid #e5e5e5; border-radius: 4px; overflow: hidden;"><img src="../images/pubs/GazeFlow.png" alt="GazeFlow" style="width: 100%; height: 100%; object-fit: contain;"></div></div>
   <div style="flex: 1 1 280px; min-width: 0;">
-    <div style="font-size: 17px; font-weight: 600; line-height: 1.4;"><a href="../files/Egocentric_Gaze_Prediction.pdf" style="color: #1a4b8c;">GazeFlow: From Human Gaze Behavior to Generative Egocentric Gaze Prediction</a></div>
+    <div style="font-size: 17px; font-weight: 600; line-height: 1.4;"><a href="https://arxiv.org/abs/2609.38519" style="color: #1a4b8c;">GazeFlow: From Human Gaze Behavior to Generative Egocentric Gaze Prediction</a></div>
     <div style="margin-top: 4px; color: #333;"><strong>Sheng Zhao</strong>, Weikai Lin, Yuhao Zhu</div>
     <div style="margin-top: 2px; color: #777; font-style: italic;">In 40th Conference on Neural Information Processing Systems (NeurIPS&rsquo;26) &middot; Main Track</div>
     <div style="margin-top: 6px; font-size: 13px;">
-      <a href="../files/Egocentric_Gaze_Prediction.pdf" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">PDF</a>
+      <a href="https://arxiv.org/abs/2609.38519" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">arXiv</a>
     </div>
   </div>
 </div>
@@ -129,11 +130,11 @@ In addition, I served as a research intern in **[PI Lab](https://pi.cs.tsinghua.
 <div id="PerceptualDimension" class="pub-item pub-item-first" style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 18px; padding: 10px 14px; border-left: 4px solid #d98c2b; background: #fff8ee; border-radius: 4px;">
   <div style="flex: 0 0 200px; max-width: 100%;"><span style="display: block; text-align: center; background: #1a4b8c; color: #fff; font-size: 12px; font-weight: 600; padding: 3px 0; border-radius: 3px;">NeurIPS</span><div style="margin-top: 6px; aspect-ratio: 2 / 1; background: #fff; border: 1px solid #e5e5e5; border-radius: 4px; overflow: hidden;"><img src="../images/pubs/ObserverModel.png" alt="Multidimensional Observer Model" style="width: 100%; height: 100%; object-fit: contain;"></div></div>
   <div style="flex: 1 1 280px; min-width: 0;">
-    <div style="font-size: 17px; font-weight: 600; line-height: 1.4;"><a href="../files/Human_Perceptual_Dimension.pdf" style="color: #1a4b8c;">Multidimensional Observer Model and Perceptual Dimensions of Human Image Quality Assessment</a></div>
+    <div style="font-size: 17px; font-weight: 600; line-height: 1.4;"><a href="https://arxiv.org/abs/2609.38487" style="color: #1a4b8c;">Multidimensional Observer Model and Perceptual Dimensions of Human Image Quality Assessment</a></div>
     <div style="margin-top: 4px; color: #333;"><strong>Sheng Zhao</strong>, Weikai Lin, Yuhao Zhu</div>
     <div style="margin-top: 2px; color: #777; font-style: italic;">In 40th Conference on Neural Information Processing Systems (NeurIPS&rsquo;26) &middot; Main Track</div>
     <div style="margin-top: 6px; font-size: 13px;">
-      <a href="../files/Human_Perceptual_Dimension.pdf" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">PDF</a>
+      <a href="https://arxiv.org/abs/2609.38487" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">arXiv</a>
     </div>
   </div>
 </div>
@@ -201,7 +202,7 @@ In addition, I served as a research intern in **[PI Lab](https://pi.cs.tsinghua.
 
 ## Service
 
-**Reviewer**: IMWUT 2024; ICWSM 2025; DIS 2025; ISMAR 2025; VR 2025, 2026; CHI 2025, 2026
+**Reviewer**: IMWUT 2024; ICWSM 2025; DIS 2025; ISMAR 2025; VR 2025, 2026, 2027; CHI 2025, 2026
 <br>**Student Volunteer**: CHI 2025
 
 <!-- ## Repository
