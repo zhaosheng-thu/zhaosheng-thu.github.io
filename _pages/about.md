@@ -95,7 +95,7 @@ Additionally, I have conducted research as a Research Assistant at the Universit
       <b><a href="">Z.ai (智谱 AI)</a></b>
       <br> <i style="color: #888;">Mar 2025 - Jul 2025</i>
       <!-- <br> Trajectory synthesis and rejection sampling for <a href="https://docs.z.ai/guides/vlm/glm-4.5v">GLM-4.5v</a>'s SFT and RL post-training on web tool use. -->
-      <br> Intern improving <a href="https://docs.z.ai/guides/vlm/glm-4.5v">GLM-4.5v</a>'s GUI web-agent capabilities via post-training (SFT and RL).
+      <br> Intern improving <a href="https://docs.z.ai/guides/vlm/glm-4.5v">GLM-4.5v</a>'s GUI web-agent capabilities through data synthesis, distillation, and post-training (SFT).
       <!-- Intern in <a href="https://github.com/THUDM/CogAgent">CogAgent</a>, -->
 
   </div>
