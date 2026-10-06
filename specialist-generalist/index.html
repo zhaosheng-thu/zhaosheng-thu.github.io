@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Specialist &amp; Generalist Basins</title>
-<meta name="description" content="Measured weight-space slices of language models trained on dated biographies: one year's loss landscape in 3D beside a top view of two years' specialists, whose overlap holds the generalist.">
+<title>Specialists and Generalists</title>
+<meta name="description" content="Measured loss landscapes of the CD and SD models on planes through parameter space: the specialists of two years, and the generalists where they overlap.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -19,6 +19,7 @@
   --rule: #dfe3dc; --axis: #c2c8c0; --ring: rgba(17,21,19,0.10); --chip: #eef1ec;
   --c1: #DF652A; --c2: #168873;                 /* the paper's Figure 3(a): orange = one year's specialists, green = the other's */
   --ramp-lo: #eef3f9; --ramp-mid: #6da7ec; --ramp-hi: #0d366b;
+  --hl: #fbf1cf; --hl-rule: #e9d495;          /* the callout that says what the two contour colors mean */
   --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
   --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -30,14 +31,14 @@
     --bg: #101211; --panel: #181a19; --ink: #f1f3f0; --ink-2: #c1c7c0; --muted: #878e88;
     --rule: #2a2e2b; --axis: #3a403b; --ring: rgba(255,255,255,0.10); --chip: #1f2220;
     --c1: #E8773F; --c2: #2BA88C;
-    --ramp-lo: #1b2330; --ramp-mid: #2a78d6; --ramp-hi: #cde2fb; color-scheme: dark;
+    --ramp-lo: #1b2330; --ramp-mid: #2a78d6; --ramp-hi: #cde2fb; --hl: #2b2715; --hl-rule: #4f4524; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #101211; --panel: #181a19; --ink: #f1f3f0; --ink-2: #c1c7c0; --muted: #878e88;
   --rule: #2a2e2b; --axis: #3a403b; --ring: rgba(255,255,255,0.10); --chip: #1f2220;
   --c1: #E8773F; --c2: #2BA88C;
-  --ramp-lo: #1b2330; --ramp-mid: #2a78d6; --ramp-hi: #cde2fb; color-scheme: dark;
+  --ramp-lo: #1b2330; --ramp-mid: #2a78d6; --ramp-hi: #cde2fb; --hl: #2b2715; --hl-rule: #4f4524; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--font-body); margin: 0; }
@@ -47,7 +48,8 @@ body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--font-body
 .eyebrow a { color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--axis); }
 .eyebrow a:hover { color: var(--ink); border-color: var(--ink); }
 h1 { font: 700 clamp(28px, 3.6vw, 40px)/1.05 var(--font-display); letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
-.lede { color: var(--ink-2); margin: 0; }
+.lede { color: var(--ink-2); margin: 0; text-wrap: pretty; }
+.lede .mono { white-space: nowrap; }
 .lede b { color: var(--ink); font-weight: 600; }
 .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; color: var(--ink); font-size: 14px; }
 /* dock */
@@ -80,6 +82,13 @@ input[type=range] { accent-color: var(--ink); }
 .yearbig { font: 600 24px/1 var(--font-mono) !important; color: var(--ink); min-width: 4ch; }
 .sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; flex: none; }
 .sw.both { background: repeating-linear-gradient(45deg, var(--c1) 0 3px, var(--c2) 3px 6px); }
+/* callout under the timeline: green = the timeline year, orange = the year picked here, striped = both */
+.callout { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 28px; padding: 6px 14px; border-radius: 8px;
+  background: var(--hl); border: 1px solid var(--hl-rule); font-size: 13px; color: var(--ink); }
+.callout .it { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.callout b { font-weight: 600; }
+.ln { display: inline-block; width: 22px; height: 4px; border-radius: 2px; flex: none; }
+#cmp { font: 600 13px var(--font-mono); border: 1.5px solid var(--c1); padding: 3px 4px; }
 /* views */
 .views { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: start; }
 .card { background: var(--panel); border: 1px solid var(--ring); border-radius: 12px; padding: 10px 12px; display: grid; gap: 8px; min-width: 0; margin: 0; }
@@ -103,13 +112,9 @@ input[type=range] { accent-color: var(--ink); }
 svg { display: block; width: 100%; height: auto; overflow: visible; }
 svg text { font-family: var(--font-mono); font-size: 11px; fill: var(--muted); }
 svg .labstrong { fill: var(--ink); font-family: var(--font-body); font-size: 12px; font-weight: 600; }
-/* below the views */
-.reading { margin: 0; font-size: 15px; color: var(--ink-2); }
-.reading b { color: var(--ink); font-weight: 600; }
-.key { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0; font-size: 12px; color: var(--ink-2); }
-.key div { display: inline-flex; gap: 6px; }
-.key dt { color: var(--muted); }
-.key dd { margin: 0; color: var(--ink); }
+.card-foot b { color: var(--ink); font-weight: 600; }
+.readout { margin: 0; }
+.readout .sw { vertical-align: -2px; margin-right: 6px; }
 .tip { position: fixed; pointer-events: none; z-index: 20; background: var(--ink); color: var(--panel); font: 12px/1.45 var(--font-mono);
   padding: 7px 9px; border-radius: 6px; max-width: 290px; opacity: 0; transition: opacity .08s; }
 footer { font-size: 12px; color: var(--muted); max-width: 110ch; border-top: 1px solid var(--rule); padding-top: 12px; }
@@ -125,25 +130,24 @@ footer { font-size: 12px; color: var(--muted); max-width: 110ch; border-top: 1px
 <body>
 <div class="wrap">
   <header class="hero">
-    <div class="eyebrow"><a href="https://zhaosheng-thu.github.io/">Sheng Zhao</a> · weight-space measurements · dated biographies 2000–2024</div>
-    <h1>Specialist &amp; Generalist Basins</h1>
-    <p class="lede">A trained model is one point in weight space. Take three trained models O, A and B, cut the flat plane through them,
-      <span class="mono">θ(a, b) = O + a·(A − O) + b·(B − O)</span>, and test the model at each of 25 × 25 grid points;
-      (0, 0), (1, 0) and (0, 1) are the trained models.</p>
-    <p class="lede">The <b>specialists of a year</b> learn that year's knowledge well (accuracy ≥ τ);
+    <div class="eyebrow"><a href="https://zhaosheng-thu.github.io/">Sheng Zhao</a> · temporal biographies, 2000–2024</div>
+    <h1>Specialists and Generalists</h1>
+    <p class="lede">A trained model is a point in parameter space. We cut the plane through three trained models O, A, and B,
+      <span class="mono">θ(a, b) = O + a(A − O) + b(B − O)</span>, and query the model at each of its 25 × 25 points.</p>
+    <p class="lede">The <b>specialists</b> of a year learn the knowledge of that year well (accuracy ≥ τ);
       <b>generalists</b> lie where the specialists of different years overlap.</p>
   </header>
 
   <div class="dock" role="toolbar" aria-label="Controls">
     <div class="row">
       <div class="seg" id="scaleSeg" role="group" aria-label="Model size"></div>
-      <label for="sliceSel"><span class="lab">slice</span> <select id="sliceSel"></select></label>
-      <label for="heightSel"><span class="lab">height</span> <select id="heightSel">
-        <option value="xent">loss on the chosen year's questions</option>
-        <option value="nll">loss on all training records</option>
+      <label for="sliceSel"><span class="lab">plane</span> <select id="sliceSel"></select></label>
+      <label for="heightSel"><span class="lab">height = loss on</span> <select id="heightSel">
+        <option value="xent">the year's knowledge</option>
+        <option value="nll">all knowledge</option>
       </select></label>
       <label for="tau"><span class="lab">τ</span> <input type="range" id="tau" min="0.1" max="0.95" step="0.05" value="0.5" style="width:100px"><output id="tauOut">0.50</output></label>
-      <label for="outlines"><input type="checkbox" id="outlines" checked> outlines in 3D</label>
+      <label for="outlines"><input type="checkbox" id="outlines" checked> contours in 3D</label>
     </div>
     <div class="row timeline">
       <button class="play" id="play" type="button" aria-label="Play years">▶</button>
@@ -153,13 +157,17 @@ footer { font-size: 12px; color: var(--muted); max-width: 110ch; border-top: 1px
         <div class="ticks" id="ticks" aria-hidden="true"></div>
       </div>
       <output id="yearOut" class="yearbig">2024</output>
-      <label for="cmp"><span class="sw" style="background:var(--c1)"></span><span class="lab">compare with</span> <select id="cmp"></select></label>
+    </div>
+    <div class="callout" role="note" aria-label="Contour colors">
+      <span class="it"><span class="ln" style="background:var(--c2)"></span><span><b>Green:</b> specialists of <b id="lgYear">2024</b>, the year on the timeline</span></span>
+      <label class="it" for="cmp"><span class="ln" style="background:var(--c1)"></span><span><b>Orange:</b> specialists of <select id="cmp"></select>, a year you set</span></label>
+      <span class="it"><span class="sw both"></span><span><b>Striped:</b> overlap, the generalists</span></span>
     </div>
   </div>
 
   <main class="views">
     <section class="card" aria-label="3D landscape">
-      <div class="card-head"><span class="cap"><span class="sw" style="background:var(--c2);width:9px;height:9px;border-radius:50%"></span><span id="cap3d">Landscape</span></span>
+      <div class="card-head"><span class="cap"><span class="sw" style="background:var(--c2);width:9px;height:9px;border-radius:50%"></span><span id="cap3d">Loss landscape</span></span>
         <div class="seg small" id="viewSeg" role="group" aria-label="Camera"><button data-v="oblique" aria-pressed="true">Oblique</button><button data-v="side">Side</button><button data-v="top">Top</button></div></div>
       <div class="stage" id="stage"><div class="labels" id="labels"></div></div>
       <div class="card-foot" id="foot3d"></div>
@@ -171,16 +179,8 @@ footer { font-size: 12px; color: var(--muted); max-width: 110ch; border-top: 1px
     </section>
   </main>
 
-  <p class="reading" id="reading"></p>
-  <dl class="key">
-    <div><dt>Position</dt><dd>model mix (a, b)</dd></div>
-    <div><dt>Height</dt><dd>loss</dd></div>
-    <div><dt>Color</dt><dd>accuracy</dd></div>
-    <div><dt>Outlines</dt><dd>accuracy ≥ τ</dd></div>
-  </dl>
-
-  <footer>CD trains on the dated records in calendar order and its checkpoints are chronological specialists; SD trains on the same records shuffled.
-    110M / 350M / 682M decoders, two epochs. A year's loss is −log P(a value the person held that year).</footer>
+  <footer>CD and SD: the same dated records in chronological and shuffled order (GPT-2 style, 110M–682M, two epochs).
+    CD 2005 is the CD checkpoint where its second epoch reaches 2005. A dated query is correct if it returns any value held that year.</footer>
 </div>
 <div class="tip" id="tip" role="tooltip"></div>
 
@@ -190,7 +190,7 @@ footer { font-size: 12px; color: var(--muted); max-width: 110ch; border-top: 1px
   const DATA = JSON.parse(document.getElementById('landscape-data').textContent);
   const YEARS = DATA.years, SCALES = ['110M', '350M', '682M'];
   const SLICE_ORDER = ['fig3a', 'three', 'init'];
-  const SLABEL = { fig3a: 'Figure 3(a): CD 2005, CD 2024, SD', three: 'Three specialists: CD 2005, 2015, 2024', init: 'CD 2024, SD and their shared random init' };
+  const SLABEL = { fig3a: 'CD 2005 · CD 2024 · SD (Fig. 3a)', three: 'CD 2005 · CD 2015 · CD 2024', init: 'init · CD 2024 · SD' };
   const st = { scale: '110M', slice: 'fig3a', hq: 'xent', year: 2024, cmp: 2005, tau: 0.5, outlines: true };
   const $ = id => document.getElementById(id);
   const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -228,19 +228,18 @@ footer { font-size: 12px; color: var(--muted); max-width: 110ch; border-top: 1px
   const anchorCells = Q => Object.entries(Q.anchors).map(([n, ab]) => [n, nearIdx(Q.a, ab[0]), nearIdx(Q.b, ab[1])]);
 
   function reading(Q) {
-    if (!Q) return 'This slice is not measured at this model size.';
-    if (!Q.complete) return 'This slice is still being measured.';
-    if (st.cmp === st.year) return `Pick two different years to see where their specialists overlap.`;
+    if (!Q) return 'Not measured at this size.';
+    if (!Q.complete) return 'Still being measured.';
+    if (st.cmp === st.year) return 'Green and orange are the same year.';
     const an = anchorCells(Q), both = components(Q, (i, j) => inC(Q, i, j) && inY(Q, i, j));
     const nAll = Q.acc.flat().filter(acc => acc.every(v => v >= st.tau)).length;
-    const pair = `Specialists of <b>${st.cmp}</b> and of <b>${st.year}</b>`;
-    if (!both.length) return `${pair} do not overlap in this slice, so it holds no generalist. All 25 years at once: <b>${nAll}</b> models.`;
+    if (!both.length) return `No overlap on this plane · all 25 years: <b>${nAll}</b>`;
     const total = both.reduce((n, c) => n + c.length, 0);
-    const named = both.map(c => [c.length, an.filter(([n, i, j]) => c.some(([x, y]) => x === i && y === j)).map(([n]) => n)]);
+    const named = both.map(c => [c.length, an.filter(([n, i, j]) => c.some(([x, y]) => x === i && y === j)).map(([n]) => short(n))]);
     const near = named.filter(([, h]) => h.length), away = named.filter(([, h]) => !h.length).reduce((n, [k]) => n + k, 0);
-    const where = near.length === 1 && !away ? `, all around ${near[0][1].join(' and ')}`
-      : ': ' + near.map(([k, h]) => `${k} around ${h.join(' and ')}`).concat(away ? [`${away} away from the trained models`] : []).join('; ');
-    return `${pair} overlap in <b>${total}</b> of 625 models${where}. All 25 years at once: <b>${nAll}</b>.`;
+    const where = !near.length ? ', away from the trained models' : near.length === 1 && !away ? `, all near ${near[0][1].join(' and ')}`
+      : ': ' + near.map(([k, h]) => `${k} near ${h.join(' and ')}`).concat(away ? [`${away} elsewhere`] : []).join(', ');
+    return `<span class="sw both"></span>Overlap: <b>${total}</b> of 625 models${where} · all 25 years: <b>${nAll}</b>`;
   }
 
   /* one vertical scale per slice and height choice, so the surface does not jump while the years play */
@@ -262,10 +261,10 @@ footer { font-size: 12px; color: var(--muted); max-width: 110ch; border-top: 1px
   const SZ = 10;
   function init3D() {
     const host = $('stage');
-    if (!window.THREE || !THREE.OrbitControls) { host.insertAdjacentHTML('beforeend', '<div class="msg">The 3D view could not load; the top view still works.</div>'); return; }
+    if (!window.THREE || !THREE.OrbitControls) { host.insertAdjacentHTML('beforeend', '<div class="msg">The 3D view did not load; the top view works.</div>'); return; }
     let renderer;
     try { renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); }
-    catch (e) { host.insertAdjacentHTML('beforeend', '<div class="msg">This browser could not start WebGL; the top view still works.</div>'); return; }
+    catch (e) { host.insertAdjacentHTML('beforeend', '<div class="msg">No WebGL in this browser; the top view works.</div>'); return; }
     renderer.setPixelRatio(Math.min(2, devicePixelRatio || 1)); host.prepend(renderer.domElement);
     const scene = new THREE.Scene(), camera = new THREE.PerspectiveCamera(32, 1, 0.1, 400), controls = new THREE.OrbitControls(camera, renderer.domElement);
     Object.assign(controls, { enableDamping: true, dampingFactor: 0.08, minDistance: 7, maxDistance: 45, maxPolarAngle: Math.PI * 0.495 });
@@ -313,7 +312,7 @@ footer { font-size: 12px; color: var(--muted); max-width: 110ch; border-top: 1px
     if (!L3.ready) return;
     clear3D(); L3.Q = Q;
     const old = L3.host.querySelector('.msg'); if (old) old.remove();
-    if (!Q || !Q.complete) { L3.host.insertAdjacentHTML('beforeend', `<div class="msg">${Q ? 'This slice is still being measured.' : 'This slice is not measured at this model size.'}</div>`); return; }
+    if (!Q || !Q.complete) { L3.host.insertAdjacentHTML('beforeend', `<div class="msg">${Q ? 'Still being measured.' : 'Not measured at this size.'}</div>`); return; }
     const A = Q.a, B = Q.b, na = A.length, nb = B.length, HT = heights(Q), HV = HT.f, Hh = HT.H, j0 = yi();
     const fi = a => (a - A[0]) / (A[na - 1] - A[0]) * (na - 1), fj = b => (b - B[0]) / (B[nb - 1] - B[0]) * (nb - 1);
     const X3 = a => (fi(a) / (na - 1) - 0.5) * SZ, Z3 = b => (0.5 - fj(b) / (nb - 1)) * SZ, Xi = i => (i / (na - 1) - 0.5) * SZ, Zj = j => (0.5 - j / (nb - 1)) * SZ;
@@ -336,27 +335,42 @@ footer { font-size: 12px; color: var(--muted); max-width: 110ch; border-top: 1px
     for (let j = 0; j < nb; j += 4) for (let i = 0; i < na - 1; i++) gl.push(Xi(i), Hh(HV(i, j)) + 0.01, Zj(j), Xi(i + 1), Hh(HV(i + 1, j)) + 0.01, Zj(j));
     const gg = new THREE.BufferGeometry(); gg.setAttribute('position', new THREE.Float32BufferAttribute(gl, 3));
     L3.group.add(new THREE.LineSegments(gg, new THREE.LineBasicMaterial({ color: muted, transparent: true, opacity: 0.2 })));
-    // contour rings of a field, draped on the surface; outlines are thin tubes so they stay visible on any screen
-    function drape(cs, make) { cs.forEach(cn => cn.coordinates.forEach(poly => poly.forEach(ring => { let run = [];
-      const flush = () => { if (run.length > 1) make(run); run = []; };
+    // Height on the drawn mesh: each cell is split along the same diagonal as the index buffer, so a contour sits on the triangles that are
+    // drawn rather than on a smooth surface the triangles cut through. g is the slope in world units.
+    const dx = SZ / (na - 1), dz = SZ / (nb - 1);
+    function hTri(i, j) { i = Math.max(0, Math.min(na - 1, i)); j = Math.max(0, Math.min(nb - 1, j));
+      const i0 = Math.min(na - 2, Math.floor(i)), k0 = Math.min(nb - 2, Math.floor(j)), u = i - i0, w = j - k0, H = (p, q) => Hh(HV(p, q));
+      const h00 = H(i0, k0), h10 = H(i0 + 1, k0), h01 = H(i0, k0 + 1), h11 = H(i0 + 1, k0 + 1);
+      const [h, gi, gj] = u + w <= 1 ? [h00 + u * (h10 - h00) + w * (h01 - h00), h10 - h00, h01 - h00]
+                                     : [h11 + (1 - u) * (h01 - h11) + (1 - w) * (h10 - h11), h11 - h01, h11 - h10];
+      return { h, g: Math.hypot(gi / dx, gj / dz) }; }
+    // contour rings of a field, laid on the mesh with points added inside each cell; lift(g) raises a point more on a steep wall,
+    // where a fixed vertical lift would leave a tube half inside the wall
+    function drape(cs, make, lift) { cs.forEach(cn => cn.coordinates.forEach(poly => poly.forEach(ring => { let run = [], prev = null;
+      const flush = () => { if (run.length > 1) make(run); run = []; prev = null; };
       ring.forEach(([px, py]) => { const i = px - 0.5, j = nb - 1 - (py - 0.5);
         if (i <= 0.01 || j <= 0.01 || i >= na - 1.01 || j >= nb - 1.01) { flush(); return; }
-        run.push(new THREE.Vector3(Xi(i), hAt(i, j), Zj(j))); });
+        const n = prev ? 5 : 1;
+        for (let s = 1; s <= n; s++) { const t = s / n, ii = prev ? prev[0] + t * (i - prev[0]) : i, jj = prev ? prev[1] + t * (j - prev[1]) : j, T = hTri(ii, jj);
+          run.push(new THREE.Vector3(Xi(ii), T.h + lift(T.g), Zj(jj))); }
+        prev = [i, j]; });
       flush(); }))); }
     const lineMat = new THREE.LineBasicMaterial({ color: muted, transparent: true, opacity: 0.5 });
-    drape(d3.contours().size([na, nb]).thresholds(HT.thr)(grid01(Q, HV)), run => L3.group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(run.map(p => p.clone().setY(p.y + 0.03))), lineMat)));
+    drape(d3.contours().size([na, nb]).thresholds(HT.thr)(grid01(Q, HV)), run => L3.group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(run), lineMat)),
+      g => 0.02 + 0.01 * Math.hypot(1, g));
     if (st.outlines) [[(i, j) => inC(Q, i, j), css('--c1')], [(i, j) => inY(Q, i, j), css('--c2')]].forEach(([f, color], k) => {
       const mat = new THREE.MeshBasicMaterial({ color: new THREE.Color().setStyle(color) });
       drape(d3.contours().size([na, nb]).thresholds([0.5])(grid01(Q, (i, j) => f(i, j) ? 1 : 0)), run => {
-        const closed = run.length > 3 && run[0].distanceTo(run[run.length - 1]) < 1e-6, pts = (closed ? run.slice(0, -1) : run).map(p => p.clone().setY(p.y + 0.07 + 0.02 * k));
-        L3.group.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts, closed, 'centripetal'), Math.max(8, pts.length * 3), 0.045, 6, closed), mat)); });
+        const closed = run.length > 3 && run[0].distanceTo(run[run.length - 1]) < 1e-6, pts = closed ? run.slice(0, -1) : run;
+        L3.group.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts, closed, 'centripetal'), Math.max(8, pts.length * 2), 0.045, 6, closed), mat)); },
+        g => 0.03 + (0.05 + 0.02 * k) * Math.hypot(1, g));
     });
     const tops = [];
     Object.entries(Q.anchors).forEach(([name, [a, b]]) => {
       const x = X3(a), z = Z3(b), yv = hAt(fi(a), fj(b)), top = new THREE.Vector3(x, yv + 1.1, z);
       L3.group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(x, yv, z), top]), new THREE.LineBasicMaterial({ color: ink })));
       const s3 = new THREE.Mesh(new THREE.SphereGeometry(0.13, 20, 14), new THREE.MeshStandardMaterial({ color: ink, roughness: 0.4 })); s3.position.set(x, yv + 0.02, z); L3.group.add(s3);
-      addLabel(name, top); tops.push(x, top.y + 0.6, z);
+      addLabel(short(name), top); tops.push(x, top.y + 0.6, z);
     });
     const rx = -SZ / 2 - 0.4, rz = -SZ / 2 - 0.4;
     L3.ruler = new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(rx, 0, rz), new THREE.Vector3(rx, maxH, rz)]), new THREE.LineBasicMaterial({ color: muted }));
@@ -378,10 +392,10 @@ footer { font-size: 12px; color: var(--muted); max-width: 110ch; border-top: 1px
   }
   function tipFor(ev, Q, i, j) {
     const acc = Q.acc[i][j], c = inC(Q, i, j), y = inY(Q, i, j);
-    const role = c && y ? `specialist of ${st.cmp} and ${st.year}: generalist region` : c ? `specialist of ${st.cmp}` : y ? `specialist of ${st.year}` : `specialist of neither year`;
-    showTip(ev, `a ${fmt2(Q.a[i])}, b ${fmt2(Q.b[j])}<br>accuracy ${st.cmp} <b>${fmt2(acc[ci()])}</b> · ${st.year} <b>${fmt2(acc[yi()])}</b>` +
-      (Q.xent ? `<br>loss on ${st.year} questions ${fmt3(Q.xent[i][j][yi()])}` : '') + `<br>loss on all records ${fmt3(Q.nll[i][j])}` +
-      `<br>${role}<br>${breadth(acc, st.tau)} of 25 years at ≥ ${fmt2(st.tau)}`);
+    const role = c && y ? 'specialist of both: generalist' : c ? `specialist of ${st.cmp}` : y ? `specialist of ${st.year}` : 'specialist of neither';
+    showTip(ev, `(a, b) = (${fmt2(Q.a[i])}, ${fmt2(Q.b[j])})<br>accuracy ${st.cmp}: <b>${fmt2(acc[ci()])}</b> · ${st.year}: <b>${fmt2(acc[yi()])}</b>` +
+      `<br>loss ${Q.xent ? `on ${st.year}: ${fmt3(Q.xent[i][j][yi()])} · ` : ''}on all: ${fmt3(Q.nll[i][j])}` +
+      `<br>${role}<br>specialist of ${breadth(acc, st.tau)} of 25 years`);
   }
 
   /* ---------- 2D top view: the paper's parameter-space plane, measured ---------- */
@@ -390,11 +404,11 @@ footer { font-size: 12px; color: var(--muted); max-width: 110ch; border-top: 1px
     L2.mark.attr('cx', L2.x(L2.Q.a[i])).attr('cy', L2.y(L2.Q.b[j])).style('display', null); }
   function drawPlane(Q) {
     const el = $('plane'); L2.mark = null;
-    if (!Q || !Q.complete) { el.innerHTML = `<div class="msg2">${Q ? 'This slice is still being measured.' : 'This slice is not measured at this model size.'}</div>`; return; }
+    if (!Q || !Q.complete) { el.innerHTML = `<div class="msg2">${Q ? 'Still being measured.' : 'Not measured at this size.'}</div>`; return; }
     const A = Q.a, B = Q.b, na = A.length, nb = B.length, W = 460, m = { l: 40, r: 12, t: 12, b: 36 }, side = W - m.l - m.r, H = side + m.t + m.b;
     const x = d3.scaleLinear().domain([A[0], A[na - 1]]).range([m.l, m.l + side]), y = d3.scaleLinear().domain([B[0], B[nb - 1]]).range([m.t + side, m.t]);
     const svg = d3.create('svg').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
-      .attr('aria-label', `Top view of the slice: the specialists of ${st.cmp} in orange, of ${st.year} in green, striped where they overlap`);
+      .attr('aria-label', `Top view of the plane: specialists of ${st.cmp} in orange, of ${st.year} in green, striped where they overlap`);
     const defs = svg.append('defs');
     const pat = defs.append('pattern').attr('id', 'bothPat').attr('patternUnits', 'userSpaceOnUse').attr('width', 8).attr('height', 8).attr('patternTransform', 'rotate(45)');
     pat.append('rect').attr('width', 4).attr('height', 8).attr('fill', css('--c1'));
@@ -445,14 +459,12 @@ footer { font-size: 12px; color: var(--muted); max-width: 110ch; border-top: 1px
     $('heightSel').querySelector('option[value=xent]').disabled = !hasX;
     $('heightSel').value = hasX ? st.hq : 'nll';
     $('yearOut').textContent = st.year; $('year').value = st.year; $('cmp').value = st.cmp; $('tauOut').textContent = fmt2(st.tau); $('outlines').checked = st.outlines;
-    $('cap3d').textContent = usesX(Q) ? `Landscape · loss on ${st.year} questions` : 'Landscape · loss on all training records';
-    $('cap2d').textContent = `Top view · specialists of ${st.cmp} and ${st.year}`;
+    $('cap3d').textContent = usesX(Q) ? `Loss · ${st.year} knowledge` : 'Loss · all knowledge';
+    $('lgYear').textContent = st.year;
     const gr = ramp(), grad = `linear-gradient(90deg, ${[0, .25, .5, .75, 1].map(v => gr(v)).join(',')})`;
-    $('foot3d').innerHTML = `<span class="rampkey">0 <span class="bar2" style="background:${grad}"></span> 1</span><span>color: accuracy in ${st.year}</span><span>height: loss, log scale</span>`;
-    $('foot2d').innerHTML = `<span><span class="sw" style="background:var(--c1)"></span>${st.cmp} specialists</span>` +
-      `<span><span class="sw" style="background:var(--c2)"></span>${st.year} specialists</span><span><span class="sw both"></span>both = generalists</span>`;
+    $('foot3d').innerHTML = `<span>Color: ${st.year} accuracy</span><span class="rampkey">0 <span class="bar2" style="background:${grad}"></span> 1</span><span>Height: loss (log)</span>`;
+    $('foot2d').innerHTML = `<p class="readout">${reading(Q)}</p>`;
     placeTimeline();
-    $('reading').innerHTML = reading(Q);
     draw3D(Q); drawPlane(Q);
   }
   $('sliceSel').onchange = e => { st.slice = e.target.value; render(); };
