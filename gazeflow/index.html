@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="GazeFlow (NeurIPS 2026) models egocentric gaze as a joint distribution over the whole trajectory with conditional flow matching. Try the interactive demo on EGTEA Gaze+ videos.">
+<meta property="og:title" content="GazeFlow: From Human Gaze Behavior to Generative Egocentric Gaze Prediction">
+<meta property="og:description" content="NeurIPS 2026. Generative egocentric gaze prediction with conditional flow matching.">
+<script>try { if (localStorage.getItem("gazeflow-theme") === "light") document.documentElement.dataset.theme = "light"; } catch (e) {}</script>
+<style>[hidden] { display: none !important; } body { margin: 0; } img { max-width: 100%; }</style>
+<title>GazeFlow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..700&display=swap">
+<style>
+/* Layout: an academic project page on white. Centered title block, a video stage with an
+   inference console beside it, then one reading column for the paper.
+   Teal = GazeFlow and its samples, red = human gaze, matching the paper's figures. */
+:root {
+  --bg: #0f1517;
+  --surface: #162023;
+  --ink: #e4eced;
+  --muted: #93a6aa;
+  --line: #26363a;
+  --accent: #3cc6d4;
+  --accent-strong: #63d6e1;
+  --accent-soft: #143238;
+  --on-accent: #062226;
+  --link: #7fb2ff;
+  --venue: #ff9a4d;
+  --human: #ff6b6e;
+  --affil: #b5c2c5;
+  --bar-base: #34474b;
+  --seg: #0c1416;
+  --seg-ink: #b9c8cb;
+  --seg-hover: #1c292d;
+  --quiet-edge: #2f4044;
+  --btn-bg: #e4eced;
+  --btn-ink: #0f1517;
+  --btn-hover: #ffffff;
+
+  --display: "Google Sans Flex", "Google Sans", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  --body: "Noto Sans", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --r: 10px;
+  --col: 980px;
+  --gutter: clamp(16px, 4vw, 40px);
+  color-scheme: dark;
+}
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --surface: #f6f8f8;
+  --ink: #363636;
+  --muted: #6b7478;
+  --line: #e2e7e8;
+  --accent: #0b8a9b;
+  --accent-strong: #08707e;
+  --accent-soft: #e2f3f5;
+  --on-accent: #ffffff;
+  --link: #3273dc;
+  --venue: #e3650f;
+  --human: #e5383b;
+  --affil: #4a4a4a;
+  --bar-base: #cfd7d9;
+  --seg: #e9eef0;
+  --seg-ink: #3d4a4e;
+  --seg-hover: #dce4e6;
+  --quiet-edge: #c9d2d4;
+  --btn-bg: #363636;
+  --btn-ink: #ffffff;
+  --btn-hover: #1f1f1f;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font: 400 17px/1.65 var(--body);
+  padding-inline: var(--gutter); padding-block: 0 64px;
+}
+.wrap { max-width: 1180px; margin-inline: auto; }
+.read { max-width: var(--col); margin-inline: auto; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; color: var(--ink); }
+.eyebrow { font: 500 12px/1 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+
+/* ---------- theme switch ---------- */
+.theme {
+  all: unset; cursor: pointer; position: fixed; z-index: 10;
+  top: calc(env(safe-area-inset-top, 0px) + 14px); right: 16px;
+  display: inline-flex; align-items: center; gap: 7px; padding: 8px 13px; border-radius: 999px;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line); font: 500 13px/1 var(--body);
+}
+.theme:hover { background: var(--seg-hover); }
+.theme:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.theme svg { width: 15px; height: 15px; fill: currentColor; }
+
+/* ---------- title block ---------- */
+header { padding-block: 64px 36px; display: grid; gap: 14px; justify-items: center; text-align: center; }
+h1 { font-size: clamp(30px, 4.3vw, 54px); line-height: 1.18; font-weight: 600; letter-spacing: -0.01em; max-width: 24em; }
+h1 .name { color: var(--accent); }
+.venue { font: 500 clamp(19px, 2.1vw, 27px)/1.3 var(--display); color: var(--venue); margin-top: 4px; }
+.authors { font-size: clamp(17px, 1.7vw, 21px); line-height: 1.5; margin-top: 6px; }
+.affil { font-size: clamp(16px, 1.6vw, 20px); color: var(--affil); }
+.links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
+.links a, .links span {
+  display: inline-flex; align-items: center; gap: 9px; padding: 10px 22px; border-radius: 999px;
+  background: var(--btn-bg); color: var(--btn-ink); font: 400 17px/1 var(--body);
+}
+.links a:hover { background: var(--btn-hover); text-decoration: none; }
+.links span { opacity: 0.45; cursor: default; }
+.links svg { width: 17px; height: 17px; fill: currentColor; flex: none; }
+
+/* ---------- abstract ---------- */
+#abstract h2 { text-align: center; font-size: clamp(24px, 2.8vw, 32px); margin-bottom: 16px; }
+#abstract p { text-align: justify; hyphens: auto; }
+
+/* ---------- demo ---------- */
+.demo { display: grid; gap: 18px; }
+.demo-head { display: grid; justify-items: center; text-align: center; gap: 8px; }
+.demo-head h2 { font-size: clamp(24px, 3vw, 32px); }
+.demo-head p { margin: 0; color: var(--muted); max-width: 72ch; }
+
+.clips { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+.clip {
+  all: unset; cursor: pointer; display: grid; gap: 6px; min-width: 0;
+  border-radius: 8px; padding: 4px; border: 1.5px solid transparent;
+}
+.clip img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; display: block; background: #000; }
+.clip b { font: 500 13.5px/1.25 var(--body); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.clip small { font: 400 11.5px/1 var(--mono); color: var(--muted); }
+.clip:hover { border-color: var(--line); }
+.clip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.clip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.bench {
+  display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+}
+.stage { position: relative; min-width: 0; align-self: start; background: #000; }
+.stage video { display: block; width: 100%; aspect-ratio: 4 / 3; background: #000; }
+.stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.prog { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: rgba(255, 255, 255, 0.18); opacity: 0; transition: opacity 0.5s ease; pointer-events: none; }
+.prog i { display: block; height: 100%; background: #3cc6d4; transform-origin: left; transform: scaleX(0); }
+.stage.running .prog { opacity: 1; }
+.hud { position: absolute; left: 10px; top: 10px; display: flex; gap: 6px; flex-wrap: wrap; pointer-events: none; }
+.hud span {
+  font: 500 11.5px/1 var(--mono); padding: 6px 8px; border-radius: 6px;
+  background: rgba(7, 11, 12, 0.72); color: #e8f0f1; letter-spacing: 0.02em;
+}
+.hud .k { color: #5fe3ef; }
+.hud .h { color: #ff8587; }
+
+.console { padding: 20px; display: grid; gap: 18px; align-content: start; min-width: 0; border-left: 1px solid var(--line); }
+.ctl { display: grid; gap: 8px; }
+.ctl-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.ctl-row .eyebrow { white-space: nowrap; }
+.ctl-row .val { font: 500 12.5px/1.3 var(--mono); color: var(--muted); text-align: right; }
+.seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px; background: var(--seg); padding: 4px; border-radius: 8px; }
+.seg button {
+  all: unset; cursor: pointer; text-align: center; padding: 8px 0; border-radius: 6px;
+  font: 500 14px/1 var(--mono); color: var(--seg-ink); font-variant-numeric: tabular-nums;
+}
+.seg button:hover { background: var(--seg-hover); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+.seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.go {
+  all: unset; cursor: pointer; text-align: center; padding: 13px 16px; border-radius: 8px;
+  background: var(--accent); color: var(--on-accent); font: 600 15px/1 var(--body);
+}
+.go:hover { background: var(--accent-strong); }
+.go:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.go:disabled { cursor: default; }
+.go[data-state="busy"] { background: var(--accent-soft); color: var(--accent-strong); }
+.go[data-state="current"] { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1px var(--quiet-edge); }
+.go[data-state="current"]:hover { background: var(--seg-hover); }
+.status { font: 400 12.5px/1.45 var(--mono); color: var(--muted); margin: -8px 0 0; min-height: 1.45em; }
+
+.layers { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13.5px; }
+.layers label { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+.layers input { accent-color: var(--accent); }
+.sw { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+
+.speed { display: grid; gap: 12px; border-top: 1px solid var(--line); padding-top: 16px; }
+.big { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.big strong { font: 600 40px/1 var(--display); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.big span { color: var(--muted); font-size: 13.5px; }
+.heat-legend { display: grid; gap: 8px; border-top: 1px solid var(--line); padding-top: 16px; }
+.heat-legend canvas { width: 100%; height: 14px; border-radius: 7px; display: block; }
+.heat-legend .ends { display: flex; justify-content: space-between; gap: 12px; font-size: 12.5px; color: var(--muted); }
+.heat-legend p { margin: 0; font-size: 13px; }
+
+/* ---------- K x S grid + method bars ---------- */
+.tradeoff { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; margin-top: 8px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 18px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.panel h3 { font-size: 19px; font-weight: 600; }
+.panel p { margin: 0; color: var(--muted); font-size: 14px; }
+.grid-wrap { overflow-x: auto; }
+table.ks { border-collapse: separate; border-spacing: 4px; font: 500 13px/1 var(--mono); font-variant-numeric: tabular-nums; width: 100%; min-width: 360px; }
+table.ks th { font-weight: 500; color: var(--muted); padding: 4px; }
+table.ks td button {
+  all: unset; cursor: pointer; display: grid; gap: 3px; width: 100%; box-sizing: border-box;
+  padding: 7px 4px; border-radius: 6px; text-align: center; color: var(--ink);
+}
+table.ks td button small { font-size: 10.5px; opacity: 0.75; }
+table.ks td button.rec { font-weight: 700; }
+table.ks td button[aria-pressed="true"] { outline: 2px solid var(--ink); outline-offset: -2px; }
+table.ks td button:focus-visible { outline: 2px solid var(--accent); }
+.legend { margin-top: auto; display: flex; align-items: center; gap: 8px; font: 400 12px/1 var(--mono); color: var(--muted); }
+.legend i { flex: 0 0 90px; height: 8px; border-radius: 4px; }
+
+.bar { display: grid; grid-template-columns: 96px minmax(0, 1fr) 52px; align-items: center; gap: 10px; font-size: 13px; line-height: 1.25; }
+.bar .track { position: relative; height: 10px; }
+.bar .fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 3px; background: var(--bar-base); transition: width 0.35s ease; }
+.bar.ours .fill { background: var(--accent); }
+.bar.ours { font-weight: 600; }
+.bar .num { font: 500 12.5px/1 var(--mono); text-align: right; font-variant-numeric: tabular-nums; }
+.axis { position: relative; height: 14px; margin-left: 106px; margin-right: 62px; font: 400 11px/1 var(--mono); color: var(--muted); }
+.axis span { position: absolute; transform: translateX(-50%); top: 2px; }
+.bars-box { flex: 1; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; }
+.bar-group { display: grid; gap: 4px; }
+
+/* ---------- paper sections ---------- */
+section { padding-block: 56px 0; max-width: var(--col); margin-inline: auto; }
+section.first { padding-block: 8px 40px; }
+.human { color: var(--human); font-weight: 600; }
+.model { color: var(--accent); font-weight: 600; }
+section > h2 { font-size: clamp(22px, 2.6vw, 28px); font-weight: 600; margin-bottom: 14px; }
+.read p { margin: 0 0 14px; }
+figure { margin: 0; display: grid; gap: 10px; }
+figure img { width: 100%; height: auto; display: block; border-radius: var(--r); border: 1px solid var(--line); background: #fff; }
+figcaption { color: var(--muted); font-size: 15px; }
+.tbl { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); }
+table.res { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 14px; font-variant-numeric: tabular-nums; }
+table.res th, table.res td { padding: 9px 12px; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+table.res th:first-child, table.res td:first-child { text-align: left; }
+table.res thead th { font: 500 12px/1.2 var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+table.res tr.ours td { font-weight: 600; background: var(--accent-soft); }
+table.res tr:last-child td { border-bottom: 0; }
+table.res .grp { text-align: center; border-bottom: 1px solid var(--line); }
+pre.bib {
+  margin: 0; padding: 16px; overflow-x: auto; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r); font: 400 13px/1.55 var(--mono);
+}
+.bib-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.copy { all: unset; cursor: pointer; font: 500 13px/1 var(--body); padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); }
+.copy:hover { background: var(--surface); }
+.copy:focus-visible { outline: 2px solid var(--accent); }
+footer { max-width: var(--col); margin-inline: auto; margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+
+@media (max-width: 980px) {
+  .bench { grid-template-columns: minmax(0, 1fr); }
+  .console { border-left: 0; border-top: 1px solid var(--line); }
+  .tradeoff { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 720px) {
+  .clips { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 42%; overflow-x: auto; padding-bottom: 6px; }
+  .bar { grid-template-columns: 84px minmax(0, 1fr) 52px; }
+  .axis { margin-left: 94px; margin-right: 62px; }
+}
+@media (prefers-reduced-motion: reduce) { .bar .fill { transition: none; } }
+</style>
+</head>
+<body>
+<button class="theme" id="theme" type="button"></button>
+<div class="wrap">
+  <header>
+    <h1><span class="name">GazeFlow:</span> From Human Gaze Behavior to Generative Egocentric Gaze Prediction</h1>
+    <div class="venue">NeurIPS 2026</div>
+    <div class="authors">
+      <a href="https://zhaosheng-thu.github.io/">Sheng Zhao</a>,
+      <a href="https://linwk20.github.io/">Weikai Lin</a>,
+      <a href="https://yuhaozhu.com/">Yuhao Zhu</a>
+    </div>
+    <div class="affil">University of Rochester</div>
+    <nav class="links" aria-label="Paper resources">
+      <a href="https://arxiv.org/pdf/2609.38519"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1h6.5L13 4.5V15H3zM9 2v3h3M5 8h6v1H5zm0 2.5h6v1H5zm0 2.5h4v1H5z" fill-rule="evenodd"/></svg>Paper</a>
+      <a href="https://arxiv.org/abs/2609.38519"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2h12v12H2zm1.5 1.5v9h9v-9zM5 5.2l1.1-.9L8 6.6l1.9-2.3 1.1.9L9.1 7.5 11 9.8l-1.1.9L8 8.4l-1.9 2.3L5 9.8l1.9-2.3z"/></svg>arXiv</a>
+      <span title="Link will be added" aria-disabled="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Code</span>
+    </nav>
+  </header>
+
+  <section class="read first" id="abstract">
+    <h2>Abstract</h2>
+    <p>Egocentric gaze prediction enables many downstream applications but remains challenging, as human gaze is inherently stochastic. This stochasticity is constrained by structured temporal dynamics alternating between fixations and saccades, top-down influences from tasks, and bottom-up visual saliency.</p>
+    <p>Based on this observation, we introduce GazeFlow, a framework that directly models gaze as a joint distribution of temporal gaze positions conditioned upon both top-down and bottom-up information. In particular, GazeFlow uses conditional flow matching (CFM): a learned velocity field iteratively transports a Gaussian noise sample into a plausible gaze trajectory drawn from this joint distribution. The velocity field is conditioned on bottom-up visual features extracted by a video encoder and on top-down task information obtained by globally querying these features.</p>
+    <p>On standard datasets, GazeFlow achieves state-of-the-art performance on per-frame metrics, and the generated trajectories align better with human gaze temporal dynamics.</p>
+  </section>
+
+  <!-- ---------------- interactive demo ---------------- -->
+  <div class="demo" id="demo">
+    <div class="demo-head">
+      <h2>Generating gaze trajectories for a whole video</h2>
+      <p>Pick a video and press Generate. GazeFlow draws K gaze trajectories for the entire video, each a sample from the learned distribution, with S Euler steps per sample.</p>
+    </div>
+
+    <div class="clips" id="clips" role="group" aria-label="Demo clips"></div>
+
+    <div class="bench">
+      <div class="stage" id="stage">
+        <video id="video" muted playsinline preload="auto"></video>
+        <canvas id="overlay" aria-hidden="true"></canvas>
+        <div class="prog" aria-hidden="true"><i id="prog-fill"></i></div>
+        <div class="hud" aria-live="polite">
+          <span id="hud-frame">frame 0 / 0</span>
+          <span class="k" id="hud-k" hidden>K=30 · S=5</span>
+          <span class="h" id="hud-h" hidden>ground truth</span>
+        </div>
+      </div>
+
+      <div class="console">
+        <div class="ctl">
+          <div class="ctl-row"><span class="eyebrow">Samples K</span><span class="val">trajectories per video</span></div>
+          <div class="seg" id="seg-k" role="group" aria-label="Sample count K"></div>
+        </div>
+        <div class="ctl">
+          <div class="ctl-row"><span class="eyebrow">Euler steps S</span><span class="val">steps per sample</span></div>
+          <div class="seg" id="seg-s" role="group" aria-label="Euler step count S"></div>
+        </div>
+        <button class="go" id="go" type="button">Generate</button>
+        <p class="status" id="status">Loading clips…</p>
+
+        <div class="layers" role="group" aria-label="Overlay layers">
+          <label><input type="checkbox" id="show-heat" checked> Heatmap</label>
+          <label><input type="checkbox" id="show-dots" checked><i class="sw" style="background:#5fe3ef"></i> Generated samples</label>
+          <label><input type="checkbox" id="show-gt" checked><i class="sw" style="background:#e8212b"></i> Ground truth</label>
+        </div>
+
+        <div class="speed" aria-live="polite">
+          <div class="big"><strong id="sp-time">0.73 s</strong><span>per 64-frame egocentric clip<br>(measured on a single H100 in BF16)</span></div>
+        </div>
+        <div class="heat-legend">
+          <span class="eyebrow">Heatmap: predicted gaze probability</span>
+          <canvas id="legend-heat" width="256" height="1" aria-hidden="true"></canvas>
+          <div class="ends"><span>low</span><span>high</span></div>
+          <p>Red marks where the human is most likely to look.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tradeoff">
+      <div class="panel">
+        <h3>Accuracy over K and S</h3>
+        <p>F1 on EGTEA Gaze+, with the time per 64-frame clip under it. We recommend K between 10 and 30 with S=5, and <strong>K=30, S=5</strong> is our recommended setting.</p>
+        <div class="grid-wrap"><table class="ks" id="ks"></table></div>
+        <div class="legend"><span>F1 0.40</span><i id="legend-ramp"></i><span>0.50</span></div>
+      </div>
+      <div class="panel">
+        <h3>Speed and accuracy</h3>
+        <p>Speed is the time to predict gaze for one frame on the same H100. Accuracy is F1 on EGTEA Gaze+. The GazeFlow bars follow the selected K and S.</p>
+        <div class="bars-box" id="bars"></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="read" id="details">
+    <h2>More details on the demo</h2>
+    <p><strong>Video and ground truth.</strong> Each clip is a head-mounted video from EGTEA Gaze+, recorded while a human performs a cooking task. Its ground-truth gaze trajectory is recorded jointly by an eye tracker and is shown as the <span class="human">red dot</span>.</p>
+    <p><strong>Generated samples.</strong> Gaze is inherently stochastic. Even for the same observer viewing the same scene, trajectories are not exactly reproducible. So the ground-truth trajectory is one sample from a distribution conditioned on the video, and GazeFlow learns to approximate this distribution. Each small <span class="model">cyan dot</span> is one generated trajectory at the current frame. The heatmap shows where the K samples concentrate, from blue (few samples) to red (most samples).</p>
+    <p><strong>K, the number of samples.</strong> Each sample starts from a different Gaussian noise. More samples cover the distribution better but cost more time. For each S, we draw 50 samples, and a smaller K shows the first K of them.</p>
+    <p><strong>S, the number of Euler steps.</strong> A sample is transported from Gaussian noise to a clean trajectory by integrating the velocity field. We evaluate this integral with S Euler steps, each of which evaluates the velocity network once. Flow matching needs few steps: accuracy saturates at S=5.</p>
+    <p><strong>Inference time.</strong> All times are measured on a single NVIDIA H100 for a 64-frame clip, which lasts about 2.7 s at 24 fps. The video encoder runs once per clip and is included.</p>
+  </section>
+
+  <!-- ---------------- paper ---------------- -->
+
+  <section id="method">
+    <h2>Method</h2>
+    <div class="read">
+      <p>Gaze patterns are difficult to predict because of their stochasticity: even for the same observer viewing the same scene, trajectories are not exactly reproducible. This stochasticity is not purely random. It is jointly constrained by three factors. First, gaze trajectories exhibit structured dynamics that alternate between saccades and fixations. Second, gaze is task-dependent, and information about the task is often revealed in future frames. Third, gaze is influenced by stimulus-driven factors such as visual saliency.</p>
+      <p>Taken together, we model gaze as a <em>joint</em> distribution of temporal gaze positions conditioned upon the <em>entire</em> video. GazeFlow learns this distribution with conditional flow matching. A video encoder extracts bottom-up visual tokens. A task-token bank, obtained by globally querying these tokens, provides top-down task information. Both condition a velocity network that transports Gaussian noise to a gaze trajectory.</p>
+    </div>
+    <figure>
+      <img src="static/method.jpg" alt="GazeFlow architecture: dual-path condition extraction, the conditional velocity network, and flow-matching sampling dynamics" loading="lazy" width="1800" height="927">
+      <figcaption><strong>(a) Dual-pathway condition extraction.</strong> A LoRA-adapted V-JEPA 2 encoder produces bottom-up visual tokens. Spatial–temporal pooling and learnable queries form the top-down task-token bank. <strong>(b) Conditional velocity network.</strong> Gaze tokens pass through six DiT blocks. In each block, time-aware self-attention captures temporal correlation, per-frame visual cross-attention injects visual saliency, and task cross-attention injects task information. <strong>(c) Sampling.</strong> Euler integration of the velocity field transports Gaussian noise to a clean trajectory. The cyan samples contract toward the ground truth (red).</figcaption>
+    </figure>
+  </section>
+
+  <section id="results">
+    <h2>Results</h2>
+    <div class="read"><p>Per-frame gaze prediction on EGTEA Gaze+ and Ego4D. GazeFlow achieves state-of-the-art performance on both datasets. AAE is the average angular error in degrees (lower is better). For all other metrics, higher is better.</p></div>
+    <div class="tbl">
+      <table class="res">
+        <thead>
+          <tr><th rowspan="2">Method</th><th class="grp" colspan="5">EGTEA Gaze+</th><th class="grp" colspan="5">Ego4D</th></tr>
+          <tr><th>AUC</th><th>F1</th><th>P</th><th>R</th><th>AAE°</th><th>AUC</th><th>F1</th><th>P</th><th>R</th><th>AAE°</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Center bias</td><td>0.906</td><td>0.185</td><td>0.162</td><td>0.215</td><td>16.07</td><td>0.930</td><td>0.222</td><td>0.194</td><td>0.258</td><td>13.92</td></tr>
+          <tr><td>GLC</td><td>0.953</td><td>0.421</td><td>0.348</td><td>0.531</td><td>10.21</td><td>0.947</td><td>0.355</td><td>0.267</td><td>0.530</td><td>11.52</td></tr>
+          <tr><td>EgoM2P (LoRA)</td><td>0.921</td><td>0.293</td><td>0.205</td><td>0.515</td><td>12.81</td><td>0.930</td><td>0.297</td><td>0.217</td><td>0.470</td><td>12.69</td></tr>
+          <tr><td>AT</td><td>0.956</td><td>0.419</td><td>0.339</td><td>0.547</td><td>9.88</td><td>0.954</td><td>0.346</td><td>0.268</td><td>0.487</td><td>12.01</td></tr>
+          <tr class="ours"><td>GazeFlow (ours)</td><td>0.964</td><td>0.491</td><td>0.414</td><td>0.603</td><td>9.01</td><td>0.958</td><td>0.392</td><td>0.307</td><td>0.540</td><td>10.46</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="cite">
+    <div class="bib-head"><h2>Citation</h2><button class="copy" id="copy" type="button">Copy BibTeX</button></div>
+    <pre class="bib" id="bib">@inproceedings{zhao2026gazeflow,
+  title     = {GazeFlow: From Human Gaze Behavior to Generative Egocentric Gaze Prediction},
+  author    = {Zhao, Sheng and Lin, Weikai and Zhu, Yuhao},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2026}
+}</pre>
+  </section>
+
+  <footer>Demo clips are from the EGTEA Gaze+ validation set. Samples come from the GazeFlow main model, in which the V-JEPA 2 encoder is fine-tuned with LoRA end-to-end with the velocity network.</footer>
+</div>
+
+<script>
+(() => {
+  // Camera-ready appendix, Tab. ks_grid: F1 and H100 seconds per 64-frame clip.
+  const K_VALUES = [1, 10, 30, 50];
+  const S_VALUES = [1, 2, 5, 10, 50];
+  const F1 = [
+    [0.453, 0.465, 0.444, 0.427, 0.405],
+    [0.460, 0.481, 0.484, 0.479, 0.468],
+    [0.460, 0.484, 0.493, 0.492, 0.486],
+    [0.460, 0.485, 0.495, 0.495, 0.491],
+  ];
+  const SECONDS = [
+    [0.49, 0.49, 0.51, 0.54, 0.77],
+    [0.52, 0.53, 0.57, 0.63, 1.14],
+    [0.58, 0.62, 0.73, 0.91, 2.35],
+    [0.65, 0.71, 0.89, 1.21, 3.37],
+  ];
+  // Appendix Tab. method_time, ms per frame on the same H100.
+  // Appendix Tab. method_time (ms per frame, same H100) and main-table F1 on EGTEA Gaze+.
+  const BASELINES = [["GLC", 12.5, 0.421], ["AT", 219, 0.419], ["EgoM2P", 506, 0.293]];
+  const CLIP_FRAMES = 64, FPS = 24, SIGMA_PX = 25;
+
+  const $ = (id) => document.getElementById(id);
+  const video = $("video"), canvas = $("overlay"), ctx = canvas.getContext("2d");
+  // Theme: dark by default, light on request; the choice is kept per browser.
+  const SUN = '<svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M7.4 0h1.2v2.4H7.4zm0 13.6h1.2V16H7.4zM0 7.4h2.4v1.2H0zm13.6 0H16v1.2h-2.4zM2.1 3l.9-.9 1.7 1.7-.9.9zm9.2 9.2.9-.9 1.7 1.7-.9.9zM3 13.9l-.9-.9 1.7-1.7.9.9zm9.2-9.2-.9-.9L13 2.1l.9.9z"/></svg>';
+  const MOON = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6.2.6a7.5 7.5 0 1 0 9.2 9.2A6.2 6.2 0 0 1 6.2.6z"/></svg>';
+  function applyTheme(t) {
+    document.documentElement.dataset.theme = t;
+    const b = $("theme");
+    b.innerHTML = t === "dark" ? `${SUN}Light` : `${MOON}Dark`;
+    b.setAttribute("aria-label", t === "dark" ? "Switch to light theme" : "Switch to dark theme");
+  }
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem("gazeflow-theme"); } catch {}
+  applyTheme(savedTheme === "light" ? "light" : "dark");
+  $("theme").addEventListener("click", () => {
+    const t = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    applyTheme(t);
+    try { localStorage.setItem("gazeflow-theme", t); } catch {}
+  });
+
+  const state = { meta: null, clip: 0, k: 30, s: 5, shown: null, phase: "idle", traj: new Map(), frame: -1 };
+
+  // ---------- helpers ----------
+  const ki = (k) => K_VALUES.indexOf(k), si = (s) => S_VALUES.indexOf(s);
+  const msPerFrame = (k, s) => SECONDS[ki(k)][si(s)] / CLIP_FRAMES * 1000;
+  const fmt = (x, d) => x.toFixed(d);
+  function f1Color(v) {
+    const t = Math.max(0, Math.min(1, (v - 0.40) / 0.10));
+    return `color-mix(in oklab, var(--accent) ${Math.round(12 + t * 70)}%, var(--surface))`;
+  }
+
+  // ---------- controls ----------
+  function seg(el, values, key) {
+    el.innerHTML = "";
+    for (const v of values) {
+      const b = document.createElement("button");
+      b.type = "button"; b.textContent = v; b.id = `${key}-${v}`;
+      b.addEventListener("click", () => { state[key] = v; refreshControls(); });
+      el.append(b);
+    }
+  }
+  seg($("seg-k"), K_VALUES, "k");
+  seg($("seg-s"), S_VALUES, "s");
+
+  function buildGrid() {
+    const t = $("ks");
+    let html = "<thead><tr><th>K \\ S</th>" + S_VALUES.map((s) => `<th>${s}</th>`).join("") + "</tr></thead><tbody>";
+    K_VALUES.forEach((k, a) => {
+      html += `<tr><th>${k}</th>`;
+      S_VALUES.forEach((s, b) => {
+        html += `<td><button type="button" class="${k === 30 && s === 5 ? "rec" : ""}" id="cell-${k}-${s}" data-k="${k}" data-s="${s}" style="background:${f1Color(F1[a][b])}" aria-label="K ${k}, S ${s}: F1 ${F1[a][b]}, ${SECONDS[a][b]} seconds">${fmt(F1[a][b], 3)}<small>${fmt(SECONDS[a][b], 2)} s</small></button></td>`;
+      });
+      html += "</tr>";
+    });
+    t.innerHTML = html + "</tbody>";
+    t.addEventListener("click", (e) => {
+      const b = e.target.closest("button[data-k]");
+      if (!b) return;
+      state.k = +b.dataset.k; state.s = +b.dataset.s;
+      refreshControls();
+      $("demo").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    });
+    $("legend-ramp").style.background = `linear-gradient(90deg, ${f1Color(0.40)}, ${f1Color(0.50)})`;
+  }
+
+  // Speed on a log scale (1 ms .. 1000 ms); F1 on a linear scale (0 .. 0.5).
+  const logPos = (ms) => Math.log10(ms) / 3 * 100;
+  const f1Pos = (f1) => f1 / 0.5 * 100;
+  function buildBars() {
+    const group = (title, key, pos, ticks, fmtNum, ourVal) => {
+      const rows = [["GazeFlow", ourVal, true], ...BASELINES.map((b) => [b[0], key === "ms" ? b[1] : b[2], false])];
+      return `<div class="bar-group"><span class="eyebrow">${title}</span>` +
+        rows.map(([n, v, ours]) =>
+          `<div class="bar${ours ? " ours" : ""}"><span>${n}</span><div class="track"><div class="fill" ${ours ? `id="bar-${key}"` : ""} style="width:${pos(v)}%"></div></div><span class="num" ${ours ? `id="bar-${key}-num"` : ""}>${fmtNum(v)}</span></div>`
+        ).join("") +
+        `<div class="axis">${ticks.map((v) => `<span style="left:${pos(v)}%">${v}</span>`).join("")}</div></div>`;
+    };
+    $("bars").innerHTML =
+      group("Speed · ms per frame ↓", "ms", logPos, [1, 10, 100, 1000], (v) => v < 100 ? fmt(v, 1) : String(v), msPerFrame(state.k, state.s)) +
+      group("Accuracy · F1 ↑", "f1", f1Pos, [0, 0.1, 0.2, 0.3, 0.4, 0.5], (v) => fmt(v, 3), F1[ki(state.k)][si(state.s)]);
+  }
+
+  function refreshControls() {
+    for (const k of K_VALUES) $(`k-${k}`).setAttribute("aria-pressed", k === state.k);
+    for (const s of S_VALUES) $(`s-${s}`).setAttribute("aria-pressed", s === state.s);
+    document.querySelectorAll("#ks button[data-k]").forEach((b) =>
+      b.setAttribute("aria-pressed", +b.dataset.k === state.k && +b.dataset.s === state.s));
+
+    const ms = msPerFrame(state.k, state.s);
+    $("sp-time").textContent = `${fmt(SECONDS[ki(state.k)][si(state.s)], 2)} s`;
+    const f1 = F1[ki(state.k)][si(state.s)];
+    $("bar-ms").style.width = `${logPos(ms)}%`;
+    $("bar-ms-num").textContent = fmt(ms, 1);
+    $("bar-f1").style.width = `${f1Pos(f1)}%`;
+    $("bar-f1-num").textContent = fmt(f1, 3);
+
+    const current = state.shown && state.shown.clip === state.clip && state.shown.k === state.k && state.shown.s === state.s;
+    const go = $("go"), busy = state.phase === "loading" || state.phase === "generating";
+    if (!current) { go.dataset.state = "ready"; go.disabled = state.phase === "loading"; go.textContent = "Generate"; }
+    else if (busy) { go.dataset.state = "busy"; go.disabled = true; go.textContent = "Generating…"; }
+    else { go.dataset.state = "current"; go.disabled = false; go.textContent = "Replay"; }
+  }
+
+  // ---------- clips ----------
+  function buildClips() {
+    const el = $("clips");
+    el.innerHTML = "";
+    state.meta.clips.forEach((c, i) => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "clip"; b.id = `clip-${i}`;
+      b.innerHTML = `<img src="demo/${c.id}/poster.jpg" alt="" loading="lazy"><b>${c.action}</b><small>${c.recipe.replace(/([a-z])([A-Z])/g, "$1 $2")} · ${fmt(c.frames / c.fps, 1)} s</small>`;
+      b.addEventListener("click", () => selectClip(i));
+      el.append(b);
+    });
+  }
+
+  function idleLabel(c) { return `input video · ${c.frames} frames · ${fmt(c.frames / c.fps, 1)} s`; }
+
+  function selectClip(i) {
+    state.clip = i; state.shown = null; state.phase = "idle"; state.frame = -1;
+    const c = state.meta.clips[i];
+    document.querySelectorAll(".clip").forEach((b, j) => b.setAttribute("aria-pressed", j === i));
+    video.pause();
+    video.poster = `demo/${c.id}/poster.jpg`;
+    video.src = `demo/${c.id}/video.mp4`;
+    $("stage").classList.remove("running");
+    $("hud-frame").textContent = idleLabel(c);
+    $("hud-k").hidden = true; $("hud-h").hidden = true;
+    $("status").textContent = `Input video: “${c.action}”. Press Generate to draw gaze samples.`;
+    clear();
+    refreshControls();
+  }
+
+  async function loadTraj(c) {
+    if (state.traj.has(c.id)) return state.traj.get(c.id);
+    const r = await fetch(`demo/${c.id}/traj.json`);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const bytes = Uint8Array.from(atob((await r.json()).b64), (ch) => ch.charCodeAt(0));
+    const view = new DataView(bytes.buffer), arr = new Uint16Array(bytes.length / 2);
+    for (let i = 0; i < arr.length; i++) arr[i] = view.getUint16(i * 2, true);
+    state.traj.set(c.id, arr);
+    return arr;
+  }
+
+  async function generate() {
+    const c = state.meta.clips[state.clip];
+    state.phase = "loading"; refreshControls();
+    try {
+      await loadTraj(c);
+    } catch (e) {
+      state.phase = "idle"; refreshControls();
+      $("status").textContent = `Could not load the samples for this clip (${e.message}). Reload the page to try again.`;
+      return;
+    }
+    state.shown = { clip: state.clip, k: state.k, s: state.s };
+    state.phase = "generating"; state.frame = -1;
+    $("hud-k").textContent = `K=${state.k} · S=${state.s}`;
+    $("hud-k").hidden = false; $("hud-h").hidden = !$("show-gt").checked;
+    $("status").textContent = `Generating ${state.k} sample${state.k === 1 ? "" : "s"} with ${state.s} Euler step${state.s === 1 ? "" : "s"} each…`;
+    $("stage").classList.add("running");
+    refreshControls();
+    const start = () => {
+      video.currentTime = 0; draw(0);
+      video.play().catch(finish);
+    };
+    if (video.readyState >= 1) start(); else video.addEventListener("loadedmetadata", start, { once: true });
+  }
+
+  function finish() {
+    if (state.phase !== "generating") return;
+    state.phase = "done";
+    $("stage").classList.remove("running");
+    const ms = msPerFrame(state.shown.k, state.shown.s);
+    $("status").textContent = `${state.shown.k} sample${state.shown.k === 1 ? "" : "s"}, ${state.shown.s} Euler step${state.shown.s === 1 ? "" : "s"} each. On an H100, this setting takes ${fmt(ms, 1)} ms per frame.`;
+    refreshControls();
+  }
+
+  // ---------- overlay ----------
+  const GW = 80, GH = 60; // density grid, 8 px cells at 640x480
+  const grid = new Float32Array(GW * GH), tmp = new Float32Array(GW * GH);
+  const small = document.createElement("canvas"); small.width = GW; small.height = GH;
+  const sctx = small.getContext("2d");
+  const img = sctx.createImageData(GW, GH);
+  const kernel = (() => {
+    const sig = SIGMA_PX / 8, rad = Math.ceil(sig * 3), k = [];
+    for (let i = -rad; i <= rad; i++) k.push(Math.exp(-(i * i) / (2 * sig * sig)));
+    return { k, rad };
+  })();
+  // Jet colormap, as in the paper's qualitative figures. Opacity rises with density,
+  // so the frame stays visible where the samples do not reach.
+  const LUT = (() => {
+    const lut = new Uint8ClampedArray(256 * 4);
+    const c = (x) => Math.max(0, Math.min(1, x));
+    const smooth = (a, b, x) => { const t = c((x - a) / (b - a)); return t * t * (3 - 2 * t); };
+    for (let i = 0; i < 256; i++) {
+      const t = i / 255;
+      const r = c(1.5 - Math.abs(4 * t - 3)), g = c(1.5 - Math.abs(4 * t - 2)), b = c(1.5 - Math.abs(4 * t - 1));
+      const a = smooth(0.03, 0.18, t) * (0.14 + 0.24 * t);
+      lut.set([r * 255, g * 255, b * 255, a * 255], i * 4);
+    }
+    return lut;
+  })();
+
+  function resize() {
+    const r = canvas.getBoundingClientRect(), dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.round(r.width * dpr); canvas.height = Math.round(r.height * dpr);
+    state.frame = -1; drawCurrent();
+  }
+  function clear() { ctx.clearRect(0, 0, canvas.width, canvas.height); }
+
+  function samplesAt(frame) {
+    const c = state.meta.clips[state.shown.clip], T = c.frames, K = state.meta.k_max;
+    const arr = state.traj.get(c.id), base = si(state.shown.s) * K * T * 2, pts = [];
+    for (let k = 0; k < state.shown.k; k++) {
+      const o = base + (k * T + frame) * 2, x = arr[o], y = arr[o + 1];
+      // Samples that leave the frame were clamped to its border on export; skip them.
+      if (x === 0 || y === 0 || x === 65535 || y === 65535) continue;
+      pts.push([x / 65535, y / 65535]);
+    }
+    return pts;
+  }
+
+  function drawHeat(pts, W, H) {
+    grid.fill(0);
+    for (const [x, y] of pts) { // bilinear splat
+      const gx = x * (GW - 1), gy = y * (GH - 1), x0 = Math.floor(gx), y0 = Math.floor(gy), fx = gx - x0, fy = gy - y0;
+      const add = (i, j, w) => { if (i >= 0 && i < GW && j >= 0 && j < GH) grid[j * GW + i] += w; };
+      add(x0, y0, (1 - fx) * (1 - fy)); add(x0 + 1, y0, fx * (1 - fy)); add(x0, y0 + 1, (1 - fx) * fy); add(x0 + 1, y0 + 1, fx * fy);
+    }
+    const { k, rad } = kernel;
+    for (let j = 0; j < GH; j++) for (let i = 0; i < GW; i++) {
+      let s = 0; for (let d = -rad; d <= rad; d++) { const ii = i + d; if (ii >= 0 && ii < GW) s += grid[j * GW + ii] * k[d + rad]; }
+      tmp[j * GW + i] = s;
+    }
+    let max = 0;
+    for (let j = 0; j < GH; j++) for (let i = 0; i < GW; i++) {
+      let s = 0; for (let d = -rad; d <= rad; d++) { const jj = j + d; if (jj >= 0 && jj < GH) s += tmp[jj * GW + i] * k[d + rad]; }
+      grid[j * GW + i] = s; if (s > max) max = s;
+    }
+    for (let p = 0; p < GW * GH; p++) {
+      const v = max > 0 ? Math.round(grid[p] / max * 255) : 0;
+      img.data.set(LUT.subarray(v * 4, v * 4 + 4), p * 4);
+    }
+    sctx.putImageData(img, 0, 0);
+    ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = "high";
+    ctx.drawImage(small, 0, 0, W, H);
+  }
+
+  function draw(frame) {
+    if (!state.shown || !state.meta) return;
+    const c = state.meta.clips[state.shown.clip];
+    frame = Math.max(0, Math.min(c.frames - 1, frame));
+    $("hud-frame").textContent = `frame ${frame + 1} / ${c.frames} · ${fmt(frame / c.fps, 1)} s`;
+    $("prog-fill").style.transform = `scaleX(${c.frames > 1 ? frame / (c.frames - 1) : 1})`;
+    if (frame === state.frame) return;
+    state.frame = frame;
+    const W = canvas.width, H = canvas.height, dpr = window.devicePixelRatio || 1;
+    clear();
+    const pts = samplesAt(frame);
+    if ($("show-heat").checked) drawHeat(pts, W, H);
+    if ($("show-dots").checked) {
+      ctx.fillStyle = "rgba(95, 227, 239, 0.75)";
+      const r = (state.shown.k > 20 ? 1.4 : 1.9) * dpr;
+      for (const [x, y] of pts) { ctx.beginPath(); ctx.arc(x * W, y * H, r, 0, Math.PI * 2); ctx.fill(); }
+    }
+    if ($("show-gt").checked) {
+      const p = c.gt[frame];
+      if (p) {
+        ctx.beginPath(); ctx.arc(p[0] * W, p[1] * H, 6.5 * dpr, 0, Math.PI * 2);
+        ctx.fillStyle = "#e8212b"; ctx.fill();
+        ctx.lineWidth = 2 * dpr; ctx.strokeStyle = "#ffffff"; ctx.stroke();
+      }
+    }
+  }
+
+  const frameOf = (t) => Math.round(t * (state.meta ? state.meta.clips[state.clip].fps : FPS));
+  function drawCurrent() { if (state.meta && state.shown) draw(frameOf(video.currentTime)); }
+
+  if ("requestVideoFrameCallback" in HTMLVideoElement.prototype) {
+    const onFrame = (_, meta) => { if (state.shown) draw(frameOf(meta.mediaTime)); else drawCurrent(); video.requestVideoFrameCallback(onFrame); };
+    video.requestVideoFrameCallback(onFrame);
+  } else {
+    const loop = () => { drawCurrent(); requestAnimationFrame(loop); };
+    requestAnimationFrame(loop);
+  }
+  video.addEventListener("ended", finish);
+  video.addEventListener("seeked", () => { state.frame = -1; drawCurrent(); });
+  video.addEventListener("loadeddata", () => { state.frame = -1; drawCurrent(); });
+  for (const id of ["show-heat", "show-dots", "show-gt"]) $(id).addEventListener("change", () => {
+    $("hud-h").hidden = !state.shown || !$("show-gt").checked; state.frame = -1; drawCurrent();
+  });
+  new ResizeObserver(resize).observe(canvas);
+
+  $("go").addEventListener("click", () => generate());
+  $("copy").addEventListener("click", async () => {
+    const b = $("copy");
+    try { await navigator.clipboard.writeText($("bib").textContent); b.textContent = "Copied"; }
+    catch { const r = document.createRange(); r.selectNodeContents($("bib")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Selected, press Ctrl+C"; }
+    setTimeout(() => (b.textContent = "Copy BibTeX"), 2000);
+  });
+
+  (() => {
+    const lc = $("legend-heat").getContext("2d");
+    lc.fillStyle = "#6b5f52"; lc.fillRect(0, 0, 256, 1);
+    for (let i = 0; i < 256; i++) {
+      const [r, g, b, a] = LUT.subarray(i * 4, i * 4 + 4);
+      lc.fillStyle = `rgba(${r}, ${g}, ${b}, ${a / 255})`; lc.fillRect(i, 0, 1, 1);
+    }
+  })();
+  buildGrid(); buildBars(); refreshControls();
+
+  fetch("demo/clips.json")
+    .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+    .then((meta) => {
+      state.meta = meta;
+      buildClips();
+      selectClip(0);
+    })
+    .catch((e) => { $("status").textContent = `Could not load the demo clips (${e.message}). Reload the page to try again.`; });
+})();
+</script>
+</body>
+</html>
