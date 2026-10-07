@@ -204,8 +204,11 @@ footer { max-width: none; text-align: center; }
       Each record states the facts that hold in one year and starts with that year, e.g. "In 2005, …".
       We pre-train GPT-2 style models at three sizes, 110M, 350M and 682M parameters, on the same records in two orders.
       <b>CD</b> (chronological, dated) reads them year by year, from 2000 to 2024. <b>SD</b> (shuffled, dated) reads them in random order.</p>
-    <p>CD models become <b>specialists</b>: they know well the years they saw last. SD models become <b>generalists</b>: they know every year.
-      This page looks inside the models: the measured loss landscape around the trained models (Figure 1), and how it changes during training (Figure 2).</p>
+    <p>Each year's knowledge has its own loss landscape over the same parameter space. A model that knows a year well sits low in a valley
+      of that year's landscape: this is a specialist of that year. CD tracks the newest year, so it moves into a valley of each year it reads.
+      Every year has many such specialists. Where the specialists of different years overlap, a model knows all those years at once;
+      this is where the generalists lie, and where SD ends up. Figure 1 shows the measured landscape around the trained models,
+      and Figure 2 shows how it changes during training.</p>
   </section>
   <section class="fig" aria-labelledby="hFig1">
     <div class="fighead"><h2 id="hFig1">Figure 1 · A real visualization of the “landscape”</h2>
@@ -455,10 +458,12 @@ footer { max-width: none; text-align: center; }
     controls.autoRotate = false; controls.autoRotateSpeed = 0.45;   // a fixed default view (Sheng 10-07)
     controls.addEventListener('start', () => { controls.autoRotate = false; });
     new ResizeObserver(resize3D).observe(host); resize3D();
-    new IntersectionObserver(es => { L3.visible = es[0].isIntersecting; L3.dirty = true; }).observe(host);
     renderer.domElement.addEventListener('pointermove', hover3D);
     renderer.domElement.addEventListener('pointerleave', () => { hideTip(); mark2D(null); });
-    (function loop() { requestAnimationFrame(loop); if (!L3.visible) return;          // drawn only when something changed, so an idle page costs nothing
+    // On-screen test read straight from the layout every frame. An IntersectionObserver flag went stale while playing (batched
+    // entries), so the view stopped redrawing and a resize left it black (Sheng 10-07). Changes made while off screen keep L3.dirty set.
+    const onScreen = () => { const r = host.getBoundingClientRect(); return r.width > 0 && r.bottom > 0 && r.top < innerHeight; };
+    (function loop() { requestAnimationFrame(loop); if (!onScreen()) return;          // drawn only when something changed, so an idle page costs nothing
       const moved = controls.update(); if (!moved && !L3.dirty) return; L3.dirty = false; centerView(); renderer.render(scene, camera); placeLabels(); })();
   }
   function resize3D() { const w = L3.host.clientWidth, h = L3.host.clientHeight; L3.dirty = true;
@@ -478,7 +483,7 @@ footer { max-width: none; text-align: center; }
   const VIEWS = { oblique: [16.5, 12.5, -16.5], side: [19, 4.2, -2], top: [0, 27, 0.01] };   // oblique: CD 2005 at the back, CD 2024 front left, SD right (Sheng 10-07); top: a right, b up, as in 2D
   function setView(v) { const p = VIEWS[v]; L3.camera.position.set(p[0], p[1], p[2]); L3.controls.target.set(0, 1.1, 0); L3.controls.update(); L3.dirty = true;
     document.querySelectorAll('#viewSeg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === v)); }
-  function addLabel(text, v3, cls, ruler) { const el = document.createElement('div'); el.className = 'lbl' + (cls ? ' ' + cls : ''); el.textContent = text;
+  function addLabel(text, v3, cls, ruler) { const el = document.createElement('div'); el.className = 'lbl' + (cls ? ' ' + cls : ''); el.textContent = text; el.style.display = 'none';   // shown once placeLabels has put it at its pin
     $('labels').appendChild(el); L3.labels.push({ el, v: v3, ruler: !!ruler }); }
   function placeLabels() { const w = L3.host.clientWidth, h = L3.host.clientHeight, v = new THREE.Vector3(), fromAbove = L3.controls.getPolarAngle() < 0.5;
     if (L3.ruler) L3.ruler.visible = !fromAbove;              // the height ruler means nothing seen from above
@@ -556,6 +561,7 @@ footer { max-width: none; text-align: center; }
     });
     L3.cursor = new THREE.Mesh(new THREE.SphereGeometry(0.17, 20, 14), material('MeshBasicMaterial', { color: ink })); L3.cursor.visible = false; L3.group.add(L3.cursor);
     L3.pts = Float32Array.from([...pos, ...tops]); L3.dirty = true;
+    L3.camera.updateMatrixWorld(); placeLabels();   // place the new labels now: while playing, this runs after the frame's render
   }
   function cursor3D(i, j) { if (!L3.cursor) return; if (i == null) { L3.cursor.visible = false; L3.dirty = true; return; }
     const M = L3.map; L3.cursor.position.set(M.Xi(i), M.hAt(i, j) + 0.16, M.Zj(j)); L3.cursor.visible = true; L3.dirty = true; }
@@ -765,10 +771,12 @@ footer { max-width: none; text-align: center; }
     Object.assign(L3, { ready: true, host, renderer, scene, camera, controls, group, marks, ray: new THREE.Raycaster(), ptr: new THREE.Vector2() });
     setView('oblique');
     new ResizeObserver(resize3D).observe(host); resize3D();
-    new IntersectionObserver(es => { L3.visible = es[0].isIntersecting; L3.dirty = true; }).observe(host);
     renderer.domElement.addEventListener('pointermove', hover3D);
     renderer.domElement.addEventListener('pointerleave', hideTip);
-    (function loop() { requestAnimationFrame(loop); if (!L3.visible) return;          // drawn only when something changed, so an idle page costs nothing
+    // On-screen test read straight from the layout every frame. An IntersectionObserver flag went stale while playing (batched
+    // entries), so the view stopped redrawing and a resize left it black (Sheng 10-07). Changes made while off screen keep L3.dirty set.
+    const onScreen = () => { const r = host.getBoundingClientRect(); return r.width > 0 && r.bottom > 0 && r.top < innerHeight; };
+    (function loop() { requestAnimationFrame(loop); if (!onScreen()) return;          // drawn only when something changed, so an idle page costs nothing
       const moved = controls.update(); if (!moved && !L3.dirty) return; L3.dirty = false; centerView(); renderer.render(scene, camera); placeLabels(); })();
   }
   function resize3D() { const w = L3.host.clientWidth, h = L3.host.clientHeight; L3.dirty = true;
@@ -787,7 +795,7 @@ footer { max-width: none; text-align: center; }
   function setView(v) { const p = VIEWS[v], asp = L3.host.clientWidth / L3.host.clientHeight, f = asp < 0.9 ? 1.6 : asp < 1.5 ? 1.3 : 1;   // step back on narrow screens, closer on wide ones
     L3.camera.position.set(p[0] * f, p[1] * f, p[2] * f); L3.controls.target.set(0, 1.2, 0); L3.controls.update(); L3.dirty = true;
     document.querySelectorAll('#p-viewSeg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === v)); }
-  function addLabel(text, v3, cls) { const el = document.createElement('div'); el.className = 'lbl' + (cls ? ' ' + cls : ''); el.textContent = text;
+  function addLabel(text, v3, cls) { const el = document.createElement('div'); el.className = 'lbl' + (cls ? ' ' + cls : ''); el.textContent = text; el.style.display = 'none';   // shown once placeLabels has put it at its pin
     $('labels').appendChild(el); L3.labels.push({ el, v: v3 }); return L3.labels[L3.labels.length - 1]; }
   function placeLabels() { const w = L3.host.clientWidth, h = L3.host.clientHeight, v = new THREE.Vector3();
     L3.labels.forEach(l => { v.copy(l.v).project(L3.camera); const on = v.z < 1 && Math.abs(v.x) < 1.2 && Math.abs(v.y) < 1.2;
