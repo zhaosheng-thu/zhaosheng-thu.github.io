@@ -367,6 +367,14 @@ footer { max-width: var(--col); margin-inline: auto; margin-top: 56px; padding-t
     <p><strong>Inference time.</strong> All times are measured on a single NVIDIA H100 for a 64-frame clip, which lasts about 2.7 s at 24 fps. The video encoder runs once per clip and is included.</p>
   </section>
 
+  <section id="comparison">
+    <h2>Comparison with prior methods</h2>
+    <figure>
+      <img src="static/teaser.jpg" alt="Predicted gaze heatmaps of AT, GLC, EgoM2P, and GazeFlow on EGTEA Gaze+ frames, with the ground-truth gaze as red dots" loading="lazy" width="2000" height="1038">
+      <figcaption>Predicted gaze heatmaps on EGTEA Gaze+. The red dot is the ground-truth gaze. GazeFlow places its heatmap tightly on the ground truth, while AT, GLC, and EgoM2P often spread out or miss it.</figcaption>
+    </figure>
+  </section>
+
   <!-- ---------------- paper ---------------- -->
 
   <section id="method">
