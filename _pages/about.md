@@ -72,7 +72,7 @@ I am Sheng Zhao (赵晟), a 1st-year Ph.D. student in Computer Science at the Un
 </div>
 
 <p>
-Additionally, I have conducted research as a Research Assistant at the University of Michigan, Ann Arbor, under the supervision of Professor <a href="https://si.umich.edu/people/michael-nebeling"><i>Michael Nebeling</i></a>; at the Department of Computer Science, University of Rochester, under the supervision of Professor <a href="https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao"><i>Yukang Yan</i></a>; and at Tsinghua University, under the supervision of Professor <a href="https://scholar.google.com/citations?user=h3Nsz6YAAAAJ"><i>Bowen Zhou</i></a> and Professor <a href="https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ"><i>Xin Yi</i></a>.
+I was previously a Research Assistant at the University of Michigan (Prof. <a href="https://si.umich.edu/people/michael-nebeling"><i>Michael Nebeling</i></a>), the University of Rochester (Prof. <a href="https://scholar.google.com/citations?user=AXGtrecAAAAJ&hl=en&oi=ao"><i>Yukang Yan</i></a>), and Tsinghua University (Prof. <a href="https://scholar.google.com/citations?user=h3Nsz6YAAAAJ"><i>Bowen Zhou</i></a> &amp; Prof. <a href="https://scholar.google.com/citations?hl=en&user=7Uy9RVYAAAAJ"><i>Xin Yi</i></a>).
 </p>
 
 
@@ -128,7 +128,7 @@ In addition, I served as a research intern in **[PI Lab](https://pi.cs.tsinghua.
 </div>
 
 <div id="GazeFlow" class="pub-item pub-item-first" style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 18px; padding: 10px 14px; border-left: 4px solid #d98c2b; background: #fff8ee; border-radius: 4px;">
-  <div style="flex: 0 0 200px; max-width: 100%;"><span style="display: block; text-align: center; background: #1a4b8c; color: #fff; font-size: 12px; font-weight: 600; padding: 3px 0; border-radius: 3px;">NeurIPS</span><div style="margin-top: 6px; aspect-ratio: 2 / 1; background: #fff; border: 1px solid #e5e5e5; border-radius: 4px; overflow: hidden;"><img src="../images/pubs/GazeFlow.png" alt="GazeFlow" style="width: 100%; height: 100%; object-fit: contain;"></div></div>
+  <div style="flex: 0 0 200px; max-width: 100%;"><span style="display: block; text-align: center; background: #1a4b8c; color: #fff; font-size: 12px; font-weight: 600; padding: 3px 0; border-radius: 3px;">NeurIPS</span><div style="margin-top: 6px; aspect-ratio: 2 / 1; background: #fff; border: 1px solid #e5e5e5; border-radius: 4px; overflow: hidden;"><video src="../images/pubs/GazeFlow.mp4" poster="../images/pubs/GazeFlow_poster.jpg" autoplay muted loop playsinline aria-label="GazeFlow gaze predictions on eight egocentric cooking videos" style="width: 100%; height: 100%; object-fit: contain; display: block;"></video></div></div>
   <div style="flex: 1 1 280px; min-width: 0;">
     <div style="font-size: 17px; font-weight: 600; line-height: 1.4;"><a href="https://zhaosheng-thu.github.io/gazeflow/" style="color: #1a4b8c;">GazeFlow: From Human Gaze Behavior to Generative Egocentric Gaze Prediction</a></div>
     <div style="margin-top: 4px; color: #333;"><strong>Sheng Zhao</strong>, Weikai Lin, Yuhao Zhu</div>
