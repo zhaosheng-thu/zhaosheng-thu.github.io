@@ -16,7 +16,7 @@ I am Sheng Zhao (赵晟), a 1st-year Ph.D. student in Computer Science at the Un
 
 <p style="text-align:center">
   <a href="mailto:alexzhao0705@gmail.com">Email</a> &nbsp;/&nbsp;
-  <a href="../files/Sheng_Zhao_CV.pdf">CV</a> &nbsp;/&nbsp;
+  <!-- <a href="../files/Sheng_Zhao_CV.pdf">CV</a> &nbsp;/&nbsp; -->
   <a href="https://scholar.google.com/citations?user=sxEizdsAAAAJ">Google Scholar</a> &nbsp;/&nbsp;
   <a href="https://www.linkedin.com/in/sheng-zhao-027719290/">LinkedIn</a> &nbsp;/&nbsp;
   <a href="https://github.com/zhaosheng-thu">GitHub</a>
@@ -114,6 +114,18 @@ In addition, I served as a research intern in **[PI Lab](https://pi.cs.tsinghua.
 </p>
 
 <div class="pub-year" style="background: #f0f0f0; color: #666; font-weight: 700; font-size: 17px; padding: 4px 12px; margin: 20px 0 14px; border-radius: 4px;">2026</div>
+
+<div id="SpecialistsLearnFaster" class="pub-item pub-item-first" style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 18px; padding: 10px 14px; border-left: 4px solid #d98c2b; background: #fff8ee; border-radius: 4px;">
+  <div style="flex: 0 0 200px; max-width: 100%;"><span style="display: block; text-align: center; background: #1a4b8c; color: #fff; font-size: 12px; font-weight: 600; padding: 3px 0; border-radius: 3px;">Preprint</span><div style="margin-top: 6px; aspect-ratio: 2 / 1; background: #171918; border: 1px solid #e5e5e5; border-radius: 4px; overflow: hidden;"><video src="../images/pubs/SpecialistGeneralist.mp4" poster="../images/pubs/SpecialistGeneralist.png" autoplay muted loop playsinline aria-label="Loss landscape of specialists and generalists across years" style="width: 100%; height: 100%; object-fit: contain; display: block;"></video></div></div>
+  <div style="flex: 1 1 280px; min-width: 0;">
+    <div style="font-size: 17px; font-weight: 600; line-height: 1.4;"><a href="https://zhaosheng-thu.github.io/specialist-generalist/" style="color: #1a4b8c;">Specialists Learn Faster</a></div>
+    <div style="margin-top: 4px; color: #333;"><strong>Sheng Zhao</strong>, Yuhao Zhu</div>
+    <div style="margin-top: 2px; color: #777; font-style: italic;">Under Review</div>
+    <div style="margin-top: 6px; font-size: 13px;">
+      <a href="https://zhaosheng-thu.github.io/specialist-generalist/" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">Webpage</a>
+    </div>
+  </div>
+</div>
 
 <div id="GazeFlow" class="pub-item pub-item-first" style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 18px; padding: 10px 14px; border-left: 4px solid #d98c2b; background: #fff8ee; border-radius: 4px;">
   <div style="flex: 0 0 200px; max-width: 100%;"><span style="display: block; text-align: center; background: #1a4b8c; color: #fff; font-size: 12px; font-weight: 600; padding: 3px 0; border-radius: 3px;">NeurIPS</span><div style="margin-top: 6px; aspect-ratio: 2 / 1; background: #fff; border: 1px solid #e5e5e5; border-radius: 4px; overflow: hidden;"><img src="../images/pubs/GazeFlow.png" alt="GazeFlow" style="width: 100%; height: 100%; object-fit: contain;"></div></div>
