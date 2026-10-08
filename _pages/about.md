@@ -122,6 +122,7 @@ In addition, I served as a research intern in **[PI Lab](https://pi.cs.tsinghua.
     <div style="margin-top: 4px; color: #333;"><strong>Sheng Zhao</strong>, Yuhao Zhu</div>
     <div style="margin-top: 2px; color: #777; font-style: italic;">Under Review</div>
     <div style="margin-top: 6px; font-size: 13px;">
+      <a href="https://drive.google.com/file/d/1PSCML7dCTJCbJlsSWFYmTJhwRR7TB4U-/view" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">Paper</a>
       <a href="https://zhaosheng-thu.github.io/specialist-generalist/" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">Webpage</a>
     </div>
   </div>
