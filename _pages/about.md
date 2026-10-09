@@ -15,8 +15,8 @@ I am Sheng Zhao (赵晟), a 1st-year Ph.D. student in Computer Science at the Un
 <!-- Previously, I interned on the AI Coding Team at ByteDance (字节跳动) and worked as a research intern at Z.ai (智谱). I received my Bachelor’s degree from Tsinghua University, Beijing, China. -->
 
 <p style="text-align:center">
+  <a href="../files/Sheng_Zhao_CV.pdf" style="background: #fff3c4; padding: 2px 8px; border-radius: 6px; font-weight: 600;">CV</a> &nbsp;/&nbsp;
   <a href="mailto:alexzhao0705@gmail.com">Email</a> &nbsp;/&nbsp;
-  <!-- <a href="../files/Sheng_Zhao_CV.pdf">CV</a> &nbsp;/&nbsp; -->
   <a href="https://scholar.google.com/citations?user=sxEizdsAAAAJ">Google Scholar</a> &nbsp;/&nbsp;
   <a href="https://www.linkedin.com/in/sheng-zhao-027719290/">LinkedIn</a> &nbsp;/&nbsp;
   <a href="https://github.com/zhaosheng-thu">GitHub</a>
@@ -120,7 +120,7 @@ In addition, I served as a research intern in **[PI Lab](https://pi.cs.tsinghua.
   <div style="flex: 1 1 280px; min-width: 0;">
     <div style="font-size: 17px; font-weight: 600; line-height: 1.4;"><a href="https://zhaosheng-thu.github.io/specialist-generalist/" style="color: #1a4b8c;">Specialists Learn Faster</a></div>
     <div style="margin-top: 4px; color: #333;"><strong>Sheng Zhao</strong>, Yuhao Zhu</div>
-    <div style="margin-top: 2px; color: #777; font-style: italic;">Under Review</div>
+    <div style="margin-top: 2px; color: #777; font-style: italic;">Preprint</div>
     <div style="margin-top: 6px; font-size: 13px;">
       <a href="https://drive.google.com/file/d/1PSCML7dCTJCbJlsSWFYmTJhwRR7TB4U-/view" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">Paper</a>
       <a href="https://zhaosheng-thu.github.io/specialist-generalist/" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">Webpage</a>
