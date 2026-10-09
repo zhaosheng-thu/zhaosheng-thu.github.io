@@ -15,7 +15,7 @@ I am Sheng Zhao (赵晟), a 1st-year Ph.D. student in Computer Science at the Un
 <!-- Previously, I interned on the AI Coding Team at ByteDance (字节跳动) and worked as a research intern at Z.ai (智谱). I received my Bachelor’s degree from Tsinghua University, Beijing, China. -->
 
 <p style="text-align:center">
-  <a href="../files/Sheng_Zhao_CV.pdf" style="background: #fff3c4; padding: 2px 8px; border-radius: 6px; font-weight: 600;">CV</a> &nbsp;/&nbsp;
+  <a href="../files/Sheng_Zhao_CV.pdf" style="background: #e6f4f8; padding: 2px 8px; border-radius: 6px;">CV</a> &nbsp;/&nbsp;
   <a href="mailto:alexzhao0705@gmail.com">Email</a> &nbsp;/&nbsp;
   <a href="https://scholar.google.com/citations?user=sxEizdsAAAAJ">Google Scholar</a> &nbsp;/&nbsp;
   <a href="https://www.linkedin.com/in/sheng-zhao-027719290/">LinkedIn</a> &nbsp;/&nbsp;
