@@ -1,0 +1,14 @@
+{
+ "dataset_key": "tmb_vpa",
+ "title": "TMB Verbal Paired Associates Test (TestMyBrain test information sheet, TMB Analysis Toolkit)",
+ "authors": "The Many Brains Project / TestMyBrain (no individual authors listed)",
+ "year": 2023,
+ "venue": "TMB Analysis Toolkit, normative data release for Verbal Paired Associates",
+ "doi_or_url": "https://cogsci.testmybrain.org/analysistools/TMB_VerbalPA.zip",
+ "pdf_url": "https://cogsci.testmybrain.org/analysistools/TMB_VerbalPA.zip",
+ "figure": "task figure on the first page (unnumbered)",
+ "page": 1,
+ "caption_short": "Study pairs such as THING - MEMBER are shown one at a time (6000 ms, 2000 ms between pairs); after other tests, the first word of each pair is shown with four numbered options and the participant picks the partner.",
+ "license": "CC BY-SA 4.0 (the toolkit download states 'Copyright 2023 by The Many Brains Project, Inc. and McLean Hospital. CC-BY-SA 4.0' in its normative-data workbook; the information PDF itself carries no licence statement)",
+ "notes": "Rendered from page 1 of TMB_VerbalPA_Info.pdf (5 pages, created 2023-12-02) inside the public TMB Analysis Toolkit zip (md5 431f958f4b81b3b65c142e23e9b3a70f, the same file as the one our build used); clip = the embedded task image's rectangle (72.0, 243.4, 527.0, 560.4 pt), 220 dpi, 1391 x 970 px; the surrounding text is excluded. The embedded image is 608 x 424 px, so the render is an upsampled bitmap and slightly soft. The sheet warns that it 'may not describe the most recent version of this cognitive test'. The task described matches Singh et al. 2021 (J Clin Exp Neuropsychol 43:786-795, PMC8922997): 25 unrelated word pairs, 6 s each with a 2 s interval, about 2 minutes of another test, then a four-option choice of the partner word. Singh et al. 2021 has no figure of this task (its Figure 1 is an icon board of the whole battery). No figure was taken from raw data; the norms workbook with participant data was not copied."
+}

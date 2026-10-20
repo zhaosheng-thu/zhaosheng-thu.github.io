@@ -1,0 +1,14 @@
+{
+ "dataset_key": "xu2018",
+ "title": "The reliability and stability of visual working memory capacity",
+ "authors": "Z. Xu, K. C. S. Adam, X. Fang, E. K. Vogel",
+ "year": 2018,
+ "venue": "Behavior Research Methods, 50(2), 576-588 (published online 7 April 2017)",
+ "doi_or_url": "https://doi.org/10.3758/s13428-017-0886-6",
+ "pdf_url": "https://link.springer.com/content/pdf/10.3758/s13428-017-0886-6.pdf",
+ "figure": "schematic (ours)",
+ "page": null,
+ "caption_short": "Schematic of one single-probe colour change-detection trial: fixation (1000 ms), a brief array of 4, 6 or 8 coloured squares, a 1000 ms blank, then one square at a studied location; same (Z) or different (/).",
+ "license": "our own schematic (CC BY 4.0)",
+ "notes": "Drawn by us with Pillow (scripts/wm2_xu_schematic.py): the paper has no paradigm figure. Its six figures are reliability heat maps (Figs. 1-3), capacity across sessions (Fig. 4), within-session reliability (Fig. 5) and between-session correlations (Fig. 6), checked in the authors' copy of the published PDF on OSF (osf.io/g7txf). Timing, set sizes, the nine RGB colours (red, green, blue, magenta, yellow, cyan, orange, white, black) and the Z / '/' keys follow the Method of Experiment 1 (page 3, journal page 578). The array duration is labelled 'shown briefly' rather than with a number: the paper says 150 ms, but the Experiment 1 session files record prefs.stimulusDuration = 0.25 s (the Experiment 2 task code sets 0.150 s)."
+}

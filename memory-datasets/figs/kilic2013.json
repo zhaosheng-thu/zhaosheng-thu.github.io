@@ -1,0 +1,14 @@
+{
+ "dataset_key": "kilic2013",
+ "title": "Effects of spacing of item repetitions in continuous recognition memory: does item retrieval difficulty promote item retention in older adults?",
+ "authors": "Aslı Kılıç, William J. Hoyer, Marc W. Howard",
+ "year": 2013,
+ "venue": "Experimental Aging Research 39(3):322-341",
+ "doi_or_url": "https://doi.org/10.1080/0361073X.2013.779200",
+ "pdf_url": null,
+ "figure": "schematic (ours)",
+ "page": null,
+ "caption_short": "Schematic of continuous word recognition with confidence: words appear one at a time, each up to three times, and after every word the participant rates from 1 (sure new) to 9 (sure old) whether it was seen before.",
+ "license": "our own schematic (CC BY 4.0)",
+ "notes": "Drawn by us: no open copy of the paper was found (not in PMC; the METU repository record and the Howard lab publication page carry no PDF), so we could not check for a task figure. The schematic follows the PubMed abstract (PMID 23607400: words presented once, twice or three times, confidence ratings) and the structure of the released OSF files (node wsu8h: five cycles of 315 trials per participant, ratings 1 to 9, repeat gaps from a few to more than a hundred trials). Example words and ratings are illustrative, not from the data."
+}

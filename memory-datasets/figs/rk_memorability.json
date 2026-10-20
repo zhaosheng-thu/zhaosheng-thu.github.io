@@ -1,0 +1,14 @@
+{
+ "dataset_key": "rk_memorability",
+ "title": "The effect of intrinsic image memorability on recollection and familiarity",
+ "authors": "N. Broers, N. A. Busch",
+ "year": 2021,
+ "venue": "Memory & Cognition 49(5):998-1018",
+ "doi_or_url": "https://doi.org/10.3758/s13421-020-01105-6",
+ "pdf_url": "https://link.springer.com/article/10.3758/s13421-020-01105-6",
+ "figure": "Fig. 6",
+ "page": null,
+ "caption_short": "Experiment 2 trial sequence. Encoding: fixation 1 s, then a scene for 2 s. Test: fixation 1 s, scene 2 s, then a six-point old / new confidence judgement, a remember / know (or detailed-new / unknown) judgement, and feedback.",
+ "license": "CC BY 4.0 (open-access article; licence statement in the article and in Europe PMC PMC8238758)",
+ "notes": "The publisher PDF could not be downloaded (link.springer.com and Europe PMC returned a browser check), so the figure is the publisher's own image file of Fig. 6 (media.springernature.com, 13421_2020_1105_Fig6_HTML.png, 1520 x 431), which contains the figure only, without its caption; saved as papers/broers_busch2021_Fig6_publisher.png and converted to RGB PNG with no other change. Page number in the published PDF not verified; in the OSF author manuscript (y2fmx, saved as papers/broers_busch2021_osf_y2fmx.pdf) the figure is on page 15 or 16. Fig. 3 is the corresponding figure for Experiment 1, which we do not use."
+}

@@ -1,0 +1,14 @@
+{
+ "dataset_key": "vmsearch",
+ "title": "Unpacking similarity effects in visual memory search: categorical, semantic, and visual contributions",
+ "authors": "Linlin Shang, Lu-Chun Yeh, Yuanfang Zhao, Marius V. Peelen",
+ "year": 2026,
+ "venue": "Journal of Memory and Language, 146, 104712 (preprint: bioRxiv 2025.04.09.647918)",
+ "doi_or_url": "https://doi.org/10.1016/j.jml.2025.104712",
+ "pdf_url": "https://europepmc.org/articles/PMC7619159",
+ "figure": "Fig. 1",
+ "page": null,
+ "caption_short": "Procedures of (A) the long-term memory task: study phase, memory test until known, then single probes (target, same-category or other-category distractor; 200 ms, 1800 ms to respond); and (B) the short-term memory task: set shown at once (self-paced), red fixation, single probe, feedback.",
+ "license": "CC BY 4.0 (journal article and author manuscript in Europe PMC / PMC7619159; bioRxiv preprint also CC BY 4.0)",
+ "notes": "Not rendered from a PDF page: the PMC / Europe PMC PDF of the author manuscript sits behind a browser challenge, and bioRxiv blocked the download. The figure is the author manuscript's own Fig. 1 image file (EMS214206-f001.jpg, 800 x 498 px) from the Europe PMC supplementary-files bundle for PMC7619159; it contains the figure only (no caption). Upsampled 1.75x with Lanczos to 1400 x 872 px for legibility; no other processing. Fig. 1 label and caption checked in the PMC JATS XML."
+}

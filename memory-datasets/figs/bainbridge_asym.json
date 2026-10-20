@@ -1,0 +1,14 @@
+{
+ "dataset_key": "bainbridge_asym",
+ "title": "Recognition-memory asymmetries predicted by individual item memorability",
+ "authors": "Igor Utochkin, Nicholas Chiang, Wilma A. Bainbridge",
+ "year": 2026,
+ "venue": "Journal of Experimental Psychology: General (figure from the PsyArXiv preprint 6n74d, version 3, 2026)",
+ "doi_or_url": "https://doi.org/10.1037/xge0002003",
+ "pdf_url": "https://osf.io/download/zwcks/",
+ "figure": "Figure 2",
+ "page": 13,
+ "caption_short": "(a) Study phase: 120 objects from list A or list B. (b) Old / new test: all 240 objects, each a target or a foil depending on the list studied. (c) Forced-choice test: fixed pairs of one list-A and one list-B object; the participant indicates the location of the old object.",
+ "license": "CC BY 4.0 (PsyArXiv preprint 6n74d v3; Crossref and OSF licence records); the published JEP: General version is APA copyright",
+ "notes": "Cropped from page 13 of 45 of the preprint PDF (Memorability2AFC_preprint_v2.pdf, which is PsyArXiv version 3, posted 2026-02-18; saved as papers/utochkin2026_preprint_6n74d_v3.pdf) at 210 dpi; the caption block is excluded. The same file is stored on the data node OSF 4au98 (identical md5). The published version (2026-09-28) could not be checked for differences in the figure."
+}

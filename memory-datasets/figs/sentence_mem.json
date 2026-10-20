@@ -1,0 +1,14 @@
+{
+ "dataset_key": "sentence_mem",
+ "title": "A distinctive meaning makes a sentence memorable",
+ "authors": "Thomas Hikaru Clark, Greta Tuckute, Bryan Medina, Evelina Fedorenko",
+ "year": 2026,
+ "venue": "Journal of Memory and Language 146:104700",
+ "doi_or_url": "https://doi.org/10.1016/j.jml.2025.104700",
+ "pdf_url": null,
+ "figure": "schematic (ours)",
+ "page": null,
+ "caption_short": "Schematic of the sentence repeat-detection task: six-word sentences appear one at a time and the participant presses a key when a sentence repeats.",
+ "license": "our own schematic (CC BY 4.0)",
+ "notes": "Drawn by us: the journal article is closed access (ScienceDirect returned 403; OpenAlex lists no open copy) and no preprint was found, so its figures could not be checked or used. Task description from MIT News (2025-10-01) and from Clark et al., arXiv 2603.12105 (section 2.1). The three example sentences are printed in arXiv 2603.12105, Table 1 (one also in the MIT News article); the repeat shown is illustrative. Presentation timing is not drawn because we could not verify it."
+}

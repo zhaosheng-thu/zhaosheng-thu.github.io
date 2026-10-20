@@ -1,0 +1,14 @@
+{
+ "dataset_key": "tmb_vispa",
+ "title": "Digital Cognitive Assessment: Results from the TestMyBrain NIMH Research Domain Criteria (RDoC) Field Test Battery Report",
+ "authors": "Eliza Passell, Daniel G. Dillon, Justin T. Baker, Sarah C. Vogel, Luke S. Scheuer, Nicholas L. Mirin, Lauren A. Rutter, Diego A. Pizzagalli, Laura Germine",
+ "year": 2019,
+ "venue": "PsyArXiv preprint",
+ "doi_or_url": "https://doi.org/10.31234/osf.io/dcszr",
+ "pdf_url": "https://osf.io/download/hnv8a/",
+ "figure": "unnumbered task illustration in the section 'TMB Visual Paired Associates Test'",
+ "page": 109,
+ "caption_short": "The TestMyBrain Visual Paired Associates test: study pairs shown for 5000 ms with a 1500 ms interval, a message that other tests come first, then test trials in which the probe (outlined in red) is shown with five candidates of the same kind.",
+ "license": "CC BY 4.0 (preprint licence on OSF / Crossref); the photographs inside the figure come from the SUN database, whose images keep their own copyright",
+ "notes": "Rendered from PDF page 109 of 123 (printed page 109) at 220 dpi with PyMuPDF; crop = the two embedded images (learn phase and test screens) only, without the section heading and text above. The figure has no caption in the report. The embedded images are low resolution (622 x 224 and 559 x 427 px), so the crop is soft. The test-phase description used on the card (24 pairs, 5 s each, 1.5 s apart, five same-kind choices, about 2.5 min delay filled with the Choice Reaction Time test) is from Singh et al. 2021 (JCEN 43:786, PMC8922997, Methods, 'TMB Visual Paired Associates'). The report text on page 109 says '25 image pairs'; the scored test has 24 trials plus one practice pair."
+}

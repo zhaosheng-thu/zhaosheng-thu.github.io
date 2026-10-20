@@ -1,0 +1,14 @@
+{
+ "dataset_key": "rocks_classrec",
+ "title": "Testing formal cognitive models of classification and old-new recognition in a real-world high-dimensional category domain",
+ "authors": "Brian J. Meagher, Robert M. Nosofsky",
+ "year": 2023,
+ "venue": "Cognitive Psychology, 145, 101596",
+ "doi_or_url": "https://doi.org/10.1016/j.cogpsych.2023.101596",
+ "pdf_url": null,
+ "figure": "schematic (ours)",
+ "page": null,
+ "caption_short": "Schematic of the task: three training blocks in which the same 180 rocks are classified as igneous, metamorphic or sedimentary, then a 540-rock test (180 training rocks, 300 new rocks, 60 photo-edited look-alikes) with a category choice and an old / new judgement for every rock.",
+ "license": "our own schematic (CC BY 4.0)",
+ "notes": "Drawn by us with Pillow (scripts/draw_rocks.py). The article is closed access (Semantic Scholar / Crossref: no open version; ScienceDirect refused the request) and no preprint or author copy was found, so no original figure could be checked or used. The structure shown was checked against the publisher abstract (via the Semantic Scholar API), the OSF node cvwu9 (title identical to the article; its online supplement states the 540 images: a 360-item set, a 120-item set and 60 photoshopped high-similarity neighbours), and the released trial file (82 participants; blocks 1-3 of 180 trials; block 4 of 540 trials with 180 training, 300 new and 60 look-alike rocks; category and old / new responses). Rock shapes are placeholders; the OSF rock photographs carry no licence."
+}

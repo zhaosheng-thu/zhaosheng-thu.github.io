@@ -1,0 +1,14 @@
+{
+ "dataset_key": "ma_search_vwm",
+ "title": "A Computational Approach to Search in Visual Working Memory",
+ "authors": "Aditi Singh, Andra Mihali, Wen-Chuang Chou, Wei Ji Ma",
+ "year": 2023,
+ "venue": "PsyArXiv preprint (version 1, 1 December 2023)",
+ "doi_or_url": "https://doi.org/10.31234/osf.io/jqthb",
+ "pdf_url": "https://osf.io/download/656a42a2783ec6081aeddbf7/",
+ "figure": "Figure 1",
+ "page": 4,
+ "caption_short": "Task design: fixation (1000 ms), memory array of 2 to 8 coloured discs (100 ms), delay (1000 ms), then a probe display in which two discs are replaced by grey circles and the target colour is shown at the centre; the participant clicks the location that held it.",
+ "license": "CC BY 4.0 (PsyArXiv licence of the preprint, from the OSF API)",
+ "notes": "Cropped from page 4 of the preprint PDF at 300 dpi (the figure is one embedded raster image; the crop covers the image and its four duration labels); caption excluded. The data repository (github.com/WeiJiMaLab/Search-In-VWM) names only the paper title; the authors and preprint were found through the Ma lab publication list and the OSF API. No journal version was found."
+}

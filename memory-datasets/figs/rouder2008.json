@@ -1,0 +1,14 @@
+{
+ "dataset_key": "rouder2008",
+ "title": "An assessment of fixed-capacity models of visual working memory",
+ "authors": "Jeffrey N. Rouder, Richard D. Morey, Nelson Cowan, Christopher E. Zwilling, Candice C. Morey, Michael S. Pratte",
+ "year": 2008,
+ "venue": "Proceedings of the National Academy of Sciences, 105(16), 5975-5979",
+ "doi_or_url": "https://doi.org/10.1073/pnas.0711295105",
+ "pdf_url": "https://www.pcn.psychology.msstate.edu/Publications/Rouder_etal_PNAS_2008.pdf",
+ "figure": "Fig. 1A",
+ "page": 2,
+ "caption_short": "Structure of a trial: fixation (1000 ms), study array of coloured squares (500 ms), blank (500 ms), pattern mask (500 ms), then a single test square at one studied location.",
+ "license": "publisher copyright (© 2008 by The National Academy of Sciences of the USA); free to read (PMC2329704); used for academic summary with citation",
+ "notes": "Cropped panel A only of Fig. 1 from page 2 (journal page 5976) of the published PNAS PDF, rendered at 400 dpi because the panel is small (about 2.1 x 2.0 in); panel B (predicted ROC lines) and the caption are excluded. Downloaded from the author lab copy at msstate.edu because PMC and Europe PMC PDF links return bot challenges; it is the typeset journal PDF (6 pages, PNAS footer and copyright line). The caption notes that the squares and masks in the experiment were coloured; the figure itself is grey scale. Set sizes 2, 5 and 8 and the change rates 0.3 / 0.5 / 0.7 are described in the text, not drawn."
+}

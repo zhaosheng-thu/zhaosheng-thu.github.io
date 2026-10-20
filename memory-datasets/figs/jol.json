@@ -1,0 +1,14 @@
+{
+ "dataset_key": "jol",
+ "title": "Making Judgments of Learning Either Enhances or Impairs Memory: Evidence From 17 Experiments With Related and Unrelated Word Pairs",
+ "authors": "Monika Undorf, Franziska Ingendahl, Vered Halamish",
+ "year": 2024,
+ "venue": "Collabra: Psychology 10(1):117108",
+ "doi_or_url": "https://doi.org/10.1525/collabra.117108",
+ "pdf_url": "https://online.ucpress.edu/collabra/article-pdf/doi/10.1525/collabra.117108/839279/collabra_2024_10_1_117108.pdf",
+ "figure": "schematic (ours)",
+ "page": null,
+ "caption_short": "Schematic of the judgment-of-learning reactivity design: related and unrelated word pairs studied one at a time, a 0-100 recall prediction after each pair in the rating group only, then a cued-recall test for everyone.",
+ "license": "our own schematic (CC BY 4.0)",
+ "notes": "Drawn by us. The article is open access (CC BY 4.0 per Crossref and Unpaywall), but its PDF and HTML at online.ucpress.edu are behind a Cloudflare challenge and returned 403 to every automated request; no PMC or preprint copy was found. So the paper's figures could not be inspected, and we do not know whether it contains a procedure figure. Design details in the schematic come from the authors' OSF project (osf.io/q3jgm, 'Making Judgments of Learning Either Enhances or Impairs Memory: Evidence from 17 Experiments with Related and Unrelated Word Pairs'): the rendered analysis reports BasicAnalyses.html and MetaAnalyses.html show JOL vs no-JOL groups in each of the 17 experiments, related and unrelated pairs, languages German (6 experiments), Hebrew (4) and English (7), lists of 36-40 pairs (4 experiments) or 60 pairs (13), study time under 8 s or 8 s (with 2 experiments not fixed), 11 unsupervised online and 6 controlled experiments. The 0-100 rating scale is from our build (ratings 0-100 rounded to steps of 10) and the JOL means in the reports (e.g. 67.2 vs 23.1 in Experiment 1). The prompt wording, the example pairs and the cue format at test ('first word - ?') are illustrative, not verified against the paper. Rendered with Pillow (DejaVu Sans)."
+}

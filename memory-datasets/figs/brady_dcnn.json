@@ -1,0 +1,14 @@
+{
+ "dataset_key": "brady_dcnn",
+ "title": "Comparing memory capacity across stimuli requires maximally dissimilar foils: Using deep convolutional neural networks to understand visual working memory capacity for real-world objects",
+ "authors": "Timothy F. Brady, Viola S. Störmer",
+ "year": 2024,
+ "venue": "Memory & Cognition, 52(3), 595-609 (online 16 November 2023)",
+ "doi_or_url": "https://doi.org/10.3758/s13421-023-01485-5",
+ "pdf_url": "https://bradylab.ucsd.edu/pdfs/BradyStormer2024.pdf",
+ "figure": "Fig. 6",
+ "page": 10,
+ "caption_short": "Method of Experiment 3: six objects or six colours in placeholders for 2000 ms, a 700 ms delay, then a cued placeholder and two candidates in the centre (until response).",
+ "license": "publisher copyright (© The Psychonomic Society, Inc. 2023; Springer Nature holds exclusive rights under a publishing agreement); author-posted PDF of the published version from the Brady lab website, used for academic summary",
+ "notes": "Rendered from PDF page 10 (journal page 604) at 220 dpi with PyMuPDF; crop = the embedded figure image only (1772 x 1106 px at source), caption excluded. Fig. 6 (Experiment 3) is used because it shows both the object and the colour condition, which our build contains; Fig. 4 on page 8 is the object-only method figure of Experiment 2 (the same trial structure). Crossref lists only Springer text-and-data-mining licences (no CC licence)."
+}

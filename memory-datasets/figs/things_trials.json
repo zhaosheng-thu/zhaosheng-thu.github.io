@@ -1,0 +1,14 @@
+{
+ "dataset_key": "things_trials",
+ "title": "What divides and unites our memories: multi-factor trial-wise predictions of memory across 6+ million trials",
+ "authors": "Wilma A. Bainbridge",
+ "year": 2026,
+ "venue": "American Psychologist 81(5):662-675 (figure taken from the PsyArXiv preprint a79h6, version 2, 2025)",
+ "doi_or_url": "https://doi.org/10.1037/amp0001672",
+ "pdf_url": "https://osf.io/preprints/psyarxiv/a79h6_v2/",
+ "figure": "Figure 1",
+ "page": null,
+ "caption_short": "One stretch of a participant's continuous recognition stream on THINGS images: the celery image returns four trials after its first showing and is caught (a hit), the lamb on the previous trial was a false alarm; the panels name the item, context and observer measures the paper uses to predict each trial.",
+ "license": "CC BY 4.0 (PsyArXiv preprint a79h6 v2; OSF licence record 'CC-By Attribution 4.0 International'); the published American Psychologist version is APA copyright",
+ "notes": "The preprint is distributed as a Word file (manuscript-revision2-10-27-25-psyarxiv.docx, saved as papers/bainbridge2026_preprint_a79h6_v2.docx), so there is no PDF page to render: the figure is the embedded image word/media/image1.tiff (220 dpi, 1430 x 767), composited on white, with the thin rule along its top edge removed; the caption text is not part of the image. Its caption in the preprint reads 'Summary of different types of measures one can calculate for a given trial.' The THINGS paper itself (Kramer et al. 2023, Science Advances) has no paradigm figure; the score-only THINGS card uses its Figure 1A, which shows the released scores, so it was not reused here. The published version (APA) could not be checked for differences in the figure."
+}

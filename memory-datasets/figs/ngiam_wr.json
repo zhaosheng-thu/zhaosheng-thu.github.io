@@ -1,0 +1,14 @@
+{
+ "dataset_key": "ngiam_wr",
+ "title": "Object-based encoding constrains storage in visual working memory",
+ "authors": "William X. Q. Ngiam, Krystian B. Loetscher, Edward Awh",
+ "year": 2024,
+ "venue": "Journal of Experimental Psychology: General, 153(1), 86-101 (online 11 September 2023)",
+ "doi_or_url": "https://doi.org/10.1037/xge0001479",
+ "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10840914/",
+ "figure": "Figure 3",
+ "page": null,
+ "caption_short": "General trial procedure of the whole-report experiments: fixation (1000 ms), memory array of six items (500 ms), retention (1000 ms), then recall at every placeholder; columns show the orientation, colour and conjunction conditions, and the middle column is the colour-only condition used here.",
+ "license": "publisher copyright (American Psychological Association); NIH author manuscript in PMC (PMC10840914); used for academic summary with citation",
+ "notes": "The figure image of the PMC author manuscript (nihms-1925518-f0003.jpg, 1813 x 1920 px at 300 dpi, from cdn.ncbi.nlm.nih.gov) resized to 210 dpi (1269 x 1344) with Lanczos; no cropping, caption not included (it is a separate text block). The PMC PDF and Europe PMC PDF links return bot challenges, so the image file was taken directly. The whole figure is kept because the timing labels sit at the left and the three conditions share the timeline; only the colour-only condition (middle column) is in our build. The figure shows the bullseye of concentric colour rings used to pick a colour. Page number not given because the image comes from the PMC HTML, not a paginated PDF."
+}

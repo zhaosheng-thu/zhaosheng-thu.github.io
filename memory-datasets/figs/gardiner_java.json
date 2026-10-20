@@ -1,0 +1,14 @@
+{
+ "dataset_key": "gardiner_java",
+ "title": "Revisiting the remember-know task: Replications of Gardiner and Java (1990)",
+ "authors": "Julia M. Haaf, Stephen Rhodes, Moshe Naveh-Benjamin, Tony Sun, Hope K. Snyder, Jeffrey N. Rouder",
+ "year": 2021,
+ "venue": "Memory & Cognition 49(1):46-66",
+ "doi_or_url": "https://doi.org/10.3758/s13421-020-01073-x",
+ "pdf_url": "https://europepmc.org/articles/PMC7491359",
+ "figure": "schematic (ours)",
+ "page": null,
+ "caption_short": "Schematic of the replications: words and nonwords studied for 2 s each, a 10-minute spot-the-difference task, then old / new judgements with a remember / know judgement after each 'old'.",
+ "license": "our own schematic (CC BY 4.0)",
+ "notes": "Drawn by us: the replication paper (CC BY 4.0, PMC7491359) has four figures, all results (Figs. 1-4). The original Gardiner & Java (1990) article (Memory & Cognition 18:23-30, doi 10.3758/BF03202642) could not be downloaded (Springer bot check), so its figures were not checked. Procedure from Haaf et al. Experiment 1 Procedure (2 s per item, 0.5 s gap, 10-minute spot-the-difference task), which Experiments 2 and 4 follow; list lengths from the Experiment 2 and 4 Methods. Example items are illustrative, not from the data."
+}

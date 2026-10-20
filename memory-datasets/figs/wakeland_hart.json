@@ -1,0 +1,14 @@
+{
+ "dataset_key": "wakeland_hart",
+ "title": "Predicting visual memory across images and within individuals",
+ "authors": "Cheyenne D. Wakeland-Hart, Steven A. Cao, Megan T. deBettencourt, Wilma A. Bainbridge, Monica D. Rosenberg",
+ "year": 2022,
+ "venue": "Cognition 227:105201",
+ "doi_or_url": "https://doi.org/10.1016/j.cognition.2022.105201",
+ "pdf_url": "https://par.nsf.gov/servlets/purl/10401486",
+ "figure": "Figure 1",
+ "page": 5,
+ "caption_short": "(a) Experiment 1: continuous recognition of scene images shown for 0.75 s, with targets repeating at least 30 s later (n = 706). (b) Experiments 2 and 3 (n = 57): indoor / outdoor sorting of scenes shown for 1 s, then a self-paced recognition test on old and new scenes.",
+ "license": "publisher copyright (Elsevier); accepted author manuscript from the NSF Public Access Repository; used for academic summary",
+ "notes": "Cropped from page 5 of 25 of the accepted manuscript PDF (NSF PAR record 10401486, saved as papers/wakeland_hart2022_nsfpar.pdf) at 220 dpi; the caption block below the figure is excluded. Not open access at the publisher and no PMC copy (Europe PMC lists PMID 35868240 without full text). The OSF project 6uc48 also holds the figure files, with no licence set on the node."
+}

@@ -1,0 +1,14 @@
+{
+ "dataset_key": "kellen2021",
+ "title": "Testing the Foundations of Signal Detection Theory in Recognition Memory",
+ "authors": "David Kellen, Samuel Winiger, John C. Dunn, Henrik Singmann",
+ "year": 2021,
+ "venue": "Psychological Review 128(6):1022-1050",
+ "doi_or_url": "https://doi.org/10.1037/rev0000288",
+ "pdf_url": "https://osf.io/p5rj9/download",
+ "figure": "Figure 15",
+ "page": 51,
+ "caption_short": "The two kinds of test trial in Experiment 4: a five-word subsetting display in which the participant selects every word judged old, and a follow-up two-alternative choice between two words that received the same judgement.",
+ "license": "CC BY 4.0 (author manuscript on PsyArXiv, preprint p5rj9, listed by OpenAlex as the accepted version); the published version is from the American Psychological Association with no open licence registered at Crossref",
+ "notes": "Cropped from page 51 of 82 of the PsyArXiv author-manuscript PDF (OSF preprint p5rj9, licence record CC-By Attribution 4.0 International), rendered at 220 dpi; the caption block below the figure is excluded. Grey boxes mark selected words. The figure covers Experiment 4 only; Experiments 1 to 3 (choice of the one studied word among 2 to 8) have no task figure in the paper. Saved as papers/kellen2021_psyarxiv.pdf."
+}

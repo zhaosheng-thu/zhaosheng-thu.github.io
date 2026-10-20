@@ -1,0 +1,14 @@
+{
+ "dataset_key": "kollenda2025_img",
+ "title": "Memories that remain: Image memorability transfers to scene descriptions",
+ "authors": "Diana Kollenda, Yee Lee Shing, Katharina Dobs, Benjamin de Haas",
+ "year": 2026,
+ "venue": "PsyArXiv preprint mg7zk, version 2 (version 1 posted 2025-08-31)",
+ "doi_or_url": "https://doi.org/10.31234/osf.io/mg7zk_v2",
+ "pdf_url": "https://osf.io/download/rk4es/",
+ "figure": "Figure 1",
+ "page": 5,
+ "caption_short": "(a) Example target and lure scenes of high and low predicted memorability with their written descriptions. (b) Procedure: encoding phase with an indoor / outdoor judgement on 80 stimuli, a short break, then a retrieval phase on 160 stimuli asking whether each was seen before, followed by a free-text question.",
+ "license": "CC BY 4.0 (PsyArXiv preprint; OSF licence record 'CC-By Attribution 4.0 International'); the scene photographs are from the OSIE set (MIT licence), with faces blurred by the authors",
+ "notes": "Cropped from page 5 of 40 of the version-2 preprint PDF (saved as papers/kollenda2026_preprint_mg7zk_v2.pdf) at 210 dpi; the caption block and the manuscript numbering in the left margin are excluded. Version 1 (2025, the version our compiler follows: Experiments 1, 2a, 2b and 3) has a figure with the same title as its Figure 3 ('Examples of experimental stimuli and procedure'); it was not compared panel by panel; version 2 moves it to Figure 1 and adds further experiments (4, 5a, 5b) that we do not use. The figure shows Experiment 1; Experiment 3 used the DALL-E 3 reproductions in the same procedure."
+}

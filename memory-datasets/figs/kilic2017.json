@@ -1,0 +1,14 @@
+{
+ "dataset_key": "kilic2017",
+ "title": "Models that allow us to perceive the world more accurately also allow us to remember past events more accurately via differentiation",
+ "authors": "Aslı Kılıç, Amy H. Criss, Kenneth J. Malmberg, Richard M. Shiffrin",
+ "year": 2017,
+ "venue": "Cognitive Psychology 92:65-86",
+ "doi_or_url": "https://doi.org/10.1016/j.cogpsych.2016.11.005",
+ "pdf_url": "https://memolab.syr.edu/wp-content/uploads/2021/04/KilicCrissMalmbergShiffrin_2017.pdf",
+ "figure": "schematic (ours)",
+ "page": null,
+ "caption_short": "Schematic of Experiment 1: a self-paced study list of 150 words with a meaning question (strong lists) or a spelling question (weak lists), then an old / new test of 150 words (75 studied, 75 new); 12 cycles over two sessions.",
+ "license": "our own schematic (CC BY 4.0)",
+ "notes": "Drawn by us: the paper has no task figure. Its 13 figures are a theory illustration (Fig. 1), model simulations (Figs. 2-5, 10-13) and results (Figs. 6-9). Design details are from Section 3.1.3 (p. 73 of the journal; PDF page 9), read in the author-hosted PDF at memolab.syr.edu (saved as papers/kilic2017.pdf; publisher copyright Elsevier 2016). Example words are illustrative, not from the data."
+}

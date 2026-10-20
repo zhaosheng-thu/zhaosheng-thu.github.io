@@ -1,0 +1,14 @@
+{
+ "dataset_key": "osth_recog",
+ "title": "Modelling orthographic similarity effects in recognition memory reveals support for open bigram representations of letter coding; Modeling the continuous recognition paradigm to determine how retrieval can impact subsequent retrievals",
+ "authors": "Lyulei Zhang, Adam F. Osth; Julian Fox, Adam F. Osth",
+ "year": 2024,
+ "venue": "Cognitive Psychology 148:101619 (2024); Cognitive Psychology 147:101605 (2023)",
+ "doi_or_url": "https://doi.org/10.1016/j.cogpsych.2023.101619",
+ "pdf_url": "https://osf.io/download/64acf86b015bbe0312eeeb91/",
+ "figure": "schematic (ours)",
+ "page": null,
+ "caption_short": "Schematic of the two paradigms: (A) study-test lists whose new test items are made by swapping or replacing letters of studied words or nonwords; (B) continuous recognition, in which every word in a long stream is judged as seen before or new.",
+ "license": "our own schematic (CC BY 4.0)",
+ "notes": "Drawn by us: neither paper has a procedure figure (Zhang & Osth Figure 1 illustrates letter-coding schemes; Fox & Osth Figure 1 illustrates sources of interference; the other figures show model mechanisms or results). Both articles are open access under CC BY 4.0 (Crossref licence record); the preprints used for checking are PsyArXiv 95hnw and 7dhz3 (CC BY 4.0). Panel A follows Zhang & Osth preprint pp. 17-21 (33 study words, 89 test probes, 1 s per word, 45 s maths distractor); COLD / CLOD is the transposition example used in the paper's text, TRIAL / TRAIL is ours. Panel B follows Fox & Osth preprint pp. 17-19 (lists of 360 trials, lags 0, 1, 2, 4, 6, 8, 16, 24, 32 or 40 intervening trials); the preprint describes only one experiment, so the second continuous-recognition file (Experiment 2) could not be checked against text. Rendered with Pillow (scripts/schem_words.py)."
+}

@@ -1,0 +1,14 @@
+{
+ "dataset_key": "osth_drm",
+ "title": "A global matching model of choice and response times in the Deese-Roediger-McDermott semantic and structural false recognition paradigms",
+ "authors": "Adam F. Osth, Lyulei Zhang, Samuel Williams",
+ "year": 2026,
+ "venue": "Psychological Review 133(4):771-819",
+ "doi_or_url": "https://doi.org/10.1037/rev0000596",
+ "pdf_url": "https://osf.io/download/68ccc95b2867a78df0413fb9/",
+ "figure": "Figure 7, top panel (Experiments 1-3)",
+ "page": 36,
+ "caption_short": "Procedure of the DRM experiments: a study list mixing words from several categories, an arithmetic distractor task, then a test list of targets, related lures, critical lures and unrelated lures judged old or new.",
+ "license": "published article CC BY 4.0 (Crossref licence record and Unpaywall); crop taken from the PsyArXiv preprint version 2, which carries no licence on PsyArXiv",
+ "notes": "Crop of the top panel of Figure 7 ('Methods and design for Experiments 1-6') from page 36 of PsyArXiv preprint 6mrux version 2 (19 September 2025), rendered at 220 dpi; the lower panels (encoding tasks of Exp. 4, study times of Exp. 5, speed / accuracy feedback of Exp. 6) and the caption are excluded. The published Psychological Review PDF could not be downloaded (APA and the University of Melbourne repository block scripted access), so the figure number and page in the published version were not checked. The second source in this card (Zhang & Osth 2026, Psychological Science, OSF kst9c) uses a blocked 16-word-per-category design with a remember / know judgement and has no procedure figure in its preprint."
+}

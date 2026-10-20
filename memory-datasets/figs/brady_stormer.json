@@ -1,0 +1,14 @@
+{
+ "dataset_key": "brady_stormer",
+ "title": "The role of meaning in visual working memory: Real-world objects, but not simple features, benefit from deeper processing",
+ "authors": "Timothy F. Brady, Viola S. Störmer",
+ "year": 2022,
+ "venue": "Journal of Experimental Psychology: Learning, Memory, and Cognition, 48(7), 942-958 (online first 25 March 2021)",
+ "doi_or_url": "https://doi.org/10.1037/xlm0001014",
+ "pdf_url": "https://bradylab.ucsd.edu/pdfs/BradyStormer2022.pdf",
+ "figure": "Figure 1",
+ "page": 6,
+ "caption_short": "Experimental methods: six real-world objects or six colours shown simultaneously for 1200 ms (sequential conditions: one at a time at the same places), an 800 ms delay, then a cued placeholder and two candidates in the centre.",
+ "license": "publisher copyright (© American Psychological Association); author-posted copy of the online-first article from the Brady lab website, used for academic summary",
+ "notes": "Rendered from PDF page 6 (printed page 5 of the online-first version) at 300 dpi with PyMuPDF, matching the embedded image's resolution (1250 x 772 px); crop = the figure image only, without the 'Figure 1 / Experimental Methods' heading and the note below. The PDF on the lab site is the online-first version (March 2021); the issue version is JEP:LMC 48(7), 942-958 (July 2022), per Crossref. Figure 1 shows the simultaneous condition only; sequential conditions used the same placeholders, 200 ms per item with 200 ms gaps."
+}

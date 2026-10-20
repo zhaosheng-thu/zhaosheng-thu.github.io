@@ -1,0 +1,14 @@
+{
+ "dataset_key": "cortese2015",
+ "title": "A mega recognition memory study of 2897 disyllabic words",
+ "authors": "Michael J. Cortese, Daniel P. McCarty, Jocelyn Schock",
+ "year": 2015,
+ "venue": "Quarterly Journal of Experimental Psychology 68(8):1489-1501",
+ "doi_or_url": "https://doi.org/10.1080/17470218.2014.945096",
+ "pdf_url": null,
+ "figure": "schematic (ours)",
+ "page": null,
+ "caption_short": "Schematic of the megastudy: 30 study-test cycles per participant, each with 50 study words (2 s each or self-paced) followed by 100 test words (50 studied, 50 new) judged old or new.",
+ "license": "our own schematic (CC BY 4.0)",
+ "notes": "Drawn by us. The article is not open access (Unpaywall: is_oa false) and no author manuscript was found, so its figures could not be checked; the design shown is taken from the abstract (Europe PMC, PMID 25220011: 120 subjects, 3000 disyllabic words, 30 study lists of 50 words, 30 test lists of 100 words, 60 subjects with 2000 ms per item and 60 self-paced) and from the released trial file (100 test words per list, 50 studied and 50 new). Example words are illustrative and not taken from the data. Rendered with Pillow (scripts/schem_words.py)."
+}

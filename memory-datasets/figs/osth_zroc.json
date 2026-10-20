@@ -1,0 +1,14 @@
+{
+ "dataset_key": "osth_zroc",
+ "title": "Diffusion vs. linear ballistic accumulation: Different models, different conclusions about the slope of the zROC in recognition memory",
+ "authors": "Adam F. Osth, Beatrice Bora, Simon Dennis, Andrew Heathcote",
+ "year": 2017,
+ "venue": "Journal of Memory and Language 96:36-61",
+ "doi_or_url": "https://doi.org/10.1016/j.jml.2017.04.003",
+ "pdf_url": "https://adamosth.com/wp-content/uploads/2019/10/osth-bora-dennis-and-heathcote-2017.pdf",
+ "figure": "schematic (ours)",
+ "page": null,
+ "caption_short": "Schematic of Experiment 1: 28 study words at one per second, then 50 test words each judged old or new and then probably or definitely, giving four confidence levels; lists alternate between speed and accuracy emphasis.",
+ "license": "our own schematic (CC BY 4.0)",
+ "notes": "Drawn by us: the paper has no procedure figure (Figures 1-3 illustrate the diffusion and accumulator models; the others show zROCs, parameter estimates, model predictions and a numerosity task used for validation). Procedure from the Method section, journal pp. 41-42 of the copy on the first author's site (publisher copyright, Elsevier): two one-hour sessions, 18 study-test cycles of which the first two are warm-up, 28 study words with two primacy and two recency buffers, 50 test words, old / new then probably / definitely with the same keys, feedback after the confidence response, speed and accuracy emphasis alternating. Example words are illustrative. Rendered with Pillow (scripts/schem_words.py)."
+}

@@ -1,0 +1,14 @@
+{
+ "dataset_key": "rocks_catsize",
+ "title": "Tests of a hybrid-similarity exemplar model of context-dependent memorability in a high-dimensional real-world category domain",
+ "authors": "Robert M. Nosofsky, Krista A. Ehinger, Adam F. Osth",
+ "year": 2025,
+ "venue": "Journal of Experimental Psychology: General, 154(12), 3450-3480",
+ "doi_or_url": "https://doi.org/10.1037/xge0001846",
+ "pdf_url": "https://osf.io/download/6wurk/",
+ "figure": "schematic (ours)",
+ "page": null,
+ "caption_short": "Schematic of the task: 75 rock photographs studied one at a time (Experiment 1: matched to one of 24 category descriptions; Experiment 2: 3 s each, just remember), with categories contributing 8, 4, 2, 1 or 0 rocks per person; then 82 rocks judged old or new.",
+ "license": "our own schematic (CC BY 4.0)",
+ "notes": "Drawn by us with Pillow (scripts/draw_rocks.py). The paper has no paradigm figure: in the accepted manuscript on PsyArXiv (osf.io/xn2f5, version 3, a .docx, 'No license' on OSF) Figure 1 is a schematic of the model's self-similarity and inter-item similarity, and Figures 2-15 and E1 are data / model plots. The journal version is behind a paywall and was not opened. The rock shapes in the schematic are drawn placeholders; the rock photographs on OSF a958r carry no licence and are not reproduced. Design facts (75 study items; sizes 8/4/2/1 in five categories each and 4 unstudied categories; 82 test trials; Exp. 1 category-description task; Exp. 2 3 s per rock with 1 s gap; J = old, F = new) are from the Design and Method sections of that manuscript."
+}

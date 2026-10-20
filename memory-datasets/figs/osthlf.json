@@ -1,0 +1,14 @@
+{
+ "dataset_key": "osthlf",
+ "title": "Disentangling the Effect of Letter Frequency, Bigram Frequency and Inter-item Similarity in Recognition Memory: A Global Matching Model Approach",
+ "authors": "Lyulei Zhang, Adam F. Osth",
+ "year": 2026,
+ "venue": "PsyArXiv preprint (version 2, 24 August 2026; listed as in press at Journal of Experimental Psychology: Learning, Memory, and Cognition on the second author's publication page)",
+ "doi_or_url": "https://doi.org/10.31234/osf.io/xyfec_v2",
+ "pdf_url": "https://osf.io/download/6a8be525e3f107851897e48f/",
+ "figure": "schematic (ours)",
+ "page": null,
+ "caption_short": "Schematic of one study-test cycle: 40 words for 1 s each, a 45 s arithmetic distractor, then 80 test words (40 studied, 40 new) judged old or new at the participant's own pace; ten cycles per participant.",
+ "license": "our own schematic (CC BY 4.0)",
+ "notes": "Drawn by us: the preprint has no procedure figure (its Figure 1 shows letter and bigram frequency distributions; the other figures show results, model fits and item analyses). Procedure from the Methods of preprint v2 (pp. 18-19: ten study-test cycles, 40 study words, 80 test probes, 1 s per word with 150 ms gaps, 45 s maths distractor, self-paced 1 / 0 key responses, words in upper case). Experiment 3b, the file used here with 85 participants, is described as Experiment 3 in preprint v1 (May 2025, 85 recruited) and as a pilot study reported in Supplementary Material C in v2; its design and procedure are the same as Experiments 1 and 2. The preprint carries no licence on PsyArXiv. Example words are illustrative. Rendered with Pillow (scripts/schem_words.py)."
+}
