@@ -107,8 +107,6 @@
         <button class="tab" data-i="2">Snowy Tokyo</button>
         <button class="tab" data-i="3">Church on the cliff</button>
         <button class="tab" data-i="4">Dragon-toucan</button>
-        <button class="tab" data-i="5">Chimneys at sunset</button>
-        <button class="tab" data-i="6">Mirror at sunset</button>
     </div>
     <figure>
       <video id="cmpv" muted loop playsinline autoplay controls preload="metadata"></video>
@@ -136,7 +134,7 @@
     v.addEventListener('timeupdate', tick);
     v.addEventListener('seeked', tick);
   });
-  var CMP = [{"v": "cmp/c0378.mp4", "poster": "cmp/c0378.jpg", "prompt": "A woman walks briskly through a bustling, wet city during heavy rain."}, {"v": "cmp/pub039.mp4", "poster": "cmp/pub039.jpg", "prompt": "A scenic shot of the Glenfinnan Viaduct in Scotland, with a steam train passing over the arch-covered bridge."}, {"v": "cmp/pub026.mp4", "poster": "cmp/pub026.jpg", "prompt": "Beautiful, snowy Tokyo city is bustling with activity."}, {"v": "cmp/pub019.mp4", "poster": "cmp/pub019.jpg", "prompt": "A drone camera circles around a beautiful historic church built on a rocky outcropping along the Amalfi Coast, showcasing intricate architectural details and tiered pathways and patios."}, {"v": "cmp/pub117.mp4", "poster": "cmp/pub117.jpg", "prompt": "Dragon-toucan walking through the Serengeti plains, feathers flowing, with a curious and determined look."}, {"v": "cmp/pub059.mp4", "poster": "cmp/pub059.jpg", "prompt": "Chimneys against the setting sun, casting long shadows, with warm orange and pink hues in the background."}, {"v": "cmp/pub066.mp4", "poster": "cmp/pub066.jpg", "prompt": "A car with polished chrome mirrors reflecting a beautiful sunset."}];
+  var CMP = [{"v": "cmp/c0378.mp4", "poster": "cmp/c0378.jpg", "prompt": "A woman walks briskly through a bustling, wet city during heavy rain."}, {"v": "cmp/pub039.mp4", "poster": "cmp/pub039.jpg", "prompt": "A scenic shot of the Glenfinnan Viaduct in Scotland, with a steam train passing over the arch-covered bridge."}, {"v": "cmp/pub026.mp4", "poster": "cmp/pub026.jpg", "prompt": "Beautiful, snowy Tokyo city is bustling with activity."}, {"v": "cmp/pub019.mp4", "poster": "cmp/pub019.jpg", "prompt": "A drone camera circles around a beautiful historic church built on a rocky outcropping along the Amalfi Coast, showcasing intricate architectural details and tiered pathways and patios."}, {"v": "cmp/pub117.mp4", "poster": "cmp/pub117.jpg", "prompt": "Dragon-toucan walking through the Serengeti plains, feathers flowing, with a curious and determined look."}];
   var v = document.getElementById('cmpv'), cap = document.getElementById('cmpc');
   function show(i) {
     document.querySelectorAll('.tab').forEach(function (b) { b.classList.toggle('on', +b.dataset.i === i); });
