@@ -147,6 +147,7 @@ In addition, I served as a research intern in **[PI Lab](https://pi.cs.tsinghua.
     <div style="margin-top: 4px; color: #333;"><strong>Sheng Zhao</strong>, Haitian Zheng, Weikai Lin, Junjie Zhao, Yuhao Zhu</div>
     <div style="margin-top: 2px; color: #777; font-style: italic;">Preprint</div>
     <div style="margin-top: 6px; font-size: 13px;">
+      <a href="https://arxiv.org/abs/2611.21559" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">arXiv</a>
       <a href="https://zhaosheng-thu.github.io/reference-force/" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">Webpage</a>
     </div>
   </div>
