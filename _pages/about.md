@@ -131,11 +131,12 @@ In addition, I served as a research intern in **[PI Lab](https://pi.cs.tsinghua.
 <div id="PerceptualDimension" class="pub-item pub-item-first" style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 18px; padding: 10px 14px; border-left: 4px solid #d98c2b; background: #fff8ee; border-radius: 4px;">
   <div style="flex: 0 0 200px; max-width: 100%;"><span style="display: block; text-align: center; background: #1a4b8c; color: #fff; font-size: 12px; font-weight: 600; padding: 3px 0; border-radius: 3px;">NeurIPS</span><div style="margin-top: 6px; aspect-ratio: 2 / 1; background: #fff; border: 1px solid #e5e5e5; border-radius: 4px; overflow: hidden;"><img src="../images/pubs/ObserverModel.png" alt="Multidimensional Observer Model" style="width: 100%; height: 100%; object-fit: contain;"></div></div>
   <div style="flex: 1 1 280px; min-width: 0;">
-    <div style="font-size: 17px; font-weight: 600; line-height: 1.4;"><a href="https://arxiv.org/abs/2609.38487" style="color: #1a4b8c;">Multidimensional Observer Model and Perceptual Dimensions of Human Image Quality Assessment</a></div>
+    <div style="font-size: 17px; font-weight: 600; line-height: 1.4;"><a href="https://horizon-lab.org/iqa/" style="color: #1a4b8c;">Multidimensional Observer Model and Perceptual Dimensions of Human Image Quality Assessment</a></div>
     <div style="margin-top: 4px; color: #333;"><strong>Sheng Zhao</strong>, Weikai Lin, Yuhao Zhu</div>
     <div style="margin-top: 2px; color: #777; font-style: italic;">In 40th Conference on Neural Information Processing Systems (NeurIPS&rsquo;26) &middot; Main Track</div>
     <div style="margin-top: 6px; font-size: 13px;">
       <a href="https://arxiv.org/abs/2609.38487" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">arXiv</a>
+      <a href="https://horizon-lab.org/iqa/" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">Webpage</a>
     </div>
   </div>
 </div>
