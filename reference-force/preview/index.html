@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reference Forcing</title>
+<meta name="description" content="Reference Forcing: long video generation with region-guided drift correction.">
+<style>
+  :root {
+    --bg: #fbfaf8; --fg: #1d1d1f; --muted: #6b6b70; --line: #e4e2dd; --card: #ffffff; --accent: #2a78d6; --soft: #eef4fc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #121214; --fg: #ededee; --muted: #9a9aa2; --line: #2a2a2f; --card: #1a1a1d; --accent: #6aa8f0; --soft: #1b2432; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { max-width: 1120px; margin: 0 auto; padding: 56px 16px 72px; }
+  header { text-align: center; margin-bottom: 28px; }
+  h1 { font-size: clamp(32px, 5.4vw, 50px); line-height: 1.12; margin: 0 0 10px; letter-spacing: -0.015em; }
+  .sub { font-size: clamp(17px, 2.5vw, 22px); color: var(--muted); margin: 0 0 22px; }
+  .authors { font-size: clamp(16px, 2.2vw, 19px); margin: 0 0 4px; }
+  .affil { color: var(--muted); font-size: 15px; margin: 0 0 20px; }
+  .links { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 999px;
+          border: 1px solid var(--line); background: var(--card); color: var(--fg); text-decoration: none; font-size: 15px; }
+  .btn.off { color: var(--muted); cursor: default; }
+  nav { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 88%, transparent);
+         backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); margin: 0 -16px; padding: 8px 16px; }
+  nav .in { max-width: 1120px; margin: 0 auto; display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; }
+  nav a { color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--fg); }
+  section { margin-top: 56px; scroll-margin-top: 56px; }
+  h2 { font-size: 24px; margin: 0 0 8px; }
+  .lead { color: var(--muted); margin: 0 0 20px; max-width: 820px; }
+  .abstract { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px;
+               text-align: justify; hyphens: auto; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  @media (max-width: 820px) { .grid3 { grid-template-columns: 1fr; } }
+  .list1 { display: grid; grid-template-columns: 1fr; gap: 22px; max-width: 960px; margin: 0 auto; }
+  figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .vwrap { position: relative; background: #000; }
+  video, img.full { display: block; width: 100%; height: auto; }
+  .clock { position: absolute; left: 10px; top: 10px; padding: 2px 9px; border-radius: 6px; background: rgba(0,0,0,.6);
+            color: #fff; font: 600 14px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; pointer-events: none; }
+  figcaption { padding: 12px 14px 14px; font-size: 14px; color: var(--muted); }
+  figcaption b { color: var(--fg); font-weight: 600; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+  .tab { border: 1px solid var(--line); background: var(--card); color: var(--fg); border-radius: 999px; padding: 6px 14px;
+          font: inherit; font-size: 14px; cursor: pointer; }
+  .tab.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .method p { max-width: 860px; }
+  footer { margin-top: 64px; text-align: center; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Reference Forcing</h1>
+    <p class="sub" style="margin-bottom:14px">Long Video Generation with Region-Guided Drift Correction</p>
+    <p class="authors">Sheng Zhao<sup>1</sup>&ensp; Haitian Zheng<sup>2</sup>&ensp; Weikai Lin<sup>1</sup>&ensp; Junjie Zhao<sup>1</sup>&ensp; Yuhao Zhu<sup>1</sup></p>
+    <p class="affil"><sup>1</sup>University of Rochester&emsp;<sup>2</sup>Adobe</p>
+    <div class="links">
+      <span class="btn off">Paper (coming soon)</span>
+      <span class="btn off">Code (coming soon)</span>
+    </div>
+  </header>
+  <nav><div class="in">
+    <a href="#abstract">Abstract</a><a href="#hours">Two-hour videos</a><a href="#compare">Comparisons</a><a href="#more">More results</a><a href="#strength">Anchor strength</a><a href="#method">Method</a>
+  </div></nav>
+
+  <section id="abstract">
+    <h2>Abstract</h2>
+    <div class="abstract">Long video generation should keep the subject and background consistent while supporting rich, natural motion. However, autoregressive models are often distilled with distribution matching distillation (DMD) over short windows, which does not train them to keep this consistency over long ranges. As a result, the subject and background can drift over time. Methods that manage the key-value (KV) cache retain or retrieve history to reduce drift. Yet this history may itself have drifted. We propose Reference Forcing, which uses the initial frames as an appearance reference. We first build a teacher that uses attention masks to force each region of a new frame to attend to the same region in the initial frames. The teacher finds these regions with off-the-shelf segmentation models. We then distill this behavior into a separate attention path of the student, which needs no external models at inference. We further introduce value correction, which corrects drifted values in the KV cache toward the matching values of drift-free initial frames. Experiments show that Reference Forcing achieves state-of-the-art subject and background consistency among long-video methods on different base models, and its advantage grows with video length.</div>
+  </section>
+
+  <section id="hours">
+    <h2>Two-hour videos</h2>
+    <p class="lead">Each video is generated in one pass, without restarts or stitching. Shown at 60&times; speed; the clock gives the time in the generated video.</p>
+    <div class="grid3">
+      <figure>
+        <div class="vwrap">
+          <video src="../twohour_pub040.mp4" muted loop playsinline autoplay controls preload="metadata" data-speed="60"></video>
+          <span class="clock">0:00:00</span>
+        </div>
+        <figcaption><b>Otter</b> &middot; An adorable happy otter stands on a surfboard wearing a yellow lifejacket, riding along turquoise tropical waters near lush tropical islands.</figcaption>
+      </figure>
+      <figure>
+        <div class="vwrap">
+          <video src="../twohour_pub000.mp4" muted loop playsinline autoplay controls preload="metadata" data-speed="60"></video>
+          <span class="clock">0:00:00</span>
+        </div>
+        <figcaption><b>Tokyo walk</b> &middot; A stylish woman in a black leather jacket and a long red dress walks down a bustling Tokyo street filled with warm glowing neon.</figcaption>
+      </figure>
+      <figure>
+        <div class="vwrap">
+          <video src="../twohour_pub028.mp4" muted loop playsinline autoplay controls preload="metadata" data-speed="60"></video>
+          <span class="clock">0:00:00</span>
+        </div>
+        <figcaption><b>Robot</b> &middot; A robot with sleek silver armor and glowing blue circuits explores a neon-lit cyberpunk city.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="compare">
+    <h2>Comparison with long-video methods</h2>
+    <p class="lead">60-second videos for the same prompt and initial noise. All methods are built on LongLive and use the same KV cache capacity of 12 latent frames.</p>
+    <div class="tabs" data-g="cmp">
+        <button class="tab on" data-i="0">Umbrella in the rain</button>
+        <button class="tab" data-i="1">Storm giant</button>
+        <button class="tab" data-i="2">Forest bunny</button>
+        <button class="tab" data-i="3">Glenfinnan Viaduct</button>
+        <button class="tab" data-i="4">Snowy Tokyo</button>
+        <button class="tab" data-i="5">Church on the cliff</button>
+        <button class="tab" data-i="6">Dragon-toucan</button>
+    </div>
+    <figure>
+      <video id="cmpv" muted loop playsinline autoplay controls preload="metadata"></video>
+      <figcaption id="cmpc"></figcaption>
+    </figure>
+  </section>
+
+  <section id="more">
+    <h2>More visualization results</h2>
+    <p class="lead">60-second videos generated by Reference Forcing on LongLive, each in one pass, shown at normal speed. Scroll down for more; each video plays while it is on screen.</p>
+    <div class="list1">
+      <figure>
+        <video src="../more/c0389.mp4" poster="../more/c0389.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A cute, cheerful young girl with curly brown hair and rosy cheeks walking along a clean, picturesque country road during autumn.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0076.mp4" poster="../more/c0076.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A beautiful young woman with flowing blonde hair walks confidently down a bustling city street.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0001.mp4" poster="../more/c0001.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A serene, slow-motion video of a person walking in a peaceful forest.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0083.mp4" poster="../more/c0083.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>An elderly man with a cheerful expression, wearing casual clothes such as a light jacket and khakis, is walking along the edge of a serene lake.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0090.mp4" poster="../more/c0090.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A majestic African lion walking confidently through the vast golden savannah.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0237.mp4" poster="../more/c0237.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A majestic blue horse is walking gracefully across an open green meadow.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0273.mp4" poster="../more/c0273.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A beautiful brunette woman dressed in a vibrant yellow traditional dress is performing a lively folkloric dance.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0101.mp4" poster="../more/c0101.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A majestic prince and a graceful princess walk side by side in a grand castle courtyard.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0103.mp4" poster="../more/c0103.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A beautiful Chinese young lady in traditional Hanfu is gracefully dancing along the riverbank.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0109.mp4" poster="../more/c0109.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A young Chinese lady, wearing a light summer dress and flip-flops, is walking leisurely along the sandy beach while enjoying an ice cream cone.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0024.mp4" poster="../more/c0024.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A fluffy, beautiful white cat with soft fur and bright green eyes is gracefully walking across an orange background.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0047.mp4" poster="../more/c0047.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A playful scene of a brown dog walking through a lush green field carrying a small orange cat on its back.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0228.mp4" poster="../more/c0228.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A cute, young lion cub walking through a savannah landscape, with tall grasses swaying gently in the breeze.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0287.mp4" poster="../more/c0287.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A heartwarming video featuring a friendly golden retriever puppy climbing a scenic mountain trail.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0173.mp4" poster="../more/c0173.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A purple cow wearing a stylish top hat dances joyfully on the surface of the moon.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0180.mp4" poster="../more/c0180.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A cute, realistically rendered yellow rabbit hopping through a lush green meadow.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0330.mp4" poster="../more/c0330.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A young boy, around 10 years old, is walking through a grassy field.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0359.mp4" poster="../more/c0359.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A young boy, around 8 years old, is walking alone down a dirt road lined with tall trees on either side.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0368.mp4" poster="../more/c0368.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A cute, domestic cat wearing a small red dress, walking gracefully across a cozy living room floor.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0271.mp4" poster="../more/c0271.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A large, majestic tiger is walking confidently along a dirt road, looking directly into the camera.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0245.mp4" poster="../more/c0245.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A green screen scene featuring a CGI-generated lifelike lion walking confidently towards the camera.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0337.mp4" poster="../more/c0337.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A lone gray wolf with piercing yellow eyes and a bushy tail is walking steadily to the right on a green screen background.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0263.mp4" poster="../more/c0263.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A 4K video featuring a young woman walking through a heavy rainstorm.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0259.mp4" poster="../more/c0259.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A young boy riding a bicycle down a winding mountain road.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0216.mp4" poster="../more/c0216.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A young woman walking through the streets at night, illuminated by the soft glow of streetlights.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0048.mp4" poster="../more/c0048.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A solitary young woman walks along the edge of the sea during a beautiful sunset afternoon.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0015.mp4" poster="../more/c0015.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A cowboy-themed animated clip featuring a cat wearing a hat and boots, rolling on roller skates down a busy city street.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0022.mp4" poster="../more/c0022.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A futuristic French girl stands in a modern, sleek swimming pool, her expression one of awe as she gazes at a supernatural dolphin floating gracefully beside her.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0089.mp4" poster="../more/c0089.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A futuristic astronaut, clad in a sleek, silver space suit with a helmet visor, rides a majestic white horse through a bustling indoor mall.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0095.mp4" poster="../more/c0095.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A man in a spacesuit is walking on the moon&#x27;s surface, holding a Bible.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0008.mp4" poster="../more/c0008.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A man rides a bicycle through the bustling streets of Amsterdam on a sunny afternoon.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0017.mp4" poster="../more/c0017.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A solitary man walking away from the camera, moving steadily down a deserted street.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0023.mp4" poster="../more/c0023.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A large white elephant walking forward, exhaling a plume of white gas from its trunk.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0028.mp4" poster="../more/c0028.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>An astronaut in a steampunk style spacesuit spins gracefully in an apocalyptic galaxy.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0044.mp4" poster="../more/c0044.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A menacing CGI animated tiger wearing round glasses chases you through a dark, abandoned pizzeria in a horror style reminiscent of Five Nights at Freddy&#x27;s.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0050.mp4" poster="../more/c0050.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A blue and orange butterfly flying erratically in a zigzag pattern over an apocalyptic landscape.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0052.mp4" poster="../more/c0052.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A photorealistic animation of a sleek black cat with green eyes leaping gracefully from a branch onto another higher branch of a tall oak tree.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0054.mp4" poster="../more/c0054.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A small, fluffy snow penguin running away from the camera lens in a playful manner.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0075.mp4" poster="../more/c0075.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A well-built, handsome man with chiseled features and short, wet hair is swimming gracefully in a crystal-clear pool under bright sunlight.</figcaption>
+      </figure>
+      <figure>
+        <video src="../more/c0104.mp4" poster="../more/c0104.jpg" class="lazy" muted loop playsinline controls preload="none"></video>
+        <figcaption>A majestic silver giant wolf running swiftly under the silvery glow of the full moon.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="strength">
+    <h2>Strength of the anchor path</h2>
+    <p class="lead">The same prompt and initial noise with the scale &gamma; of the anchor path multiplied by 0.25, 1 (default) and 2. A weak anchor path lets the scene drift; a strong one holds the scene but leaves less motion.</p>
+    <div class="tabs" data-g="sw">
+        <button class="tab on" data-i="0">Church on the cliff</button>
+        <button class="tab" data-i="1">Octopus and crab</button>
+        <button class="tab" data-i="2">Art gallery</button>
+        <button class="tab" data-i="3">Waterfall in the living room</button>
+    </div>
+    <figure>
+      <video id="swv" muted loop playsinline autoplay controls preload="metadata"></video>
+      <figcaption id="swc"></figcaption>
+    </figure>
+  </section>
+
+  <section id="method" class="method">
+    <h2>Method</h2>
+    <p class="lead">A teacher uses attention masks so that each region of a new frame attends to the same region of the initial frames. We distill this behavior into a separate anchor path of the student, with a learned anchor gate, so no external models are needed at inference. Value correction then moves the drifted values in the KV cache toward the matching values of the initial frames.</p>
+    <figure><img class="full" src="../overview.jpg" alt="Overview of Reference Forcing"></figure>
+  </section>
+
+  <footer>Paper coming soon.</footer>
+</main>
+<script>
+  document.querySelectorAll('video[data-speed]').forEach(function (v) {
+    var clock = v.parentNode.querySelector('.clock');
+    var k = parseFloat(v.dataset.speed) || 1;
+    function pad(n) { return (n < 10 ? '0' : '') + n; }
+    function tick() {
+      var s = Math.floor(v.currentTime * k);
+      clock.textContent = Math.floor(s / 3600) + ':' + pad(Math.floor(s / 60) % 60) + ':' + pad(s % 60);
+    }
+    v.addEventListener('timeupdate', tick);
+    v.addEventListener('seeked', tick);
+  });
+  function tabs(g, vid, capid, DATA) {
+    var box = document.querySelector('.tabs[data-g="' + g + '"]');
+    if (!box) return;
+    var v = document.getElementById(vid), cap = document.getElementById(capid);
+    function show(i) {
+      box.querySelectorAll('.tab').forEach(function (b) { b.classList.toggle('on', +b.dataset.i === i); });
+      v.poster = '../' + DATA[i].poster; v.src = '../' + DATA[i].v; v.play().catch(function () {});
+      cap.innerHTML = '<b>Prompt</b> &middot; ' + DATA[i].prompt;
+    }
+    box.querySelectorAll('.tab').forEach(function (b) { b.addEventListener('click', function () { show(+b.dataset.i); }); });
+    show(0);
+  }
+  tabs('cmp', 'cmpv', 'cmpc', [{"v": "cmp/c0378.mp4", "poster": "cmp/c0378.jpg", "prompt": "A woman walks briskly through a bustling, wet city during heavy rain."}, {"v": "cmp/pub046.mp4", "poster": "cmp/pub046.jpg", "prompt": "A towering cloud shaped like a man looms over the earth, his massive form casting long shadows."}, {"v": "cmp/pub016.mp4", "poster": "cmp/pub016.jpg", "prompt": "3D animation of a small, round, fluffy creature with big, expressive eyes exploring a vibrant, enchanted forest."}, {"v": "cmp/pub039.mp4", "poster": "cmp/pub039.jpg", "prompt": "A scenic shot of the Glenfinnan Viaduct in Scotland, with a steam train passing over the arch-covered bridge."}, {"v": "cmp/pub026.mp4", "poster": "cmp/pub026.jpg", "prompt": "Beautiful, snowy Tokyo city is bustling with activity."}, {"v": "cmp/pub019.mp4", "poster": "cmp/pub019.jpg", "prompt": "A drone camera circles around a beautiful historic church built on a rocky outcropping along the Amalfi Coast, showcasing intricate architectural details and tiered pathways and patios."}, {"v": "cmp/pub117.mp4", "poster": "cmp/pub117.jpg", "prompt": "Dragon-toucan walking through the Serengeti plains, feathers flowing, with a curious and determined look."}]);
+  tabs('sw', 'swv', 'swc', [{"v": "sweep/pub019.mp4", "poster": "sweep/pub019.jpg", "prompt": "A drone camera circles around a beautiful historic church built on a rocky outcropping along the Amalfi Coast, showcasing intricate architectural details and tiered pathways and patios."}, {"v": "sweep/pub020.mp4", "poster": "sweep/pub020.jpg", "prompt": "A large orange octopus is resting on the ocean floor, blending into the sandy and rocky terrain."}, {"v": "sweep/pub025.mp4", "poster": "sweep/pub025.jpg", "prompt": "A tour of an art gallery featuring numerous beautiful works of art in various styles, including impressionist paintings, modern sculptures, and abstract installations."}, {"v": "sweep/pub084.mp4", "poster": "sweep/pub084.jpg", "prompt": "A fast-paced first-person POV shot quickly flies through open doors, revealing a surreal waterfall cascading in the middle of a cozy living room."}]);
+  if ('IntersectionObserver' in window) {       // gallery videos play only while they are on screen
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.play().catch(function () {}); } else { e.target.pause(); } });
+    }, { threshold: 0.35 });
+    document.querySelectorAll('video.lazy').forEach(function (x) { io.observe(x); });
+  }
+</script>
+</body>
+</html>
