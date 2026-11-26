@@ -23,7 +23,8 @@ I am Sheng Zhao (赵晟), a 1st-year Ph.D. student in Computer Science at the Un
 </p>
 
 <div class="hiring-box" style="background: #fdf2f1; border: 1px solid #efc3be; border-radius: 18px; padding: 14px 22px; margin: 8px 0 24px; color: #7a1f17; line-height: 1.6;">
-  <b style="color: #c0392b;">I am looking for a research internship in the U.S. for Summer 2027.</b> If you think I could be a good fit, please feel free to reach out via <a href="mailto:alexzhao0705@gmail.com" style="color: #c0392b; text-decoration: underline;">email</a>.
+  <b style="color: #c0392b;">Seeking Spring 2027 Part-Time and Summer 2027 Internships in the U.S. (Research / Applied)</b><br>
+  The Ph.D. program at the University of Rochester supports Curricular Practical Training (CPT) for internships. If you think I could be a good fit, please feel free to reach out via <a href="mailto:alexzhao0705@gmail.com" style="color: #c0392b; text-decoration: underline;">email</a>.
 </div>
 
 ## Latest News
