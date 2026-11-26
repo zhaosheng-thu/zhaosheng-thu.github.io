@@ -167,6 +167,18 @@ In addition, I served as a research intern in **[PI Lab](https://pi.cs.tsinghua.
   </div>
 </div>
 
+<div id="ContinuousRecognitionMemory" class="pub-item pub-item-first" style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 18px; padding: 10px 14px; border-left: 4px solid #d98c2b; background: #fff8ee; border-radius: 4px;">
+  <div style="flex: 0 0 200px; max-width: 100%;"><span style="display: block; text-align: center; background: #1a4b8c; color: #fff; font-size: 12px; font-weight: 600; padding: 3px 0; border-radius: 3px;">Preprint</span><div style="margin-top: 6px; aspect-ratio: 2 / 1; background: #fff; border: 1px solid #e5e5e5; border-radius: 4px; overflow: hidden;"><img src="../images/pubs/ContinuousRecognitionMemory.jpg" alt="Observer model of continuous recognition memory: encode, diffuse, decide" style="width: 100%; height: 100%; object-fit: contain;"></div></div>
+  <div style="flex: 1 1 280px; min-width: 0;">
+    <div style="font-size: 17px; font-weight: 600; line-height: 1.4;"><a href="https://arxiv.org/abs/2611.33947" style="color: #1a4b8c;">A Computational Model of Continuous Recognition Memory for Natural Images</a></div>
+    <div style="margin-top: 4px; color: #333;"><strong>Sheng Zhao</strong>, Yijin Wang, Bei Xiao, Yuhao Zhu</div>
+    <div style="margin-top: 2px; color: #777; font-style: italic;">Preprint</div>
+    <div style="margin-top: 6px; font-size: 13px;">
+      <a href="https://arxiv.org/abs/2611.33947" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">arXiv</a>
+    </div>
+  </div>
+</div>
+
 <div id="LowPowAR" class="pub-item" style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 18px; padding: 10px 14px; border-left: 4px solid transparent;">
   <div style="flex: 0 0 200px; max-width: 100%;"><span style="display: block; text-align: center; background: #1a4b8c; color: #fff; font-size: 12px; font-weight: 600; padding: 3px 0; border-radius: 3px;">TVCG</span><div style="margin-top: 6px; aspect-ratio: 2 / 1; background: #fff; border: 1px solid #e5e5e5; border-radius: 4px; overflow: hidden;"><img src="../images/pubs/LowPowAR.png" alt="LowPowAR" style="width: 100%; height: 100%; object-fit: contain;"></div></div>
   <div style="flex: 1 1 280px; min-width: 0;">
