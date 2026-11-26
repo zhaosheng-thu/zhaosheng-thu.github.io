@@ -179,6 +179,19 @@ In addition, I served as a research intern in **[PI Lab](https://pi.cs.tsinghua.
   </div>
 </div>
 
+<div id="SpectralFusionGS" class="pub-item" style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 18px; padding: 10px 14px; border-left: 4px solid transparent;">
+  <div style="flex: 0 0 200px; max-width: 100%;"><span style="display: block; text-align: center; background: #1a4b8c; color: #fff; font-size: 12px; font-weight: 600; padding: 3px 0; border-radius: 3px;">Preprint</span><div style="margin-top: 6px; aspect-ratio: 2 / 1; background: #fff; border: 1px solid #e5e5e5; border-radius: 4px; overflow: hidden;"><img src="../images/pubs/SpectralFusionGS.jpg" alt="Overview of spectral fusion and distillation for sparse-view Gaussian Splatting" style="width: 100%; height: 100%; object-fit: contain;"></div></div>
+  <div style="flex: 1 1 280px; min-width: 0;">
+    <div style="font-size: 17px; font-weight: 600; line-height: 1.4;"><a href="https://linwk20.github.io/spectral-fusion-gs/" style="color: #1a4b8c;">Enhancing Sparse-View Gaussian Splatting with Feed-Forward Priors via Spectral Fusion and Distillation</a></div>
+    <div style="margin-top: 4px; color: #333;">Weikai Lin, Jun Dai, <strong>Sheng Zhao</strong>, Junjie Zhao, Yuhao Zhu</div>
+    <div style="margin-top: 2px; color: #777; font-style: italic;">Preprint</div>
+    <div style="margin-top: 6px; font-size: 13px;">
+      <a href="https://arxiv.org/abs/2611.31428" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">arXiv</a>
+      <a href="https://linwk20.github.io/spectral-fusion-gs/" style="display: inline-block; padding: 0 8px; border: 1px solid #1a4b8c; border-radius: 3px; margin-right: 6px; text-decoration: none;">Webpage</a>
+    </div>
+  </div>
+</div>
+
 <div id="LowPowAR" class="pub-item" style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 18px; padding: 10px 14px; border-left: 4px solid transparent;">
   <div style="flex: 0 0 200px; max-width: 100%;"><span style="display: block; text-align: center; background: #1a4b8c; color: #fff; font-size: 12px; font-weight: 600; padding: 3px 0; border-radius: 3px;">TVCG</span><div style="margin-top: 6px; aspect-ratio: 2 / 1; background: #fff; border: 1px solid #e5e5e5; border-radius: 4px; overflow: hidden;"><img src="../images/pubs/LowPowAR.png" alt="LowPowAR" style="width: 100%; height: 100%; object-fit: contain;"></div></div>
   <div style="flex: 1 1 280px; min-width: 0;">
